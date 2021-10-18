@@ -24,6 +24,26 @@ const IndexPage = () => (
         formats={['auto', 'webp', 'avif']}
       />
     </div>
+    <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+      <StaticImage
+        src='../images/FirstdayStreetSelfie.jpg'
+        alt='Selfie on an Instanbul Street'
+        quality={95}
+        width={500}
+        height={700}
+        formats={['auto', 'webp', 'avif']}
+        style={{ margin: '10px 15px 0 0' }}
+      />
+      <StaticImage
+        src='../images/BlueMosque.jpg'
+        alt='The Blue Mosque'
+        quality={95}
+        width={500}
+        height={700}
+        formats={['auto', 'webp', 'avif']}
+        style={{ margin: '10px 0 0 15px' }}
+      />
+    </div>
   </Layout>
 );
 
