@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { Box } from '@chakra-ui/react';
 import HomeBackground from '../components/HomeBackground';
+import HomeHeader from '../components/HomeHeader';
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       </Head>
       
       <main className={styles.main}>
-      <HomeBackground />
+        <HomeBackground />
+        <HomeHeader />
       </main>
 
       <footer className={styles.footer}>
