@@ -748,6 +748,21 @@
     "minimatch" "^3.0.4"
     "strip-json-comments" "^3.1.1"
 
+"@fontsource/aldrich@^4.5.1":
+  "integrity" "sha512-P9l665jtPmCXSzaGD1hSP9QscrkOiAw3MntLf20m0YLWgB9SMtVjyjilzqNKLIluoUoTdNIFcrCIBcMdPoR72Q=="
+  "resolved" "https://registry.npmjs.org/@fontsource/aldrich/-/aldrich-4.5.1.tgz"
+  "version" "4.5.1"
+
+"@fontsource/nerko-one@^4.5.2":
+  "integrity" "sha512-MyTh93ykIL6WZoxua8TnMZg/KZNu+FSorE5LkW41+h7NgKmXttAtM6xhP58n6c4fw4PG59oNxGfpZCxCkpoSVA=="
+  "resolved" "https://registry.npmjs.org/@fontsource/nerko-one/-/nerko-one-4.5.2.tgz"
+  "version" "4.5.2"
+
+"@fontsource/open-sans@^4.5.6":
+  "integrity" "sha512-bQuNS0H1VL1VLC6FwmReHlpJaICVe/seODU3Q9cpTQbJ5OtRD4TwWMrAjfTxqcFNollA6O0AlE4BnRSWMQLfvw=="
+  "resolved" "https://registry.npmjs.org/@fontsource/open-sans/-/open-sans-4.5.6.tgz"
+  "version" "4.5.6"
+
 "@humanwhocodes/config-array@^0.9.2":
   "integrity" "sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.9.5.tgz"
