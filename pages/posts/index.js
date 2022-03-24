@@ -7,7 +7,7 @@ export default function Posts({ postData }) {
   </Head>
   return (
     <>
-      <Heading>Blogs</Heading>
+      <Heading>All Blogs</Heading>
     </>
   )
 };

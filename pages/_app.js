@@ -1,12 +1,14 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import '../styles/globals.css';
 import "@fontsource/aldrich";
 import "@fontsource/open-sans";
+import "@fontsource/nerko-one"
 
 
 // 2. Extend the theme to include custom colors, fonts, etc
 const theme = extendTheme({
   fonts: {
-    heading: 'Aldrich, sans-serif',
+    heading: 'nekro-one, sans-serif',
     body: 'Open Sans, sans-serif'
   },
   colors: {

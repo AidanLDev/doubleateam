@@ -5,10 +5,17 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: red;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.blogHeading {
+  padding: 0 0 20px 0;
 }
