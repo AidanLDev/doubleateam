@@ -11,6 +11,7 @@ export default function BlogLayout({ children }) {
           content='Double A Teams blog posts'
         />
       </Head>
+      <BackHomeLink blog />
       {children}
       <BackHomeLink />
     </Box>
