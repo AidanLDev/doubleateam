@@ -1,23 +1,22 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Heading, List, ListItem, Text } from "@chakra-ui/react";
+import { Heading, List, ListItem, Text } from '@chakra-ui/react';
 import { getBlogPostPaths } from '../../lib/posts';
 import BackHomeLink from '../../components/BackHomeLink';
 
 export async function getStaticProps() {
-  const postPaths = getBlogPostPaths();
-  const sortedPaths = postPaths.map(post => post.replace(/\.js$/, ''));
+  const sortedPaths = getBlogPostPaths();
   return {
     props: {
-      sortedPaths
-    }
-  }
+      sortedPaths,
+    },
+  };
 }
 
 export default function Posts({ sortedPaths }) {
   <Head>
     <title>Double A Title</title>
-  </Head>
+  </Head>;
   return (
     <>
       <Heading color='primary'>All Blogs</Heading>
@@ -27,14 +26,14 @@ export default function Posts({ sortedPaths }) {
             return (
               <ListItem key={`${post}__${idx}`}>
                 <Link href={`/posts/${post}`} passHref>
-                <a>{post}</a>
+                  <a>{post}</a>
                 </Link>
               </ListItem>
-            )
+            );
           }
         })}
       </List>
       <BackHomeLink />
     </>
-  )
-};
+  );
+}
