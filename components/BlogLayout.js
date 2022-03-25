@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
+import BackHomeLink from './BackHomeLink';
 
 export default function BlogLayout({ children }) {
   return (
@@ -11,7 +12,7 @@ export default function BlogLayout({ children }) {
         />
       </Head>
       {children}
-
+      <BackHomeLink />
     </Box>
   )
 }

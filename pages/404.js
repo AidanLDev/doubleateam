@@ -1,12 +1,10 @@
-import Link from 'next/link';
+import BackHomeLink from '../components/BackHomeLink';
 
 export default function Custom404() {
   return (
     <>
       <h1>404 - Page Not Found</h1>
-      <Link href='/'>
-        <a>Let's take you back home shall we?</a>
-      </Link>
+      <BackHomeLink />
     </>
   );
 }
