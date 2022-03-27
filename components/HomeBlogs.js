@@ -19,7 +19,7 @@ export default function HomeBlogs({ sortedPaths }) {
           if (post !== 'index' && post && post.length > 0) {
             return (
               <Link href={`/posts/${post}`} passHref key={`${post}__${idx}`}>
-                <ListItem w='30%' h='700px' cursor='pointer' m='10px 20px'>
+                <ListItem w='500px' h='700px' cursor='pointer' m='10px 20px'>
                   <Text
                     pos='absolute'
                     color='primary'
