@@ -13,8 +13,8 @@ export default function HomeBlogs({ sortedPaths }) {
     }
   };
   return (
-    <List>
-      <Flex wrap='wrap'>
+    <List display='flex'>
+      <Flex wrap='wrap' placeContent='center'>
         {sortedPaths.map((post, idx) => {
           if (post !== 'index' && post && post.length > 0) {
             return (
@@ -27,7 +27,7 @@ export default function HomeBlogs({ sortedPaths }) {
                     zIndex='10'
                     fontSize='22px'
                     fontWeight='600'
-                    textShadow='2px 2px whitesmoke'
+                    textShadow='2px 2px #441f1f'
                   >
                     {neatenUpPost(post)}
                   </Text>
