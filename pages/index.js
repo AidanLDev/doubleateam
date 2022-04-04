@@ -5,6 +5,7 @@ import { Box } from '@chakra-ui/react';
 import HomeBackground from '../components/HomeBackground';
 import HomeHeader from '../components/HomeHeader';
 import HomeBlogs from '../components/HomeBlogs';
+import Footer from '../components/Footer';
 import { getBlogPostPaths } from '../lib/posts';
 
 export async function getStaticProps() {
@@ -33,6 +34,7 @@ export default function Home({ sortedPaths }) {
       <Box m='6%' minH='1000px'>
         <HomeBlogs sortedPaths={sortedPaths} />
       </Box>
+      <Footer />
     </Box>
   );
 }

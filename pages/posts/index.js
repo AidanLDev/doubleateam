@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Heading, List, ListItem, Text } from '@chakra-ui/react';
+import { Heading, List, ListItem } from '@chakra-ui/react';
 import { getBlogPostPaths } from '../../lib/posts';
 import BackHomeLink from '../../components/BackHomeLink';
 
