@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { List, ListItem, Flex, Text, Image } from '@chakra-ui/react';
+import { List, ListItem, Flex, Text, Image, useMediaQuery } from '@chakra-ui/react';
 
 const MotionImage = motion(Image);
 
 export default function HomeBlogs({ sortedPaths }) {
+  const [isMobile] = useMediaQuery(
+    '(max-width: 500px)'
+  );
+
   const neatenUpPost = (post) => {
     if (post.includes('-')) {
       return post.replace(/-/g, ' ').toUpperCase();
@@ -19,15 +23,16 @@ export default function HomeBlogs({ sortedPaths }) {
           if (post !== 'index' && post && post.length > 0) {
             return (
               <Link href={`/posts/${post}`} passHref key={`${post}__${idx}`}>
-                <ListItem w='500px' h='700px' cursor='pointer' m='10px 20px'>
+                <ListItem w={isMobile ? '100%' : '500px'} h={isMobile ? '500px' : '700px'} cursor='pointer' m='10px 20px'>
                   <Text
                     pos='absolute'
                     color='primary'
                     padding='10px 14px'
                     zIndex='10'
-                    fontSize='22px'
+                    fontSize={isMobile ? '26px' : '30px'}
                     fontWeight='600'
                     textShadow='2px 2px #441f1f'
+                    maxW={isMobile ? '230px' : ''}
                   >
                     {neatenUpPost(post)}
                   </Text>
