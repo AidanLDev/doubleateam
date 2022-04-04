@@ -6,7 +6,7 @@ const MotionImage = motion(Image);
 
 export default function HomeBlogs({ sortedPaths }) {
   const [isMobile] = useMediaQuery(
-    '(max-width: 500px)'
+    '(max-width: 575px)'
   );
 
   const neatenUpPost = (post) => {
