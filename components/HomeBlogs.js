@@ -1,13 +1,26 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { List, ListItem, Flex, Text, Image, useMediaQuery } from '@chakra-ui/react';
+import {
+  List,
+  ListItem,
+  Flex,
+  Text,
+  Image,
+  useMediaQuery,
+} from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
 const MotionImage = motion(Image);
 
 export default function HomeBlogs({ sortedPaths }) {
-  const [isMobile] = useMediaQuery(
-    '(max-width: 575px)'
-  );
+  const [isMobile, setIsMobile] = useState(false);
+  const mediaQuery = useMediaQuery('(max-width: 575px)');
+
+  useEffect(() => {
+    if (mediaQuery !== isMobile) {
+      setIsMobile(mediaQuery);
+    }
+  }, [mediaQuery]);
 
   const neatenUpPost = (post) => {
     if (post.includes('-')) {
@@ -23,7 +36,12 @@ export default function HomeBlogs({ sortedPaths }) {
           if (post !== 'index' && post && post.length > 0) {
             return (
               <Link href={`/posts/${post}`} passHref key={`${post}__${idx}`}>
-                <ListItem w={isMobile ? '100%' : '500px'} h={isMobile ? '500px' : '700px'} cursor='pointer' m='10px 20px'>
+                <ListItem
+                  w={isMobile ? '100%' : '500px'}
+                  h={isMobile ? '500px' : '700px'}
+                  cursor='pointer'
+                  m='10px 20px'
+                >
                   <Text
                     pos='absolute'
                     color='primary'
