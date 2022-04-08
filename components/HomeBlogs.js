@@ -14,12 +14,10 @@ const MotionImage = motion(Image);
 
 export default function HomeBlogs({ sortedPaths }) {
   const [isMobile, setIsMobile] = useState(false);
-  const mediaQuery = useMediaQuery('(max-width: 575px)');
+  const [mediaQuery] = useMediaQuery('(max-width: 575px)');
 
   useEffect(() => {
-    if (mediaQuery !== isMobile) {
-      setIsMobile(mediaQuery);
-    }
+    setIsMobile(mediaQuery);
   }, [mediaQuery]);
 
   const neatenUpPost = (post) => {
