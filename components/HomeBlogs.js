@@ -39,6 +39,7 @@ export default function HomeBlogs({ sortedPaths }) {
                   h={isMobile ? '500px' : '700px'}
                   cursor='pointer'
                   m='10px 20px'
+                  overflow='hidden'
                 >
                   <Text
                     pos='absolute'
