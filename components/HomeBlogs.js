@@ -60,9 +60,11 @@ export default function HomeBlogs({ sortedPaths }) {
                     minHeight='100%'
                     width='100%'
                     height='100%'
-                    whileHover={{ scale: 1.02 }}
+                    opacity='0.6'
+                    whileHover={{ scale: 1.08 }}
                     whileTap={{ scale: 0.98 }}
                     zIndex='-1'
+                    _hover={{ opacity: 0.8 }}
                   />
                 </ListItem>
               </Link>
