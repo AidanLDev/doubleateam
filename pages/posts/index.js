@@ -14,11 +14,11 @@ export async function getStaticProps() {
 }
 
 export default function Posts({ sortedPaths }) {
-  <Head>
-    <title>Double A Title</title>
-  </Head>;
   return (
     <>
+      <Head>
+        <title>Double A Team | Blogs</title>
+      </Head>
       <Heading color='primary'>All Blogs</Heading>
       <List spacing={3}>
         {sortedPaths.map((post, idx) => {

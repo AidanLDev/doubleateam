@@ -1,9 +1,13 @@
+import Head from 'next/head';
 import { Heading, Text } from '@chakra-ui/react';
 import BlogLayout from '../../components/BlogLayout';
 
 export default function HowToPassIelts() {
   return (
     <BlogLayout>
+            <Head>
+        <title>Double A Team | What to do in Indonesia</title>
+      </Head>
       <Heading className='blogHeading'>
         How to spend your time in Indonesia
       </Heading>

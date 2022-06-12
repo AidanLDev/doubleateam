@@ -1,9 +1,13 @@
+import Head from 'next/head';
 import { Heading, Text } from '@chakra-ui/react';
 import BlogLayout from '../../components/BlogLayout';
 
 export default function HowToPassIelts() {
   return (
     <BlogLayout>
+      <Head>
+        <title>Double A Team | How to pass IELTs</title>
+      </Head>
       <Heading className='blogHeading'>Getting a UK Family Visa</Heading>
       <Text>
         Minim occaecat sunt voluptate exercitation sunt do. Enim esse dolor
