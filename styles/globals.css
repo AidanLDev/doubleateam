@@ -19,3 +19,18 @@ a:hover {
 .blogHeading {
   padding: 0 0 20px 0;
 }
+
+.fadingText {
+  animation: fadingAnimation 6s ease alternate infinite;
+  opacity: 1;
+  cursor: default;
+}
+
+@keyframes fadingAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
