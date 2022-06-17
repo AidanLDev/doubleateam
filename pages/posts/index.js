@@ -15,11 +15,28 @@ export async function getStaticProps() {
   };
 }
 
-export default function Posts({ sortedPaths }) {
+export default async function Posts({ sortedPaths }) {
   const [filterValue, setFilterValue] = useState('');
 
   const handleInputChange = (e) => {
     setFilterValue(e.target.value);
+  };
+
+  const compileMessages = async () => {
+    return messages.map((message, idx) => {
+      return (
+        <Text
+          position='absolute'
+          top={Math.floor(Math.random() * 300 + 100)}
+          left={Math.floor(Math.random() * 1920)}
+          key={`${message}__${idx}`}
+          fontSize='lg'
+          className='fadingText'
+        >
+          {message}
+        </Text>
+      );
+    });
   };
 
   return (
@@ -38,18 +55,7 @@ export default function Posts({ sortedPaths }) {
           value={filterValue}
           onChange={handleInputChange}
         />
-        {messages.map((message, idx) => (
-          <Text
-            position='absolute'
-            top={Math.floor(Math.random() * 300 + 100)}
-            left={Math.floor(Math.random() * 1920)}
-            key={`${message}__${idx}`}
-            fontSize='lg'
-            className='fadingText'
-          >
-            {message}
-          </Text>
-        ))}
+        {compileMessages()}
       </Flex>
       <Text>
         Spreading what we know, with those who want to know with as much clarity
