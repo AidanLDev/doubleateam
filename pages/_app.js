@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import '@fontsource/aldrich';
 import '@fontsource/open-sans';
 import '@fontsource/nerko-one';
+import '@fontsource/aguafina-script';
 
 // 2. Extend the theme to include custom colors, fonts, etc
 const theme = extendTheme({

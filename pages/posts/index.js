@@ -23,18 +23,18 @@ export default function Posts({ sortedPaths }) {
     setFilterValue(e.target.value);
   };
 
-  // const timeoutFunction = () => {
-  //   setTimeout(function () {
-  //     setMessageCount(messageCount++);
-  //     if (messageCount < messages.length) {
-  //       timeoutFunction();
-  //     }
-  //   }, 4000);
-  // };
+  const timeoutFunction = () => {
+    setTimeout(function () {
+      setMessageCount(messageCount++);
+      if (messageCount < messages.length) {
+        timeoutFunction();
+      }
+    }, 6000);
+  };
 
-  // useEffect(() => {
-  //   timeoutFunction();
-  // }, []);
+  useEffect(() => {
+    timeoutFunction();
+  }, []);
 
   return (
     <>
@@ -57,7 +57,7 @@ export default function Posts({ sortedPaths }) {
             position='absolute'
             top={Math.floor(Math.random() * 300 + 100)}
             left={Math.floor(Math.random() * 1920)}
-            fontSize='lg'
+            fontSize='6xl'
             className='fadingText'
           >
             {messages[messageCount]}

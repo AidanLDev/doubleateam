@@ -24,6 +24,9 @@ a:hover {
   animation: fadingAnimation 6s ease alternate infinite;
   opacity: 1;
   cursor: default;
+  font-family: "Aguafina Script", cursive;
+  color: red;
+  text-shadow: 0 1px 1px #fff;
 }
 
 @keyframes fadingAnimation {
