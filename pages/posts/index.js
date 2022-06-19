@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Flex, Heading, List, ListItem, Input, Text } from '@chakra-ui/react';
 import { getBlogPostPaths } from '../../lib/posts';
 import { messages } from '../../lib/messages';
@@ -15,29 +15,26 @@ export async function getStaticProps() {
   };
 }
 
-export default async function Posts({ sortedPaths }) {
+export default function Posts({ sortedPaths }) {
   const [filterValue, setFilterValue] = useState('');
+  const [messageCount, setMessageCount] = useState(0);
 
   const handleInputChange = (e) => {
     setFilterValue(e.target.value);
   };
 
-  const compileMessages = async () => {
-    return messages.map((message, idx) => {
-      return (
-        <Text
-          position='absolute'
-          top={Math.floor(Math.random() * 300 + 100)}
-          left={Math.floor(Math.random() * 1920)}
-          key={`${message}__${idx}`}
-          fontSize='lg'
-          className='fadingText'
-        >
-          {message}
-        </Text>
-      );
-    });
-  };
+  // const timeoutFunction = () => {
+  //   setTimeout(function () {
+  //     setMessageCount(messageCount++);
+  //     if (messageCount < messages.length) {
+  //       timeoutFunction();
+  //     }
+  //   }, 4000);
+  // };
+
+  // useEffect(() => {
+  //   timeoutFunction();
+  // }, []);
 
   return (
     <>
@@ -55,7 +52,17 @@ export default async function Posts({ sortedPaths }) {
           value={filterValue}
           onChange={handleInputChange}
         />
-        {compileMessages()}
+        {
+          <Text
+            position='absolute'
+            top={Math.floor(Math.random() * 300 + 100)}
+            left={Math.floor(Math.random() * 1920)}
+            fontSize='lg'
+            className='fadingText'
+          >
+            {messages[messageCount]}
+          </Text>
+        }
       </Flex>
       <Text>
         Spreading what we know, with those who want to know with as much clarity
