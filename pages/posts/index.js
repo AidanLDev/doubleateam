@@ -41,16 +41,23 @@ export default function Posts({ sortedPaths }) {
       <Head>
         <title>Double A Team | Blogs</title>
       </Head>
-      <Flex height='500px' backgroundImage='url(/images/snowyMountain.jpg)'>
+      <Flex
+        height='500px'
+        backgroundImage='url(/images/sky2-resize.jpg)'
+        padding='20px'
+        borderBottom='2px solid red'
+      >
         <Heading color='primary' width='50%'>
           <Link href={'/'}>Double A Team</Link>
         </Heading>
         <Input
           variant='outline'
-          placeholder='Search'
+          placeholder='Search...'
           width='50%'
           value={filterValue}
           onChange={handleInputChange}
+          _placeholder={{ opacity: 1, color: 'red' }}
+          color='red'
         />
         {
           <Text
@@ -64,14 +71,13 @@ export default function Posts({ sortedPaths }) {
           </Text>
         }
       </Flex>
-      <Text>
-        Spreading what we know, with those who want to know with as much clarity
-        as possible.
+      <Text fontSize='42px' align='center' color='red' padding='24px 0'>
+        Spreading what we know, with those who want to know
       </Text>
       <List spacing={3}>
         {sortedPaths.map((post, idx) => {
           if (post !== 'index' && post) {
-            const neatenedPost = post?.replace('-', ' ');
+            const neatenedPost = post?.replaceAll('-', ' ');
             if (
               filterValue === '' ||
               RegExp(filterValue, 'i').test(neatenedPost)
