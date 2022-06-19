@@ -1,21 +1,31 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Flex, Heading, List, ListItem, Input, Text } from '@chakra-ui/react';
+import {
+  Flex,
+  Heading,
+  List,
+  ListItem,
+  Input,
+  Text,
+  Grid,
+  GridItem,
+  Box,
+} from '@chakra-ui/react';
 import { getBlogPostPaths } from '../../lib/posts';
 import { messages } from '../../lib/messages';
 import BackHomeLink from '../../components/BackHomeLink';
 
 export async function getStaticProps() {
-  const sortedPaths = getBlogPostPaths();
+  const blogs = getBlogPostPaths();
   return {
     props: {
-      sortedPaths,
+      blogs,
     },
   };
 }
 
-export default function Posts({ sortedPaths }) {
+export default function Posts({ blogs }) {
   const [filterValue, setFilterValue] = useState('');
   const [messageCount, setMessageCount] = useState(0);
 
@@ -74,25 +84,20 @@ export default function Posts({ sortedPaths }) {
       <Text fontSize='42px' align='center' color='red' padding='24px 0'>
         Spreading what we know, with those who want to know
       </Text>
-      <List spacing={3}>
-        {sortedPaths.map((post, idx) => {
-          if (post !== 'index' && post) {
-            const neatenedPost = post?.replaceAll('-', ' ');
-            if (
-              filterValue === '' ||
-              RegExp(filterValue, 'i').test(neatenedPost)
-            ) {
-              return (
-                <ListItem key={`${post}__${idx}`}>
-                  <Link href={`/posts/${post}`} passHref>
-                    <a>{neatenedPost}</a>
-                  </Link>
-                </ListItem>
-              );
-            }
+      <Grid spacing={3} display='grid'>
+        {blogs.map((blog, idx) => {
+          // const neatenedPost = blog?.replace('-', ' ');
+          if (filterValue === '' || RegExp(filterValue, 'i').test(blog.title)) {
+            return (
+              <Link href={`/posts/${blog.path}`}>
+                <Box key={`${blog}__${idx}`} cursor='pointer'>
+                  <Text>{blog.title}</Text>
+                </Box>
+              </Link>
+            );
           }
         })}
-      </List>
+      </Grid>
       <BackHomeLink />
     </>
   );
