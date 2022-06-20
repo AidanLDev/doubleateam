@@ -9,15 +9,15 @@ import Footer from '../components/Footer';
 import { getBlogPostPaths } from '../lib/posts';
 
 export async function getStaticProps() {
-  const sortedPaths = getBlogPostPaths();
+  const blogs = getBlogPostPaths();
   return {
     props: {
-      sortedPaths,
+      blogs,
     },
   };
 }
 
-export default function Home({ sortedPaths }) {
+export default function Home({ blogs }) {
   return (
     <Box w='100%' h='100%'>
       <Head>
@@ -32,7 +32,7 @@ export default function Home({ sortedPaths }) {
       </Box>
       {/* Display latest blogs */}
       <Box m='6%' minH='1000px'>
-        <HomeBlogs sortedPaths={sortedPaths} />
+        <HomeBlogs blogs={blogs} />
       </Box>
       <Footer />
     </Box>
