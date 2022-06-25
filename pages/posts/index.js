@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react';
 import {
   Flex,
   Heading,
-  List,
-  ListItem,
   Input,
   Text,
   Grid,
@@ -28,6 +26,7 @@ export async function getStaticProps() {
 export default function Posts({ blogs }) {
   const [filterValue, setFilterValue] = useState('');
   const [messageCount, setMessageCount] = useState(0);
+  let winWidth;
 
   const handleInputChange = (e) => {
     setFilterValue(e.target.value);
@@ -36,14 +35,21 @@ export default function Posts({ blogs }) {
   const timeoutFunction = () => {
     setTimeout(function () {
       setMessageCount(messageCount++);
+      if (messageCount === messages.length) {
+        setMessageCount(0);
+      }
+      console.log({ messageCount }, messages.length);
       if (messageCount < messages.length) {
         timeoutFunction();
       }
-    }, 6000);
+    }, 12000);
   };
 
   useEffect(() => {
-    timeoutFunction();
+    winWidth = window.innerWidth;
+    setTimeout(function () {
+      timeoutFunction();
+    }, 12000);
   }, []);
 
   return (
@@ -73,7 +79,7 @@ export default function Posts({ blogs }) {
           <Text
             position='absolute'
             top={Math.floor(Math.random() * 300 + 100)}
-            left={Math.floor(Math.random() * 1920)}
+            left={Math.floor(Math.random() * winWidth)}
             fontSize='6xl'
             className='fadingText'
           >
@@ -84,15 +90,25 @@ export default function Posts({ blogs }) {
       <Text fontSize='42px' align='center' color='red' padding='24px 0'>
         Spreading what we know, with those who want to know
       </Text>
-      <Grid spacing={3} display='grid'>
+      <Grid
+        gap={24}
+        templateColumns='repeat(3, 1fr)'
+        templateRows='repeat(3, 1fr)'
+      >
         {blogs.map((blog, idx) => {
           // const neatenedPost = blog?.replace('-', ' ');
           if (filterValue === '' || RegExp(filterValue, 'i').test(blog.title)) {
             return (
-              <Link href={`/posts/${blog.path}`}>
-                <Box key={`${blog}__${idx}`} cursor='pointer'>
-                  <Text>{blog.title}</Text>
-                </Box>
+              <Link
+                href={`/posts/${blog.path}`}
+                key={`${blog}__${idx}`}
+                passHref
+              >
+                <GridItem backgroundColor='red' cursor='pointer'>
+                  <Box>
+                    <Text>{blog.title}</Text>
+                  </Box>
+                </GridItem>
               </Link>
             );
           }

@@ -12,7 +12,7 @@ export default function HomeBackground() {
       pos='absolute'
       zIndex='-1'
       backgroundSize='cover'
-      borderBottom='2px solid'
+      borderBottom='2px solid red'
     />
   );
 }
