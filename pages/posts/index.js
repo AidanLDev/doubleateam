@@ -8,8 +8,11 @@ import {
   Text,
   Grid,
   GridItem,
-  Box,
+  HStack,
+  Tag,
+  Icon,
 } from '@chakra-ui/react';
+import { AiFillTag } from 'react-icons/ai';
 import { getBlogPostPaths } from '../../lib/posts';
 import { messages } from '../../lib/messages';
 import BackHomeLink from '../../components/BackHomeLink';
@@ -38,7 +41,6 @@ export default function Posts({ blogs }) {
       if (messageCount === messages.length) {
         setMessageCount(0);
       }
-      console.log({ messageCount }, messages.length);
       if (messageCount < messages.length) {
         timeoutFunction();
       }
@@ -90,10 +92,13 @@ export default function Posts({ blogs }) {
       <Text fontSize='42px' align='center' color='red' padding='24px 0'>
         Spreading what we know, with those who want to know
       </Text>
+      {/* TODO: Check screen size, if it's small reduce grid to 1/1 */}
       <Grid
         gap={24}
         templateColumns='repeat(3, 1fr)'
         templateRows='repeat(3, 1fr)'
+        h='100vh'
+        p='0 24px'
       >
         {blogs.map((blog, idx) => {
           // const neatenedPost = blog?.replace('-', ' ');
@@ -104,10 +109,20 @@ export default function Posts({ blogs }) {
                 key={`${blog}__${idx}`}
                 passHref
               >
-                <GridItem backgroundColor='red' cursor='pointer'>
-                  <Box>
-                    <Text>{blog.title}</Text>
-                  </Box>
+                <GridItem
+                  backgroundColor='red'
+                  cursor='pointer'
+                  colSpan={blog.size.colSpan}
+                  rowSpan={blog.size.rowSpan}
+                  p='24px'
+                >
+                  <Text>{blog.title}</Text>
+                  <HStack>
+                    <Icon as={AiFillTag} />
+                    {blog.tags.map((tag, tagIdx) => (
+                      <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
+                    ))}
+                  </HStack>
                 </GridItem>
               </Link>
             );
