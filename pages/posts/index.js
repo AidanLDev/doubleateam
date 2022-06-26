@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import {
+  Box,
   Flex,
   Heading,
   Input,
@@ -16,6 +17,7 @@ import { AiFillTag } from 'react-icons/ai';
 import { getBlogPostPaths } from '../../lib/posts';
 import { messages } from '../../lib/messages';
 import BackHomeLink from '../../components/BackHomeLink';
+import Footer from '../../components/Footer';
 
 export async function getStaticProps() {
   const blogs = getBlogPostPaths();
@@ -116,13 +118,15 @@ export default function Posts({ blogs }) {
                   rowSpan={blog.size.rowSpan}
                   p='24px'
                 >
-                  <Text>{blog.title}</Text>
-                  <HStack>
-                    <Icon as={AiFillTag} />
-                    {blog.tags.map((tag, tagIdx) => (
-                      <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
-                    ))}
-                  </HStack>
+                  <Flex flexDir='column'>
+                    <Text>{blog.title}</Text>
+                    <HStack>
+                      <Icon as={AiFillTag} />
+                      {blog.tags.map((tag, tagIdx) => (
+                        <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
+                      ))}
+                    </HStack>
+                  </Flex>
                 </GridItem>
               </Link>
             );
@@ -130,6 +134,7 @@ export default function Posts({ blogs }) {
         })}
       </Grid>
       <BackHomeLink />
+      <Footer />
     </>
   );
 }
