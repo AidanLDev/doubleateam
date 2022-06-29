@@ -4,10 +4,10 @@ import {
   List,
   ListItem,
   Flex,
-  Text,
   Image,
   useMediaQuery,
 } from '@chakra-ui/react';
+import CardTitle from './CardTitle';
 import { useEffect, useState } from 'react';
 
 const MotionImage = motion(Image);
@@ -36,18 +36,7 @@ export default function HomeBlogs({ blogs }) {
                   boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
                 }}
               >
-                <Text
-                  pos='absolute'
-                  color='primary'
-                  padding='10px 14px'
-                  zIndex='10'
-                  fontSize={isMobile ? '26px' : '30px'}
-                  fontWeight='600'
-                  textShadow='2px 2px #441f1f'
-                  maxW={isMobile ? '230px' : '500px'}
-                >
-                  {blog.title}
-                </Text>
+                <CardTitle titleText={blog.title} />
                 <MotionImage
                   src={`/images/blog/${blog.path}.jpg`}
                   alt={`${blog.title} image`}

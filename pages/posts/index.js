@@ -18,6 +18,7 @@ import { getBlogPostPaths } from '../../lib/posts';
 import { messages } from '../../lib/messages';
 import BackHomeLink from '../../components/BackHomeLink';
 import Footer from '../../components/Footer';
+import CardTitle from '../../components/CardTitle';
 
 export async function getStaticProps() {
   const blogs = getBlogPostPaths();
@@ -112,14 +113,17 @@ export default function Posts({ blogs }) {
                 passHref
               >
                 <GridItem
-                  backgroundColor='red'
+                  backgroundColor='blue'
                   cursor='pointer'
                   colSpan={blog.size.colSpan}
                   rowSpan={blog.size.rowSpan}
                   p='24px'
+                  _hover={{
+                    boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
+                  }}
                 >
-                  <Flex flexDir='column'>
-                    <Text>{blog.title}</Text>
+                  <Flex flexDir='column' h="100%" justifyContent="space-between">
+                    <Text fontSize="26px" fontWeight="600" textShadow='2px 2px #441f1f' color='primary'>{blog.title}</Text>
                     <HStack>
                       <Icon as={AiFillTag} />
                       {blog.tags.map((tag, tagIdx) => (
