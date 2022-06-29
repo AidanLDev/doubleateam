@@ -13,6 +13,7 @@ import {
   Tag,
   Icon,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { AiFillTag } from 'react-icons/ai';
 import { getBlogPostPaths } from '../../lib/posts';
 import { messages } from '../../lib/messages';
@@ -28,6 +29,8 @@ export async function getStaticProps() {
     },
   };
 }
+
+const MotionContainer = motion(Box);
 
 export default function Posts({ blogs }) {
   const [filterValue, setFilterValue] = useState('');
@@ -112,25 +115,32 @@ export default function Posts({ blogs }) {
                 key={`${blog}__${idx}`}
                 passHref
               >
-                <GridItem
-                  backgroundColor='blue'
+                <GridItem overflow='hidden' h="100%" w="100%" colSpan={blog.size.colSpan}
+                  rowSpan={blog.size.rowSpan} _hover={{
+                    boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
+                  }} borderRadius="6%">
+                <MotionContainer
+                  backgroundImage={`/images/blog/${blog.path}.jpg`}
+                  backgroundSize="cover"
                   cursor='pointer'
                   colSpan={blog.size.colSpan}
                   rowSpan={blog.size.rowSpan}
                   p='24px'
-                  _hover={{
-                    boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
-                  }}
+                  h="100%"
+                  w="100%"
+                  whileHover={{ scale: 1.04 }}
+                  
                 >
                   <Flex flexDir='column' h="100%" justifyContent="space-between">
-                    <Text fontSize="26px" fontWeight="600" textShadow='2px 2px #441f1f' color='primary'>{blog.title}</Text>
+                    <CardTitle titleText={blog.title} fontSize="26px" pos="relative" />
                     <HStack>
-                      <Icon as={AiFillTag} />
+                      <Icon as={AiFillTag} fill="white" />
                       {blog.tags.map((tag, tagIdx) => (
                         <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
                       ))}
                     </HStack>
                   </Flex>
+                </MotionContainer>
                 </GridItem>
               </Link>
             );

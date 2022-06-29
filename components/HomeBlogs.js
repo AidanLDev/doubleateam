@@ -36,7 +36,7 @@ export default function HomeBlogs({ blogs }) {
                   boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
                 }}
               >
-                <CardTitle titleText={blog.title} />
+                <CardTitle titleText={blog.title} fontSize={isMobile ? '26px' : '30px'} pos='absolute'/>
                 <MotionImage
                   src={`/images/blog/${blog.path}.jpg`}
                   alt={`${blog.title} image`}
