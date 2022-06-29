@@ -12,6 +12,7 @@ import {
   HStack,
   Tag,
   Icon,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { AiFillTag } from 'react-icons/ai';
@@ -35,7 +36,14 @@ const MotionContainer = motion(Box);
 export default function Posts({ blogs }) {
   const [filterValue, setFilterValue] = useState('');
   const [messageCount, setMessageCount] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mediaQuery] = useMediaQuery('(max-width: 750px)');
+
   let winWidth;
+
+  useEffect(() => {
+    setIsMobile(mediaQuery);
+  }, [mediaQuery]);
 
   const handleInputChange = (e) => {
     setFilterValue(e.target.value);
@@ -101,9 +109,8 @@ export default function Posts({ blogs }) {
       {/* TODO: Check screen size, if it's small reduce grid to 1/1 */}
       <Grid
         gap={24}
-        templateColumns='repeat(3, 1fr)'
-        templateRows='repeat(3, 1fr)'
-        h='100vh'
+        templateColumns={`repeat(${isMobile ? '1' : '3'}, 1fr)`}
+        templateRows={`repeat(${isMobile ? '1' : '2'}, 1fr)`}
         p='0 24px'
       >
         {blogs.map((blog, idx) => {
@@ -114,33 +121,50 @@ export default function Posts({ blogs }) {
                 href={`/posts/${blog.path}`}
                 key={`${blog}__${idx}`}
                 passHref
+                maxH='600px'
               >
-                <GridItem overflow='hidden' h="100%" w="100%" colSpan={blog.size.colSpan}
-                  rowSpan={blog.size.rowSpan} _hover={{
+                <GridItem
+                  overflow='hidden'
+                  h='100%'
+                  w='100%'
+                  minH='600px'
+                  maxH='600px'
+                  colSpan={isMobile ? 1 : blog.size.colSpan}
+                  rowSpan={isMobile ? 1 : blog.size.rowSpan}
+                  _hover={{
                     boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
-                  }} borderRadius="6%">
-                <MotionContainer
-                  backgroundImage={`/images/blog/${blog.path}.jpg`}
-                  backgroundSize="cover"
-                  cursor='pointer'
-                  colSpan={blog.size.colSpan}
-                  rowSpan={blog.size.rowSpan}
-                  p='24px'
-                  h="100%"
-                  w="100%"
-                  whileHover={{ scale: 1.04 }}
-                  
+                  }}
+                  borderRadius='6%'
                 >
-                  <Flex flexDir='column' h="100%" justifyContent="space-between">
-                    <CardTitle titleText={blog.title} fontSize="26px" pos="relative" />
-                    <HStack>
-                      <Icon as={AiFillTag} fill="white" />
-                      {blog.tags.map((tag, tagIdx) => (
-                        <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
-                      ))}
-                    </HStack>
-                  </Flex>
-                </MotionContainer>
+                  <MotionContainer
+                    backgroundImage={`/images/blog/${blog.path}.jpg`}
+                    backgroundSize='cover'
+                    cursor='pointer'
+                    colSpan={blog.size.colSpan}
+                    rowSpan={blog.size.rowSpan}
+                    p='24px'
+                    h='100%'
+                    w='100%'
+                    whileHover={{ scale: 1.04 }}
+                  >
+                    <Flex
+                      flexDir='column'
+                      h='100%'
+                      justifyContent='space-between'
+                    >
+                      <CardTitle
+                        titleText={blog.title}
+                        fontSize='26px'
+                        pos='relative'
+                      />
+                      <HStack>
+                        <Icon as={AiFillTag} fill='white' />
+                        {blog.tags.map((tag, tagIdx) => (
+                          <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
+                        ))}
+                      </HStack>
+                    </Flex>
+                  </MotionContainer>
                 </GridItem>
               </Link>
             );
