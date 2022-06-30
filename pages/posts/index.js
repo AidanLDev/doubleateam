@@ -83,13 +83,14 @@ export default function Posts({ blogs }) {
           <Link href={'/'}>Double A Team</Link>
         </Heading>
         <Input
-          variant='outline'
-          placeholder='Search...'
-          width='50%'
+          variant='filled'
+          placeholder='Blog Search...'
+          width='25%'
           value={filterValue}
           onChange={handleInputChange}
           _placeholder={{ opacity: 1, color: 'red' }}
           color='red'
+          background="rgba(11,11,11, 0.3)"
         />
         {
           <Text
@@ -129,8 +130,8 @@ export default function Posts({ blogs }) {
                   w='100%'
                   minH='600px'
                   maxH='600px'
-                  colSpan={isMobile ? 1 : blog.size.colSpan}
-                  rowSpan={isMobile ? 1 : blog.size.rowSpan}
+                  colSpan={isMobile || filterValue !== '' ? 1 : blog.size.colSpan}
+                  rowSpan={isMobile || filterValue !== '' ? 1 : blog.size.rowSpan}
                   _hover={{
                     boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
                   }}
