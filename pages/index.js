@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.scss';
 import { Box } from '@chakra-ui/react';
 import HomeBackground from '../components/HomeBackground';
 import HomeHeader from '../components/HomeHeader';

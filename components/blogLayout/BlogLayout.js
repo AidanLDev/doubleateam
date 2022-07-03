@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Box, useMediaQuery } from '@chakra-ui/react';
 import Head from 'next/head';
 import BackHomeLink from '../BackHomeLink';
+import Signature from '../Signature';
+
 import styles from './styles.module.scss';
 
 export default function BlogLayout({ children }) {
@@ -24,6 +26,7 @@ export default function BlogLayout({ children }) {
       </Head>
       <BackHomeLink blog />
       {children}
+      <Signature />
       <BackHomeLink />
     </Box>
   );
