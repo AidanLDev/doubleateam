@@ -20,6 +20,13 @@ a:hover {
   padding: 0 0 20px 0;
 }
 
+.blogLayout {
+  background-color: #fff;
+}
+/* .blogLayout div {
+
+} */
+
 .fadingText {
   animation: fadingAnimation 6s ease alternate infinite;
   opacity: 1;

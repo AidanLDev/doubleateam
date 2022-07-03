@@ -180,7 +180,23 @@ export default function HowToPassIelts() {
         Now you’ve got all that, all that’s left is the waiting game. Usually,
         the visa will take less than 3 months to process, however with the
         pandemic there’s a bit of a back log and it could take up to 4 months or
-        so.
+        so. The{' '}
+        <a
+          href='https://www.gov.uk/guidance/visa-decision-waiting-times-applications-outside-the-uk?msclkid=81bf9ef8d12311ec9cea32779cb8b0d4#join-family-in-the-uk'
+          target=''
+        >
+          current status of the waiting time can be seen here
+        </a>
+      </Text>
+      <Text>
+        About one month after we submitted our application, we received an email
+        saying the application had reached the UK Decision making centre. They
+        gave a final opportunity for us to provide any supporting docs via
+        VSFGlobal or by directly sending the documents to an address in
+        Birmingham England. Although they charged £100 to send the docs. It’s
+        reassuring to know that if you did forget to submit a particular doc at
+        the time of your application, it’s not your final chance to give UKVI
+        everything they need to make your application succeed.
       </Text>
       <Text>
         All the best of luck to you and we wish you and your partner a happy
