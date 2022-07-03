@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #eee !important;
 }
 
 a {
@@ -15,17 +16,6 @@ a:hover {
 * {
   box-sizing: border-box;
 }
-
-.blogHeading {
-  padding: 0 0 20px 0;
-}
-
-.blogLayout {
-  background-color: #fff;
-}
-/* .blogLayout div {
-
-} */
 
 .fadingText {
   animation: fadingAnimation 6s ease alternate infinite;

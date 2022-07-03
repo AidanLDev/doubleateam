@@ -3,7 +3,7 @@ import { Text, Heading, Box } from '@chakra-ui/react';
 
 export default function HomeHeader() {
   return (
-    <Box p='180px 6%'>
+    <Box p='180px 6%' zIndex='20'>
       <Link href='/posts/' passHref>
         <Text color='primary' fontSize='26px' p='0 0 0 8px'>
           <a>Blogs</a>

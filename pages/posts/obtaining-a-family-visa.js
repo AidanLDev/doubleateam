@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Heading, Text, List, ListItem } from '@chakra-ui/react';
-import BlogLayout from '../../components/BlogLayout';
+import BlogLayout from '../../components/blogLayout/BlogLayout';
+import StyledUL from '../../components/StyledUL';
 
 export default function HowToPassIelts() {
   return (

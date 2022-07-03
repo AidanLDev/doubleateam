@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { Heading, Text } from '@chakra-ui/react';
-import BlogLayout from '../../components/BlogLayout';
+import BlogLayout from '../../components/blogLayout/BlogLayout';
 
 export default function HowToPassIelts() {
   return (
     <BlogLayout>
-            <Head>
+      <Head>
         <title>Double A Team | What to do in Indonesia</title>
       </Head>
       <Heading className='blogHeading'>
