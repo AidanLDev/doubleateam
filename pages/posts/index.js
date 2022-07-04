@@ -62,6 +62,7 @@ export default function Posts({ blogs }) {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     flashingTextWidth = innerWidth;
     setTimeout(function () {
       timeoutFunction();
