@@ -100,12 +100,16 @@ export default function HowToPassIelts() {
         ]}
       />
       <Text>
-        In my opinion, this is the most difficult part, the actual documents
-        checklist is relatively short. However, if you want a really solid
-        application (which we all do, especially considering how pricy it is to
-        even apply), then you’re going to want to submit a lot of supporting
-        documents to make it undoubtable that you hit the criteria mentioned
-        above.
+        Documents can be submitted after you've completed the online application
+        and created an appointment at your biometric centre of choice. Once
+        you've booked an appointment, you can start submitting documents online
+        from when you book your appointment until 24 hours before your
+        appointment. There are add-ons you can pay for such as document scanning
+        assistance etc. The actual documents checklist is relatively short.
+        However, if you want a really solid application (which we all do,
+        especially considering how pricy it is to even apply), then you’re going
+        to want to submit a lot of supporting documents to make it undoubtable
+        that you hit the criteria mentioned above.
       </Text>
       <Heading size='sm'>Conditional Documents</Heading>
       <Text>
