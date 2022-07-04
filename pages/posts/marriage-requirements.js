@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Heading, Text } from '@chakra-ui/react';
-import BlogLayout from '../../components/blogLayout/BlogLayout/';
+import BlogLayout from '../../components/blogLayout/BlogLayout';
+import BlogTitle from '../../components/BlogTitle';
 
 export default function HowToPassIelts() {
   return (
@@ -8,9 +9,7 @@ export default function HowToPassIelts() {
       <Head>
         <title>Double A Team | Marriage Requirements</title>
       </Head>
-      <Heading className='blogHeading'>
-        Getting married to a foreigner in Indonesia
-      </Heading>
+      <BlogTitle text='Getting married to a foreigner in Indonesia' />
       <Text>
         Minim occaecat sunt voluptate exercitation sunt do. Enim esse dolor
         laborum incididunt magna occaecat. Aute esse sit magna fugiat minim non

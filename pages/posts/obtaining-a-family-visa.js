@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Heading, Text, List, ListItem } from '@chakra-ui/react';
+import { Heading, Text } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import StyledUL from '../../components/StyledUL';
+import BlogTitle from '../../components/BlogTitle';
 
 export default function HowToPassIelts() {
   return (
@@ -10,7 +11,7 @@ export default function HowToPassIelts() {
       <Head>
         <title>Double A Team | How to pass IELTs</title>
       </Head>
-      <Heading className='blogHeading'>Getting a UK Family Visa</Heading>
+      <BlogTitle text='Getting a UK Family Visa' />
       <Heading size='md'>Expenses</Heading>
       <Text>
         For the family visa it’s quite expensive. It cost us £1,682 for the
@@ -49,7 +50,11 @@ export default function HowToPassIelts() {
             text: 'Have you been declined entry or had a visa application declined before?',
           },
           {
-            text: 'Sadly, we had failed to obtain a visitor visa in the past, so we had to put down yes and explain a little about why. To get the wording100% we reached out and were advised to put the following (this will be specific to our situation as the reason the visitor visa was declined was due to UKVI thinking ties to the original country weren’t strong enough and by the end of the visa, they thought she wouldn’t leave the UK) I applied for a visit visa to the UK so I could spend some time with my husband (at the time fiancé) Aidan. I really wanted to spend some quality time with him and meet his family, but sadly the visa application was declined The ECO was not completely satisfied I would return to Indonesia at the end of the trip',
+            text: 'Sadly, we had failed to obtain a visitor visa in the past, so we had to put down yes and explain a little about why. Hopefully our wording can help you if you find yourself in a similar situation',
+            isNested: true,
+          },
+          {
+            text: '"I applied for a visit visa to the UK so I could spend some time with my husband (at the time fiancé) Aidan. I really wanted to spend some quality time with him and meet his family, but sadly the visa application was declined The ECO was not completely satisfied I would return to Indonesia at the end of the trip"',
             isNested: true,
           },
         ]}
@@ -105,11 +110,14 @@ export default function HowToPassIelts() {
         you've booked an appointment, you can start submitting documents online
         from when you book your appointment until 24 hours before your
         appointment. There are add-ons you can pay for such as document scanning
-        assistance etc. The actual documents checklist is relatively short.
-        However, if you want a really solid application (which we all do,
-        especially considering how pricy it is to even apply), then you’re going
-        to want to submit a lot of supporting documents to make it undoubtable
-        that you hit the criteria mentioned above.
+        assistance etc.
+      </Text>
+      <Text>
+        The actual documents checklist is relatively short. However, if you want
+        a really solid application (which we all do, especially considering how
+        pricy it is to even apply), then you’re going to want to submit a lot of
+        supporting documents to make it undoubtable that you hit the criteria
+        mentioned above.
       </Text>
       <Heading size='sm'>Conditional Documents</Heading>
       <Text>

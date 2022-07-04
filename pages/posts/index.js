@@ -39,7 +39,7 @@ export default function Posts({ blogs }) {
   const [isMobile, setIsMobile] = useState(false);
   const [mediaQuery] = useMediaQuery('(max-width: 750px)');
 
-  let winWidth;
+  let flashingTextWidth;
 
   useEffect(() => {
     setIsMobile(mediaQuery);
@@ -62,7 +62,7 @@ export default function Posts({ blogs }) {
   };
 
   useEffect(() => {
-    winWidth = window.innerWidth;
+    flashingTextWidth = innerWidth;
     setTimeout(function () {
       timeoutFunction();
     }, 12000);
@@ -96,7 +96,7 @@ export default function Posts({ blogs }) {
           <Text
             position='absolute'
             top={Math.floor(Math.random() * 300 + 100)}
-            left={Math.floor(Math.random() * winWidth)}
+            left={Math.floor(Math.random() * flashingTextWidth || 800)}
             fontSize='6xl'
             className='fadingText'
           >
@@ -107,7 +107,6 @@ export default function Posts({ blogs }) {
       <Text fontSize='42px' align='center' color='red' padding='24px 0'>
         Spreading what we know, with those who want to know
       </Text>
-      {/* TODO: Check screen size, if it's small reduce grid to 1/1 */}
       <Grid
         gap={24}
         templateColumns={`repeat(${isMobile ? '1' : '3'}, 1fr)`}

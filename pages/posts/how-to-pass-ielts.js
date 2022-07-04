@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import { Heading, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
+import BlogTitle from '../../components/BlogTitle';
 
 export default function HowToPassIelts() {
   return (
@@ -8,9 +9,7 @@ export default function HowToPassIelts() {
       <Head>
         <title>Double A Team | How to pass IELTs</title>
       </Head>
-      <Heading className='blogHeading'>
-        How to get an IELTS A1 Certification for UKVI Family Visa Applications
-      </Heading>
+      <BlogTitle text='How to get an IELTS A1 Certification for UKVI Family Visa Applications' />
       <Text>
         Est quis qui elit laborum cillum duis dolor. Nulla duis aute culpa
         cupidatat id ullamco nostrud deserunt enim anim. Ad quis consectetur ad

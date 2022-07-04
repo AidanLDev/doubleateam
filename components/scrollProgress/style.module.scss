@@ -1,0 +1,11 @@
+@import 'styles/variables.scss';
+.progressIcon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: 120px;
+  @media(max-width: $isMobile) {
+    left: 0;
+  }
+}
