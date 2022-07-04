@@ -10,9 +10,9 @@ export default function HomeBackground() {
       h='100vh'
       w='100%'
       pos='absolute'
-      zIndex='-1'
+      zIndex='10'
       backgroundSize='cover'
-      borderBottom='2px solid'
+      borderBottom='2px solid red'
     />
   );
 }

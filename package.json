@@ -10,17 +10,19 @@
     "export": "next export"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.8.6",
+    "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/aguafina-script": "^4.5.8",
     "@fontsource/aldrich": "^4.5.1",
     "@fontsource/nerko-one": "^4.5.2",
     "@fontsource/open-sans": "^4.5.6",
     "framer-motion": "^6.2.8",
-    "next": "12.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.3.1"
+    "next": "12.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "sass": "^1.53.0"
   },
   "devDependencies": {
     "eslint": "8.11.0",

@@ -1,13 +1,11 @@
-import { Icon } from "@chakra-ui/react";
+import { Icon } from '@chakra-ui/react';
 
-
-export default function FooterIcon ({icon, link}) {
+export default function FooterIcon({ icon, link, hoverColour }) {
   return (
     <>
-      <a href={link} target="_blank" rel="noreferrer">
-        <Icon as={icon} cursor='pointer'/>
-     </a>
+      <a href={link} target='_blank' rel='noreferrer'>
+        <Icon as={icon} cursor='pointer' _hover={{ color: hoverColour }} />
+      </a>
     </>
-  )
-
+  );
 }
