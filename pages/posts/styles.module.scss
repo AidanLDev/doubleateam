@@ -1,0 +1,10 @@
+@import 'styles/variables';
+.logo {
+  a {
+    font-size: 56px;
+    @media(max-width: $isMobile) {
+      font-size: 42px;
+    }
+  }
+
+}

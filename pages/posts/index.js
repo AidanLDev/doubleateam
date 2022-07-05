@@ -13,6 +13,7 @@ import {
   Tag,
   Icon,
   useMediaQuery,
+  Divider,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { AiFillTag } from 'react-icons/ai';
@@ -21,6 +22,7 @@ import { messages } from '../../lib/messages';
 import BackHomeLink from '../../components/BackHomeLink';
 import Footer from '../../components/Footer';
 import CardTitle from '../../components/CardTitle';
+import styles from './styles.module.scss';
 
 export async function getStaticProps() {
   const blogs = getBlogPostPaths();
@@ -74,25 +76,20 @@ export default function Posts({ blogs }) {
       <Head>
         <title>Double A Team | Blogs</title>
       </Head>
-      <Flex
+      <Box
         height='500px'
         backgroundImage='url(/images/sky2-resize.jpg)'
         padding='20px'
         borderBottom='2px solid red'
       >
-        <Heading color='primary' width='50%'>
+        <Heading
+          color='primary'
+          width='50%'
+          margin='0 38%'
+          className={styles.logo}
+        >
           <Link href={'/'}>Double A Team</Link>
         </Heading>
-        <Input
-          variant='filled'
-          placeholder='Blog Search...'
-          width='25%'
-          value={filterValue}
-          onChange={handleInputChange}
-          _placeholder={{ opacity: 1, color: 'red' }}
-          color='red'
-          background='rgba(11,11,11, 0.3)'
-        />
         {
           <Text
             position='absolute'
@@ -106,7 +103,7 @@ export default function Posts({ blogs }) {
             {messages[messageCount]}
           </Text>
         }
-      </Flex>
+      </Box>
       <Text
         fontSize={isMobile ? '32px' : '42px'}
         align='center'
@@ -115,6 +112,20 @@ export default function Posts({ blogs }) {
       >
         Spreading what we know, with those who want to know
       </Text>
+      <Divider borderColor='red' />
+      <Flex>
+        <Input
+          variant='filled'
+          placeholder='Blog Search...'
+          width='25%'
+          value={filterValue}
+          onChange={handleInputChange}
+          _placeholder={{ opacity: 1, color: 'red' }}
+          color='red'
+          margin='20px auto'
+          minW='200px'
+        />
+      </Flex>
       <Grid
         gap={24}
         templateColumns={`repeat(${isMobile ? '1' : '3'}, 1fr)`}
