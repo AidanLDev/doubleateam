@@ -63,7 +63,7 @@ export default function Posts({ blogs }) {
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    flashingTextWidth = innerWidth;
+    flashingTextWidth = window.innerWidth;
     setTimeout(function () {
       timeoutFunction();
     }, 12000);
@@ -97,15 +97,22 @@ export default function Posts({ blogs }) {
           <Text
             position='absolute'
             top={Math.floor(Math.random() * 300 + 100)}
-            left={Math.floor(Math.random() * flashingTextWidth || 800)}
-            fontSize='6xl'
+            left={Math.floor(
+              Math.random() * flashingTextWidth || isMobile ? 200 : 800
+            )}
+            fontSize={isMobile ? 'large' : '6xl'}
             className='fadingText'
           >
             {messages[messageCount]}
           </Text>
         }
       </Flex>
-      <Text fontSize='42px' align='center' color='red' padding='24px 0'>
+      <Text
+        fontSize={isMobile ? '32px' : '42px'}
+        align='center'
+        color='red'
+        padding='24px 0'
+      >
         Spreading what we know, with those who want to know
       </Text>
       <Grid
