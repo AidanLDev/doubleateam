@@ -3,9 +3,14 @@ import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 
 export default function HowToPassIelts() {
-  const blogTitle = 'How to get an IELTS A1 Certification for UKVI Family Visa Applications'
+  const blogTitle =
+    'How to get an IELTS A1 Certification for UKVI Family Visa Applications';
   return (
-    <BlogLayout title="Double A Team | How to pass IELTs" description={blogTitle}>
+    <BlogLayout
+      title='Double A Team | How to pass IELTs'
+      description={blogTitle}
+      postUrl='how-to-pass-ielts'
+    >
       <BlogTitle text={blogTitle} />
       <Text>
         Est quis qui elit laborum cillum duis dolor. Nulla duis aute culpa

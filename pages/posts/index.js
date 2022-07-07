@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import {
@@ -75,8 +74,9 @@ export default function Posts({ blogs }) {
   return (
     <>
       <SEO
-        title="Double A Team | Blogs"
+        title='Double A Team | Blogs'
         description="All of the blogs we've written, scroll through and pick whatever takes your fancy or search via tags or by blog title if you have something specific in mind."
+        url='https://doubleateam.co.uk/posts'
       />
       <Box
         height='500px'

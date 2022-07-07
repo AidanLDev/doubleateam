@@ -6,9 +6,13 @@ import StyledUL from '../../components/StyledUL';
 import BlogTitle from '../../components/BlogTitle';
 
 export default function HowToPassIelts() {
-  const blogTitle = 'Getting a UK Family Visa' 
+  const blogTitle = 'Getting a UK Family Visa';
   return (
-    <BlogLayout title="Double A Team | UK Family Visa Guide" description={blogTitle}>
+    <BlogLayout
+      title='Double A Team | UK Family Visa Guide'
+      description={blogTitle}
+      postUrl='obtaining-a-family-visa'
+    >
       <BlogTitle text={blogTitle} />
       <Heading size='md'>Expenses</Heading>
       <Text>

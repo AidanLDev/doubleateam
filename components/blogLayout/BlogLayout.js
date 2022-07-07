@@ -7,7 +7,7 @@ import SEO from '../SEO';
 
 import styles from './styles.module.scss';
 
-export default function BlogLayout({ title, description ,children }) {
+export default function BlogLayout({ title, description, children, postUrl }) {
   const [isMobile, setIsMobile] = useState(false);
   const [mediaQuery] = useMediaQuery('(max-width: 575px)');
 
@@ -25,6 +25,7 @@ export default function BlogLayout({ title, description ,children }) {
       <SEO
         title={title}
         description={description}
+        url={`https://doubleateam.co.uk/posts/${postUrl}`}
       />
       <ScrollProgress isMobile={isMobile} />
       <BackHomeLink blog />

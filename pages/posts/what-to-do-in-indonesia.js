@@ -3,9 +3,13 @@ import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 
 export default function HowToPassIelts() {
-  const blogTitle = 'How to spend your time in Indonesia'
+  const blogTitle = 'How to spend your time in Indonesia';
   return (
-    <BlogLayout title="Double A Team | What to do in Indonesia" description={blogTitle}>
+    <BlogLayout
+      title='Double A Team | What to do in Indonesia'
+      description={blogTitle}
+      postUrl='what-to-do-in-indonesia'
+    >
       <BlogTitle text={blogTitle} />
       <Text>
         Minim occaecat sunt voluptate exercitation sunt do. Enim esse dolor

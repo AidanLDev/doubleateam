@@ -3,9 +3,13 @@ import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 
 export default function HowToPassIelts() {
-  const blogTitle = 'Getting married to a foreigner in Indonesia'
+  const blogTitle = 'Getting married to a foreigner in Indonesia';
   return (
-    <BlogLayout title="Double A Team | Marriage Requirements" description={blogTitle}>
+    <BlogLayout
+      title='Double A Team | Marriage Requirements'
+      description={blogTitle}
+      postUrl='marriage-requirements'
+    >
       <BlogTitle text={blogTitle} />
       <Text>
         Minim occaecat sunt voluptate exercitation sunt do. Enim esse dolor
