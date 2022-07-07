@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import Head from 'next/head';
 import Link from 'next/link';
 import { Heading, Text } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
@@ -7,12 +6,10 @@ import StyledUL from '../../components/StyledUL';
 import BlogTitle from '../../components/BlogTitle';
 
 export default function HowToPassIelts() {
+  const blogTitle = 'Getting a UK Family Visa' 
   return (
-    <BlogLayout>
-      <Head>
-        <title>Double A Team | How to pass IELTs</title>
-      </Head>
-      <BlogTitle text='Getting a UK Family Visa' />
+    <BlogLayout title="Double A Team | UK Family Visa Guide" description={blogTitle}>
+      <BlogTitle text={blogTitle} />
       <Heading size='md'>Expenses</Heading>
       <Text>
         For the family visa it’s quite expensive. It cost us £1,682 for the

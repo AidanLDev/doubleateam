@@ -23,6 +23,7 @@ import BackHomeLink from '../../components/BackHomeLink';
 import Footer from '../../components/Footer';
 import CardTitle from '../../components/CardTitle';
 import styles from './styles.module.scss';
+import SEO from '../../components/SEO';
 
 export async function getStaticProps() {
   const blogs = getBlogPostPaths();
@@ -73,9 +74,10 @@ export default function Posts({ blogs }) {
 
   return (
     <>
-      <Head>
-        <title>Double A Team | Blogs</title>
-      </Head>
+      <SEO
+        title="Double A Team | Blogs"
+        description="All of the blogs we've written, scroll through and pick whatever takes your fancy or search via tags or by blog title if you have something specific in mind."
+      />
       <Box
         height='500px'
         backgroundImage='url(/images/sky2-resize.jpg)'

@@ -1,15 +1,12 @@
-import Head from 'next/head';
-import { Heading, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 
 export default function HowToPassIelts() {
+  const blogTitle = 'How to spend your time in the UK'
   return (
-    <BlogLayout>
-      <Head>
-        <title>Double A Team | What to do in the UK</title>
-      </Head>
-      <BlogTitle text='How to spend your time in the UK' />
+    <BlogLayout title="Double A Team | What to do in the UK" description={blogTitle}>
+      <BlogTitle text={blogTitle} />
       <Text>
         Minim occaecat sunt voluptate exercitation sunt do. Enim esse dolor
         laborum incididunt magna occaecat. Aute esse sit magna fugiat minim non

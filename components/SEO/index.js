@@ -8,6 +8,7 @@ const SEO = ({ title, description, image }) => {
       <meta itemProp='name' content={title} />
       <meta itemProp='description' content={description} />
       {image && <meta itemProp='image' content={image} />}
+      <link rel="icon" href='/favicon.ico' />
     </Head>
   );
 };
