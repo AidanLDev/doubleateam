@@ -14,6 +14,9 @@ export default function HowToPassIelts() {
       postUrl='obtaining-a-family-visa'
     >
       <BlogTitle text={blogTitle} />
+      <Text>
+        The family visa, in the past there were a couple more visas such as the parent visa or even the child visa, however now these all fall under the family visa category. Just to clear up any confusion, as when we first started this process, we had no idea what the type of visa we actually wanted was. There are also fiance/fiancee visas or spouse visa types, with a fiance/spouse visa you can stay in the UK for up to 6 months, however one of the requirements is that you must get married within this time period. If you do so, you can then apply to extend your stay and obtain a family visa (this can be a viable route if you and your partner both want to marry in the UK, however it's going to be a pricy one as you'll have to pay for both the fiance/spouse visa application then the family visa. We'll get onto family visa pricing further down).
+      </Text>
       <Heading size='md'>Expenses</Heading>
       <Text>
         For the family visa it’s quite expensive. It cost us £1,682 for the
@@ -283,6 +286,10 @@ export default function HowToPassIelts() {
         reassuring to know that if you did forget to submit a particular doc at
         the time of your application, it’s not your final chance to give UKVI
         everything they need to make your application succeed.
+      </Text>
+      <Heading size='md'>Visa Duration</Heading>
+      <Text>
+        With a UK family visa, you can initially stay in the UK for 2 years and 9 months. After this you'll be able to apply to extend your stay for another 2 years and 6 months. After you have lived in the UK for 5 years continuously on a family visa, you can apply to settle in the UK (called indefinite leave to remain or to put it in even simpler words, permanent residence).
       </Text>
       <Text>
         All the best of luck to you and we wish you and your partner a happy
