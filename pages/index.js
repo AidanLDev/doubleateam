@@ -24,6 +24,7 @@ export default function Home({ blogs }) {
         title='Double A Team'
         description='A website built through our passion of helping others, learning and growing. Come learn what we know, if you want to know that is!'
         url='https://doubleateam.co.uk/'
+        image='/images/IstanbulHagiaSopia.jpg'
       />
       <Box className={styles.main}>
         <HomeBackground />

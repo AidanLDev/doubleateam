@@ -77,6 +77,7 @@ export default function Posts({ blogs }) {
         title='Double A Team | Blogs'
         description="All of the blogs we've written, scroll through and pick whatever takes your fancy or search via tags or by blog title if you have something specific in mind."
         url='https://doubleateam.co.uk/posts'
+        image='/images/IstanbulHagiaSopia.jpg'
       />
       <Box
         height='500px'

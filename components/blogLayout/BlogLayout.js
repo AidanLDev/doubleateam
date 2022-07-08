@@ -26,10 +26,11 @@ export default function BlogLayout({ title, description, children, postUrl }) {
         title={title}
         description={description}
         url={`https://doubleateam.co.uk/posts/${postUrl}`}
+        image='/images/IstanbulHagiaSopia.jpg'
       />
       <ScrollProgress isMobile={isMobile} />
       <BackHomeLink blog />
-      {children}
+        {children}
       <Signature />
       <BackHomeLink />
     </Box>
