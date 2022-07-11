@@ -4,7 +4,7 @@ export default function HomeBackground() {
   return (
     <Box
       bg='main'
-      bgImage='url(/images/IstanbulHagiaSopia.png)'
+      bgImage='url(/images/IstanbulHagiaSopia.jpg)'
       backgroundPosition='center'
       backgroundRepeat='no-repeat'
       h='100vh'
