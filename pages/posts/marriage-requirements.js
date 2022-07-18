@@ -66,7 +66,25 @@ export default function HowToPassIelts() {
           {text: 'KK'}
         ]}
       />
-      <Text>These docs may not be necessary however some areas may have stricter KUAs and will require the following:</Text>
+      <Text>
+        Again these docs may not be necessary however some KUAs will ask for the following:
+      </Text>
+      <StyledUL
+        items={[
+          {text: 'Parents KTP and KK'},
+          {text: 'Death certificate (if parents have passed away)'},
+          {text: 'ID cards of 2 witnesses'}
+        ]}
+      />
+      <Heading size="md">Photos</Heading>
+      <Text>
+      You will both need to get professional photos taken where with the following format: 
+      2 x 3 with a blue background – 3 sheets 
+      </Text>
+      <Text>
+      English documents will need to be translated by an approved sworn translator; we used the Juliani Language Centre (WA: +62 818-588-036) 
+      <a>A list of translators provided by the British gov site.</a>
+      </Text>
     </BlogLayout>
   );
 }
