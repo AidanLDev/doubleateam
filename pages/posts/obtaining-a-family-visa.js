@@ -4,6 +4,7 @@ import { Heading, Text } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import StyledUL from '../../components/StyledUL';
 import BlogTitle from '../../components/BlogTitle';
+import SimpleLink from '../../components/SimpleLink';
 
 export default function HowToPassIelts() {
   const blogTitle = 'Getting a UK Family Visa';
@@ -38,30 +39,20 @@ export default function HowToPassIelts() {
       <Heading size='md'>Visa Consultant</Heading>
       <Text>
         That’s why we hired a visa consultant from{' '}
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://www.i-vars.com/'
-        >
-          I-vars
-        </a>
-        . Their service was unbelievably helpful, they start with an initial
-        call, going through the process itself and they get to understand you
-        and your situation so they can know how to best help. Once signed up
-        they send a pack with all the information about the visa application
-        process and documents required to get the approval we all need. They
-        will review any documents and give guidance throughout the process.
+        <SimpleLink link='https://www.i-vars.com/'>I-vars</SimpleLink>. Their
+        service was unbelievably helpful, they start with an initial call, going
+        through the process itself and they get to understand you and your
+        situation so they can know how to best help. Once signed up they send a
+        pack with all the information about the visa application process and
+        documents required to get the approval we all need. They will review any
+        documents and give guidance throughout the process.
       </Text>
       <Heading size='md'>The application</Heading>
       <Text>
         On to the application itself then, it’s all done online{' '}
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://www.gov.uk/uk-family-visa/partner-spouse'
-        >
+        <SimpleLink link='https://www.gov.uk/uk-family-visa/partner-spouse'>
           here through the gov website.
-        </a>{' '}
+        </SimpleLink>{' '}
         The majority of questions are self-explanatory. A few stand out ones
         that could do with some further clarification:
       </Text>
@@ -155,13 +146,9 @@ export default function HowToPassIelts() {
       <Heading size='xs'>TB Test</Heading>
       <Text>
         To find out if your country is listed as needing a TB test,{' '}
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://www.gov.uk/tb-test-visa/countries-where-you-need-a-tb-test-to-enter-the-uk'
-        >
+        <SimpleLink link='https://www.gov.uk/tb-test-visa/countries-where-you-need-a-tb-test-to-enter-the-uk'>
           visit this site provided by the British Government
-        </a>
+        </SimpleLink>
       </Text>
       <Heading size='xs'>English Test</Heading>
       <Text>
@@ -219,13 +206,9 @@ export default function HowToPassIelts() {
       <Text>
         More information about the CELT and a list of approved test centres in
         your country{' '}
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt'
-        >
+        <SimpleLink link='https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt'>
           can be found here on the GOV website
-        </a>
+        </SimpleLink>
       </Text>
       <Heading size='sm'>General Documents</Heading>
       <Text>
@@ -280,13 +263,9 @@ export default function HowToPassIelts() {
         for them. Now all that’s left is the waiting game. Usually, the visa
         will take less than 3 months to process, however with the pandemic
         there’s a bit of a back log and it could take up to 4 months or so. The{' '}
-        <a
-          href='https://www.gov.uk/guidance/visa-decision-waiting-times-applications-outside-the-uk?msclkid=81bf9ef8d12311ec9cea32779cb8b0d4#join-family-in-the-uk'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
+        <SimpleLink link='https://www.gov.uk/guidance/visa-decision-waiting-times-applications-outside-the-uk?msclkid=81bf9ef8d12311ec9cea32779cb8b0d4#join-family-in-the-uk'>
           current status of the waiting time can be seen here
-        </a>
+        </SimpleLink>
       </Text>
       <Text>
         About one month after we submitted our application, we received an email
