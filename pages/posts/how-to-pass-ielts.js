@@ -24,8 +24,8 @@ export default function HowToPassIelts() {
         the exam confident, knowing exactly what to expect.
       </Text>
       <Text>
-        Here is the structure of the exam, it's broken up into 4 phases 1A, 1B,
-        2A and 2B:
+        Here is the structure of the exam, it&apos;s broken up into 4 phases 1A,
+        1B, 2A and 2B:
         <Flex justify='center'>
           <Image
             alt='IELTs A1 exam structure'
@@ -35,7 +35,7 @@ export default function HowToPassIelts() {
       </Text>
       <Heading size='md'>Test Providers</Heading>
       <Text>
-        To get a UK family visa, you'll need to prove your English speaking
+        To get a UK family visa, you&apos;ll need to prove your English speaking
         skills by passing a secure English language test (SELT). The IELTs test
         is one of the popular ones as they have a few different providers.
         <SimpleLink link='https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt'>
@@ -126,8 +126,8 @@ export default function HowToPassIelts() {
         <SimpleLink link='https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt#approved-test-centres'>
           A list of approved test centres can be found here on the gov website.
         </SimpleLink>{' '}
-        Now you know where, it's now just up to you to book the test when you
-        feel comfortabke and get that certificate! (You can do it!)
+        Now you know where, it&apos;s now just up to you to book the test when
+        you feel comfortabke and get that certificate! (You can do it!)
       </Text>
     </BlogLayout>
   );
