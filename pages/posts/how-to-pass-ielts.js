@@ -1,8 +1,66 @@
-import { Text, Heading, Image, Flex } from '@chakra-ui/react';
+import React from 'react';
+import { Text, Heading, Image, Flex, Box } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 import SimpleLink from '../../components/SimpleLink';
 import StyledUL from '../../components/StyledUL';
+
+// const rows = [
+//     'IELTS Life Skills – A1 Speaking & Listening',
+//     'IELTS SELT Consortium',
+//     'Pass',
+//     <Box>
+//       <SimpleLink link='https://www.ielts.org/about-ielts/ielts-for-migration/united-kingdom/ielts-life-skills'>
+//         Providers website
+//       </SimpleLink>{' '}
+//       <SimpleLink link='https://www.ielts.org/for-test-takers/book-a-test'>
+//         Book a test here
+//       </SimpleLink>
+//     </Box>,
+//     '3.4m IDR (est £189)',
+//     'Within one week'
+// ];
+
+//  https://chakra-ui.com/docs/components/table/usage
+
+{
+  /* Table data
+        
+        IELTS Life Skills – A1 Speaking & Listening
+        Test Provider - IELTS SELT Consortium
+        Minimum score required – Pass
+        Providers website https://www.ielts.org/about-ielts/ielts-for-migration/united-kingdom/ielts-life-skills
+        Book a test here https://www.ielts.org/for-test-takers/book-a-test
+        Price – 3.4m IDR
+        Results time – within one week
+
+        LanguageCert International ESOL SELT A1 (Speaking & Listening)
+        Test Provider – LanguageCert
+        Minimum score required – 60/100
+        Providers Website https://www.languagecert.org/en/language-exams/english/languagecert-selt/a1-sl-2730
+        Book a test here https://selt.languagecert.org/?exam=A104EE3F80A249B9A74B3C1862FE3CE9&country=50EB9A019EAB4678AE83D2DA8A4EC680
+        Price – 165 USD (est 2.37m IDR)
+        Results time – 5 working days
+        Address - The Indonesia Int`L Educ.Foundation, Menara Imperium 28Th Floor Suite B, Jakarta, 12980, IDN
+
+        PTE Home A1
+        Test provider – Pearson
+        Minimum score required – Pass
+        Providers Website https://www.pearsonpte.com/selt-tests/pte-academic-ukvi
+        Book a test here https://findseats.pearsonvue.com/testtaker/registration/CombinedTestCenterSearchPage/PEARSONLANGUAGE?conversationId=191788
+        Price – N/A (Couldn’t find on site)
+        Note – Low availability, possibly due to pandemic
+        Results time -
+
+        Skills for English UKVI A1 (2 component)
+        Test Provider – PSI Service (UK) Ltd
+        Minimum score required – Pass
+        Providers Website https://www.psionline.com/en-gb/certification/skills-for-english/
+        Price – 210 USD (est 3m IDR)
+        Results time - >14 Days
+        Address - Jakarta - PT. International Test Center (SfE) Plaza Sentral 17th Floor, Jakarta, Indonesia
+      */
+}
 
 export default function HowToPassIelts() {
   const blogTitle =
@@ -81,42 +139,7 @@ export default function HowToPassIelts() {
       <Text>
         Some information regarding a few of the different test providers that
         they have in Indonesia:
-        {/* TODO: Add a table comparing these 3
-        
-        IELTS Life Skills – A1 Speaking & Listening
-        Test Provider - IELTS SELT Consortium
-        Minimum score required – Pass
-        Providers website https://www.ielts.org/about-ielts/ielts-for-migration/united-kingdom/ielts-life-skills
-        Book a test here https://www.ielts.org/for-test-takers/book-a-test
-        Price – 3.4m IDR
-        Results time – within one week
-
-        LanguageCert International ESOL SELT A1 (Speaking & Listening)
-        Test Provider – LanguageCert
-        Minimum score required – 60/100
-        Providers Website https://www.languagecert.org/en/language-exams/english/languagecert-selt/a1-sl-2730
-        Book a test here https://selt.languagecert.org/?exam=A104EE3F80A249B9A74B3C1862FE3CE9&country=50EB9A019EAB4678AE83D2DA8A4EC680
-        Price – 165 USD (est 2.37m IDR)
-        Results time – 5 working days
-        Address - The Indonesia Int`L Educ.Foundation, Menara Imperium 28Th Floor Suite B, Jakarta, 12980, IDN
-
-        PTE Home A1
-        Test provider – Pearson
-        Minimum score required – Pass
-        Providers Website https://www.pearsonpte.com/selt-tests/pte-academic-ukvi
-        Book a test here https://findseats.pearsonvue.com/testtaker/registration/CombinedTestCenterSearchPage/PEARSONLANGUAGE?conversationId=191788
-        Price – N/A (Couldn’t find on site)
-        Note – Low availability, possibly due to pandemic
-        Results time -
-
-        Skills for English UKVI A1 (2 component)
-        Test Provider – PSI Service (UK) Ltd
-        Minimum score required – Pass
-        Providers Website https://www.psionline.com/en-gb/certification/skills-for-english/
-        Price – 210 USD (est 3m IDR)
-        Results time - >14 Days
-        Address - Jakarta - PT. International Test Center (SfE) Plaza Sentral 17th Floor, Jakarta, Indonesia
-      */}
+        {/* TODO Add table here */}
       </Text>
       <Heading size='md'>Finding a test centre</Heading>
       <Text>
