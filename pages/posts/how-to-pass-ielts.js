@@ -1,66 +1,23 @@
 import React from 'react';
-import { Text, Heading, Image, Flex, Box } from '@chakra-ui/react';
+import {
+  Text,
+  Heading,
+  Image,
+  Flex,
+  Box,
+  Table,
+  TableContainer,
+  TableCaption,
+  Thead,
+  Th,
+  Tr,
+  Td,
+  Tbody,
+} from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 import SimpleLink from '../../components/SimpleLink';
 import StyledUL from '../../components/StyledUL';
-
-// const rows = [
-//     'IELTS Life Skills – A1 Speaking & Listening',
-//     'IELTS SELT Consortium',
-//     'Pass',
-//     <Box>
-//       <SimpleLink link='https://www.ielts.org/about-ielts/ielts-for-migration/united-kingdom/ielts-life-skills'>
-//         Providers website
-//       </SimpleLink>{' '}
-//       <SimpleLink link='https://www.ielts.org/for-test-takers/book-a-test'>
-//         Book a test here
-//       </SimpleLink>
-//     </Box>,
-//     '3.4m IDR (est £189)',
-//     'Within one week'
-// ];
-
-//  https://chakra-ui.com/docs/components/table/usage
-
-{
-  /* Table data
-        
-        IELTS Life Skills – A1 Speaking & Listening
-        Test Provider - IELTS SELT Consortium
-        Minimum score required – Pass
-        Providers website https://www.ielts.org/about-ielts/ielts-for-migration/united-kingdom/ielts-life-skills
-        Book a test here https://www.ielts.org/for-test-takers/book-a-test
-        Price – 3.4m IDR
-        Results time – within one week
-
-        LanguageCert International ESOL SELT A1 (Speaking & Listening)
-        Test Provider – LanguageCert
-        Minimum score required – 60/100
-        Providers Website https://www.languagecert.org/en/language-exams/english/languagecert-selt/a1-sl-2730
-        Book a test here https://selt.languagecert.org/?exam=A104EE3F80A249B9A74B3C1862FE3CE9&country=50EB9A019EAB4678AE83D2DA8A4EC680
-        Price – 165 USD (est 2.37m IDR)
-        Results time – 5 working days
-        Address - The Indonesia Int`L Educ.Foundation, Menara Imperium 28Th Floor Suite B, Jakarta, 12980, IDN
-
-        PTE Home A1
-        Test provider – Pearson
-        Minimum score required – Pass
-        Providers Website https://www.pearsonpte.com/selt-tests/pte-academic-ukvi
-        Book a test here https://findseats.pearsonvue.com/testtaker/registration/CombinedTestCenterSearchPage/PEARSONLANGUAGE?conversationId=191788
-        Price – N/A (Couldn’t find on site)
-        Note – Low availability, possibly due to pandemic
-        Results time -
-
-        Skills for English UKVI A1 (2 component)
-        Test Provider – PSI Service (UK) Ltd
-        Minimum score required – Pass
-        Providers Website https://www.psionline.com/en-gb/certification/skills-for-english/
-        Price – 210 USD (est 3m IDR)
-        Results time - >14 Days
-        Address - Jakarta - PT. International Test Center (SfE) Plaza Sentral 17th Floor, Jakarta, Indonesia
-      */
-}
 
 export default function HowToPassIelts() {
   const blogTitle =
@@ -90,6 +47,53 @@ export default function HowToPassIelts() {
             src='/images/IELTSA1TestStructure.jpeg'
           />
         </Flex>
+      </Text>
+      <Heading size='md'>How we prepared for the test</Heading>
+      <Text>
+        There&apos;s a lot of great free resources outthere that can make you as
+        prepared as you&apos;ll ever be to pass the IELTs test. To get a better
+        understanding of the structure of the test, going through a{' '}
+        <SimpleLink link='https://www.ielts.org/about-ielts/ielts-for-migration/united-kingdom/ielts-life-skills'>
+          sample test on ielts.org
+        </SimpleLink>
+        . There are two samples on this website, paper A and B, both have their
+        own audio tracks which should be played to answer the phase 2a
+        questions.
+      </Text>
+      <Text>
+        Seeing where your weak points are by going through a practise test is
+        really valuable, so you can focus on the area you need to improve in. If
+        it&apos;s the speaking phases of the test, phase 1a, 2a and 2b, going
+        through{' '}
+        <SimpleLink link='https://www.ieltsdeal.com/ielts-life-skills-level-a1-speaking-basic-questions-with-answers/'>
+          this list of practise questions
+        </SimpleLink>{' '}
+        and understanding the example answers given should help. However if
+        it&apos;s the listening segmant, phase 2a, that you struggle with,
+        there&apos;s a bunch of{' '}
+        <SimpleLink link='https://www.ielts.org/for-test-takers/sample-test-questions'>
+          practise listening questions here on the IELTs website.
+        </SimpleLink>
+      </Text>
+      <Text>
+        A really valuable resource that can help you see how these exams are
+        taken out is YouTube playlist, go through some of the{' '}
+        <SimpleLink link='https://www.youtube.com/watch?v=iXm_rcv0GJA&list=PLOdYbfVGcVAaQcbaVFaE_S2ylP9Fib6Me&index=5'>
+          IELTS Life Skills A1 Speaking and Listening videos
+        </SimpleLink>{' '}
+        and pay attention to the answers given. Just going through a couple of
+        these to really drill the format of the test into your mind will be
+        super helpful.
+      </Text>
+      {/* List of a1 speaking basic questions with answers:  */}
+      <Heading size='lg'>Useful information for booking a test</Heading>
+      <Text>
+        Now we have gone through some tips that should help you prepare for your
+        test, when it comes to booking the IELTs A1 test, there are a few things
+        you should keep in mind. We will compare the different test providers
+        and make it clear which ones are approved by the UK government so you
+        can have peace of mind that the certificate you&apos;re getting is going
+        to be the right one for getting a UK Visa.
       </Text>
       <Heading size='md'>Test Providers</Heading>
       <Text>
@@ -139,7 +143,99 @@ export default function HowToPassIelts() {
       <Text>
         Some information regarding a few of the different test providers that
         they have in Indonesia:
-        {/* TODO Add table here */}
+        <TableContainer>
+          {/* TODO: play with variant */}
+          <Table variant={'unstyled'}>
+            <TableCaption>Test Provider Comparison</TableCaption>
+            <Thead>
+              <Tr>
+                <Th>Test Format</Th>
+                <Th>Provider</Th>
+                <Th>Min Score Required</Th>
+                <Th>Useful Links</Th>
+                <Th>Price</Th>
+                <Th>Result Time</Th>
+                <Th>Address</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>IELTS Life Skills – A1 Speaking & Listening</Td>
+                <Td>IELTS SELT Consortium</Td>
+                <Td>Pass</Td>
+                <Td>
+                  {' '}
+                  <Box>
+                    <SimpleLink link='https://www.ielts.org/about-ielts/ielts-for-migration/united-kingdom/ielts-life-skills'>
+                      Providers Website
+                    </SimpleLink>{' '}
+                    <SimpleLink link='https://www.ielts.org/for-test-takers/book-a-test'>
+                      Book a test here
+                    </SimpleLink>
+                  </Box>
+                </Td>
+                <Td>3.4m IDR (est £189)</Td>
+                <Td>Within one week</Td>
+              </Tr>
+              <Tr>
+                <Td>
+                  LanguageCert International ESOL SELT A1 (Speaking & Listening)
+                </Td>
+                <Td>LanguageCert</Td>
+                <Td>60/100</Td>
+                <Td>
+                  <Box>
+                    <SimpleLink link='https://www.languagecert.org/en/language-exams/english/languagecert-selt/a1-sl-2730'>
+                      Providers Website
+                    </SimpleLink>{' '}
+                    <SimpleLink link='https://selt.languagecert.org/?exam=A104EE3F80A249B9A74B3C1862FE3CE9&country=50EB9A019EAB4678AE83D2DA8A4EC680'>
+                      Book a test here
+                    </SimpleLink>
+                  </Box>
+                </Td>
+                <Td>165 USD (est 2.37m IDR)</Td>
+                <Td>5 working days</Td>
+                <Td>
+                  The Indonesia Int`L Educ.Foundation, Menara Imperium 28Th
+                  Floor Suite B, Jakarta, 12980, IDN
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>PTE Home A1</Td>
+                <Td>Pearson</Td>
+                <Td>Pass</Td>
+                <Td>
+                  <Box>
+                    <SimpleLink link='https://www.pearsonpte.com/selt-tests/pte-academic-ukvi'>
+                      Providers Website
+                    </SimpleLink>{' '}
+                    <SimpleLink link='https://home.pearsonvue.com/Test-takers.aspx'>
+                      Book a test here
+                    </SimpleLink>
+                  </Box>
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>Skills for English UKVI A1 (2 component)</Td>
+                <Td>PSI Service (UK) Ltd</Td>
+                <Td>Pass</Td>
+                <Td>
+                  <Box>
+                    <SimpleLink link='https://www.psionline.com/en-gb/certification/skills-for-english/'>
+                      Providers Website
+                    </SimpleLink>
+                  </Box>
+                </Td>
+                <Td>210 USD (est 3m IDR)</Td>
+                <Td>14 Days</Td>
+                <Td>
+                  Jakarta - PT. International Test Center (SfE) Plaza Sentral
+                  17th Floor, Jakarta, Indonesia
+                </Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </TableContainer>
       </Text>
       <Heading size='md'>Finding a test centre</Heading>
       <Text>
@@ -150,7 +246,7 @@ export default function HowToPassIelts() {
           A list of approved test centres can be found here on the gov website.
         </SimpleLink>{' '}
         Now you know where, it&apos;s now just up to you to book the test when
-        you feel comfortabke and get that certificate! (You can do it!)
+        you feel comfortabke and get that certificate! (You can do it!).
       </Text>
     </BlogLayout>
   );
