@@ -1,4 +1,4 @@
-import { Text, Heading } from '@chakra-ui/react';
+import { Text, Heading, Image } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 
@@ -31,7 +31,23 @@ export default function HowToPassIelts() {
         Arni... todo({/* TODO: add photos and a few hiking places from Arni */})
       </Text>
       <Text>
-        <b>Kawah Ratu</b>
+        <b>Gunung Tangkuban Perahu </b>
+      </Text>
+      <Text>
+        This active volcano is stunning, it's about 30km north of Bandung city
+        and it last erupted in 2019. In fact it just recently started smoking
+        again when we went back in February 2022
+        <Image
+          src='/images/blog/whatToDoInIndonesia/KawaRatu.jpg'
+          alt='Kawa Ratu volcano'
+        />
+        Because of the weather it was nice and quiet when we went too, plenty of
+        space for photos and exploration.
+        {/* TODO: Reduce image sizes */}
+        <Image
+          src='/images/blog/whatToDoInIndonesia/TogetherByKawaRatuSign.jpg'
+          alt='Aidan and Arni enjoying Kawa Ratu volcano'
+        />
       </Text>
     </BlogLayout>
   );
