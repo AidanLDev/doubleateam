@@ -136,7 +136,6 @@ export default function Posts({ blogs }) {
         p='0 24px'
       >
         {blogs.map((blog, idx) => {
-          // const neatenedPost = blog?.replace('-', ' ');
           if (
             filterValue === '' ||
             RegExp(filterValue, 'i').test(blog.title) ||

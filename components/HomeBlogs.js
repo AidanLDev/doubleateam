@@ -1,12 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  List,
-  ListItem,
-  Flex,
-  Image,
-  useMediaQuery,
-} from '@chakra-ui/react';
+import { List, ListItem, Flex, Image, useMediaQuery } from '@chakra-ui/react';
 import CardTitle from './CardTitle';
 import { useEffect, useState } from 'react';
 
@@ -24,37 +18,47 @@ export default function HomeBlogs({ blogs }) {
     <List display='flex'>
       <Flex wrap='wrap' placeContent='center'>
         {blogs.map((blog, idx) => {
-          return (
-            <Link href={`/posts/${blog.path}`} passHref key={`${blog}__${idx}`}>
-              <ListItem
-                w={isMobile ? '100%' : '500px'}
-                h={isMobile ? '500px' : '700px'}
-                cursor='pointer'
-                m='10px 20px'
-                overflow='hidden'
-                _hover={{
-                  boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
-                }}
+          if (blog.new) {
+            return (
+              <Link
+                href={`/posts/${blog.path}`}
+                passHref
+                key={`${blog}__${idx}`}
               >
-                <CardTitle titleText={blog.title} fontSize={isMobile ? '26px' : '30px'} pos='absolute'/>
-                <MotionImage
-                  src={`/images/blog/${blog.path}.jpg`}
-                  alt={`${blog.title} image`}
-                  minWidth='100%'
-                  minHeight='100%'
-                  width='100%'
-                  height='100%'
-                  opacity='0.6'
-                  whileHover={{ scale: 1.08 }}
-                  whileTap={{ scale: 0.98 }}
-                  zIndex='-1'
+                <ListItem
+                  w={isMobile ? '100%' : '500px'}
+                  h={isMobile ? '500px' : '700px'}
+                  cursor='pointer'
+                  m='10px 20px'
+                  overflow='hidden'
                   _hover={{
-                    opacity: 0.8,
+                    boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
                   }}
-                />
-              </ListItem>
-            </Link>
-          );
+                >
+                  <CardTitle
+                    titleText={blog.title}
+                    fontSize={isMobile ? '26px' : '30px'}
+                    pos='absolute'
+                  />
+                  <MotionImage
+                    src={`/images/blog/${blog.path}.jpg`}
+                    alt={`${blog.title} image`}
+                    minWidth='100%'
+                    minHeight='100%'
+                    width='100%'
+                    height='100%'
+                    opacity='0.6'
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.98 }}
+                    zIndex='-1'
+                    _hover={{
+                      opacity: 0.8,
+                    }}
+                  />
+                </ListItem>
+              </Link>
+            );
+          }
         })}
       </Flex>
     </List>

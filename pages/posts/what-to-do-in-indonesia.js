@@ -2,6 +2,7 @@
 import { Text, Heading, Image } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
+import SimpleLink from '../../components/SimpleLink';
 
 export default function HowToPassIelts() {
   const blogTitle = 'How to spend your time in Indonesia';
@@ -39,16 +40,36 @@ export default function HowToPassIelts() {
         and it last erupted in 2019. In fact it just recently started smoking
         again when we went back in February 2022
         <Image
-          src='/images/blog/whatToDoInIndonesia/KawaRatu.jpg'
+          src='/images/blog/whatToDoInIndonesia/Bandung/KawaRatu.jpg'
           alt='Kawa Ratu volcano'
         />
         Because of the weather it was nice and quiet when we went too, plenty of
         space for photos and exploration.
         {/* TODO: Reduce image sizes */}
         <Image
-          src='/images/blog/whatToDoInIndonesia/TogetherByKawaRatuSign.jpg'
+          src='/images/blog/whatToDoInIndonesia/Bandung/TogetherByKawaRatuSign.jpg'
           alt='Aidan and Arni enjoying Kawa Ratu volcano'
         />
+      </Text>
+      <Heading>Jogja</Heading>
+      <Text>
+        Jogja is a historical baeuty of a place, countless choices to be made as
+        there's a lot to see in this special city in Indonesia.{' '}
+        <SimpleLink link='/posts/what-to-do-in-jogja'>
+          We go into detail here about what there is to see in Jogja
+        </SimpleLink>{' '}
+        and where we'd reccomed based on our experiance. A few places to note
+        are:
+      </Text>
+      <Heading>Malang</Heading>
+      <Text>
+        During our journey through Java, we made our way east to Malang, this
+        city feels so refreshing, surrounded by the most beautiful mountainous
+        scenery. We had a tour with "ENTER BROMO TOUR COMPANY HERE" and we
+        couldn't reccomed them enough. They were very reasonable in price
+        compared to some other and it only cost a little extra to include a
+        camera man who showed us all the best spots, gave plenty of background
+        and of course took some stunning photos:
       </Text>
     </BlogLayout>
   );
