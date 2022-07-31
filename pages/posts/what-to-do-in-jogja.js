@@ -13,6 +13,13 @@ export default function HowToPassIelts() {
       postUrl='what-to-do-in-jogja'
     >
       <BlogTitle text={blogTitle} />
+      <Heading>Travel there</Heading>
+      <Heading>Hotel</Heading>
+      <Heading>Resturant</Heading>
+      <Heading>Malioboro</Heading>
+      <Heading>Hotel2</Heading>
+      <Heading>Sunrise place</Heading>
+      <Heading>Borobudur</Heading>
     </BlogLayout>
   );
 }

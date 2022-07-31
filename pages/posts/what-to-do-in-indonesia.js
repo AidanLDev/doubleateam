@@ -61,6 +61,38 @@ export default function HowToPassIelts() {
         and where we'd reccomed based on our experiance. A few places to note
         are:
       </Text>
+      <strong>Nice resturant</strong>
+      <Image
+        alt='enter res name here'
+        src='/images/blog/whatToDoInIndonesia/Jogja/niceResturant.jpg'
+      />
+      <Text>
+        To eat some delicious food with the most stunning backdrop and a few
+        places for memorable photos. We couldn't recommend this place enough.
+        They sell a selection of refreshing drinks too so even after you're done
+        eating, you can just relax with a few drinks and soak up that unique
+        view of Jogja.
+      </Text>
+      <strong>Malioboro</strong>
+      <Image
+        alt='enter res name here'
+        src='/images/blog/whatToDoInIndonesia/Jogja/malioboro.jpg'
+      />
+      <Text>
+        This is where it all happens, with countless shops and various street
+        entertainers. The centre of Jogja is an active vibrant street, plenty to
+        see here.
+      </Text>
+      <strong>Borobudur</strong>
+      <Image
+        alt='enter res name here'
+        src='/images/blog/whatToDoInIndonesia/Jogja/boroboudor.jpg'
+      />
+      <Text>
+        Jogja is a historic place with ancient temples that date way back.
+        Borobudur dates back to the 9th century and is the largest Buddhist
+        temple. If you're in the region, this is a must see.
+      </Text>
       <Heading>Malang</Heading>
       <Text>
         During our journey through Java, we made our way east to Malang, this
