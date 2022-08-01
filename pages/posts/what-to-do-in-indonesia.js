@@ -14,22 +14,22 @@ export default function HowToPassIelts() {
     >
       <BlogTitle text={blogTitle} />
       <Text>
-        This is going to be a quick summary of a few places we visited and a
+        This is going to be a quick summary of a few places we visited and a a
         little bit of insight into them to help you plan your Indonesian
-        getaway. We will go into more depth on places we think deserve more
-        attention in seperate blogs but for a nice overview, here is our
+        getaway. We will go into more depth on places we think to deserve more
+        attention in separate blogs but for a nice overview, here is our
         Indonesian travel guide.
       </Text>
       <Heading size='md'>Bandung</Heading>
       <Text>
         My wife could go on for days about what Bandung is like as a city in
         general as she has spent most of her life living there! From a western
-        perspective, Bandung is a breath of freshair, it's the first city I
+        perspective, Bandung is a breath of fresh air, it's the first city I
         visited after Jakarta and the climate is so much fresher. The air feels
-        clean as it's surrounded by mountains/volcanos and the temprature is
+        clean as it's surrounded by mountains/volcanos and the temperature is
         cooler as a result. If you're into hiking there's plenty around Bandung
         to get stuck into. The last couple of times we went, it was the rainy
-        season so we gave that a miss but here are some reccomendations from
+        season so we gave that a miss but here are some recommendations from
         Arni... todo({/* TODO: add photos and a few hiking places from Arni */})
       </Text>
       <Text>
@@ -37,14 +37,14 @@ export default function HowToPassIelts() {
       </Text>
       <Text>
         This active volcano is stunning, it's about 30km north of Bandung city
-        and it last erupted in 2019. In fact it just recently started smoking
+        and it last erupted in 2019. In fact, it just recently started smoking
         again when we went back in February 2022
         <Image
           src='/images/blog/whatToDoInIndonesia/Bandung/KawaRatu.jpg'
           alt='Kawa Ratu volcano'
         />
-        Because of the weather it was nice and quiet when we went too, plenty of
-        space for photos and exploration.
+        Because of the weather, it was nice and quiet when we went too, plenty
+        of space for photos and exploration.
         {/* TODO: Reduce image sizes */}
         <Image
           src='/images/blog/whatToDoInIndonesia/Bandung/TogetherByKawaRatuSign.jpg'
@@ -53,12 +53,12 @@ export default function HowToPassIelts() {
       </Text>
       <Heading>Jogja</Heading>
       <Text>
-        Jogja is a historical baeuty of a place, countless choices to be made as
+        Jogja is a historical beauty of a place, countless choices to be made as
         there's a lot to see in this special city in Indonesia.{' '}
         <SimpleLink link='/posts/what-to-do-in-jogja'>
           We go into detail here about what there is to see in Jogja
         </SimpleLink>{' '}
-        and where we'd reccomed based on our experiance. A few places to note
+        and where we'd recommend based on our experience. A few places to note
         are:
       </Text>
       <strong>Candhari Heaven restaurant</strong>
@@ -91,7 +91,7 @@ export default function HowToPassIelts() {
       <Text>
         Jogja is a historic place with ancient temples that date way back.
         Borobudur dates back to the 9th century and is the largest Buddhist
-        temple. If you're in the region, this is a must see.
+        temple. If you're in the region, this is a must-see.
       </Text>
       <Heading>Malang</Heading>
       <Text>
@@ -102,9 +102,9 @@ export default function HowToPassIelts() {
           Explore Bromo
         </SimpleLink>{' '}
         and we were so chuffed we chose them. They were very reasonable in price
-        compared to some other and it only cost a little extra to include a
-        camera man who showed us all the best spots, gave plenty of background
-        and of course took some stunning photos:
+        compared to some others and it only cost a little extra to include a
+        cameraman who showed us all the best spots gave plenty of background and
+        of course, took some stunning photos:
       </Text>
       <Image
         alt='Bromo tour pic'
@@ -134,7 +134,7 @@ export default function HowToPassIelts() {
         With your eyes blessed with this stunning Indonesian nature, we hope you
         too can enjoy and explore this enchanting country. The sheer size of it
         means you can visit this country time and time again and have a
-        different experiance every time.
+        different experience every time.
       </Text>
       <Text>We hope you enjoy your time and have safe travels ✈️🌍☀️🏔️</Text>
     </BlogLayout>

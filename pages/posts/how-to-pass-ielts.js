@@ -14,7 +14,6 @@ import {
   Tr,
   Td,
   Tbody,
-  Divider
 } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
@@ -27,28 +26,26 @@ export default function HowToPassIelts() {
     'How to get an IELTS A1 Certification for UKVI Family Visa Applications';
   return (
     <BlogLayout
-      title='Double A Team | How to pass IELTs'
+      title='Double A Team | How to pass IELTS'
       description={blogTitle}
       postUrl='how-to-pass-ielts'
     >
       <BlogTitle text={blogTitle} />
       <Text>
-        The IELTs A1 exam is almost like a short interview, there will
-        be you and one other test taker in the room with the examiner.
-        The examiner will ask you and your partner a serise of
-        questions which you must respond to in English, there will
-        also be sections in the test where you will need to
-        communicate with your partner. Luckily the test is broken up
-        into 4 sections, and each section is clearly defined so you
-        can go into the exam confident, knowing exactly what to
-        expect.
+        The IELTS A1 exam is almost like a short interview, there will be you
+        and one other test taker in the room with the examiner. The examiner
+        will ask you and your partner a series of questions which you must
+        respond to in English, there will also, be sections in the test where
+        you will need to communicate with your partner. Luckily the test is
+        broken up into 4 sections, and each section is clearly defined so you
+        can go into the exam confident, knowing exactly what to expect.
       </Text>
       <Text>
-        Here is the structure of the exam, it&apos;s broken up into 4
-        phases 1A, 1B, 2A and 2B:
+        Here is the structure of the exam, it's broken up into 4 phases 1A, 1B,
+        2A and 2B:
         <Flex justify='center'>
           <Image
-            alt='IELTs A1 exam structure'
+            alt='IELTS A1 exam structure'
             src='/images/IELTSA1TestStructure.jpeg'
           />
         </Flex>
@@ -58,140 +55,133 @@ export default function HowToPassIelts() {
         <StyledUL
           items={[
             {
-              text: <b>Phase 1A</b>
+              text: <b>Phase 1A</b>,
             },
             { text: 'Answering these 3 questions:' },
             { text: "What's your name?", isNested: true },
             {
               text: 'Can you spell it for me? (You will be expected to spell out your full name, letter by letter)',
-              isNested: true
+              isNested: true,
             },
             { text: 'Where do you come from?', isNested: true },
             {
-              text: 'Then you will answer some basic questions on small talk topics, such as food, hobbies and interests etc.'
+              text: 'Then you will answer some basic questions on small talk topics, such as food, hobbies and interests etc',
             },
             { text: <b>Phase 1B</b> },
             {
-              text: 'You and your partner will be given a topic each, write down questions based on this topic and when instructed, you will ask your partner the questions you prepared and visa versa.'
+              text: 'You and your partner will be given a topic each, write down questions based on this topic and when instructed, you will ask your partner the questions you prepared and vice versa',
             },
             { text: <b>Phase 2A</b> },
             {
-              text: 'The examiner will play a short recording, you will be given some paper with a few pictures on it, answer the question by ticking one of the pictures provided'
+              text: 'The examiner will play a short recording, you will be given some paper with a few pictures on it, and answer the question by ticking one of the pictures provided',
             },
             { text: <b>Phase 2B</b> },
             {
-              text: 'The examiner will give you both a topic that you need to have a conversation about.'
-            }
+              text: 'The examiner will give you both a topic that you need to have a conversation about',
+            },
           ]}
         />
-        <StyledDivider />I know that was a lot about the structure of
-        the test, but knowing this well is so valuable to
-        understanding how to pass the test.
+        <StyledDivider />I know that was a lot about the structure of the test,
+        but knowing this well is so valuable to understanding how to pass the
+        test.
       </Text>
       <Heading size='md'>How we prepared for the test</Heading>
       <Text>
-        There&apos;s a lot of great free resources outthere that can
-        make you as prepared as you&apos;ll ever be to pass the IELTs
-        test. To get a better understanding of what we&apos;ve
-        discussed and to see what your strengths/weaknesses are, you
-        can go through a{' '}
+        There are a lot of great free resources out there that can make you as
+        prepared as you'll ever be to pass the IELTS test. To get a better
+        understanding of what we've discussed and to see what your
+        strengths/weaknesses are, you can go through a{' '}
         <SimpleLink link='https://www.ielts.org/about-ielts/ielts-for-migration/united-kingdom/ielts-life-skills'>
           sample test on ielts.org
-        </SimpleLink>
-        . There are two samples on this website, paper A and B, both
-        have their own audio tracks which should be played to answer
-        the phase 2A questions.
+        </SimpleLink>{' '}
+        There are two samples on this website, papers A and B, both have their
+        own audio tracks which should be played to answer the phase 2A
+        questions.
       </Text>
       <Text>
-        Seeing where your weak points are by going through a practice
-        test is really valuable, so you can focus on the areas you
-        need to improve in. If it&apos;s the speaking phases of the
-        test, phase 1A, 2A and 2B, going through{' '}
+        Seeing where your weak points are by going through a practice test is
+        really valuable, so you can focus on the areas you need to improve. If
+        it's the speaking phases of the test, phases 1A, 2A and 2B, going
+        through{' '}
         <SimpleLink link='https://www.ieltsdeal.com/ielts-life-skills-level-a1-speaking-basic-questions-with-answers/'>
           this list of practice questions
         </SimpleLink>{' '}
-        and understanding the example answers given should help. On
-        the other hand if it&apos;s the listening segmant, phase 2a,
-        that you struggle with, there&apos;s a bunch of{' '}
+        and understanding the example answers given should help. On the other
+        hand if it's the listening segment, phase 2a, that you struggle with,
+        there's a bunch of{' '}
         <SimpleLink link='https://www.ielts.org/for-test-takers/sample-test-questions'>
-          practise listening questions here on the IELTs website.
+          practise listening questions here on the IELTS website.
         </SimpleLink>
       </Text>
       <Text>
-        A really valuable learning resource is this YouTube playlist,
-        go through some of the{' '}
+        A valuable learning resource is this YouTube playlist, go through some
+        of the{' '}
         <SimpleLink link='https://www.youtube.com/watch?v=iXm_rcv0GJA&list=PLOdYbfVGcVAaQcbaVFaE_S2ylP9Fib6Me&index=5'>
           IELTS Life Skills A1 Speaking and Listening videos
         </SimpleLink>{' '}
-        and pay attention to the answers given. Just going through a
-        couple of these to really drill the format of the test into
-        your mind will be super helpful as you can see live examples
-        of questions and answers to the same sort of questions you'll
-        be asked on the day of your exam.
+        and pay attention to the answers given. Just going through a couple of
+        these to drill the format of the test into your mind will be super
+        helpful as you can see live examples of questions and answers to the
+        same sort of questions you'll be asked on the day of your exam.
       </Text>
       {/* List of a1 speaking basic questions with answers:  */}
-      <Heading size='lg'>
-        Useful information for booking a test
-      </Heading>
+      <Heading size='lg'>Useful information for booking a test</Heading>
       <Text>
-        Now we have gone through some tips that will help you prepare
-        for your test, when it comes to booking the IELTs A1 test,
-        there are a few things you should keep in mind. We will
-        compare the different test providers and make it clear which
-        ones are approved by the UK government so you can have peace
-        of mind that the certificate you&apos;re getting is going to
+        Now we have gone through some tips that will help you prepare for your
+        test, when it comes to booking the IELTS A1 test, there are a few things
+        you should keep in mind. We will compare the different test providers
+        and make it clear which ones are approved by the UK government so you
+        can have peace of mind that the certificate you're getting is going to
         be the right one.
       </Text>
       <Heading size='md'>Test Providers</Heading>
       <Text>
-        To get a UK family visa, you&apos;ll need to prove your
-        English speaking skills by passing a secure English language
-        test (SELT). The IELTs test is one of the popular ones as they
-        have a few different providers.
+        To get a UK family visa, you'll need to prove your English speaking
+        skills by passing a secure English language test (SELT). The IELTS test
+        is one of the popular ones as they have a few different providers.
         <SimpleLink link='https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt'>
-          A list of approved English test providers from the UK Gov
-          website
+          A list of approved English test providers from the UK Gov website
         </SimpleLink>
-        To potentially save you a click and some reading, at the time
-        of writing, 2022/07/21, the approved test providers are:
+        To potentially save you a click and some reading, at the time of
+        writing, 2022/07/21, the approved test providers are:
         <Heading size='md'>If you are in the UK</Heading>
         <StyledUL
           items={[
             {
-              text: 'Trinity College London'
+              text: 'Trinity College London',
             },
             {
-              text: 'IELTS SELT Consortium'
+              text: 'IELTS SELT Consortium',
             },
             {
-              text: 'LanguageCert'
+              text: 'LanguageCert',
             },
             {
-              text: 'Pearson'
-            }
+              text: 'Pearson',
+            },
           ]}
         />
         <Heading size='md'>If you are outside the UK</Heading>
         <StyledUL
           items={[
             {
-              text: 'PSI Services (UK) Ltd'
+              text: 'PSI Services (UK) Ltd',
             },
             {
-              text: 'IELTS SELT Consortium'
+              text: 'IELTS SELT Consortium',
             },
             {
-              text: 'LanguageCert'
+              text: 'LanguageCert',
             },
             {
-              text: 'Pearson'
-            }
+              text: 'Pearson',
+            },
           ]}
         />
       </Text>
       <Text>
-        Some information regarding a few of the different test
-        providers that they have in Indonesia:
+        Some information regarding a few of the different test providers that
+        they have in Indonesia:
         <TableContainer>
           <Table variant={'unstyled'}>
             <TableCaption>Test Provider Comparison</TableCaption>
@@ -227,8 +217,7 @@ export default function HowToPassIelts() {
               </Tr>
               <Tr>
                 <Td>
-                  LanguageCert International ESOL SELT A1 (Speaking &
-                  Listening)
+                  LanguageCert International ESOL SELT A1 (Speaking & Listening)
                 </Td>
                 <Td>LanguageCert</Td>
                 <Td>60/100</Td>
@@ -245,8 +234,8 @@ export default function HowToPassIelts() {
                 <Td>165 USD (est 2.37m IDR)</Td>
                 <Td>5 working days</Td>
                 <Td>
-                  The Indonesia Int`L Educ.Foundation, Menara Imperium
-                  28Th Floor Suite B, Jakarta, 12980, IDN
+                  The Indonesia Int`L Educ.Foundation, Menara Imperium 28Th
+                  Floor Suite B, Jakarta, 12980, IDN
                 </Td>
               </Tr>
               <Tr>
@@ -278,8 +267,8 @@ export default function HowToPassIelts() {
                 <Td>210 USD (est 3m IDR)</Td>
                 <Td>14 Days</Td>
                 <Td>
-                  Jakarta - PT. International Test Center (SfE) Plaza
-                  Sentral 17th Floor, Jakarta, Indonesia
+                  Jakarta - PT. International Test Center (SfE) Plaza Sentral
+                  17th Floor, Jakarta, Indonesia
                 </Td>
               </Tr>
             </Tbody>
@@ -288,18 +277,13 @@ export default function HowToPassIelts() {
       </Text>
       <Heading size='md'>Finding a test centre</Heading>
       <Text>
-        Now you should have a good idea of which test provider you
-        want to go with, finding an official test centre is luckily
-        quite easy as the UK gov has{' '}
+        Now you should have a good idea of which test provider you want to go
+        with, finding an official test centre is luckily quite easy as the UK
+        gov has{' '}
         <SimpleLink link='https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt#approved-test-centres'>
           a list of approved centres on their website
         </SimpleLink>
-        .
-        <Text>
-          Now you know where, it&apos;s now just up to you to book the
-          test when you feel comfortable and get that certificate!
-          (You can do it! 🤞)
-        </Text>
+        .<Text>You can do it!! 🤞</Text>
       </Text>
     </BlogLayout>
   );

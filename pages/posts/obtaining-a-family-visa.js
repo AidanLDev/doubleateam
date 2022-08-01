@@ -18,21 +18,21 @@ export default function HowToPassIelts() {
       <Text>
         The family visa, in the past there were a couple more visas such as the
         parent visa or even the child visa, however now these all fall under the
-        family visa category. Just to clear up any confusion, as when we first
-        started this process, we had no idea what the type of visa we actually
-        wanted was. There are also fiance/fiancee visas or spouse visa types,
-        with a fiance/spouse visa you can stay in the UK for up to 6 months,
-        however one of the requirements is that you must get married within this
-        time period. If you do so, you can then apply to extend your stay and
-        obtain a family visa (this can be a viable route if you and your partner
-        both want to marry in the UK, however it's going to be a pricy one as
-        you'll have to pay for both the fiance/spouse visa application then the
-        family visa. We'll get onto family visa pricing further down).
+        family visa category. Just to clear up any confusion, when we first
+        started this process, we had no idea what the type of visa we wanted
+        was. There are also fiance/fiancee visas or spouse visa types, with a
+        fiance/spouse visa you can stay in the UK for up to 6 months, however,
+        one of the requirements is that you must get married within this time
+        period. If you do so, you can then apply to extend your stay and obtain
+        a family visa (this can be a viable route if you and your partner both
+        want to marry in the UK, however, it's going to be a pricy one as you'll
+        have to pay for both the fiance/spouse visa application then the family
+        visa. We'll get onto family visa pricing further down).
       </Text>
       <Heading size='md'>Expenses</Heading>
       <Text>
-        For the family visa it’s quite expensive. It cost us £1,682 for the
-        application and an extra £2,047 for the IHS (health insurance surge)
+        The family visa it’s quite expensive. It cost us £1,682 for the
+        application and an extra £2,047 for the IHS (health insurance surge) a
         payment that’s required as part of the application. We needed to get it
         right, to live our lives together and build our future.
       </Text>
@@ -53,25 +53,25 @@ export default function HowToPassIelts() {
         <SimpleLink link='https://www.gov.uk/uk-family-visa/partner-spouse'>
           here through the gov website.
         </SimpleLink>{' '}
-        The majority of questions are self-explanatory. A few stand out ones
+        The majority of questions are self-explanatory. A few stand-out ones
         that could do with some further clarification:
       </Text>
       <StyledUL
         items={[
           { text: 'When did you first meet?' },
           {
-            text: 'As we met online, we weren’t really sure whether to put the date we first talked online or the first time we physically met each other in person for the first time. We were advised to put down the date we first talked to each online',
+            text: 'As we met online, we weren’t sure whether to put the date we first talked online or the first time we physically met each other in person for the first time. We were advised to put down the date we first talked to each online',
             isNested: true,
           },
           {
             text: 'Have you been declined entry or had a visa application declined before?',
           },
           {
-            text: 'Sadly, we had failed to obtain a visitor visa in the past, so we had to put down yes and explain a little about why. Hopefully our wording can help you if you find yourself in a similar situation',
+            text: 'Sadly, we had failed to obtain a visitor visa in the past, so we had to put down yes and explain a little about why. Hopefully, our wording can help you if you find yourself in a similar situation',
             isNested: true,
           },
           {
-            text: '"I applied for a visit visa to the UK so I could spend some time with my husband (at the time fiancé) Aidan. I really wanted to spend some quality time with him and meet his family, but sadly the visa application was declined The ECO was not completely satisfied I would return to Indonesia at the end of the trip"',
+            text: '"I applied for a visit visa to the UK so I could spend some time with my husband (at the time fiancé) Aidan. I really wanted to spend some quality time with him and meet his family, but sadly the visa application was declined. The ECO was not completely satisfied I would return to Indonesia at the end of the trip"',
             isNested: true,
           },
         ]}
@@ -114,7 +114,7 @@ export default function HowToPassIelts() {
             text: 'You have a good knowledge of English (either a degree taught in English validated by ECCTIS or a secure test at A1 CERF minimum)',
           },
           {
-            text: 'You meet the financial requires (your partners salary must be over £18,600, which your partner has to of earned for the last 6 months at least)',
+            text: "You meet the financial requirements (your partner's salary must be over £18,600, which your partner has to of earned for the last 6 months at least)",
           },
           {
             text: 'You’re free from TB (if you live in a country that requires this)',
@@ -133,15 +133,15 @@ export default function HowToPassIelts() {
         The actual documents checklist is relatively short. However, if you want
         a really solid application (which we all do, especially considering how
         pricy it is to even apply), then you’re going to want to submit a lot of
-        supporting documents to make it undoubtable that you hit the criteria
+        supporting documents to make it undoubtedly that you hit the criteria
         mentioned above.
       </Text>
       <Heading size='sm'>Conditional Documents</Heading>
       <Text>
         The TB test and Secure English language test are two bits of documents
-        you may not even need to gather. However if you do, you will need to
+        you may not even need to gather. However, if you do, you will need to
         study for the English test and book an appointment for the TB test which
-        could take some time, so lets get those out the way with first.
+        could take some time, so let us get those out the way first.
       </Text>
       <Heading size='xs'>TB Test</Heading>
       <Text>
@@ -200,7 +200,7 @@ export default function HowToPassIelts() {
       <Text>
         If you don't meet any of the above conditions, you will need to study
         for your test, the one we prepared for and passed (hurray) was the
-        IELTs.{' '}
+        IELTS.{' '}
         <Link href='/posts/how-to-pass-ielts'>Find our study guide here</Link>
       </Text>
       <Text>
@@ -218,12 +218,12 @@ export default function HowToPassIelts() {
       <StyledUL
         items={[
           { text: 'Current and any old passports' },
-          { text: 'A copy of your partners passport' },
+          { text: "A copy of your partner's passport" },
           {
             text: 'Proof of your relationship (including your marriage certificate and evidence relating to time you have spent together as a couple)',
           },
           {
-            text: 'Cover letters from you and your partner, together with supporting statements, including photographic evidence, from family, friends, employers etc. As you deem necessary to prove your relationship is genuine',
+            text: 'Cover letters from you and your partner, together with supporting statements, including photographic evidence, from family, friends, employers etc. As you deem it necessary to prove your relationship is genuine',
           },
           { text: 'Sponsorship declaration from your partner/family member' },
           {
@@ -247,7 +247,7 @@ export default function HowToPassIelts() {
       <StyledUL
         items={[
           {
-            text: 'A letter from your partners employers confirming their role, salary and tenure',
+            text: "A letter from your partner's employers confirming their role, salary and tenure",
           },
           { text: 'Bank statements going back 6 months' },
           { text: 'Payslips going back 6 months' },
@@ -258,11 +258,11 @@ export default function HowToPassIelts() {
       />
       <Text>
         Phew! That was a lot wasn't it! For personalised support on gathering
-        the documents alone, we couldn't reccomed i-vars, the visa counciler,
-        enough. They were super stars and answered all 1,000 questions we had
-        for them. Now all that’s left is the waiting game. Usually, the visa
-        will take less than 3 months to process, however with the pandemic
-        there’s a bit of a back log and it could take up to 4 months or so. The{' '}
+        the documents alone, we couldn't recommend i-vars, the visa counsellor,
+        enough. They were superstars and answered all 1,000 questions we had for
+        them. Now all that’s left is the waiting game. Usually, the visa will
+        take less than 3 months to process, however with the pandemic there’s a
+        bit of a backlog and it could take up to 4 months or so. The{' '}
         <SimpleLink link='https://www.gov.uk/guidance/visa-decision-waiting-times-applications-outside-the-uk?msclkid=81bf9ef8d12311ec9cea32779cb8b0d4#join-family-in-the-uk'>
           current status of the waiting time can be seen here
         </SimpleLink>
