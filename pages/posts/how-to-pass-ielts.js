@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import {
   Text,
@@ -117,28 +118,29 @@ export default function HowToPassIelts() {
         </SimpleLink>
       </Text>
       <Text>
-        A really valuable resource that can help you see how these
-        exams are taken out is YouTube playlist, go through some of
-        the{' '}
+        A really valuable learning resource is this YouTube playlist,
+        go through some of the{' '}
         <SimpleLink link='https://www.youtube.com/watch?v=iXm_rcv0GJA&list=PLOdYbfVGcVAaQcbaVFaE_S2ylP9Fib6Me&index=5'>
           IELTS Life Skills A1 Speaking and Listening videos
         </SimpleLink>{' '}
         and pay attention to the answers given. Just going through a
         couple of these to really drill the format of the test into
-        your mind will be super helpful.
+        your mind will be super helpful as you can see live examples
+        of questions and answers to the same sort of questions you'll
+        be asked on the day of your exam.
       </Text>
       {/* List of a1 speaking basic questions with answers:  */}
       <Heading size='lg'>
         Useful information for booking a test
       </Heading>
       <Text>
-        Now we have gone through some tips that should help you
-        prepare for your test, when it comes to booking the IELTs A1
-        test, there are a few things you should keep in mind. We will
+        Now we have gone through some tips that will help you prepare
+        for your test, when it comes to booking the IELTs A1 test,
+        there are a few things you should keep in mind. We will
         compare the different test providers and make it clear which
         ones are approved by the UK government so you can have peace
         of mind that the certificate you&apos;re getting is going to
-        be the right one for getting a UK Visa.
+        be the right one.
       </Text>
       <Heading size='md'>Test Providers</Heading>
       <Text>
@@ -151,7 +153,7 @@ export default function HowToPassIelts() {
           website
         </SimpleLink>
         To potentially save you a click and some reading, at the time
-        of writting, 2022/07/21, the approved test providers are:
+        of writing, 2022/07/21, the approved test providers are:
         <Heading size='md'>If you are in the UK</Heading>
         <StyledUL
           items={[
@@ -191,7 +193,6 @@ export default function HowToPassIelts() {
         Some information regarding a few of the different test
         providers that they have in Indonesia:
         <TableContainer>
-          {/* TODO: play with variant */}
           <Table variant={'unstyled'}>
             <TableCaption>Test Provider Comparison</TableCaption>
             <Thead>
@@ -289,14 +290,16 @@ export default function HowToPassIelts() {
       <Text>
         Now you should have a good idea of which test provider you
         want to go with, finding an official test centre is luckily
-        quite easy as the UK gov have a list of approved centres.
+        quite easy as the UK gov has{' '}
         <SimpleLink link='https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt#approved-test-centres'>
-          A list of approved test centres can be found here on the gov
-          website.
-        </SimpleLink>{' '}
-        Now you know where, it&apos;s now just up to you to book the
-        test when you feel comfortabke and get that certificate! (You
-        can do it!).
+          a list of approved centres on their website
+        </SimpleLink>
+        .
+        <Text>
+          Now you know where, it&apos;s now just up to you to book the
+          test when you feel comfortable and get that certificate!
+          (You can do it! 🤞)
+        </Text>
       </Text>
     </BlogLayout>
   );
