@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Text, Heading, Image } from '@chakra-ui/react';
+import { Text, Heading, Image, Center } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 import SimpleLink from '../../components/SimpleLink';
@@ -22,10 +22,12 @@ export default function HowToPassIelts() {
         buffet breakfast with foods from all over Indonesia and even some
         European options. I mean just check out this stunning garden you'll be
         stuffing your faces in!
-        <Image
-          src={`${imagePath}hotelBreakfastGarden.jpg`}
-          alt='Hotel garden'
-        />
+        <Center>
+          <Image
+            src={`${imagePath}hotelBreakfastGarden.jpg`}
+            alt='Hotel garden'
+          />
+        </Center>
         The hotel has a laundry service and is within walking distance to the
         popular shopping district in Malioboro. Plenty to see and do just on
         your doorstep! The hotel was reasonable considering the location and
@@ -40,7 +42,7 @@ export default function HowToPassIelts() {
         can do just that while eating some delicious Indonesian food or even
         just sitting back and enjoying some of their refreshing fruit smoothies.
         <Image
-          src={`${imagePath}nicerestaurantFood.jpg`}
+          src={`${imagePath}niceResturantFood.jpg`}
           alt='Candhari Heaven restaurants food'
         />
         Now this place does get busy, so to guarantee a table we would recommend
@@ -50,26 +52,34 @@ export default function HowToPassIelts() {
         </SimpleLink>{' '}
         Their number: <b>+6281282677677</b>.
       </Text>
-      <Image
-        src={`${imagePath}nicerestaurant.jpg`}
-        alt='Candhari Heaven restaurant'
-      />
-      <Image
-        src={`${imagePath}nicerestaurantView2.jpg`}
-        alt='Candhari Heaven restaurant view'
-      />
+      <Center>
+        <Image
+          src={`${imagePath}niceResturant.jpg`}
+          alt='Candhari Heaven restaurant'
+        />
+      </Center>
+      <Center>
+        <Image
+          src={`${imagePath}niceResturantView2.jpg`}
+          alt='Candhari Heaven restaurant view'
+        />
+      </Center>
       <Heading>Malioboro</Heading>
       <Text>
         The street where it all happens!
-        <Image src={`${imagePath}malioboro.jpg`} alt='Malioboro street' />
+        <Center>
+          <Image src={`${imagePath}malioboro.jpg`} alt='Malioboro street' />
+        </Center>
         What a fun place to be! If you fancy doing some shopping or eating ice
         cream, Malioboro is the place to do it. With countless street performers
         and more shops than you'll know what to do with, this vibrant place is a
         must-visit when coming to Jogja.
-        <Image
-          src={`${imagePath}malioboroGelato.jpg`}
-          alt='Gelato in malioboro'
-        />
+        <Center>
+          <Image
+            src={`${imagePath}malioboroGelato.jpg`}
+            alt='Gelato in malioboro'
+          />
+        </Center>
         Jogja was HOT when we visited, so this icecream went down an absolute
         treat.
       </Text>
@@ -85,15 +95,19 @@ export default function HowToPassIelts() {
         you get at 500.000 IDR a night, but what a location. It was only 15 mins
         away from Punthuk Setumbu and felt like such a breathe of fresh air,
         you're truly out in nature here.
-        <Image src={`${imagePath}hotel2Rooms.jpg`} alt='Gade Village rooms' />
+        <Center>
+          <Image src={`${imagePath}hotel2Rooms.jpg`} alt='Gade Village rooms' />
+        </Center>
         Just looking at those rooms relaxes me, beautiful. The welcome we got
         there was top notch too, we were given complimentary drinks and
         breakfast was brought to our door as there was an event on that morning
         so we couldn't use the restaurant.
-        <Image
-          src={`${imagePath}hotel2Breakfast.jpg`}
-          alt='Gade Village Breakfst'
-        />{' '}
+        <Center>
+          <Image
+            src={`${imagePath}hotel2Breakfast.jpg`}
+            alt='Gade Village Breakfst'
+          />
+        </Center>{' '}
         The breakfast was tasty and traditional, although we do love our
         breakfast buffets where we can stuff our faces until our bellies can't
         fit any more food in.
@@ -126,7 +140,9 @@ export default function HowToPassIelts() {
         citizen's tickets are very cheap, however, if you're foreign you will be
         expected to pay a bit extra, around £20 overall, however where else can
         you see such a magnificent landmark? Worth every penny.
-        <Image src={`${imagePath}boroboudor.jpg`} alt='boroboudor' />
+        <Center>
+          <Image src={`${imagePath}boroboudor.jpg`} alt='boroboudor' />
+        </Center>
       </Text>
       <Heading>Travelling to Jogja</Heading>
       <Text>
@@ -136,10 +152,12 @@ export default function HowToPassIelts() {
         "eksekutif class" are incredibly comfortable. The train has food and
         beverage sellers and even a restaurant cart. If you're on a tight budget
         you can use this bus from Bandung to Jogja.
-        <Image
-          src='/images/blog/whatToDoInIndonesia/Jogja/bus-bandung-jogja.jpg'
-          alt='bus to Jogja'
-        />
+        <Center>
+          <Image
+            src='/images/blog/whatToDoInIndonesia/Jogja/bus-bandung-jogja.jpg'
+            alt='bus to Jogja'
+          />
+        </Center>
         It cost around 300,000 for a ticket, however, the journey took over 13
         hours, which is including time spent stopping for passengers, toilet
         stops and lunch were included too (which was surprisingly tasty

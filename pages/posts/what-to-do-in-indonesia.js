@@ -3,6 +3,7 @@ import { Text, Heading, Image } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 import SimpleLink from '../../components/SimpleLink';
+import Centre from '../../components/Centre';
 
 export default function HowToPassIelts() {
   const blogTitle = 'How to spend your time in Indonesia';
@@ -45,7 +46,6 @@ export default function HowToPassIelts() {
         />
         Because of the weather, it was nice and quiet when we went too, plenty
         of space for photos and exploration.
-        {/* TODO: Reduce image sizes */}
         <Image
           src='/images/blog/whatToDoInIndonesia/Bandung/TogetherByKawaRatuSign.jpg'
           alt='Aidan and Arni enjoying Kawa Ratu volcano'
@@ -62,10 +62,12 @@ export default function HowToPassIelts() {
         are:
       </Text>
       <strong>Candhari Heaven restaurant</strong>
-      <Image
-        alt='Candhari Heaven'
-        src='/images/blog/whatToDoInIndonesia/Jogja/niceResturant.jpg'
-      />
+      <Centre>
+        <Image
+          alt='Candhari Heaven'
+          src='/images/blog/whatToDoInIndonesia/Jogja/niceResturant.jpg'
+        />
+      </Centre>
       <Text>
         To eat some delicious food with the most stunning backdrop and multiple
         places for memorable photos. We couldn't recommend this place enough.
@@ -74,20 +76,24 @@ export default function HowToPassIelts() {
         view of Jogja.
       </Text>
       <strong>Malioboro</strong>
-      <Image
-        alt='Malioboro street'
-        src='/images/blog/whatToDoInIndonesia/Jogja/malioboro.jpg'
-      />
+      <Centre>
+        <Image
+          alt='Malioboro street'
+          src='/images/blog/whatToDoInIndonesia/Jogja/malioboro.jpg'
+        />
+      </Centre>
       <Text>
         This is where it all happens, with countless shops and various street
         entertainers. The centre of Jogja is an active vibrant street, plenty to
         see here.
       </Text>
       <strong>Borobudur</strong>
-      <Image
-        alt='Borobudur'
-        src='/images/blog/whatToDoInIndonesia/Jogja/boroboudor.jpg'
-      />
+      <Centre>
+        <Image
+          alt='Borobudur'
+          src='/images/blog/whatToDoInIndonesia/Jogja/boroboudor.jpg'
+        />
+      </Centre>
       <Text>
         Jogja is a historic place with ancient temples that date way back.
         Borobudur dates back to the 9th century and is the largest Buddhist
