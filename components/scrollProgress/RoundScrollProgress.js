@@ -1,15 +1,10 @@
 import { useEffect, useState } from 'react';
-import {
-  motion,
-  useViewportScroll,
-  useSpring,
-  useTransform,
-} from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import styles from './style.module.scss';
 
-const ScrollProgress = () => {
+const RoundScrollProgress = () => {
   const [isComplete, setIsComplete] = useState(false);
-  const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
   const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
   const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
 
@@ -44,4 +39,4 @@ const ScrollProgress = () => {
   );
 };
 
-export default ScrollProgress;
+export default RoundScrollProgress;

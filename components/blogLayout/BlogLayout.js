@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Box, useMediaQuery } from '@chakra-ui/react';
 import BackHomeLink from '../BackHomeLink';
 import Signature from '../Signature';
-import ScrollProgress from '../scrollProgress/ScrollProgress';
+import StraightLineProgress from '../scrollProgress/StraightLineProgress';
 import SEO from '../SEO';
 
 import styles from './styles.module.scss';
@@ -28,9 +28,9 @@ export default function BlogLayout({ title, description, children, postUrl }) {
         url={`https://doubleateam.co.uk/posts/${postUrl}`}
         image='/images/IstanbulHagiaSopia.jpg'
       />
-      <ScrollProgress isMobile={isMobile} />
+      <StraightLineProgress />
       <BackHomeLink blog />
-        {children}
+      {children}
       <Signature />
       <BackHomeLink />
     </Box>
