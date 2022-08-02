@@ -1,5 +1,6 @@
 import { List, ListIcon, ListItem } from '@chakra-ui/react';
 import { FaDotCircle, FaRegDotCircle } from 'react-icons/fa';
+import { BsFillHandThumbsUpFill, BsHandThumbsUp } from 'react-icons/bs';
 
 const StyledUL = ({ items, iconColour }) => {
   return (
@@ -8,8 +9,8 @@ const StyledUL = ({ items, iconColour }) => {
         return (
           <ListItem key={`${text}__${idx}`} pl={isNested ? '22px' : '0'}>
             <ListIcon
-              as={isNested ? FaRegDotCircle : FaDotCircle}
-              color={iconColour ? iconColour : 'green'}
+              as={isNested ? BsHandThumbsUp : BsFillHandThumbsUpFill}
+              color={iconColour ? iconColour : 'red'}
             />
             {text}
           </ListItem>

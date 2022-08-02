@@ -5,6 +5,7 @@ import HomeBlogs from '../components/HomeBlogs';
 import Footer from '../components/Footer';
 import { getBlogPostPaths } from '../lib/posts';
 import SEO from '../components/SEO';
+import Link from 'next/link';
 
 import styles from '../styles/Home.module.scss';
 
@@ -33,7 +34,10 @@ export default function Home({ blogs }) {
 
       <Box m='2% 6%' minH='1000px'>
         <Text fontSize={'38px'} align='center' color='red' pb='12px'>
-          Latest Blogs
+          Our Latest Blogs |{' '}
+          <Link href='/posts/' passHref>
+            <a style={{ color: '#0070f3' }}>Click for all Blogs</a>
+          </Link>
         </Text>
         <HomeBlogs blogs={blogs} />
       </Box>

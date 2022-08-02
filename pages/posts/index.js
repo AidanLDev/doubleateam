@@ -200,7 +200,9 @@ export default function Posts({ blogs }) {
           }
         })}
       </Grid>
-      <BackHomeLink />
+      <Box p='0 24px'>
+        <BackHomeLink style={{ padding: '0 24px' }} />
+      </Box>
       <Footer />
     </>
   );

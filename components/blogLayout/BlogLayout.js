@@ -32,7 +32,10 @@ export default function BlogLayout({ title, description, children, postUrl }) {
       <BackHomeLink blog />
       {children}
       <Signature />
-      <BackHomeLink />
+      <Box display='flex' justifyContent='space-between'>
+        <BackHomeLink />
+        <BackHomeLink blog />
+      </Box>
     </Box>
   );
 }
