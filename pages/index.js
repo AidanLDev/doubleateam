@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import HomeBackground from '../components/HomeBackground';
 import HomeHeader from '../components/HomeHeader';
@@ -6,6 +7,7 @@ import Footer from '../components/Footer';
 import { getBlogPostPaths } from '../lib/posts';
 import SEO from '../components/SEO';
 import Link from 'next/link';
+import ToggleLanguage from '../components/ToggleLanguage/ToggleLanguage';
 
 import styles from '../styles/Home.module.scss';
 
@@ -33,6 +35,7 @@ export default function Home({ blogs }) {
       </Box>
 
       <Box m='2% 6%' minH='1000px'>
+        <ToggleLanguage />
         <Text fontSize={'38px'} align='center' color='red' pb='12px'>
           Our Latest Blogs |{' '}
           <Link href='/posts/' passHref>

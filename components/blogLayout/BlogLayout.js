@@ -29,7 +29,10 @@ export default function BlogLayout({ title, description, children, postUrl }) {
         image='/images/IstanbulHagiaSopia.jpg'
       />
       <StraightLineProgress />
-      <BackHomeLink blog />
+      <Box display='flex' justifyContent='space-between'>
+        <BackHomeLink />
+        <BackHomeLink blog />
+      </Box>
       {children}
       <Signature />
       <Box display='flex' justifyContent='space-between'>
