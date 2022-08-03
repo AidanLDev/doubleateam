@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 const MotionImage = motion(Image);
 
-export default function HomeBlogs({ blogs }) {
+export default function HomeBlogs({ blogs, lang }) {
   const [isMobile, setIsMobile] = useState(false);
   const [mediaQuery] = useMediaQuery('(max-width: 575px)');
 
@@ -36,7 +36,7 @@ export default function HomeBlogs({ blogs }) {
                   }}
                 >
                   <CardTitle
-                    titleText={blog.title}
+                    titleText={lang === 'Eng' ? blog.title : blog.indTitle}
                     fontSize={isMobile ? '26px' : '30px'}
                     pos='absolute'
                   />

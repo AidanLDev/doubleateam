@@ -40,12 +40,20 @@ export default function Posts({ blogs }) {
   const [messageCount, setMessageCount] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [mediaQuery] = useMediaQuery('(max-width: 750px)');
+  const [lang, setLang] = useState();
 
   let flashingTextWidth;
 
   useEffect(() => {
     setIsMobile(mediaQuery);
   }, [mediaQuery]);
+
+  useEffect(() => {
+    if (!lang) {
+      setLang(sessionStorage.getItem('language'));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleInputChange = (e) => {
     setFilterValue(e.target.value);
@@ -112,8 +120,11 @@ export default function Posts({ blogs }) {
         align='center'
         color='red'
         padding='24px 0'
+        cursor='default'
       >
-        Spreading what we know, with those who want to know
+        {lang === 'Eng'
+          ? 'Spreading what we know, with those who want to know'
+          : 'Menyebarkan apa yang kita ketahui, dengan mereka yang ingin tahu'}
       </Text>
       <Divider borderColor='red' />
       <Flex>
@@ -182,15 +193,19 @@ export default function Posts({ blogs }) {
                       justifyContent='space-between'
                     >
                       <CardTitle
-                        titleText={blog.title}
+                        titleText={lang === 'Eng' ? blog.title : blog.indTitle}
                         fontSize='26px'
                         pos='relative'
                       />
                       <HStack>
                         <Icon as={AiFillTag} fill='white' />
-                        {blog.tags.map((tag, tagIdx) => (
-                          <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
-                        ))}
+                        {lang === 'Eng'
+                          ? blog.tags.map((tag, tagIdx) => (
+                              <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
+                            ))
+                          : blog.indTags.map((tag, tagIdx) => (
+                              <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
+                            ))}
                       </HStack>
                     </Flex>
                   </MotionContainer>

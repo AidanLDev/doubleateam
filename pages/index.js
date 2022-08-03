@@ -45,7 +45,7 @@ export default function Home({ blogs }) {
             </a>
           </Link>
         </Text>
-        <HomeBlogs blogs={blogs} />
+        <HomeBlogs lang={lang} blogs={blogs} />
       </Box>
       <Footer />
     </Box>
