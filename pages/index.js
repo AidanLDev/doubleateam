@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import HomeBackground from '../components/HomeBackground';
 import HomeHeader from '../components/HomeHeader';
@@ -21,6 +21,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ blogs }) {
+  const [lang, setLang] = useState();
   return (
     <Box w='100%' h='100%'>
       <SEO
@@ -35,11 +36,13 @@ export default function Home({ blogs }) {
       </Box>
 
       <Box m='2% 6%' minH='1000px'>
-        <ToggleLanguage />
+        <ToggleLanguage lang={lang} setLang={setLang} />
         <Text fontSize={'38px'} align='center' color='red' pb='12px'>
-          Our Latest Blogs |{' '}
+          {lang === 'Eng' ? 'Our Latest Blogs' : 'blog terbaru kami'}|{' '}
           <Link href='/posts/' passHref>
-            <a style={{ color: '#0070f3' }}>Click for all Blogs</a>
+            <a style={{ color: '#0070f3' }}>
+              {lang === 'Eng' ? 'Click for all Blogs' : 'Klik untuk semua Blog'}
+            </a>
           </Link>
         </Text>
         <HomeBlogs blogs={blogs} />
