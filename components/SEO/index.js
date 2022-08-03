@@ -43,38 +43,34 @@ const socialTags = ({
 
 const SEO = ({ title, description, image, url }) => {
   return (
-    <>
-      <Script
+    <Head>
+      <title>{title}</title>
+      <link rel='icon' href='/favicon.ico' />
+      <meta name='description' content={description} />
+      <meta itemProp='name' content={title} />
+      <meta itemProp='description' content={description} />
+      {image && <meta itemProp='image' content={image} />}
+      {socialTags({ url, title, description, image }).map(
+        ({ name, content }) => {
+          return <meta key={name} name={name} content={content} />;
+        }
+      )}
+      <script
         async
         src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8647500966281017'
-        crossorigin='anonymous'
+        crossOrigin='anonymous'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@content': 'http://schema.org',
+            '@type': 'Article',
+            name: title,
+            about: description,
+            url: url,
+          }),
+        }}
       />
-      <Head>
-        <title>{title}</title>
-        <link rel='icon' href='/favicon.ico' />
-        <meta name='description' content={description} />
-        <meta itemProp='name' content={title} />
-        <meta itemProp='description' content={description} />
-        {image && <meta itemProp='image' content={image} />}
-        {socialTags({ url, title, description, image }).map(
-          ({ name, content }) => {
-            return <meta key={name} name={name} content={content} />;
-          }
-        )}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@content': 'http://schema.org',
-              '@type': 'Article',
-              name: title,
-              about: description,
-              url: url,
-            }),
-          }}
-        />
-      </Head>
-    </>
+    </Head>
   );
 };
 
