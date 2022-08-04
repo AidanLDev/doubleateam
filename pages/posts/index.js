@@ -130,7 +130,7 @@ export default function Posts({ blogs }) {
       <Flex>
         <Input
           variant='filled'
-          placeholder='Blog Search...'
+          placeholder={lang === 'Eng' ? 'Blog Search...' : 'Pencarian blog...'}
           width='25%'
           value={filterValue}
           onChange={handleInputChange}

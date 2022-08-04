@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Text, Heading } from '@chakra-ui/react';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
@@ -185,7 +185,7 @@ const IndonesianBlog = (
     description={blogTitle}
     postUrl='marriage-requirements'
   >
-    <BlogTitle text={blogTitle} />
+    <BlogTitle text='Menikah dengan orang asing di Indonesia' />
     <Text>
       Pernikahan di Indonesia selalu upacara keagamaan, ini bisa bikin hal-hal
       yang agak rumit jika Anda berasal dari latar belakang agama yang berbeda
