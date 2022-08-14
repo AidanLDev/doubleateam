@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap --config next-sitemap-config.js",
     "start": "next start",
     "lint": "next lint",
     "export": "next export"
@@ -19,6 +20,7 @@
     "@fontsource/open-sans": "^4.5.6",
     "framer-motion": "latest",
     "next": "latest",
+    "next-sitemap": "^3.1.17",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "^4.4.0",
