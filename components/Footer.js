@@ -13,7 +13,12 @@ export default function Footer() {
   return (
     <footer className='footer'>
       <Box p='20px 0 50px 0' w='100%' borderBottom='2px solid gray'>
-        <Flex justify='center' gap='5%' paddingBottom='20px'>
+        <Flex
+          justify='center'
+          gap='5%'
+          paddingBottom='20px'
+          className='footerLinks'
+        >
           <Links />
           {/* <FooterIcon icon={FaTwitter} link='' hoverColour={twitterBlue} />
           <FooterIcon icon={FaFacebookF} link='' hoverColour={fbBlue} /> */}

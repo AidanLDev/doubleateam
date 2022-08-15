@@ -1,5 +1,4 @@
 import { List, ListIcon, ListItem } from '@chakra-ui/react';
-import { FaDotCircle, FaRegDotCircle } from 'react-icons/fa';
 import { BsFillHandThumbsUpFill, BsHandThumbsUp } from 'react-icons/bs';
 
 const StyledUL = ({ items, iconColour }) => {

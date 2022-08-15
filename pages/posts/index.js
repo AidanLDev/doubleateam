@@ -11,7 +11,6 @@ import {
   HStack,
   Tag,
   Icon,
-  useMediaQuery,
   Divider,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
@@ -19,12 +18,12 @@ import { AiFillTag } from 'react-icons/ai';
 import useSetLang from '../../hooks/useSetLang';
 import { getBlogPostPaths } from '../../lib/posts';
 import { messages } from '../../lib/messages';
-import BackHomeLink from '../../components/BackHomeLink';
 import Footer from '../../components/Footer';
 import CardTitle from '../../components/CardTitle';
 import styles from './styles.module.scss';
 import SEO from '../../components/SEO';
 import Topbar from '../../components/Nav/Topbar';
+import useIsMobile from '../../hooks/useIsMobile';
 
 export async function getStaticProps() {
   const blogs = getBlogPostPaths();
@@ -40,15 +39,10 @@ const MotionContainer = motion(Box);
 export default function Posts({ blogs }) {
   const [filterValue, setFilterValue] = useState('');
   const [messageCount, setMessageCount] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [mediaQuery] = useMediaQuery('(max-width: 750px)');
   const lang = useSetLang();
+  const isMobile = useIsMobile();
 
   let flashingTextWidth;
-
-  useEffect(() => {
-    setIsMobile(mediaQuery);
-  }, [mediaQuery]);
 
   const handleInputChange = (e) => {
     setFilterValue(e.target.value);

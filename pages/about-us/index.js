@@ -4,6 +4,7 @@ import React from 'react';
 import Card from '../../components/card/Card';
 import Layout from '../../components/Layout';
 import Topbar from '../../components/Nav/Topbar';
+import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
 
 import styles from './styles.module.scss';
@@ -14,7 +15,7 @@ export default function AboutUs() {
       <SEO
         title='Double A Team | About Us'
         description='A little background on who the double A team are'
-        url='https://doubleateam.co.uk/'
+        url='https://doubleateam.co.uk/about-us'
         image='/images/IstanbulHagiaSopia.jpg'
       />
       <Topbar />
@@ -34,7 +35,7 @@ export default function AboutUs() {
           <Heading>Arni Riani</Heading>
           <Image
             alt='Photo of Arni'
-            src='/images/ArniAvatar.png'
+            src='/images/us/ArniAvatar.png'
             width='250px'
             border='1px solid red'
             borderRadius='125px'
@@ -49,7 +50,7 @@ export default function AboutUs() {
           <Heading>Aidan Lowson</Heading>
           <Image
             alt='Photo of Aidan'
-            src='/images/AidanAvatar.png'
+            src='/images/us/AidanAvatar.png'
             width='250px'
             border='1px solid red'
             borderRadius='125px'
@@ -65,6 +66,7 @@ export default function AboutUs() {
           </Card>
         </VStack>
       </Layout>
+      <Footer />
     </Box>
   );
 }

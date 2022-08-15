@@ -30,4 +30,11 @@
     .logo:hover::after {
         transform: scaleY(1);
     }
+    @media(max-width: 575px) {
+        font-size: 18px;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 0;
+        gap: 6px;
+    }
 }

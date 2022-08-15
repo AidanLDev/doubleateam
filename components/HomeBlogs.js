@@ -1,18 +1,13 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { List, ListItem, Flex, Image, useMediaQuery } from '@chakra-ui/react';
+import { List, ListItem, Flex, Image } from '@chakra-ui/react';
 import CardTitle from './CardTitle';
-import { useEffect, useState } from 'react';
+import useIsMobile from '../hooks/useIsMobile';
 
 const MotionImage = motion(Image);
 
 export default function HomeBlogs({ blogs, lang }) {
-  const [isMobile, setIsMobile] = useState(false);
-  const [mediaQuery] = useMediaQuery('(max-width: 575px)');
-
-  useEffect(() => {
-    setIsMobile(mediaQuery);
-  }, [mediaQuery]);
+  const isMobile = useIsMobile();
 
   return (
     <List display='flex'>
