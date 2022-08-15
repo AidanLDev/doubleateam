@@ -1,4 +1,5 @@
-import { Box, Center, Heading, Text, VStack } from '@chakra-ui/react';
+/* eslint-disable react/no-unescaped-entities */
+import { Box, Center, Heading, Text, VStack, Image } from '@chakra-ui/react';
 import React from 'react';
 import Card from '../../components/card/Card';
 import Layout from '../../components/Layout';
@@ -30,15 +31,29 @@ export default function AboutUs() {
               others.
             </Text>
           </Card>
-          {/* Arni's Avatar */}
+          <Heading>Arni Riani</Heading>
+          <Image
+            alt='Photo of Arni'
+            src='/images/ArniAvatar.png'
+            width='250px'
+            border='1px solid red'
+            borderRadius='125px'
+          />
           <Card>
             <Text>
-              Arni Riani, originally from Bandung Indonesia. I have a affection
-              for painting, nail art and anything creative. A lover of the
-              outdoors, hiking is a big hobby of mine.
+              Originally from Bandung Indonesia. I have a affection for
+              painting, nail art and anything creative. A lover of the outdoors,
+              hiking is a big hobby of mine.
             </Text>
           </Card>
-          {/* Aidan's Avatar */}
+          <Heading>Aidan Lowson</Heading>
+          <Image
+            alt='Photo of Aidan'
+            src='/images/AidanAvatar.png'
+            width='250px'
+            border='1px solid red'
+            borderRadius='125px'
+          />
           <Card>
             <Text>
               Aidan Lowson, originally a mackem lad from Sunderland, now living
