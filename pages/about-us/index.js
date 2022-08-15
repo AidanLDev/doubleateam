@@ -6,10 +6,12 @@ import Layout from '../../components/Layout';
 import Topbar from '../../components/Nav/Topbar';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
+import useSetLang from '../../hooks/useSetLang';
 
 import styles from './styles.module.scss';
 
 export default function AboutUs() {
+  const lang = useSetLang();
   return (
     <Box className={styles.aboutUsContainer}>
       <SEO
@@ -21,15 +23,14 @@ export default function AboutUs() {
       <Topbar />
       <Layout>
         <Center>
-          <Heading>About us</Heading>
+          <Heading>{lang === 'Eng' ? 'About us' : 'Tentang kami'}</Heading>
         </Center>
         <VStack>
           <Card>
             <Text>
-              Arni and Aidan are two individuals, an Indonesian woman and
-              English man, who when put together make the double A team 😎 We're
-              passionate about traveling, living life to the full and helping
-              others.
+              {lang === 'Eng'
+                ? "Arni and Aidan are two individuals, an Indonesian woman and English man, who when put together make the double A team 😎 We're passionate about traveling, living life to the full and helping others."
+                : 'Arni dan Aidan adalah dua individu, seorang wanita Indonesia dan pria Inggris, yang ketika disatukan menjadi tim ganda A 😎 Kami bersemangat bepergian, menjalani hidup sepenuhnya, dan membantu orang lain.'}
             </Text>
           </Card>
           <Heading>Arni Riani</Heading>
@@ -42,9 +43,9 @@ export default function AboutUs() {
           />
           <Card>
             <Text>
-              Originally from Bandung Indonesia. I have a affection for
-              painting, nail art and anything creative. A lover of the outdoors,
-              hiking is a big hobby of mine.
+              {lang === 'Eng'
+                ? 'Originally from Bandung Indonesia. I have a affection for painting, nail art and anything creative. A lover of the outdoors, hiking is a big hobby of mine.'
+                : 'Berasal dari Bandung Indonesia. Saya memiliki kasih sayang untuk melukis, seni kuku, dan segala sesuatu yang kreatif. Seorang pecinta alam bebas, hiking adalah hobi besar saya.'}
             </Text>
           </Card>
           <Heading>Aidan Lowson</Heading>
@@ -57,11 +58,9 @@ export default function AboutUs() {
           />
           <Card>
             <Text>
-              Aidan Lowson, originally a mackem lad from Sunderland, now living
-              in the south of England. I love all things tech, be it playing
-              around with hardware to learning the latest in web technologies.
-              Always keen to learn anything new, reading and running are my main
-              hobbies.
+              {lang === 'Eng'
+                ? 'Aidan Lowson, originally a mackem lad from Sunderland, now living in the south of England. I love all things tech, be it playing around with hardware to learning the latest in web technologies. Always keen to learn anything new, reading and running are my main hobbies.'
+                : 'Berasal dari Sunderland, sekarang tinggal di selatan Inggris. Saya menyukai semua hal tentang teknologi, baik itu bermain-main dengan perangkat keras hingga mempelajari teknologi web terbaru. Selalu ingin belajar sesuatu yang baru, membaca dan berlari adalah hobi utama saya.'}
             </Text>
           </Card>
         </VStack>
