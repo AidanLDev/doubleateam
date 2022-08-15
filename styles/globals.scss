@@ -54,3 +54,12 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
 }
+
+.footer {
+  span {
+    color: $link-blue;
+  }
+  a {
+    color: $link-blue;
+  }
+}

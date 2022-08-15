@@ -26,7 +26,7 @@ export default function Home({ blogs }) {
     <Box w='100%' h='100%'>
       <SEO
         title='Double A Team'
-        description='A website built through our passion of helping others, learning and growing. Come learn what we know, if you want to know that is!'
+        description='A website built through our passion for helping others, learning and growing. Come learn what we know, if you want to know that is!'
         url='https://doubleateam.co.uk/'
         image='/images/IstanbulHagiaSopia.jpg'
       />

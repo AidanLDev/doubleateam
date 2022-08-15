@@ -6,6 +6,8 @@ import StraightLineProgress from '../scrollProgress/StraightLineProgress';
 import SEO from '../SEO';
 
 import styles from './styles.module.scss';
+import Footer from '../Footer';
+import Topbar from '../Nav/Topbar';
 
 export default function BlogLayout({ title, description, children, postUrl }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -28,17 +30,15 @@ export default function BlogLayout({ title, description, children, postUrl }) {
         url={`https://doubleateam.co.uk/posts/${postUrl}`}
         image='/images/IstanbulHagiaSopia.jpg'
       />
+      <Topbar />
       <StraightLineProgress />
-      <Box display='flex' justifyContent='space-between'>
+      {/* <Box display='flex' justifyContent='space-between'>
         <BackHomeLink />
         <BackHomeLink blog />
-      </Box>
+      </Box> */}
       {children}
       <Signature />
-      <Box display='flex' justifyContent='space-between'>
-        <BackHomeLink />
-        <BackHomeLink blog />
-      </Box>
+      <Footer />
     </Box>
   );
 }
