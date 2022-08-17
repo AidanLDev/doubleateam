@@ -112,7 +112,7 @@ export default function Posts({ blogs }) {
         padding='24px 0'
         cursor='default'
       >
-        {lang === 'Eng'
+        {lang !== 'Ind'
           ? 'Spreading what we know, with those who want to know'
           : 'Menyebarkan apa yang kita ketahui, dengan mereka yang ingin tahu'}
       </Text>
@@ -120,7 +120,7 @@ export default function Posts({ blogs }) {
       <Flex>
         <Input
           variant='filled'
-          placeholder={lang === 'Eng' ? 'Blog Search...' : 'Pencarian blog...'}
+          placeholder={lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'}
           width='25%'
           value={filterValue}
           onChange={handleInputChange}
@@ -183,13 +183,13 @@ export default function Posts({ blogs }) {
                       justifyContent='space-between'
                     >
                       <CardTitle
-                        titleText={lang === 'Eng' ? blog.title : blog.indTitle}
+                        titleText={lang !== 'Ind' ? blog.title : blog.indTitle}
                         fontSize='26px'
                         pos='relative'
                       />
                       <HStack>
                         <Icon as={AiFillTag} fill='white' />
-                        {lang === 'Eng'
+                        {lang !== 'Ind'
                           ? blog.tags.map((tag, tagIdx) => (
                               <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
                             ))

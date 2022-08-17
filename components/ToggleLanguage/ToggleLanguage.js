@@ -14,21 +14,21 @@ export default function ToggleLanguage({ lang, setLang }) {
       <Box
         onClick={() =>
           setLang((lang) => {
-            sessionStorage.setItem('language', lang === 'Eng' ? 'Ind' : 'Eng');
-            return lang === 'Eng' ? 'Ind' : 'Eng';
+            sessionStorage.setItem('language', lang !== 'Ind' ? 'Ind' : 'Eng');
+            return lang !== 'Ind' ? 'Ind' : 'Eng';
           })
         }
         cursor='pointer'
       >
         {
           <Text color='primary'>
-            {lang === 'Eng'
+            {lang !== 'Ind'
               ? 'klik di sini untuk mengubah bahasa Indonesia'
               : 'Click here to change the language to English'}
           </Text>
         }
         <Image
-          src={lang === 'Eng' ? '/images/Ind.png' : '/images/Eng.jpg'}
+          src={lang !== 'Ind' ? '/images/Ind.png' : '/images/Eng.jpg'}
           alt='Translate Flags'
           w='350px'
           h='200px'

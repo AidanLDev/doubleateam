@@ -23,12 +23,12 @@ export default function AboutUs() {
       <Topbar />
       <Layout>
         <Center>
-          <Heading>{lang === 'Eng' ? 'About us' : 'Tentang kami'}</Heading>
+          <Heading>{lang !== 'Ind' ? 'About us' : 'Tentang kami'}</Heading>
         </Center>
         <VStack>
           <Card>
             <Text>
-              {lang === 'Eng'
+              {lang !== 'Ind'
                 ? "Arni and Aidan are two individuals, an Indonesian woman and English man, who when put together make the double A team 😎 We're passionate about traveling, living life to the full and helping others."
                 : 'Arni dan Aidan adalah dua individu, seorang wanita Indonesia dan pria Inggris, yang ketika disatukan menjadi tim ganda A 😎 Kami bersemangat bepergian, menjalani hidup sepenuhnya, dan membantu orang lain.'}
               {/* But you’re a young 28 year old Sundanese woman from Bandung
@@ -48,7 +48,7 @@ export default function AboutUs() {
           />
           <Card>
             <Text>
-              {lang === 'Eng'
+              {lang !== 'Ind'
                 ? 'Originally from Bandung Indonesia. I have a affection for painting, nail art and anything creative. A lover of the outdoors, hiking is a big hobby of mine.'
                 : 'Berasal dari Bandung Indonesia. Saya memiliki kasih sayang untuk melukis, seni kuku, dan segala sesuatu yang kreatif. Seorang pecinta alam bebas, hiking adalah hobi besar saya.'}
             </Text>
@@ -63,7 +63,7 @@ export default function AboutUs() {
           />
           <Card>
             <Text>
-              {lang === 'Eng'
+              {lang !== 'Ind'
                 ? 'Aidan Lowson, originally a mackem lad from Sunderland, now living in the south of England. I love all things tech, be it playing around with hardware to learning the latest in web technologies. Always keen to learn anything new, reading and running are my main hobbies.'
                 : 'Berasal dari Sunderland, sekarang tinggal di selatan Inggris. Saya menyukai semua hal tentang teknologi, baik itu bermain-main dengan perangkat keras hingga mempelajari teknologi web terbaru. Selalu ingin belajar sesuatu yang baru, membaca dan berlari adalah hobi utama saya.'}
             </Text>

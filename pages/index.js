@@ -38,10 +38,10 @@ export default function Home({ blogs }) {
       <Box m='2% 6%' minH='1000px'>
         <ToggleLanguage lang={lang} setLang={setLang} />
         <Text fontSize={'38px'} align='center' color='red' pb='12px'>
-          {lang === 'Eng' ? 'Our Latest Blogs' : 'blog terbaru kami'}|{' '}
+          {lang !== 'Ind' ? 'Our Latest Blogs' : 'blog terbaru kami'}|{' '}
           <Link href='/posts/' passHref>
             <a style={{ color: '#0070f3' }}>
-              {lang === 'Eng' ? 'Click for all Blogs' : 'Klik untuk semua Blog'}
+              {lang !== 'Ind' ? 'Click for all Blogs' : 'Klik untuk semua Blog'}
             </a>
           </Link>
         </Text>

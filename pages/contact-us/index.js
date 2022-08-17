@@ -41,7 +41,7 @@ export default function ContactUs() {
       <Topbar />
       <Layout>
         <Center>
-          <Heading>{lang === 'Eng' ? 'Contact Us' : 'Hubungi kami'}</Heading>
+          <Heading>{lang !== 'Ind' ? 'Contact Us' : 'Hubungi kami'}</Heading>
         </Center>
         <VStack>
           <Card>
@@ -65,7 +65,7 @@ export default function ContactUs() {
               <span>
                 {' '}
                 -{' '}
-                {lang === 'Eng'
+                {lang !== 'Ind'
                   ? 'Send an email to our double a team mailbox'
                   : 'Kirim email ke kotak surat tim ganda kami'}
               </span>
@@ -96,7 +96,7 @@ export default function ContactUs() {
               <span>
                 {' '}
                 -{' '}
-                {lang === 'Eng'
+                {lang !== 'Ind'
                   ? 'Be sure to visit our YouTube channel!'
                   : 'Pastikan untuk mengunjungi saluran YouTube kami!'}
               </span>
@@ -105,7 +105,7 @@ export default function ContactUs() {
             <Center>
               <Heading>
                 {' '}
-                {lang === 'Eng' ? "Arni's Socials" : 'Sosial Arni'}
+                {lang !== 'Ind' ? "Arni's Socials" : 'Sosial Arni'}
               </Heading>
             </Center>
             <Center>
@@ -143,7 +143,7 @@ export default function ContactUs() {
               <span>
                 {' '}
                 -{' '}
-                {lang === 'Eng'
+                {lang !== 'Ind'
                   ? "You're missing out if you're not following Arni's Insta"
                   : 'Anda rugi jika tidak mengikuti Insta Arni'}
               </span>
@@ -174,7 +174,7 @@ export default function ContactUs() {
               <span>
                 {' '}
                 -{' '}
-                {lang === 'Eng'
+                {lang !== 'Ind'
                   ? 'Not much of a tweeter, but worth a follow in-case she finds her voice'
                   : 'Tidak banyak tweeter, tetapi patut diikuti jika dia menemukan suaranya'}
               </span>
@@ -183,7 +183,7 @@ export default function ContactUs() {
             <Center>
               <Heading>
                 {' '}
-                {lang === 'Eng' ? "Aidan's Socials" : 'Sosial Aidan'}
+                {lang !== 'Ind' ? "Aidan's Socials" : 'Sosial Aidan'}
               </Heading>
             </Center>
             <Center>
@@ -221,7 +221,7 @@ export default function ContactUs() {
               <span>
                 {' '}
                 -{' '}
-                {lang === 'Eng'
+                {lang !== 'Ind'
                   ? 'Not quite as good a photographer as Arni, however we try to keep IG relatively up to date so give us a follow'
                   : 'Tidak sebagus fotografer Arni, namun kami mencoba untuk menjaga IG relatif up to date, jadi ikuti kami'}{' '}
                 😉
@@ -248,7 +248,7 @@ export default function ContactUs() {
               <span>
                 {' '}
                 -{' '}
-                {lang === 'Eng'
+                {lang !== 'Ind'
                   ? 'Again... much of a tweeter, but you never know if that will change'
                   : 'Tidak sebagus fotografer Arni, namun kami mencoba untuk menjaga IG relatif up to date, jadi ikuti kami'}
                 ?!
@@ -272,7 +272,7 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span> - {lang === 'Eng' ? 'The classic FB' : 'FB klasik'}</span>
+              <span> - {lang !== 'Ind' ? 'The classic FB' : 'FB klasik'}</span>
             </Box>
           </Card>
         </VStack>

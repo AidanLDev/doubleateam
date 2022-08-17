@@ -9,20 +9,20 @@ export default function Links() {
   return (
     <>
       <Link href='/'>
-        <a>{lang === 'Eng' ? 'Home' : 'rumah'}</a>
+        <a>{lang !== 'Ind' ? 'Home' : 'Rumah'}</a>
       </Link>
       <Link href='/posts'>
-        <a>{lang === 'Eng' ? 'All Blogs' : 'Semua Blog'}</a>
+        <a>{lang !== 'Ind' ? 'All Blogs' : 'Semua Blog'}</a>
       </Link>
       {!isMobile && <span>|</span>}
       <Link href='/about-us' passHref>
-        <a>{lang === 'Eng' ? 'About Us' : 'Tentang kami'}</a>
+        <a>{lang !== 'Ind' ? 'About Us' : 'Tentang kami'}</a>
       </Link>
       <Link href='/contact-us' passHref>
-        <a>{lang === 'Eng' ? 'Contact Us' : 'Hubungi kami'}</a>
+        <a>{lang !== 'Ind' ? 'Contact Us' : 'Hubungi kami'}</a>
       </Link>
       <Link href='/privacy-policy' passHref>
-        <a>{lang === 'Eng' ? 'Privacy Policy' : 'Kebijakan pribadi'}</a>
+        <a>{lang !== 'Ind' ? 'Privacy Policy' : 'Kebijakan pribadi'}</a>
       </Link>
     </>
   );

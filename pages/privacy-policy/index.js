@@ -242,7 +242,7 @@ export default function PrivacyPolicy() {
           m='2rem auto 2rem'
           className={styles.privacyPolicyContent}
         >
-          {lang === 'Eng' ? engPolicy : indPolicy}
+          {lang !== 'Ind' ? engPolicy : indPolicy}
         </Box>
       </Layout>
       <Footer />

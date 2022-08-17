@@ -16,10 +16,10 @@ export default function BackHomeLink({ blog }) {
       <Text color='secondary' m='20px 0'>
         <a>
           {blog
-            ? lang === 'Eng' || !lang
+            ? lang !== 'Ind' || !lang
               ? 'All blogs'
               : 'Semua blog'
-            : lang === 'Eng' || !lang
+            : lang !== 'Ind' || !lang
             ? 'Take me home'
             : 'Bawa aku pulang'}
         </a>
