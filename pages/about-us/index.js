@@ -31,6 +31,11 @@ export default function AboutUs() {
               {lang === 'Eng'
                 ? "Arni and Aidan are two individuals, an Indonesian woman and English man, who when put together make the double A team 😎 We're passionate about traveling, living life to the full and helping others."
                 : 'Arni dan Aidan adalah dua individu, seorang wanita Indonesia dan pria Inggris, yang ketika disatukan menjadi tim ganda A 😎 Kami bersemangat bepergian, menjalani hidup sepenuhnya, dan membantu orang lain.'}
+              {/* But you’re a young 28 year old Sundanese woman from Bandung
+                  You graduated in Finance
+                  Have experience as an events organiser, retail and finance and administration 
+
+                  You enjoy being creative with things like nail art and love swimming on the beach and being out in nature when hiking  */}
             </Text>
           </Card>
           <Heading>Arni Riani</Heading>
