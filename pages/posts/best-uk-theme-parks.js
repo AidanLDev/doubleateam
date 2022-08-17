@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { Text } from '@chakra-ui/react';
+import { Text, Heading, Image, Box } from '@chakra-ui/react';
 import useSetLang from '../../hooks/useSetLang';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
+import ThemeparkBox from '../../components/blogComponents/ThemeparkBox';
 
 const blogTitle = 'UKs Best Theme parks';
 
@@ -19,6 +20,65 @@ const EnglishBlog = (
       scattered between various parks. Let's dive deep into what parks are here
       in the UK.
     </Text>
+
+    <ThemeparkBox
+      park='Alton Towers'
+      parkDetails='Stoke-On-Trent | £36 online or free with a Merlin Pass'
+      imageSrc='/images/Eng.jpg'
+    >
+      <Text>Great information about Alton Towers</Text>
+    </ThemeparkBox>
+
+    <ThemeparkBox
+      park='Thorpe Park'
+      parkDetails='Staines | £37 online or free with a Merlin Pass'
+    >
+      <Text>Thorpepark info</Text>
+    </ThemeparkBox>
+
+    <ThemeparkBox
+      park='Chessington World of Adventure'
+      parkDetails='London | £39 online or free with a Merlin Pass'
+      imageSrc=''
+    ></ThemeparkBox>
+
+    <ThemeparkBox
+      park='Legoland Windsor'
+      parkDetails='Windsor | £32 Online or free with a Merlin Pass'
+      imageSrc=''
+    ></ThemeparkBox>
+
+    <ThemeparkBox
+      park='Blackpool Pleasure Beach'
+      parkDetails=''
+      imageSrc=''
+    ></ThemeparkBox>
+
+    <ThemeparkBox park='Paultons' parkDetails='' imageSrc=''></ThemeparkBox>
+
+    <ThemeparkBox
+      park='Fantasy Island'
+      parkDetails=''
+      imageSrc=''
+    ></ThemeparkBox>
+
+    <ThemeparkBox
+      park='Flamingo Land'
+      parkDetails=''
+      imageSrc=''
+    ></ThemeparkBox>
+
+    <ThemeparkBox
+      park='Drayton Manor'
+      parkDetails=''
+      imageSrc=''
+    ></ThemeparkBox>
+
+    <ThemeparkBox
+      park='Oakwood Theme Park'
+      parkDetails=''
+      imageSrc=''
+    ></ThemeparkBox>
   </BlogLayout>
 );
 
