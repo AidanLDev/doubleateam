@@ -21,12 +21,20 @@ import useSetLang from '../../hooks/useSetLang';
 import styles from './styles.module.scss';
 // Icons
 import { AiOutlineMail } from 'react-icons/ai';
-import { FaInstagram, FaYoutube, FaTwitter, FaFacebookF } from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaYoutube,
+  FaTwitter,
+  FaFacebookF,
+  FaLinkedinIn,
+} from 'react-icons/fa';
+import { TbWorld } from 'react-icons/tb';
 
 const igPink = '#e04d93';
 const youtubeRed = '#fe2c3c';
 const twitterBlue = '#61b9ff';
 const fbBlue = '#3e55aa';
+const linkedInBlue = '#2867b2';
 
 export default function ContactUs() {
   const lang = useSetLang();
@@ -35,13 +43,15 @@ export default function ContactUs() {
       <SEO
         title='Double A Team | Contact Us'
         description='Get in touch with the Double A Team!'
-        url='https://doubleateam.co.uk/privacy-policy'
+        url='https://doubleateam.co.uk/contact-us'
         image='/images/IstanbulHagiaSopia.jpg'
       />
       <Topbar />
       <Layout>
         <Center>
-          <Heading>{lang !== 'Ind' ? 'Contact Us' : 'Hubungi kami'}</Heading>
+          <Heading>
+            {lang !== 'Ind' ? 'Contact Us' : 'Hubungi kami'}
+          </Heading>
         </Center>
         <VStack>
           <Card>
@@ -255,7 +265,10 @@ export default function ContactUs() {
               </span>
             </Box>
             <Box>
-              <Link href='https://www.facebook.com/aidan.lowson' passHref>
+              <Link
+                href='https://www.facebook.com/aidan.lowson'
+                passHref
+              >
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
@@ -272,7 +285,65 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span> - {lang !== 'Ind' ? 'The classic FB' : 'FB klasik'}</span>
+              <span>
+                {' '}
+                - {lang !== 'Ind' ? 'The classic FB' : 'FB klasik'}
+              </span>
+            </Box>
+            <Box>
+              <Link href='https://aidanlowson.com' passHref>
+                <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  style={{ borderBottom: 'none' }}
+                >
+                  <Icon
+                    pos='relative'
+                    top='10px'
+                    color='black'
+                    cursor='pointer'
+                    boxSize={8}
+                    as={TbWorld}
+                    target='_blank'
+                  />
+                </a>
+              </Link>{' '}
+              <span>
+                {' '}
+                -{' '}
+                {lang !== 'Ind'
+                  ? 'My personal portfolio website'
+                  : 'Situs web portofolio pribadi saya'}
+              </span>
+            </Box>
+            <Box>
+              <Link
+                href='https://www.linkedin.com/in/aidanlowson1/'
+                passHref
+              >
+                <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  style={{ borderBottom: 'none' }}
+                >
+                  <Icon
+                    pos='relative'
+                    top='10px'
+                    color={linkedInBlue}
+                    cursor='pointer'
+                    boxSize={8}
+                    as={FaLinkedinIn}
+                    target='_blank'
+                  />
+                </a>
+              </Link>{' '}
+              <span>
+                {' '}
+                -{' '}
+                {lang !== 'Ind'
+                  ? 'For the professionals out there'
+                  : 'Untuk para profesional'}
+              </span>
             </Box>
           </Card>
         </VStack>

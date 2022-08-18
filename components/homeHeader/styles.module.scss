@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.headingContainer {
+  .heading {
+    &::before {
+      border: 1px solid red;
+    }
+  }
+}
