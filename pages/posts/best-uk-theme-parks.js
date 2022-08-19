@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { Text, Heading, Image, Box } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import useSetLang from '../../hooks/useSetLang';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';

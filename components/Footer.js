@@ -1,7 +1,11 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
-import { FaInstagram, FaYoutube, FaTwitter, FaFacebookF } from 'react-icons/fa';
+import { Box, Divider, Flex, Text } from '@chakra-ui/react';
+import {
+  FaInstagram,
+  FaYoutube,
+  FaTwitter,
+  FaFacebookF,
+} from 'react-icons/fa';
 import FooterIcon from './functional/FooterIcon';
-import Link from 'next/link';
 import Links from './Nav/Links';
 
 export default function Footer() {
@@ -12,11 +16,15 @@ export default function Footer() {
 
   return (
     <footer className='footer'>
-      <Box p='20px 0 50px 0' w='100%' borderBottom='2px solid gray'>
+      <Box
+        p='20px 0 50px 0'
+        w='100%'
+        borderBottom='2px solid #868484'
+      >
         <Flex
           justify='center'
           gap='5%'
-          paddingBottom='20px'
+          paddingBottom='30px'
           className='footerLinks'
         >
           <Links />

@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: black !important;
+  background-color: #282828b8 !important;
 }
 
 a {
@@ -65,7 +65,7 @@ a:hover {
 
 .footerLinks {
   @media(max-width: 575px) {
-    font-size: 18px;
+    font-size: 24px;
     flex-direction: column;
     align-items: center;
     padding: 12px 0;

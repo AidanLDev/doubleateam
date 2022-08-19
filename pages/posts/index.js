@@ -156,10 +156,14 @@ export default function Posts({ blogs }) {
                   minH='600px'
                   maxH='600px'
                   colSpan={
-                    isMobile || filterValue !== '' ? 1 : blog.size.colSpan
+                    isMobile || filterValue !== ''
+                      ? 1
+                      : blog.size.colSpan
                   }
                   rowSpan={
-                    isMobile || filterValue !== '' ? 1 : blog.size.rowSpan
+                    isMobile || filterValue !== ''
+                      ? 1
+                      : blog.size.rowSpan
                   }
                   _hover={{
                     boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
@@ -175,26 +179,42 @@ export default function Posts({ blogs }) {
                     p='24px'
                     h='100%'
                     w='100%'
-                    whileHover={{ scale: 1.04 }}
+                    whileHover={{ scale: 1.02 }}
                   >
                     <Flex
                       flexDir='column'
                       h='100%'
                       justifyContent='space-between'
                     >
-                      <CardTitle
-                        titleText={lang !== 'Ind' ? blog.title : blog.indTitle}
-                        fontSize='26px'
-                        pos='relative'
-                      />
+                      <Box>
+                        <CardTitle
+                          titleText={
+                            lang !== 'Ind'
+                              ? blog.title
+                              : blog.indTitle
+                          }
+                          fontSize='26px'
+                          pos='relative'
+                        />
+                        <Divider />
+                        <CardTitle
+                          titleText={blog.published}
+                          fontSize='16px'
+                          pos='relative'
+                        />
+                      </Box>
                       <HStack>
                         <Icon as={AiFillTag} fill='white' />
                         {lang !== 'Ind'
                           ? blog.tags.map((tag, tagIdx) => (
-                              <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
+                              <Tag key={`${tag}__${idx}__${tagIdx}`}>
+                                {tag}
+                              </Tag>
                             ))
                           : blog.indTags.map((tag, tagIdx) => (
-                              <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
+                              <Tag key={`${tag}__${idx}__${tagIdx}`}>
+                                {tag}
+                              </Tag>
                             ))}
                       </HStack>
                     </Flex>

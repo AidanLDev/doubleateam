@@ -17,7 +17,7 @@ export default function BlogLayout({ title, description, children, postUrl }) {
       <Topbar />
       <Box
         maxW={isMobile ? '90%' : '60rem'}
-        p='4px 2rem'
+        p='24px 2rem'
         m='2rem auto 2rem'
         className={styles.blogLayout}
       >
