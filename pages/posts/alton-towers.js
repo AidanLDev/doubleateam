@@ -257,7 +257,34 @@ const EnglishBlog = (
     <Text>
       We can't talk about Alton Towers without mentioning the old estately home
       that takes up a sizeable chunk of the park.
-      {/* TODO: Learn history and add it here */}
+    </Text>
+    <Text>
+      <b>The history of Alton Towers</b>: The stately home was once the largest
+      private house in Europe. The house has historically been owned by the
+      Talbot family since 1406 when Sir John Talbot aquired the estate when he
+      married Maud. He was the first Earl of Shrewsbury. The 19th Earl decided
+      to open the grounds up to the public to fund repairs to the house around
+      the 1890s. This inspired the 20th early to develop the state for tourist
+      attractions. However when the earl and his wife separated in 1896, he left
+      his wife to live in the estate, although he refused to spend money on
+      up-keep of the building. A group of local businessmen bought the estate
+      and formed "Alton Towers Limited". By the 1920s they opened the grounds up
+      to the public and added cafes, it was extremely popular during the 20s and
+      30s. When world war 2 broke out, the estate was re-purposed as a cadet
+      training camp.
+      {/* Estately home photos */}
+    </Text>
+    <Text>
+      During the 1960s and 1970s, Towers began to see fair rides and other
+      attractions spring up in the grounds, while the building itself was left
+      deserted after taking heavy damage during the war. Although concrete
+      floors were added to the house so vistors could enter and walk around. By
+      the 1980s, the new owners of Alton Towers, inspired by Disney, wanted to
+      open up a fully fledged theme park. They themed streets inspired by Disney
+      parks and opened up a new coaster that was the start of Alton Towers as we
+      know it today... <b>The Corkscrew</b>. This was an instant hit, with line
+      wait times going up 6 hours.
+      {/* Corkscrew photos */}
     </Text>
     <Text>
       To get an arial view of the stunning grounds, you can take the{' '}
