@@ -226,8 +226,43 @@ const EnglishBlog = (
     <Text>
       There's more to Alton Towers than just rollercoasters! A selection of
       family friendly and thrilling flat rides can be found scattered about the
-      park.
+      park. Here's a selection of said rides:
     </Text>
+    <ThemeparkBox park='Gangsta Granny The Ride' parkDetails="David Walliams' Gansta Granny perfect for families" ></ThemeparkBox>
+    <ThemeparkBox park='Retro Squad' parkDetails='Retro themed flat rides featuring Spinjam, a Tivoli Extreme | Funk n Fly, a Super Trooper | Roller Disco, a waltzer'>
+      <Text>
+        Only for those with strong stomachs, fun carnival vibes with these classic flat rides and the music for all of these attractions will have you dancing and signing like an old school disco.
+      </Text>
+    </ThemeparkBox>
+    <ThemeparkBox park='Enterprise' parkDetails='This ride generates enouugh Gs to let you invert without restraints, a fun experiance, you will feel like an astronought training for a mission to Mars.'>
+
+    </ThemeparkBox>
+    {/* <TehemparkBox park='Hex - The legend of the Towers' parkDetails=''>
+      
+      </ThemeparkBox> */}
+      <ThemeparkBox park='Duel: THe Haunted House Strikes Back' parkDetails='Shoot undead targets to raise your score in this interactive ride. The queue line has you going through a rundown haunted house with plenty of details to keep you entertained during your wait in the line.'>
+        </ThemeparkBox>
+        <Heading>
+          The Towers and Gardens
+        </Heading>
+        <Text>
+        We can't talk about Alton Towers without mentioning the old estately home that takes up a sizeable chunk of the park.
+        {/* TODO: Learn history and add it here */}
+        </Text>
+        <Text>
+          To get an arial view of the stunning grounds, you can take the <b>Skyride</b> to one area of the park to another. You will be entertained by audio describing some of the history of the park as well as a distinctive view of the park. 
+          </Text>
+          <Text>
+            There's many hidden gems of beauty throughout the park, you can walk through the gardens where you'll see water features such as this:
+            {/* water feature phpto */}
+            </Text>
+            <Text>
+              All throughout the park there's beauty, this waterfall is outside one of the best rides, The Wicker Man:
+              {/* Waterfall image */}
+              </Text>
+              <Text>
+                There's nowhere else quite like Alton Towers. It offers a little something to everyone, while being a stunning location in the process. 
+                </Text>
   </BlogLayout>
 );
 
