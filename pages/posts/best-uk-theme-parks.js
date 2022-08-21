@@ -54,7 +54,7 @@ const EnglishBlog = (
     <ThemeparkBox
       park='Thorpe Park'
       parkDetails='Staines | £37 online or free with a Merlin Pass'
-      imageSrc={`${imgPath}thorpe-park.JPG`}
+      imageSrc={`${imgPath}thorpe-park/stealth.jpg`}
     >
       <Text>
         The Island like no other... Located in Staines, not too far from London,
@@ -74,7 +74,7 @@ const EnglishBlog = (
     <ThemeparkBox
       park='Chessington World of Adventures'
       parkDetails='Surrey, Greater London | £39 online or free with a Merlin Pass'
-      imageSrc={`${imgPath}chessington.JPG`}
+      imageSrc={`${imgPath}/chessington/crock-drop-img.jpg`}
     >
       <Text>
         This family friendly Zoo/Theme park has a wide veriaty of attractions.
@@ -122,7 +122,7 @@ const EnglishBlog = (
     <ThemeparkBox
       park='Blackpool Pleasure Beach'
       parkDetails='Blackpool | £30 - £40 Online'
-      imageSrc={`${imgPath}bPool.JPG`}
+      imageSrc={`${imgPath}/blackpool/icon.jpg`}
     >
       <Text>
         I always feel like I'm going back in time when I step foot here, in the
@@ -292,7 +292,7 @@ const IndonesianBlog = (
     <ThemeparkBox
       park='Thorpe Park'
       parkDetails='Staines | £37 online atau gratis dengan Merlin Pass'
-      imageSrc={`${imgPath}thorpe-park.JPG`}
+      imageSrc={`${imgPath}thorpe-park/stealth.jpg`}
     >
       <Text>
         Pulau tidak seperti yang lain... Terletak di Staines, tidak terlalu jauh
@@ -314,7 +314,7 @@ const IndonesianBlog = (
     <ThemeparkBox
       park='Chessington World of Adventures'
       parkDetails='Surrey, Greater London | £39 online atau gratis dengan Merlin Pass'
-      imageSrc={`${imgPath}chessington.JPG`}
+      imageSrc={`${imgPath}/chessington/crock-drop-img.jpg`}
     >
       <Text>
         Kebun Binatang/Taman hiburan yang ramah keluarga ini memiliki beragam
@@ -366,7 +366,7 @@ const IndonesianBlog = (
     <ThemeparkBox
       park='Blackpool Pleasure Beach'
       parkDetails='Blackpool | £30 - £40 Online'
-      imageSrc={`${imgPath}bPool.JPG`}
+      imageSrc={`${imgPath}/blackpool/icon.jpg`}
     >
       <Text>
         Saya selalu merasa seperti kembali ke masa lalu ketika saya menginjakkan
