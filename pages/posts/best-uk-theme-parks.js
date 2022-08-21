@@ -12,7 +12,7 @@ const imgPath = '/images/blog/theme-parks/';
 
 const EnglishBlog = (
   <BlogLayout
-    title='Double A Team | What to do in the UK'
+    title='Double A Team | Best UK Theme Parks'
     description={blogTitle}
     postUrl='best-uk-theme-parks'
   >
@@ -243,7 +243,7 @@ const EnglishBlog = (
 
 const IndonesianBlog = (
   <BlogLayout
-    title='Double A Team | What to do in the UK'
+    title='Double A Team | Best UK Theme Parks'
     description={blogTitle}
     postUrl='best-uk-theme-parks'
   >
