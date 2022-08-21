@@ -5,6 +5,7 @@ import useSetLang from '../../hooks/useSetLang';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 import ThemeparkBox from '../../components/blogComponents/ThemeparkBox';
+import SimpleLink from '../../components/SimpleLink';
 
 const blogTitle = 'All you need to know about Alton Towers';
 
@@ -18,30 +19,20 @@ const EnglishBlog = (
   >
     <BlogTitle text={blogTitle} />
     <Text>
-      This island holds a lot of thrill, with some of the world's best coasters
-      scattered between various parks. Let's dive deep into what parks are here
-      in the UK.
+      The biggest park in the UK, coming in at a massive 910 acres of thrills,
+      stunning well-kept gardens, and stately home. It’s the full package and
+      caters to both families and thrill seekers.
     </Text>
-
     <ThemeparkBox
-      park='Alton Towers'
-      parkDetails='Stoke-On-Trent | £36 online or free with a Merlin Pass'
-      imageSrc='/images/blog/best-uk-theme-parks.jpg'
+      park='Location'
+      parkDetails='Farley Ln, Alton, Stoke-on-Trent ST10 4DB'
+      //   imageSrc={``}
+      // Update image src to a beautiful pic of the area
     >
       <Text>
-        Alton Towers is not only home to some of the best thrill rides you'll
-        find anywhere in this world, hosting 10 record-breaking coasters, but
-        also some of the most beautiful scenery surrounding an old stately home.
-      </Text>
-      <Text>
-        Prepare to get plenty of steps in as this park covers 910 acres,
-        boasting over 40 attractions for both families and thrill seakers.
-      </Text>
-      <Text>
-        There's something for everyone at Alton Towers, with CBeebies land,
-        hosting the David Walliams' Ganster Granny ride. To the likes of
-        Nemesis, Oblivion and Smiler. You can even fly like superman on
-        Galactica.
+        The park is in central Staffordshire, close to the city Stoke-On-Trent.
+        However you’re getting to Towers, you’ll be sure to be greeted by the
+        glorious British countryside.
       </Text>
     </ThemeparkBox>
   </BlogLayout>

@@ -5,6 +5,7 @@ import useSetLang from '../../hooks/useSetLang';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import BlogTitle from '../../components/BlogTitle';
 import ThemeparkBox from '../../components/blogComponents/ThemeparkBox';
+import SimpleLink from '../../components/SimpleLink';
 
 const blogTitle = 'UKs Best Theme parks';
 
@@ -42,6 +43,11 @@ const EnglishBlog = (
         hosting the David Walliams' Ganster Granny ride. To the likes of
         Nemesis, Oblivion and Smiler. You can even fly like superman on
         Galactica.
+      </Text>
+      <Text>
+        <SimpleLink link='/posts/alton-towers'>
+          Find out more here from our personal Alton Towers guide
+        </SimpleLink>
       </Text>
     </ThemeparkBox>
 
@@ -275,6 +281,11 @@ const IndonesianBlog = (
         menjadi tuan rumah wahana Ganster Granny milik David Walliams. Untuk
         orang-orang seperti Nemesis, Oblivion dan Smiler. Anda bahkan bisa
         terbang seperti superman di Galactica.
+      </Text>
+      <Text>
+        <SimpleLink link='/posts/alotn-towers'>
+          Cari tahu lebih lanjut dari panduan pribadi kami di sini
+        </SimpleLink>
       </Text>
     </ThemeparkBox>
 
