@@ -146,6 +146,11 @@ const EnglishBlog = (
         },
       ]}
     />
+    <Text>
+      Personally I managed to get a hefty discount on my Merlin Pass by buying
+      it during a Black Friday deal. So for those bargain hunters out there,
+      keep that in mind 😉
+    </Text>
     <Heading>Rides and attractions</Heading>
     <Text>
       This park is packed full of rides, with well over 40 rides, there are
@@ -335,6 +340,35 @@ const EnglishBlog = (
       Throughout the park, there's beauty, this waterfall is outside one of the
       best rides, The Wicker Man:
       <SmallBlogImg src={`${imgPath}waterfall-still.jpg`} alt='Waterfall' />
+    </Text>
+    <Heading>Gallery</Heading>
+    <SmallBlogImg src={`${imgPath}me-and-bob.jpg`} alt='Me and big b' />
+    <Text>
+      <Center>
+        <AspectRatio w='500px' ratio={1}>
+          <video
+            title='Oblivion'
+            src={`${imgPath}oblivion.MOV`}
+            autoPlay
+            muted
+            loop
+          />
+        </AspectRatio>
+      </Center>
+    </Text>
+
+    <Text>
+      <Center>
+        <AspectRatio w='500px' ratio={1}>
+          <video
+            title='Waterfall'
+            src={`${imgPath}waterfall.MOV`}
+            autoPlay
+            muted
+            loop
+          />
+        </AspectRatio>
+      </Center>
     </Text>
     <Text>
       There's nowhere else quite like Alton Towers. It offers a little something
@@ -676,6 +710,35 @@ const IndonesianBlog = (
     <Text>
       Tidak ada tempat lain seperti Alton Towers. Ini menawarkan sedikit sesuatu
       untuk semua orang, sambil menjadi lokasi yang menakjubkan dalam prosesnya.
+    </Text>
+    <Heading>Galeri</Heading>
+    <SmallBlogImg src={`${imgPath}me-and-bob.jpg`} alt='Me and big b' />
+    <Text>
+      <Center>
+        <AspectRatio w='500px' ratio={1}>
+          <video
+            title='Oblivion'
+            src={`${imgPath}oblivion.MOV`}
+            autoPlay
+            muted
+            loop
+          />
+        </AspectRatio>
+      </Center>
+    </Text>
+
+    <Text>
+      <Center>
+        <AspectRatio w='500px' ratio={1}>
+          <video
+            title='Waterfall'
+            src={`${imgPath}waterfall.MOV`}
+            autoPlay
+            muted
+            loop
+          />
+        </AspectRatio>
+      </Center>
     </Text>
   </BlogLayout>
 );
