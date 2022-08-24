@@ -8,7 +8,6 @@ import {
   Icon,
   Box,
   Flex,
-  Divider,
 } from '@chakra-ui/react';
 import CardTitle from '../CardTitle';
 import { AiFillTag } from 'react-icons/ai';
@@ -38,27 +37,14 @@ export default function PostCard({ blog, idx, filterValue }) {
       borderRadius='6%'
     >
       <Box>
-        <Link href={`/posts/${blog.path}`} passHref maxH='600px'>
-          <MotionContainer
-            backgroundImage={`/images/blog/${blog.path}.jpg`}
-            backgroundSize='cover'
-            cursor='pointer'
-            colSpan={blog.size.colSpan}
-            rowSpan={blog.size.rowSpan}
-            p='24px'
-            h='600px'
-            w='100%'
-            whileHover={{ scale: 1.02 }}
-          />
-        </Link>
         <Flex
           flexDir='column'
           justifyContent='space-between'
-          position='relative'
-          top='-580px'
+          position='absolute'
         >
           <Box>
             <Flex justifyContent='space-around'>
+              {/* TODO: Sort out length */}
               <CardTitle
                 titleText={
                   lang !== 'Ind' ? blog.title : blog.indTitle
@@ -74,7 +60,6 @@ export default function PostCard({ blog, idx, filterValue }) {
                 onClick={() => setCopied(copied => !copied)}
               />
             </Flex>
-            <Divider />
             <CardTitle
               titleText={blog.published}
               fontSize='16px'
@@ -82,7 +67,20 @@ export default function PostCard({ blog, idx, filterValue }) {
             />
           </Box>
         </Flex>
-        <HStack pos='relative' top='-150px'>
+        <Link href={`/posts/${blog.path}`} passHref maxH='600px'>
+          <MotionContainer
+            backgroundImage={`/images/blog/${blog.path}.jpg`}
+            backgroundSize='cover'
+            cursor='pointer'
+            colSpan={blog.size.colSpan}
+            rowSpan={blog.size.rowSpan}
+            p='24px'
+            h='600px'
+            w='100%'
+            whileHover={{ scale: 1.02 }}
+          />
+        </Link>
+        <HStack pos='relative' zIndex='20' top='-40px' left='12px'>
           <Icon as={AiFillTag} fill='white' />
           {lang !== 'Ind'
             ? blog.tags.map((tag, tagIdx) => (
