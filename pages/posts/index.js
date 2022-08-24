@@ -7,24 +7,17 @@ import {
   Input,
   Text,
   Grid,
-  GridItem,
-  HStack,
-  Tag,
-  Icon,
   Divider,
 } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
-import { AiFillTag } from 'react-icons/ai';
-import { BsClipboard, BsClipboardCheck } from 'react-icons/bs';
 import useSetLang from '../../hooks/useSetLang';
 import { getBlogPostPaths } from '../../lib/posts';
 import { messages } from '../../lib/messages';
 import Footer from '../../components/Footer';
-import CardTitle from '../../components/CardTitle';
 import styles from './styles.module.scss';
 import SEO from '../../components/SEO';
 import Topbar from '../../components/Nav/Topbar';
 import useIsMobile from '../../hooks/useIsMobile';
+import PostCard from '../../components/postsComponents/PostCard';
 
 export async function getStaticProps() {
   const blogs = getBlogPostPaths();
@@ -35,18 +28,15 @@ export async function getStaticProps() {
   };
 }
 
-const MotionContainer = motion(Box);
-
 export default function Posts({ blogs }) {
   const [filterValue, setFilterValue] = useState('');
   const [messageCount, setMessageCount] = useState(0);
-  const [copied, setCopied] = useState(false);
   const lang = useSetLang();
   const isMobile = useIsMobile();
 
   let flashingTextWidth;
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     setFilterValue(e.target.value);
   };
 
@@ -97,7 +87,9 @@ export default function Posts({ blogs }) {
             position='absolute'
             top={Math.floor(Math.random() * 300 + 100)}
             left={Math.floor(
-              Math.random() * flashingTextWidth || isMobile ? 200 : 800
+              Math.random() * flashingTextWidth || isMobile
+                ? 200
+                : 800
             )}
             fontSize={isMobile ? 'large' : '6xl'}
             className='fadingText'
@@ -122,7 +114,9 @@ export default function Posts({ blogs }) {
       <Flex>
         <Input
           variant='filled'
-          placeholder={lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'}
+          placeholder={
+            lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'
+          }
           width='25%'
           value={filterValue}
           onChange={handleInputChange}
@@ -145,85 +139,12 @@ export default function Posts({ blogs }) {
             blog.tags.includes(filterValue)
           ) {
             return (
-              // TODO: Move this into it's own seperate componant that handles it's own copy state
-              <Link
-                href={`/posts/${blog.path}`}
+              <PostCard
+                blog={blog}
+                idx={idx}
+                filterValue={filterValue}
                 key={`${blog}__${idx}`}
-                passHref
-                maxH='600px'
-              >
-                <GridItem
-                  overflow='hidden'
-                  h='100%'
-                  w='100%'
-                  minH='600px'
-                  maxH='600px'
-                  colSpan={
-                    isMobile || filterValue !== '' ? 1 : blog.size.colSpan
-                  }
-                  rowSpan={
-                    isMobile || filterValue !== '' ? 1 : blog.size.rowSpan
-                  }
-                  _hover={{
-                    boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
-                  }}
-                  borderRadius='6%'
-                >
-                  {/* Keep as MotionContainer Box but don't wrap whole component */}
-                  <MotionContainer
-                    backgroundImage={`/images/blog/${blog.path}.jpg`}
-                    backgroundSize='cover'
-                    cursor='pointer'
-                    colSpan={blog.size.colSpan}
-                    rowSpan={blog.size.rowSpan}
-                    p='24px'
-                    h='100%'
-                    w='100%'
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <Flex
-                      flexDir='column'
-                      h='100%'
-                      justifyContent='space-between'
-                    >
-                      <Box>
-                        <Flex justifyContent='space-between'>
-                          <CardTitle
-                            titleText={
-                              lang !== 'Ind' ? blog.title : blog.indTitle
-                            }
-                            fontSize='26px'
-                            pos='relative'
-                          />
-                          <Icon
-                            as={copied ? BsClipboardCheck : BsClipboard}
-                            color='primary'
-                            boxSize={8}
-                            zIndex='20'
-                            onClick={() => setCopied((copied) => !copied)}
-                          />
-                        </Flex>
-                        <Divider />
-                        <CardTitle
-                          titleText={blog.published}
-                          fontSize='16px'
-                          pos='relative'
-                        />
-                      </Box>
-                      <HStack>
-                        <Icon as={AiFillTag} fill='white' />
-                        {lang !== 'Ind'
-                          ? blog.tags.map((tag, tagIdx) => (
-                              <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
-                            ))
-                          : blog.indTags.map((tag, tagIdx) => (
-                              <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
-                            ))}
-                      </HStack>
-                    </Flex>
-                  </MotionContainer>
-                </GridItem>
-              </Link>
+              />
             );
           }
         })}
