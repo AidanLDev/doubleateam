@@ -3,7 +3,6 @@ import React from 'react';
 import { Text, Heading, Image, Center } from '@chakra-ui/react';
 import useSetLang from '../../hooks/useSetLang';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
-import BlogTitle from '../../components/BlogTitle';
 import SimpleLink from '../../components/SimpleLink';
 
 const imagePath = '/images/blog/whatToDoInIndonesia/Jogja/';
@@ -15,7 +14,6 @@ const EnglishBlog = (
     description={blogTitle}
     postUrl='what-to-do-in-jogja'
   >
-    <BlogTitle text={blogTitle} />
     <Heading>Hotel</Heading>
     <Text>
       We stayed very central in the <b>Jambuluwuk Malioboro Hotel</b>.
@@ -198,10 +196,9 @@ const EnglishBlog = (
 const IndonesianBlog = (
   <BlogLayout
     title='Double A Team | What to do in Jogja'
-    description={blogTitle}
+    description='Bagaimana kami merekomendasikan Anda menikmati waktu Anda di Jogja'
     postUrl='what-to-do-in-jogja'
   >
-    <BlogTitle text='Bagaimana kami merekomendasikan Anda menikmati waktu Anda di Jogja' />
     <Heading>Hotel</Heading>
     <Text>
       Kami tinggal sangat sentral di<b>Jambuluwuk Malioboro Hotel</b>.

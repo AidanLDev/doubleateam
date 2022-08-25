@@ -17,6 +17,7 @@ import styles from './styles.module.scss';
 import SEO from '../../components/SEO';
 import Topbar from '../../components/Nav/Topbar';
 import useIsMobile from '../../hooks/useIsMobile';
+import useIsTablet from '../../hooks/useIsTablet';
 import PostCard from '../../components/postsComponents/PostCard';
 
 export async function getStaticProps() {
@@ -33,6 +34,7 @@ export default function Posts({ blogs }) {
   const [messageCount, setMessageCount] = useState(0);
   const lang = useSetLang();
   const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
 
   let flashingTextWidth;
 
@@ -128,8 +130,8 @@ export default function Posts({ blogs }) {
       </Flex>
       <Grid
         gap={24}
-        templateColumns={`repeat(${isMobile ? '1' : '3'}, 1fr)`}
-        templateRows={`repeat(${isMobile ? '1' : '2'}, 1fr)`}
+        templateColumns={`repeat(${isTablet ? '1' : '3'}, 1fr)`}
+        templateRows={`repeat(${isTablet ? '1' : '2'}, 1fr)`}
         p='0 24px'
       >
         {blogs.map((blog, idx) => {

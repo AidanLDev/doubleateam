@@ -5,7 +5,6 @@ import { Heading, Text } from '@chakra-ui/react';
 import useSetLang from '../../hooks/useSetLang';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import StyledUL from '../../components/StyledUL';
-import BlogTitle from '../../components/BlogTitle';
 import SimpleLink from '../../components/SimpleLink';
 
 const blogTitle = 'Getting a UK Family Visa';
@@ -16,7 +15,6 @@ const EnglishBlog = (
     description={blogTitle}
     postUrl='obtaining-a-family-visa'
   >
-    <BlogTitle text={blogTitle} />
     <Text>
       The family visa, in the past there were a couple more visas such
       as the parent visa or even the child visa, however now these all
@@ -67,19 +65,19 @@ const EnglishBlog = (
         { text: 'When did you first meet?' },
         {
           text: 'As we met online, we weren’t sure whether to put the date we first talked online or the first time we physically met each other in person for the first time. We were advised to put down the date we first talked to each online',
-          isNested: true
+          isNested: true,
         },
         {
-          text: 'Have you been declined entry or had a visa application declined before?'
+          text: 'Have you been declined entry or had a visa application declined before?',
         },
         {
           text: 'Sadly, we had failed to obtain a visitor visa in the past, so we had to put down yes and explain a little about why. Hopefully, our wording can help you if you find yourself in a similar situation',
-          isNested: true
+          isNested: true,
         },
         {
           text: '"I applied for a visit visa to the UK so I could spend some time with my husband (at the time fiancé) Aidan. I really wanted to spend some quality time with him and meet his family, but sadly the visa application was declined. The ECO was not completely satisfied I would return to Indonesia at the end of the trip"',
-          isNested: true
-        }
+          isNested: true,
+        },
       ]}
     />
     <Text>
@@ -101,34 +99,34 @@ const EnglishBlog = (
     <StyledUL
       items={[
         {
-          text: 'Your partner or family member is one of the following:'
+          text: 'Your partner or family member is one of the following:',
         },
         { text: 'Has a British Citizenship', isNested: true },
         {
           text: 'Settlement or EU pre-settled status in the UK',
-          isNested: true
+          isNested: true,
         },
         {
           text: 'Asylum or humanitarian protection in the UK',
-          isNested: true
+          isNested: true,
         },
         { text: 'You’re over 18' },
         { text: 'You’re in a marriage that is recognised in the UK' },
         {
-          text: 'You intend to continue to living together in the UK after you apply'
+          text: 'You intend to continue to living together in the UK after you apply',
         },
         {
-          text: 'You and your family will have an adequate place to live in the UK'
+          text: 'You and your family will have an adequate place to live in the UK',
         },
         {
-          text: 'You have a good knowledge of English (either a degree taught in English validated by ECCTIS or a secure test at A1 CERF minimum)'
+          text: 'You have a good knowledge of English (either a degree taught in English validated by ECCTIS or a secure test at A1 CERF minimum)',
         },
         {
-          text: "You meet the financial requirements (your partner's salary must be over £18,600, which your partner has to of earned for the last 6 months at least)"
+          text: "You meet the financial requirements (your partner's salary must be over £18,600, which your partner has to of earned for the last 6 months at least)",
         },
         {
-          text: 'You’re free from TB (if you live in a country that requires this)'
-        }
+          text: 'You’re free from TB (if you live in a country that requires this)',
+        },
       ]}
     />
     <Text>
@@ -173,15 +171,15 @@ const EnglishBlog = (
       items={[
         { text: "You're applying as a child" },
         {
-          text: "You're applying as an adult coming to be cared for by a relative"
+          text: "You're applying as an adult coming to be cared for by a relative",
         },
         {
-          text: "You've been in the UK on a family visa for 5 years and you're extending it as a partner or parent"
+          text: "You've been in the UK on a family visa for 5 years and you're extending it as a partner or parent",
         },
         { text: "You're over 65" },
         {
-          text: 'You have a physical or mental condition that prevents you from meeting the requirement'
-        }
+          text: 'You have a physical or mental condition that prevents you from meeting the requirement',
+        },
       ]}
     />
     <Text>
@@ -206,7 +204,7 @@ const EnglishBlog = (
         { text: 'St Lucia' },
         { text: 'St Vincent and the Grenadines' },
         { text: 'Trinidad and Tobago' },
-        { text: 'USA' }
+        { text: 'USA' },
       ]}
     />
     <Text>
@@ -234,17 +232,17 @@ const EnglishBlog = (
         { text: 'Current and any old passports' },
         { text: "A copy of your partner's passport" },
         {
-          text: 'Proof of your relationship (including your marriage certificate and evidence relating to time you have spent together as a couple)'
+          text: 'Proof of your relationship (including your marriage certificate and evidence relating to time you have spent together as a couple)',
         },
         {
-          text: 'Cover letters from you and your partner, together with supporting statements, including photographic evidence, from family, friends, employers etc. As you deem it necessary to prove your relationship is genuine'
+          text: 'Cover letters from you and your partner, together with supporting statements, including photographic evidence, from family, friends, employers etc. As you deem it necessary to prove your relationship is genuine',
         },
         {
-          text: 'Sponsorship declaration from your partner/family member'
+          text: 'Sponsorship declaration from your partner/family member',
         },
         {
-          text: 'Proof that any earlier relationships for either of you were over before you married (such as an affidavit or affirmation)'
-        }
+          text: 'Proof that any earlier relationships for either of you were over before you married (such as an affidavit or affirmation)',
+        },
       ]}
     />
 
@@ -264,13 +262,13 @@ const EnglishBlog = (
     <StyledUL
       items={[
         {
-          text: "A letter from your partner's employers confirming their role, salary and tenure"
+          text: "A letter from your partner's employers confirming their role, salary and tenure",
         },
         { text: 'Bank statements going back 6 months' },
         { text: 'Payslips going back 6 months' },
         {
-          text: 'Evidence for your UK accommodation such as; estate agent’s details, tenancy agreements, a letter from the landlord if you’re renting'
-        }
+          text: 'Evidence for your UK accommodation such as; estate agent’s details, tenancy agreements, a letter from the landlord if you’re renting',
+        },
       ]}
     />
     <Text>
@@ -315,10 +313,9 @@ const EnglishBlog = (
 const IndonesianBlog = (
   <BlogLayout
     title='Double A Team | UK Family Visa Guide'
-    description={blogTitle}
+    description='Mendapatkan Visa Keluarga Inggris'
     postUrl='obtaining-a-family-visa'
   >
-    <BlogTitle text='Mendapatkan Visa Keluarga Inggris' />
     <Text>
       Visa keluarga, di masa lalu ada beberapa visa lagi seperti visa
       orang tua atau bahkan visa anak, namun sekarang ini semua
@@ -371,19 +368,19 @@ const IndonesianBlog = (
         { text: 'When did you first meet?' },
         {
           text: 'Saat kami bertemu online, kami tidak yakin apakah akan mencantumkan tanggal pertama kali kami berbicara online atau pertama kali kami bertemu secara fisik untuk pertama kalinya. Kami disarankan untuk menuliskan tanggal pertama kali kami berbicara satu sama lain secara online',
-          isNested: true
+          isNested: true,
         },
         {
-          text: 'Have you been declined entry or had a visa application declined before?'
+          text: 'Have you been declined entry or had a visa application declined before?',
         },
         {
           text: 'Sayangnya, kami gagal mendapatkan visa pengunjung di masa lalu, jadi kami harus meletakkan ya dan menjelaskan sedikit tentang alasannya. Semoga, kata-kata kami dapat membantu Anda jika Anda menemukan diri Anda dalam situasi yang sama',
-          isNested: true
+          isNested: true,
         },
         {
           text: '"Saya mengajukan permohonan visa kunjungan ke Inggris sehingga saya bisa menghabiskan waktu bersama suami saya (saat itu tunangan) Aidan. Saya benar-benar ingin menghabiskan waktu berkualitas dengannya dan bertemu keluarganya, tetapi sayangnya aplikasi visa ditolak. ECO tidak sepenuhnya puas saya akan kembali ke Indonesia di akhir perjalanan"',
-          isNested: true
-        }
+          isNested: true,
+        },
       ]}
     />
     <Text>
@@ -405,36 +402,36 @@ const IndonesianBlog = (
     <StyledUL
       items={[
         {
-          text: 'Pasangan atau anggota keluarga Anda adalah salah satu dari berikut ini:'
+          text: 'Pasangan atau anggota keluarga Anda adalah salah satu dari berikut ini:',
         },
         { text: 'Memiliki Kewarganegaraan Inggris', isNested: true },
         {
           text: 'Penyelesaian atau status penyelesaian Uni Eropa di Inggris',
-          isNested: true
+          isNested: true,
         },
         {
           text: 'Suaka atau perlindungan kemanusiaan di Inggris',
-          isNested: true
+          isNested: true,
         },
         { text: 'Anda lebih dari 18' },
         {
-          text: 'Anda berada dalam pernikahan yang diakui di Inggris'
+          text: 'Anda berada dalam pernikahan yang diakui di Inggris',
         },
         {
-          text: 'Anda berniat untuk terus tinggal bersama di Inggris setelah Anda melamar'
+          text: 'Anda berniat untuk terus tinggal bersama di Inggris setelah Anda melamar',
         },
         {
-          text: 'Anda berniat untuk terus tinggal bersama di Inggris setelah Anda melamar'
+          text: 'Anda berniat untuk terus tinggal bersama di Inggris setelah Anda melamar',
         },
         {
-          text: 'Anda memiliki pengetahuan bahasa Inggris yang baik (baik gelar yang diajarkan dalam bahasa Inggris divalidasi oleh ECCTIS atau tes aman di minimum A1 CERF)'
+          text: 'Anda memiliki pengetahuan bahasa Inggris yang baik (baik gelar yang diajarkan dalam bahasa Inggris divalidasi oleh ECCTIS atau tes aman di minimum A1 CERF)',
         },
         {
-          text: 'Anda memenuhi persyaratan keuangan (gaji pasangan Anda harus lebih dari £18.600, yang harus diperoleh pasangan Anda setidaknya selama 6 bulan terakhir)'
+          text: 'Anda memenuhi persyaratan keuangan (gaji pasangan Anda harus lebih dari £18.600, yang harus diperoleh pasangan Anda setidaknya selama 6 bulan terakhir)',
         },
         {
-          text: 'Anda bebas dari TB (jika Anda tinggal di negara yang mengharuskan ini)'
-        }
+          text: 'Anda bebas dari TB (jika Anda tinggal di negara yang mengharuskan ini)',
+        },
       ]}
     />
     <Text>
@@ -481,15 +478,15 @@ const IndonesianBlog = (
       items={[
         { text: 'Anda melamar sebagai seorang anak' },
         {
-          text: 'Anda melamar sebagai orang dewasa yang akan dirawat oleh kerabat'
+          text: 'Anda melamar sebagai orang dewasa yang akan dirawat oleh kerabat',
         },
         {
-          text: 'Anda telah berada di Inggris dengan visa keluarga selama 5 tahun dan Anda memperpanjangnya sebagai pasangan atau orang tua'
+          text: 'Anda telah berada di Inggris dengan visa keluarga selama 5 tahun dan Anda memperpanjangnya sebagai pasangan atau orang tua',
         },
         { text: 'Anda berusia lebih dari 65 tahun' },
         {
-          text: 'Anda memiliki kondisi fisik atau mental yang menghalangi Anda untuk memenuhi persyaratan'
-        }
+          text: 'Anda memiliki kondisi fisik atau mental yang menghalangi Anda untuk memenuhi persyaratan',
+        },
       ]}
     />
     <Text>
@@ -515,7 +512,7 @@ const IndonesianBlog = (
         { text: 'St Lucia' },
         { text: 'St Vincent and the Grenadines' },
         { text: 'Trinidad and Tobago' },
-        { text: 'USA' }
+        { text: 'USA' },
       ]}
     />
     <Text>
@@ -543,17 +540,17 @@ const IndonesianBlog = (
         { text: 'Paspor saat ini dan paspor lama lainnya' },
         { text: 'Salinan paspor pasangan Anda' },
         {
-          text: 'Bukti hubungan Anda (termasuk surat nikah Anda dan bukti yang berkaitan dengan waktu yang Anda habiskan bersama sebagai pasangan)'
+          text: 'Bukti hubungan Anda (termasuk surat nikah Anda dan bukti yang berkaitan dengan waktu yang Anda habiskan bersama sebagai pasangan)',
         },
         {
-          text: 'Surat pengantar dari Anda dan pasangan, bersama dengan pernyataan pendukung, termasuk bukti foto, dari keluarga, teman, majikan, dll. Jika Anda menganggap perlu untuk membuktikan bahwa hubungan Anda asli'
+          text: 'Surat pengantar dari Anda dan pasangan, bersama dengan pernyataan pendukung, termasuk bukti foto, dari keluarga, teman, majikan, dll. Jika Anda menganggap perlu untuk membuktikan bahwa hubungan Anda asli',
         },
         {
-          text: 'Pernyataan sponsor dari pasangan/anggota keluarga Anda'
+          text: 'Pernyataan sponsor dari pasangan/anggota keluarga Anda',
         },
         {
-          text: 'Bukti bahwa hubungan sebelumnya untuk Anda berdua telah berakhir sebelum Anda menikah (seperti surat pernyataan atau penegasan)'
-        }
+          text: 'Bukti bahwa hubungan sebelumnya untuk Anda berdua telah berakhir sebelum Anda menikah (seperti surat pernyataan atau penegasan)',
+        },
       ]}
     />
 
@@ -573,13 +570,13 @@ const IndonesianBlog = (
     <StyledUL
       items={[
         {
-          text: 'Surat dari majikan mitra Anda yang mengonfirmasi peran, gaji, dan masa kerja mereka'
+          text: 'Surat dari majikan mitra Anda yang mengonfirmasi peran, gaji, dan masa kerja mereka',
         },
         { text: 'Laporan bank akan kembali 6 bulan' },
         { text: 'Slip gaji akan kembali 6 bulan' },
         {
-          text: 'Bukti akomodasi UK Anda seperti; rincian agen real, perjanjian sewa, surat dari pemilik jika Anda menyewa'
-        }
+          text: 'Bukti akomodasi UK Anda seperti; rincian agen real, perjanjian sewa, surat dari pemilik jika Anda menyewa',
+        },
       ]}
     />
     <Text>

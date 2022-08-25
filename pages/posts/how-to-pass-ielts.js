@@ -17,7 +17,6 @@ import {
 } from '@chakra-ui/react';
 import useSetLang from '../../hooks/useSetLang';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
-import BlogTitle from '../../components/BlogTitle';
 import SimpleLink from '../../components/SimpleLink';
 import StyledUL from '../../components/StyledUL';
 import StyledDivider from '../../components/StyledDivider';
@@ -28,7 +27,6 @@ const EnglishBlog = (
     description='How to get an IELTS A1 Certification for UKVI Family Visa Applications'
     postUrl='how-to-pass-ielts'
   >
-    <BlogTitle text='How to get an IELTS A1 Certification for UKVI Family Visa Applications' />
     <Text>
       The IELTS A1 exam is almost like a short interview, there will
       be you and one other test taker in the room with the examiner.
@@ -54,30 +52,30 @@ const EnglishBlog = (
       <StyledUL
         items={[
           {
-            text: <b>Phase 1A</b>
+            text: <b>Phase 1A</b>,
           },
           { text: 'Answering these 3 questions:' },
           { text: "What's your name?", isNested: true },
           {
             text: 'Can you spell it for me? (You will be expected to spell out your full name, letter by letter)',
-            isNested: true
+            isNested: true,
           },
           { text: 'Where do you come from?', isNested: true },
           {
-            text: 'Then you will answer some basic questions on small talk topics, such as food, hobbies and interests etc'
+            text: 'Then you will answer some basic questions on small talk topics, such as food, hobbies and interests etc',
           },
           { text: <b>Phase 1B</b> },
           {
-            text: 'You and your partner will be given a topic each, write down questions based on this topic and when instructed, you will ask your partner the questions you prepared and vice versa'
+            text: 'You and your partner will be given a topic each, write down questions based on this topic and when instructed, you will ask your partner the questions you prepared and vice versa',
           },
           { text: <b>Phase 2A</b> },
           {
-            text: 'The examiner will play a short recording, you will be given some paper with a few pictures on it, and answer the question by ticking one of the pictures provided'
+            text: 'The examiner will play a short recording, you will be given some paper with a few pictures on it, and answer the question by ticking one of the pictures provided',
           },
           { text: <b>Phase 2B</b> },
           {
-            text: 'The examiner will give you both a topic that you need to have a conversation about'
-          }
+            text: 'The examiner will give you both a topic that you need to have a conversation about',
+          },
         ]}
       />
       <StyledDivider />I know that was a lot about the structure of
@@ -150,34 +148,34 @@ const EnglishBlog = (
       <StyledUL
         items={[
           {
-            text: 'Trinity College London'
+            text: 'Trinity College London',
           },
           {
-            text: 'IELTS SELT Consortium'
+            text: 'IELTS SELT Consortium',
           },
           {
-            text: 'LanguageCert'
+            text: 'LanguageCert',
           },
           {
-            text: 'Pearson'
-          }
+            text: 'Pearson',
+          },
         ]}
       />
       <Heading size='md'>If you are outside the UK</Heading>
       <StyledUL
         items={[
           {
-            text: 'PSI Services (UK) Ltd'
+            text: 'PSI Services (UK) Ltd',
           },
           {
-            text: 'IELTS SELT Consortium'
+            text: 'IELTS SELT Consortium',
           },
           {
-            text: 'LanguageCert'
+            text: 'LanguageCert',
           },
           {
-            text: 'Pearson'
-          }
+            text: 'Pearson',
+          },
         ]}
       />
     </Text>
@@ -294,10 +292,9 @@ const EnglishBlog = (
 const IndonesianBlog = (
   <BlogLayout
     title='Double A Team | How to pass IELTS'
-    description='How to get an IELTS A1 Certification for UKVI Family Visa Applications'
+    description='Cara mendapatkan Sertifikasi IELTS A1 untuk Aplikasi Visa Keluarga UKVI'
     postUrl='how-to-pass-ielts'
   >
-    <BlogTitle text='Cara mendapatkan Sertifikasi IELTS A1 untuk Aplikasi Visa Keluarga UKVI' />
     <Text>
       Ujian IELTS A1 hampir seperti wawancara singkat, akan ada Anda
       dan satu peserta tes lainnya dalam satu ruangan dengan penguji.
@@ -316,30 +313,30 @@ const IndonesianBlog = (
       <StyledUL
         items={[
           {
-            text: <b>Phase 1A</b>
+            text: <b>Phase 1A</b>,
           },
           { text: 'Menjawab 3 pertanyaan ini:' },
           { text: "What's your name?", isNested: true },
           {
             text: 'Can you spell it for me? (Anda diharapkan untuk mengeja nama lengkap Anda, huruf demi huruf)',
-            isNested: true
+            isNested: true,
           },
           { text: 'Where do you come from?', isNested: true },
           {
-            text: 'Kemudian Anda akan menjawab beberapa pertanyaan dasar tentang topik obrolan ringan, seperti makanan, hobi, dan minat, dll'
+            text: 'Kemudian Anda akan menjawab beberapa pertanyaan dasar tentang topik obrolan ringan, seperti makanan, hobi, dan minat, dll',
           },
           { text: <b>Phase 1B</b> },
           {
-            text: 'Anda dan pasangan akan diberikan topik masing-masing, menuliskan pertanyaan berdasarkan topik ini dan ketika diinstruksikan, Anda akan menanyakan pasangan pertanyaan yang Anda siapkan dan sebaliknya'
+            text: 'Anda dan pasangan akan diberikan topik masing-masing, menuliskan pertanyaan berdasarkan topik ini dan ketika diinstruksikan, Anda akan menanyakan pasangan pertanyaan yang Anda siapkan dan sebaliknya',
           },
           { text: <b>Phase 2A</b> },
           {
-            text: 'Penguji akan memutar rekaman pendek, Anda akan diberikan beberapa kertas dengan beberapa gambar di atasnya, dan menjawab pertanyaan dengan mencentang salah satu gambar yang disediakan'
+            text: 'Penguji akan memutar rekaman pendek, Anda akan diberikan beberapa kertas dengan beberapa gambar di atasnya, dan menjawab pertanyaan dengan mencentang salah satu gambar yang disediakan',
           },
           { text: <b>Phase 2B</b> },
           {
-            text: 'Penguji akan memberi Anda berdua topik yang perlu Anda bicarakan'
-          }
+            text: 'Penguji akan memberi Anda berdua topik yang perlu Anda bicarakan',
+          },
         ]}
       />
       <StyledDivider />
@@ -418,34 +415,34 @@ const IndonesianBlog = (
       <StyledUL
         items={[
           {
-            text: 'Trinity College London'
+            text: 'Trinity College London',
           },
           {
-            text: 'IELTS SELT Consortium'
+            text: 'IELTS SELT Consortium',
           },
           {
-            text: 'LanguageCert'
+            text: 'LanguageCert',
           },
           {
-            text: 'Pearson'
-          }
+            text: 'Pearson',
+          },
         ]}
       />
       <Heading size='md'>Jika Anda berada di luar Inggris</Heading>
       <StyledUL
         items={[
           {
-            text: 'PSI Services (UK) Ltd'
+            text: 'PSI Services (UK) Ltd',
           },
           {
-            text: 'IELTS SELT Consortium'
+            text: 'IELTS SELT Consortium',
           },
           {
-            text: 'LanguageCert'
+            text: 'LanguageCert',
           },
           {
-            text: 'Pearson'
-          }
+            text: 'Pearson',
+          },
         ]}
       />
     </Text>

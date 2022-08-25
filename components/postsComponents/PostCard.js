@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
@@ -8,19 +8,29 @@ import {
   Icon,
   Box,
   Flex,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import CardTitle from '../CardTitle';
 import { AiFillTag } from 'react-icons/ai';
-import { BsClipboard, BsClipboardCheck } from 'react-icons/bs';
 import useIsMobile from '../../hooks/useIsMobile';
 import useSetLang from '../../hooks/useSetLang';
+import useIsTablet from '../../hooks/useIsTablet';
+
+import styles from './styles.module.scss';
+import CopyClipboard from '../CopyClipboard';
 
 const MotionContainer = motion(Box);
 
 export default function PostCard({ blog, idx, filterValue }) {
-  const [copied, setCopied] = useState(false);
+  const [isLaptop, setIsLaptop] = useState(false);
+  const [mediaQuery] = useMediaQuery('(max-width: 1500px)');
   const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
   const lang = useSetLang();
+
+  useEffect(() => {
+    setIsLaptop(mediaQuery);
+  }, [mediaQuery]);
 
   return (
     <GridItem
@@ -29,12 +39,13 @@ export default function PostCard({ blog, idx, filterValue }) {
       w='100%'
       minH='600px'
       maxH='600px'
-      colSpan={isMobile || filterValue !== '' ? 1 : blog.size.colSpan}
-      rowSpan={isMobile || filterValue !== '' ? 1 : blog.size.rowSpan}
+      colSpan={isTablet || filterValue !== '' ? 1 : blog.size.colSpan}
+      rowSpan={isTablet || filterValue !== '' ? 1 : blog.size.rowSpan}
       _hover={{
         boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
       }}
       borderRadius='6%'
+      className={styles.postCardWrapper}
     >
       <Box>
         <Flex
@@ -43,21 +54,25 @@ export default function PostCard({ blog, idx, filterValue }) {
           position='absolute'
         >
           <Box>
-            <Flex justifyContent='space-around'>
-              {/* TODO: Sort out length */}
+            <Flex
+              maxW={isLaptop ? '300px' : '500px'}
+              alignItems='baseline'
+            >
               <CardTitle
                 titleText={
                   lang !== 'Ind' ? blog.title : blog.indTitle
                 }
-                fontSize='26px'
+                fontSize={
+                  isTablet && !isMobile
+                    ? '26px'
+                    : isMobile || isLaptop
+                    ? '18px'
+                    : '26px'
+                }
                 pos='relative'
               />
-              <Icon
-                as={copied ? BsClipboardCheck : BsClipboard}
-                color='primary'
-                boxSize={8}
-                zIndex='20'
-                onClick={() => setCopied(copied => !copied)}
+              <CopyClipboard
+                postUrl={`https://doubleateam.co.uk/posts/${blog.path}`}
               />
             </Flex>
             <CardTitle

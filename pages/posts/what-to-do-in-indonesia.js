@@ -3,7 +3,6 @@ import React from 'react';
 import { Text, Heading, Image } from '@chakra-ui/react';
 import useSetLang from '../../hooks/useSetLang';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
-import BlogTitle from '../../components/BlogTitle';
 import SimpleLink from '../../components/SimpleLink';
 import Centre from '../../components/Centre';
 
@@ -15,7 +14,6 @@ const EnglishBlog = (
     description={blogTitle}
     postUrl='what-to-do-in-indonesia'
   >
-    <BlogTitle text={blogTitle} />
     <Text>
       This is going to be a quick summary of a few places we visited
       and a a little bit of insight into them to help you plan your
@@ -156,10 +154,9 @@ const EnglishBlog = (
 const IndonesianBlog = (
   <BlogLayout
     title='Double A Team | What to do in Indonesia'
-    description={blogTitle}
+    description='Bagaimana cara menghabiskan waktu Anda di Indonesia'
     postUrl='what-to-do-in-indonesia'
   >
-    <BlogTitle text='Bagaimana cara menghabiskan waktu Anda di Indonesia' />
     <Text>
       Ini akan menjadi ringkasan singkat dari beberapa tempat yang
       kami kunjungi dan a sedikit wawasan tentang mereka untuk

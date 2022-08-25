@@ -3,7 +3,6 @@ import React from 'react';
 import { Text, Heading } from '@chakra-ui/react';
 import useSetLang from '../../hooks/useSetLang';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
-import BlogTitle from '../../components/BlogTitle';
 import StyledUL from '../../components/StyledUL';
 import SimpleLink from '../../components/SimpleLink';
 
@@ -14,7 +13,6 @@ const EnglishBlog = (
     description={blogTitle}
     postUrl='marriage-requirements'
   >
-    <BlogTitle text={blogTitle} />
     <Text>
       Weddings in Indonesia are always religious ceremonies, this can
       make things a bit complicated if you’re from a different
@@ -38,18 +36,18 @@ const EnglishBlog = (
     <StyledUL
       items={[
         {
-          text: 'Affidavit/affirmation to prove that all previous relationships have ended'
+          text: 'Affidavit/affirmation to prove that all previous relationships have ended',
         },
         {
           text: 'Email the relevant embassy in Jakarta and book an appointment to swear an Affidavit – The British Embassy was very responsive and managed to get us an appointment the very week we emailed. They charge a fee of £50',
-          isNested: true
+          isNested: true,
         },
         {
-          text: 'If the Indonesian spouse is Muslim, you will need a shahada certificate. I got mine from the central London Mosque, you can contact them here. Although some KUAs (the Indonesian registry office) will allow the foreign spouse to take their shahada as part of the wedding ceremony or privately with them just before the wedding.'
+          text: 'If the Indonesian spouse is Muslim, you will need a shahada certificate. I got mine from the central London Mosque, you can contact them here. Although some KUAs (the Indonesian registry office) will allow the foreign spouse to take their shahada as part of the wedding ceremony or privately with them just before the wedding.',
         },
         {
-          text: 'ID - Your passport, which you should have with you anyways! So, this requirement is a freebee yay. Just in case you might want to bring along something like a driving licence if you have one '
-        }
+          text: 'ID - Your passport, which you should have with you anyways! So, this requirement is a freebee yay. Just in case you might want to bring along something like a driving licence if you have one ',
+        },
       ]}
     />
     <Text>
@@ -67,7 +65,7 @@ const EnglishBlog = (
     <StyledUL
       items={[
         { text: 'Birth Certificate' },
-        { text: 'Certificate of domicile' }
+        { text: 'Certificate of domicile' },
       ]}
     />
     <Heading size='md'>Local Indonesian spouse documents </Heading>
@@ -75,7 +73,7 @@ const EnglishBlog = (
       items={[
         { text: 'Marriage introduction letter from RT & RW' },
         { text: 'KTP' },
-        { text: 'KK' }
+        { text: 'KK' },
       ]}
     />
     <Text>
@@ -86,7 +84,7 @@ const EnglishBlog = (
       items={[
         { text: 'Parents KTP and KK' },
         { text: 'Death certificate (if parents have passed away)' },
-        { text: 'ID cards of 2 witnesses' }
+        { text: 'ID cards of 2 witnesses' },
       ]}
     />
     <Heading size='md'>Photos</Heading>
@@ -192,10 +190,9 @@ const EnglishBlog = (
 const IndonesianBlog = (
   <BlogLayout
     title='Double A Team | Marriage Requirements'
-    description={blogTitle}
+    description='Menikah dengan orang asing di Indonesia'
     postUrl='marriage-requirements'
   >
-    <BlogTitle text='Menikah dengan orang asing di Indonesia' />
     <Text>
       Pernikahan di Indonesia selalu upacara keagamaan, ini bisa bikin
       hal-hal yang agak rumit jika Anda berasal dari latar belakang
@@ -221,18 +218,18 @@ const IndonesianBlog = (
     <StyledUL
       items={[
         {
-          text: 'Surat pernyataan / penegasan untuk membuktikan bahwa semua hubungan sebelumnya telah berakhir'
+          text: 'Surat pernyataan / penegasan untuk membuktikan bahwa semua hubungan sebelumnya telah berakhir',
         },
         {
           text: 'Email kedutaan terkait di Jakarta dan pesan janji untuk bersumpah - Kedutaan Besar Inggris sangat responsif dan berhasil membuat kami membuat janji pada minggu kami mengirim email. Mereka mengenakan biaya sebesar £50',
-          isNested: true
+          isNested: true,
         },
         {
-          text: 'Jika pasangan Indonesia adalah Muslim, Anda akan memerlukan sertifikat syahadat. Saya mendapatkan milik saya dari Masjid pusat London, Anda dapat menghubungi mereka di sini. Meskipun beberapa KUA (kantor catatan sipil Indonesia) akan mengizinkan pasangan asing untuk mengucapkan syahadat sebagai bagian dari upacara pernikahan atau secara pribadi dengan mereka sebelum pernikahan.'
+          text: 'Jika pasangan Indonesia adalah Muslim, Anda akan memerlukan sertifikat syahadat. Saya mendapatkan milik saya dari Masjid pusat London, Anda dapat menghubungi mereka di sini. Meskipun beberapa KUA (kantor catatan sipil Indonesia) akan mengizinkan pasangan asing untuk mengucapkan syahadat sebagai bagian dari upacara pernikahan atau secara pribadi dengan mereka sebelum pernikahan.',
         },
         {
-          text: 'ID -  Paspor Anda, yang harus Anda bawa! Jadi, persyaratan ini adalah freebee yay. Untuk berjaga-jaga jika Anda mungkin ingin membawa sesuatu seperti SIM jika Anda memilikinya'
-        }
+          text: 'ID -  Paspor Anda, yang harus Anda bawa! Jadi, persyaratan ini adalah freebee yay. Untuk berjaga-jaga jika Anda mungkin ingin membawa sesuatu seperti SIM jika Anda memilikinya',
+        },
       ]}
     />
     <Text>
@@ -251,7 +248,7 @@ const IndonesianBlog = (
     <StyledUL
       items={[
         { text: 'Birth Certificate' },
-        { text: 'Certificate of domicile' }
+        { text: 'Certificate of domicile' },
       ]}
     />
     <Heading size='md'>Dokumen pasangan lokal Indonesia</Heading>
@@ -259,7 +256,7 @@ const IndonesianBlog = (
       items={[
         { text: 'Marriage surat pengantar dari RT & RW' },
         { text: 'KTP' },
-        { text: 'KK' }
+        { text: 'KK' },
       ]}
     />
     <Text>
@@ -270,9 +267,9 @@ const IndonesianBlog = (
       items={[
         { text: 'KTP and KK Orang tua' },
         {
-          text: 'Surat Keterangan Kematian Orang Tua (jika orang tua telah meninggal dunia)'
+          text: 'Surat Keterangan Kematian Orang Tua (jika orang tua telah meninggal dunia)',
         },
-        { text: 'ID kartu 2 saksi' }
+        { text: 'ID kartu 2 saksi' },
       ]}
     />
     <Heading size='md'>Foto</Heading>
