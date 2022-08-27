@@ -14,7 +14,7 @@ jobs:
       - checkout
       - aws-s3/sync:
           from: .
-          to: 'https://s3.eu-west-2.amazonaws.com/doubleateam.co.uk/'
+          to: 's3://doubleateam.co.uk'
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400" \
