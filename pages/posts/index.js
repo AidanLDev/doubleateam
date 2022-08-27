@@ -119,7 +119,7 @@ export default function Posts({ blogs }) {
           value={filterValue}
           onChange={handleInputChange}
           _placeholder={{ opacity: 1, color: 'red' }}
-          color='red'
+          color='black'
           margin='20px auto'
           minW='200px'
         />
