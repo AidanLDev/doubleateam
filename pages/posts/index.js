@@ -38,7 +38,7 @@ export default function Posts({ blogs }) {
 
   let flashingTextWidth;
 
-  const handleInputChange = e => {
+  const handleInputChange = (e) => {
     setFilterValue(e.target.value);
   };
 
@@ -89,9 +89,7 @@ export default function Posts({ blogs }) {
             position='absolute'
             top={Math.floor(Math.random() * 300 + 100)}
             left={Math.floor(
-              Math.random() * flashingTextWidth || isMobile
-                ? 200
-                : 800
+              Math.random() * flashingTextWidth || isMobile ? 200 : 800
             )}
             fontSize={isMobile ? 'large' : '6xl'}
             className='fadingText'
@@ -116,9 +114,7 @@ export default function Posts({ blogs }) {
       <Flex>
         <Input
           variant='filled'
-          placeholder={
-            lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'
-          }
+          placeholder={lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'}
           width='25%'
           value={filterValue}
           onChange={handleInputChange}
@@ -127,6 +123,7 @@ export default function Posts({ blogs }) {
           margin='20px auto'
           minW='200px'
         />
+        {/* TODO: Add Tag buttons */}
       </Flex>
       <Grid
         gap={24}
