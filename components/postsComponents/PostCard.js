@@ -54,14 +54,9 @@ export default function PostCard({ blog, idx, filterValue }) {
           position='absolute'
         >
           <Box>
-            <Flex
-              maxW={isLaptop ? '300px' : '500px'}
-              alignItems='baseline'
-            >
+            <Flex maxW={isLaptop ? '300px' : '500px'} alignItems='baseline'>
               <CardTitle
-                titleText={
-                  lang !== 'Ind' ? blog.title : blog.indTitle
-                }
+                titleText={lang !== 'Ind' ? blog.title : blog.indTitle}
                 fontSize={
                   isTablet && !isMobile
                     ? '26px'
@@ -95,7 +90,14 @@ export default function PostCard({ blog, idx, filterValue }) {
             whileHover={{ scale: 1.02 }}
           />
         </Link>
-        <HStack pos='relative' zIndex='20' top='-40px' left='12px'>
+        <HStack
+          pos='relative'
+          zIndex='20'
+          top='-85px'
+          left='12px'
+          flexWrap='wrap'
+          gap='2px'
+        >
           <Icon as={AiFillTag} fill='white' />
           {lang !== 'Ind'
             ? blog.tags.map((tag, tagIdx) => (
