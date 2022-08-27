@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
       - aws-s3/sync:
-          from: .
+          from: ./out
           to: 's3://doubleateam.co.uk'
           arguments: |
             --acl public-read \
