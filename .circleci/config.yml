@@ -1,45 +1,24 @@
-defaults: &defaults
-  working_directory: ~/doubleateam
-  docker:
-    - image: circleci/node:8.10
-version: 2
+version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@1.0.6
+description: |
+  copy files to S3 bucket and then create an Cloudfront invalidation
+  on the distribution.
+
 jobs:
   build:
-    <<: *defaults
-steps:
+    docker:
+      - image: 'circleci/python:latest'
+
+    steps:
       - checkout
-- restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package-lock.json" }}
-- run:
-          name: Install dependencies
-          command: |
-            npm install
-- save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package-lock.json" }}
-deploy:
-    <<: *defaults
-steps:
-      - checkout
-- restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package-lock.json" }}
-- run: npm run-script build
-      - run: npm run-script postbuild
-        - run: npm run script export
-- store_artifacts:
-          path: public
-- store_artifacts:
-          path: serverless.yml
-workflows:
-  version: 2
-  build-test-deploy:
-    jobs:
-      - build
-      - deploy:
-          filters:
-            branches:
-              only:
-                - main
+      - aws-s3/sync:
+          from: .
+          to: 'https://s3.eu-west-2.amazonaws.com/doubleateam.co.uk/'
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400" \
+            --exclude ".git/*" \
+            --exclude ".gitignore" \
+            --exclude ".circleci/*" \
+          overwrite: true
