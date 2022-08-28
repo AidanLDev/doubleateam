@@ -3,8 +3,10 @@ import { useState, useEffect } from 'react';
 import {
   Box,
   Flex,
+  Center,
   Heading,
   Input,
+  Tag,
   Text,
   Grid,
   Divider,
@@ -28,6 +30,31 @@ export async function getStaticProps() {
     },
   };
 }
+
+const tags = [
+  'Education',
+  'Visa',
+  'Travel',
+  'Indonesia',
+  'Marriage',
+  'UK',
+  'Days out',
+  'Roller coasters',
+  'Web dev',
+  'Programming',
+  'Astro',
+  'JS frameworks',
+  'React',
+  'Svelt',
+  'Vue',
+  'Solid-js',
+  'lit',
+  'Preact',
+  'Netlify',
+  'Hosting',
+  'CI/CD',
+  'CircleCI',
+];
 
 export default function Posts({ blogs }) {
   const [filterValue, setFilterValue] = useState('');
@@ -110,21 +137,34 @@ export default function Posts({ blogs }) {
           ? 'Spreading what we know, with those who want to know'
           : 'Menyebarkan apa yang kita ketahui, dengan mereka yang ingin tahu'}
       </Text>
-      <Divider borderColor='red' />
-      <Flex>
+      <Divider borderColor='red' paddingBottom='12px' />
+      <Text align='center' color='red' fontSize='18px' paddingBottom='8px'>
+        Filter by tag
+      </Text>
+      <Flex p='0 12px' flexWrap='wrap' gap='4px' justify='center'>
+        {tags.map((tag, id) => (
+          <Tag
+            key={`${id}__${tag}`}
+            onClick={() => setFilterValue(tag)}
+            colorScheme={tag === filterValue ? 'green' : 'blue'}
+            cursor='pointer'
+          >
+            {tag}
+          </Tag>
+        ))}
+      </Flex>
+      <Center padding='12px 0'>
         <Input
           variant='filled'
           placeholder={lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'}
           width='25%'
           value={filterValue}
           onChange={handleInputChange}
-          _placeholder={{ opacity: 1, color: 'red' }}
-          color='black'
-          margin='20px auto'
+          _placeholder={{ opacity: 1, color: 'black' }}
+          color='#0070f3'
           minW='200px'
         />
-        {/* TODO: Add Tag buttons */}
-      </Flex>
+      </Center>
       <Grid
         gap={24}
         templateColumns={`repeat(${isTablet ? '1' : '3'}, 1fr)`}
