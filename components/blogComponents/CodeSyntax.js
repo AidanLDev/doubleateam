@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { Tooltip, Icon, Box } from '@chakra-ui/react';
 
 import { AiFillCheckCircle } from 'react-icons/ai';
