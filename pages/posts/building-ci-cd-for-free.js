@@ -6,6 +6,7 @@ import BlogLayout from '../../components/blogLayout/BlogLayout';
 import SimpleLink from '../../components/SimpleLink';
 import StyledUL from '../../components/StyledUL';
 import SmallBlogImg from '../../components/blogComponents/SmallBlogImg';
+import CodeSyntax from '../../components/blogComponents/CodeSyntax';
 
 const imgPath = '/images/blog/ci-cd-pipeline/';
 
@@ -113,23 +114,56 @@ const EnglishBlog = (
       <code>.circleci</code> and in that folder a file called{' '}
       <code>config.yml</code>. In here you will want to add the following code:
     </Text>
-    <SmallBlogImg
-      alt='Code for our CI/CD pipeline'
-      src={`${imgPath}circleci-config.png`}
-    />
     <Text>
-      {/* TODO: Add code from: https://edaoud.com/blog/2019/04/12/deploy-static-website-to-aws-s3-circleci/ in it's own syntax highlighted box: https://blog.openreplay.com/building-a-code-snippet-highlighter-in-next-js */}
+      <CodeSyntax language='yaml'>
+        {`
+        version: 2.1
+        orbs:
+          aws-s3: circleci/aws-s3@1.0.6
+        description: |
+          copy files to S3 bucket and then create an Cloudfront invalidation
+          on the distribution.
+        
+        jobs:
+          build:
+            docker:
+              - image: 'circleci/python:latest'
+        
+            steps:
+              - checkout
+              - aws-s3/sync:
+                  from: out
+                  to: 's3://example.com'
+                  arguments: |
+                    --acl public-read \
+
+                    --cache-control "max-age=86400" \
+
+                    --exclude ".git/*" \
+
+                    --exclude ".gitignore" \
+
+                    --exclude ".circleci/*" \
+
+                  overwrite: true
+        
+        `}
+      </CodeSyntax>
     </Text>
     <Text>
       Swap out the following:
       <StyledUL
         items={[
-          { text: 'S3 bucket url to be s3://yourbucketname' },
+          { text: `to: 's3://example.com'to be s3://yourbucketname` },
           {
             text: 'from: . should be updated to the folder that holds the files you want to serve are such as dist, build, out etc.',
           },
         ]}
       />
+    </Text>
+    <Text>
+      Something to note, if you want to move across all the files in your repo
+      to S3, swap out <code>from: out</code> with <code>from: .</code>
     </Text>
     <Text>
       Push up those changes and watch the pipeline build on CircleCI! If all is
@@ -147,7 +181,7 @@ const EnglishBlog = (
         usage: aws s3 sync {'<LocalPath>'} {'<S3Uri>'} or {'<S3Uri>'}{' '}
         {'<LocalPath>'} or {'<S3Uri>'} {'<S3Uri>'}
         Error: Invalid argument type
-      </code>
+      </code>{' '}
       I had to update the <code>to: 's3://your-bucket'</code> to match my bucket
       name, before I was putting in the actual S3 bucket URL.
     </Text>
