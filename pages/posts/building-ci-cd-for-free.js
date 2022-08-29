@@ -196,6 +196,15 @@ const EnglishBlog = (
       without the "./folderName/*"
     </Text>
     <Text>
+      A quick aside, sometimes you just want to commit your work up and not
+      actually deploy said code to your server. To do this, in your commit
+      message just add the following "[ci skip]". For example,{' '}
+      <code>
+        $ git commit -m "Just making a tiny adjustment, don't want to deploy
+        this [ci skip]"
+      </code>
+    </Text>
+    <Text>
       I hope this was helpful and you managed to deploy a pipeline, if you have
       an issues please <SimpleLink link='/contact-us'>get in touch</SimpleLink>{' '}
       and I will do what I can to help.
