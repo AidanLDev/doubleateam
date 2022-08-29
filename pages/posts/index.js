@@ -54,6 +54,7 @@ const tags = [
   'Hosting',
   'CI/CD',
   'CircleCI',
+  'All',
 ];
 
 export default function Posts({ blogs }) {
@@ -145,7 +146,13 @@ export default function Posts({ blogs }) {
         {tags.map((tag, id) => (
           <Tag
             key={`${id}__${tag}`}
-            onClick={() => setFilterValue(tag)}
+            onClick={() => {
+              if (tag === 'All') {
+                setFilterValue('');
+              } else {
+                setFilterValue(tag);
+              }
+            }}
             colorScheme={tag === filterValue ? 'green' : 'blue'}
             cursor='pointer'
           >
