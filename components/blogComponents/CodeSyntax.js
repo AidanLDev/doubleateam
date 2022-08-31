@@ -9,10 +9,9 @@ import { BsClipboard } from 'react-icons/bs';
 
 export default function CodeSyntax({ children, language }) {
   const [copied, setCopied] = useState(false);
-  console.log(children);
   return (
     <>
-      <Box pos='relative' top='65px' left='90%'>
+      <Box pos='relative' top='65px' left='90%' w='fit-content'>
         <Tooltip
           label={copied ? 'Copied!' : 'Copy code snippet'}
           shouldWrapChildren
