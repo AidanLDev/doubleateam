@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { List, ListItem, Flex } from '@chakra-ui/react';
+// import Image from 'next/image';
+import { List, ListItem, Flex, Image } from '@chakra-ui/react';
 import CardTitle from './CardTitle';
 import useIsMobile from '../hooks/useIsMobile';
 
