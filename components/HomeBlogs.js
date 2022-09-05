@@ -30,9 +30,7 @@ export default function HomeBlogs({ blogs, lang }) {
                   className='blogCard'
                 >
                   <CardTitle
-                    titleText={
-                      lang !== 'Ind' ? blog.title : blog.indTitle
-                    }
+                    titleText={lang !== 'Ind' ? blog.title : blog.indTitle}
                     fontSize={isMobile ? '26px' : '30px'}
                     pos='absolute'
                   />
