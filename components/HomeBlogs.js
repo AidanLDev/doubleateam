@@ -1,6 +1,6 @@
 import Link from 'next/link';
-// import Image from 'next/image';
-import { List, ListItem, Flex, Image } from '@chakra-ui/react';
+import Image from 'next/image';
+import { List, ListItem, Flex } from '@chakra-ui/react';
 import CardTitle from './CardTitle';
 import useIsMobile from '../hooks/useIsMobile';
 
@@ -37,14 +37,10 @@ export default function HomeBlogs({ blogs, lang }) {
                     pos='absolute'
                   />
                   <Image
-                    src={`/images/blog/${blog.path}.jpg`}
+                    src={blog.img || `/images/blog/${blog.path}.jpg`}
                     alt={`${blog.title} image`}
                     width={isMobile ? '250px' : '500px'}
                     height={isMobile ? '500px' : '700px'}
-                    opacity='0.6'
-                    _hover={{
-                      opacity: 0.8,
-                    }}
                   />
                 </ListItem>
               </Link>
