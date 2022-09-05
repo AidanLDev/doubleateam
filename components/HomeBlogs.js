@@ -1,10 +1,8 @@
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { List, ListItem, Flex, Image } from '@chakra-ui/react';
+import Image from 'next/image';
+import { List, ListItem, Flex } from '@chakra-ui/react';
 import CardTitle from './CardTitle';
 import useIsMobile from '../hooks/useIsMobile';
-
-const MotionImage = motion(Image);
 
 export default function HomeBlogs({ blogs, lang }) {
   const isMobile = useIsMobile();
@@ -21,7 +19,7 @@ export default function HomeBlogs({ blogs, lang }) {
                 key={`${blog}__${idx}`}
               >
                 <ListItem
-                  w={isMobile ? '100%' : '500px'}
+                  w={isMobile ? '250px' : '500px'}
                   h={isMobile ? '500px' : '700px'}
                   cursor='pointer'
                   m='10px 20px'
@@ -29,23 +27,21 @@ export default function HomeBlogs({ blogs, lang }) {
                   _hover={{
                     boxShadow: '5px 7px 16px -5px rgba(0,0,0,0.56)',
                   }}
+                  className='blogCard'
                 >
                   <CardTitle
-                    titleText={lang !== 'Ind' ? blog.title : blog.indTitle}
+                    titleText={
+                      lang !== 'Ind' ? blog.title : blog.indTitle
+                    }
                     fontSize={isMobile ? '26px' : '30px'}
                     pos='absolute'
                   />
-                  <MotionImage
+                  <Image
                     src={`/images/blog/${blog.path}.jpg`}
                     alt={`${blog.title} image`}
-                    minWidth='100%'
-                    minHeight='100%'
-                    width='100%'
-                    height='100%'
+                    width={isMobile ? '250px' : '500px'}
+                    height={isMobile ? '500px' : '700px'}
                     opacity='0.6'
-                    whileHover={{ scale: 1.08 }}
-                    whileTap={{ scale: 0.98 }}
-                    zIndex='-1'
                     _hover={{
                       opacity: 0.8,
                     }}

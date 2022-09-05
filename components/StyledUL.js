@@ -8,7 +8,11 @@ const StyledUL = ({ items, iconColour }) => {
     <List spacing={3}>
       {items.map(({ text, isNested }, idx) => {
         return (
-          <ListItem key={`${text}__${idx}`} pl={isNested ? '22px' : '0'}>
+          <ListItem
+            key={`${text}__${idx}`}
+            pl={isNested ? '42px' : '0'}
+            className={isNested && 'styledList'}
+          >
             <ListIcon
               as={isNested ? BiCircle : AiTwotoneMinusCircle}
               color={iconColour ? iconColour : 'inherit'}
