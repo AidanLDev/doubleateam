@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Box, Text } from '@chakra-ui/react';
-import HomeBackground from '../components/HomeBackground';
-import HomeHeader from '../components/homeHeader/HomeHeader';
-import HomeBlogs from '../components/HomeBlogs';
+import HomeBackground from '../components/home/HomeBackground';
+import HomeHeader from '../components/home/homeHeader/HomeHeader';
+import HomeBlogs from '../components/home/HomeBlogs';
 import Footer from '../components/Footer';
 import { getBlogPostPaths } from '../lib/posts';
 import SEO from '../components/SEO';

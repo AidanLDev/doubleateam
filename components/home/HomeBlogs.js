@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { List, ListItem, Flex } from '@chakra-ui/react';
-import CardTitle from './CardTitle';
-import useIsMobile from '../hooks/useIsMobile';
+import CardTitle from '../CardTitle';
+import useIsMobile from '../../hooks/useIsMobile';
 
 export default function HomeBlogs({ blogs, lang }) {
   const isMobile = useIsMobile();
@@ -30,12 +30,14 @@ export default function HomeBlogs({ blogs, lang }) {
                   className='blogCard'
                 >
                   <CardTitle
-                    titleText={lang !== 'Ind' ? blog.title : blog.indTitle}
+                    titleText={
+                      lang !== 'Ind' ? blog.title : blog.indTitle
+                    }
                     fontSize={isMobile ? '26px' : '30px'}
                     pos='absolute'
                   />
                   <Image
-                    src={blog.img || `/images/blog/${blog.path}.jpg`}
+                    src={blog.img || `/images/blog/${blog.path}.avif`}
                     alt={`${blog.title} image`}
                     width={isMobile ? '250px' : '500px'}
                     height={isMobile ? '500px' : '700px'}

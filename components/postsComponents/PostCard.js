@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
@@ -54,9 +55,14 @@ export default function PostCard({ blog, idx, filterValue }) {
           position='absolute'
         >
           <Box>
-            <Flex maxW={isLaptop ? '300px' : '500px'} alignItems='baseline'>
+            <Flex
+              maxW={isLaptop ? '300px' : '500px'}
+              alignItems='baseline'
+            >
               <CardTitle
-                titleText={lang !== 'Ind' ? blog.title : blog.indTitle}
+                titleText={
+                  lang !== 'Ind' ? blog.title : blog.indTitle
+                }
                 fontSize={
                   isTablet && !isMobile
                     ? '26px'
@@ -79,7 +85,7 @@ export default function PostCard({ blog, idx, filterValue }) {
         </Flex>
         <Link href={`/posts/${blog.path}`} passHref maxH='600px'>
           <MotionContainer
-            backgroundImage={`/images/blog/${blog.path}.jpg`}
+            backgroundImage={`/images/blog/${blog.path}.avif`}
             backgroundSize='cover'
             cursor='pointer'
             colSpan={blog.size.colSpan}
