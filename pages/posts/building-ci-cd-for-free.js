@@ -47,7 +47,7 @@ const EnglishBlog = (
       you would name it "google.com", and take a note of the region.
       <SmallBlogImg
         alt='Creating an S3 bucket'
-        src={`${imgPath}create-s3-bucket.png`}
+        src={`${imgPath}create-s3-bucket.avif`}
       />
       Logically the region should be close to wherever the majority of users of
       your website are from to give a slightly better performance. You will also
@@ -249,7 +249,7 @@ const IndonesianBlog = (
       "google.com", dan catat wilayahnya.
       <SmallBlogImg
         alt='Creating an S3 bucket'
-        src={`${imgPath}create-s3-bucket.png`}
+        src={`${imgPath}create-s3-bucket.avif`}
       />
       Logikanya wilayah tersebut harus dekat dengan tempat mayoritas pengguna
       situs web Anda untuk memberikan kinerja yang sedikit lebih baik. Kamu juga
@@ -316,10 +316,6 @@ const IndonesianBlog = (
       dan di folder itu ada file bernama <code>config.yml</code>. Di sini Anda
       ingin menambahkan kode berikut::
     </Text>
-    <SmallBlogImg
-      alt='Code for our CI/CD pipeline'
-      src={`${imgPath}circleci-config.png`}
-    />
     <Text>
       {/* TODO: Add code from: https://edaoud.com/blog/2019/04/12/deploy-static-website-to-aws-s3-circleci/ in it's own syntax highlighted box: https://blog.openreplay.com/building-a-code-snippet-highlighter-in-next-js */}
     </Text>

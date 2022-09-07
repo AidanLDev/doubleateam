@@ -23,9 +23,7 @@ export default function AboutUs() {
       <Topbar />
       <Layout>
         <Center>
-          <Heading>
-            {lang !== 'Ind' ? 'About us' : 'Tentang kami'}
-          </Heading>
+          <Heading>{lang !== 'Ind' ? 'About us' : 'Tentang kami'}</Heading>
         </Center>
         <VStack>
           <Card>
@@ -43,7 +41,7 @@ export default function AboutUs() {
           <Heading>Arni Riani</Heading>
           <Image
             alt='Photo of Arni'
-            src='/images/us/ArniAvatar.png'
+            src='/images/us/ArniAvatar.avif'
             width='250px'
             border='1px solid red'
             borderRadius='125px'
@@ -58,7 +56,7 @@ export default function AboutUs() {
           <Heading>Aidan Lowson</Heading>
           <Image
             alt='Photo of Aidan'
-            src='/images/us/AidanAvatar.png'
+            src='/images/us/AidanAvatar.avif'
             width='250px'
             border='1px solid red'
             borderRadius='125px'

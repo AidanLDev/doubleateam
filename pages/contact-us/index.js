@@ -49,9 +49,7 @@ export default function ContactUs() {
       <Topbar />
       <Layout>
         <Center>
-          <Heading>
-            {lang !== 'Ind' ? 'Contact Us' : 'Hubungi kami'}
-          </Heading>
+          <Heading>{lang !== 'Ind' ? 'Contact Us' : 'Hubungi kami'}</Heading>
         </Center>
         <VStack>
           <Card>
@@ -121,7 +119,7 @@ export default function ContactUs() {
             <Center>
               <Image
                 alt='Arnis photo'
-                src='/images/us/ARSelfie.jpg'
+                src='/images/us/ARSelfie.avif'
                 width='200px'
                 borderRadius='60px'
                 border='1px solid red'
@@ -199,7 +197,7 @@ export default function ContactUs() {
             <Center>
               <Image
                 alt='Aidans photo'
-                src='/images/us/sunnyAidanBalcony.jpg'
+                src='/images/us/sunnyAidanBalcony.avif'
                 width='200px'
                 borderRadius='60px'
                 border='1px solid red'
@@ -265,10 +263,7 @@ export default function ContactUs() {
               </span>
             </Box>
             <Box>
-              <Link
-                href='https://www.facebook.com/aidan.lowson'
-                passHref
-              >
+              <Link href='https://www.facebook.com/aidan.lowson' passHref>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
@@ -285,10 +280,7 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span>
-                {' '}
-                - {lang !== 'Ind' ? 'The classic FB' : 'FB klasik'}
-              </span>
+              <span> - {lang !== 'Ind' ? 'The classic FB' : 'FB klasik'}</span>
             </Box>
             <Box>
               <Link href='https://aidanlowson.com' passHref>
@@ -317,10 +309,7 @@ export default function ContactUs() {
               </span>
             </Box>
             <Box>
-              <Link
-                href='https://www.linkedin.com/in/aidanlowson1/'
-                passHref
-              >
+              <Link href='https://www.linkedin.com/in/aidanlowson1/' passHref>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
