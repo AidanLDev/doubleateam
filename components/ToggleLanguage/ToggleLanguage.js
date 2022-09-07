@@ -13,8 +13,11 @@ export default function ToggleLanguage({ lang, setLang }) {
     <Center>
       <Box
         onClick={() =>
-          setLang((lang) => {
-            sessionStorage.setItem('language', lang !== 'Ind' ? 'Ind' : 'Eng');
+          setLang(lang => {
+            sessionStorage.setItem(
+              'language',
+              lang !== 'Ind' ? 'Ind' : 'Eng'
+            );
             return lang !== 'Ind' ? 'Ind' : 'Eng';
           })
         }
@@ -28,7 +31,9 @@ export default function ToggleLanguage({ lang, setLang }) {
           </Text>
         }
         <Image
-          src={lang !== 'Ind' ? '/images/Ind.png' : '/images/Eng.jpg'}
+          src={
+            lang !== 'Ind' ? '/images/Ind.png' : '/images/Eng.avif'
+          }
           alt='Translate Flags'
           w='350px'
           h='200px'

@@ -28,7 +28,7 @@ export default function Home({ blogs }) {
         title='Double A Team'
         description='A website built through our passion for helping others, learning and growing. Come learn what we know, if you want to know that is!'
         url='https://doubleateam.co.uk/'
-        image='/images/IstanbulHagiaSopia.jpg'
+        image='/images/IstanbulHagiaSopia.avif'
       />
       <Box className={styles.main}>
         <HomeBackground />
@@ -41,7 +41,9 @@ export default function Home({ blogs }) {
           {lang !== 'Ind' ? 'Our Latest Blogs' : 'blog terbaru kami'}|{' '}
           <Link href='/posts/' passHref>
             <a style={{ color: '#0070f3' }}>
-              {lang !== 'Ind' ? 'Click for all Blogs' : 'Klik untuk semua Blog'}
+              {lang !== 'Ind'
+                ? 'Click for all Blogs'
+                : 'Klik untuk semua Blog'}
             </a>
           </Link>
         </Text>

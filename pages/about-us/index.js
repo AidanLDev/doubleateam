@@ -18,12 +18,14 @@ export default function AboutUs() {
         title='Double A Team | About Us'
         description='A little background on who the double A team are'
         url='https://doubleateam.co.uk/about-us'
-        image='/images/IstanbulHagiaSopia.jpg'
+        image='/images/IstanbulHagiaSopia.avif'
       />
       <Topbar />
       <Layout>
         <Center>
-          <Heading>{lang !== 'Ind' ? 'About us' : 'Tentang kami'}</Heading>
+          <Heading>
+            {lang !== 'Ind' ? 'About us' : 'Tentang kami'}
+          </Heading>
         </Center>
         <VStack>
           <Card>

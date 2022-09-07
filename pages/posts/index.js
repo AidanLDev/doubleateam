@@ -96,11 +96,11 @@ export default function Posts({ blogs }) {
         title='Double A Team | Blogs'
         description="All of the blogs we've written, scroll through and pick whatever takes your fancy or search via tags or by blog title if you have something specific in mind."
         url='https://doubleateam.co.uk/posts'
-        image='/images/IstanbulHagiaSopia.jpg'
+        image='/images/IstanbulHagiaSopia.avif'
       />
       <Box
         height='500px'
-        backgroundImage='url(/images/sky2-resize.jpg)'
+        backgroundImage='url(/images/sky2-resize.avif)'
         padding='20px'
         borderBottom='2px solid red'
       >
@@ -117,7 +117,9 @@ export default function Posts({ blogs }) {
             position='absolute'
             top={Math.floor(Math.random() * 300 + 100)}
             left={Math.floor(
-              Math.random() * flashingTextWidth || isMobile ? 200 : 800
+              Math.random() * flashingTextWidth || isMobile
+                ? 200
+                : 800
             )}
             fontSize={isMobile ? 'large' : '6xl'}
             className='fadingText'
@@ -139,7 +141,12 @@ export default function Posts({ blogs }) {
           : 'Menyebarkan apa yang kita ketahui, dengan mereka yang ingin tahu'}
       </Text>
       <Divider borderColor='red' paddingBottom='12px' />
-      <Text align='center' color='red' fontSize='18px' paddingBottom='8px'>
+      <Text
+        align='center'
+        color='red'
+        fontSize='18px'
+        paddingBottom='8px'
+      >
         Filter by tag
       </Text>
       <Flex p='0 12px' flexWrap='wrap' gap='4px' justify='center'>
@@ -163,7 +170,9 @@ export default function Posts({ blogs }) {
       <Center padding='12px 0'>
         <Input
           variant='filled'
-          placeholder={lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'}
+          placeholder={
+            lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'
+          }
           width='25%'
           value={filterValue}
           onChange={handleInputChange}

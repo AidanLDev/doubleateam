@@ -28,7 +28,7 @@ export default function BlogLayout({ title, description, children, postUrl }) {
           title={title}
           description={description}
           url={url}
-          image='/images/IstanbulHagiaSopia.jpg'
+          image='/images/IstanbulHagiaSopia.avif'
         />
         <StraightLineProgress />
         <Flex alignItems='baseline' gap='24px'>
