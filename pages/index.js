@@ -26,7 +26,7 @@ export default function Home({ blogs }) {
     <Box w='100%' h='100%'>
       <SEO
         title='Double A Team'
-        description='A website built through our passion for helping others, learning and growing. Come learn what we know, if you want to know that is!'
+        description='We are the Double A Team and together we built a website through our passion for helping others, learning and growing. Come learn what we know, if you want to know that is!'
         url='https://doubleateam.co.uk/'
         image='/images/IstanbulHagiaSopia.avif'
       />
@@ -42,8 +42,8 @@ export default function Home({ blogs }) {
           <Link href='/posts/' passHref>
             <a style={{ color: '#0070f3' }}>
               {lang !== 'Ind'
-                ? 'Click for all Blogs'
-                : 'Klik untuk semua Blog'}
+                ? "Click for all of the Double A Team's Blogs"
+                : 'Klik untuk semua Blog Double A Team'}
             </a>
           </Link>
         </Text>

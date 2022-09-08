@@ -58,7 +58,7 @@ export default function Posts({ blogs }) {
     <>
       <SEO
         title='Double A Team | Blogs'
-        description="All of the blogs we've written, scroll through and pick whatever takes your fancy or search via tags or by blog title if you have something specific in mind."
+        description='All of the blogs available on double a team, scroll through and pick whatever takes your fancy or search via tags or by blog title if you have something specific in mind.'
         url='https://doubleateam.co.uk/posts'
         image='/images/IstanbulHagiaSopia.avif'
       />
@@ -100,7 +100,9 @@ export default function Posts({ blogs }) {
       <Center padding='12px 0'>
         <Input
           variant='filled'
-          placeholder={lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'}
+          placeholder={
+            lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'
+          }
           width='25%'
           value={filterValue}
           onChange={handleInputChange}

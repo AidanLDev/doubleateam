@@ -51,7 +51,7 @@ export default function Footer() {
         textAlign='center'
         fontSize='14px'
       >
-        © Aidan John Lowson & Arni Riani Lowson
+        © The Double A Team: Aidan John Lowson & Arni Riani Lowson
       </Text>
     </footer>
   );
