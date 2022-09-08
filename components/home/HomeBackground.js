@@ -12,11 +12,11 @@ export default function HomeBackground() {
       borderBottom='2px solid red'
     >
       <Image
-        src={`/images/IstanbulHagiaSopia${isMobile ? 'Mobile' : ''}.avif`}
+        src={`/images/IstanbulHagiaSopia${
+          isMobile ? 'Mobile' : ''
+        }.avif`}
         alt='Hagia Sopia home image'
         layout='fill'
-        width='100%'
-        height='100%'
         priority
       />
     </Box>
