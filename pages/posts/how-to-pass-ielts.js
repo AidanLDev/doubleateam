@@ -43,7 +43,7 @@ const EnglishBlog = (
       <Flex justify='center'>
         <Image
           alt='IELTS A1 exam structure'
-          src='/images/IELTSA1TestStructure.avif'
+          src='/images/IELTSA1TestStructure.webp'
         />
       </Flex>
     </Text>

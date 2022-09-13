@@ -25,7 +25,7 @@ const EnglishBlog = (
       "Wessex" etc... Each kingdom having their own rulers.
     </Text>
     <SmallBlogImg
-      src={`${imgPath}pre-eng-kingdoms.avif`}
+      src={`${imgPath}pre-eng-kingdoms.webp`}
       alt='Pre England kingdoms'
       caption='English kingdoms in the year 800'
     />
@@ -36,7 +36,7 @@ const EnglishBlog = (
       England, but it's not the strongest of claims, let's diver deeper into the
       past...
     </Text>
-    <SmallBlogImg src={`${imgPath}Egbert.avif`} alt='Egbert' caption='Egbert' />
+    <SmallBlogImg src={`${imgPath}Egbert.webp`} alt='Egbert' caption='Egbert' />
     <Text>
       It's safer to say that the origins of our modern monarchy can be dated
       back to the late 800s and early 900s, when all of the various Anglo-Saxon
@@ -44,7 +44,7 @@ const EnglishBlog = (
       of the House of Wessex to form the Kingdom of England.
     </Text>
     <SmallBlogImg
-      src={`${imgPath}Æthelstan.avif`}
+      src={`${imgPath}Æthelstan.webp`}
       alt='Æthelstan'
       caption='Æthelstan'
     />
@@ -83,7 +83,7 @@ const EnglishBlog = (
       between 449 - {new Date().getFullYear()}.
     </Text>
     <SmallBlogImg
-      src={`${imgPath}Hengist.avif`}
+      src={`${imgPath}Hengist.webp`}
       alt='Hengist King of Kent'
       caption='Hengist King of Kent'
     />
@@ -94,7 +94,7 @@ const EnglishBlog = (
       foundation of English Christianity.
     </Text>
     <SmallBlogImg
-      src={`${imgPath}Æthelberht.avif`}
+      src={`${imgPath}Æthelberht.webp`}
       alt='Æthelberht of Kent'
       caption='Æthelberht of Kent'
     />
@@ -105,12 +105,12 @@ const EnglishBlog = (
       royal family and country we know today.
     </Text>
     <SmallBlogImg
-      src={`${imgPath}Queen-Elizabeth-2nd.avif`}
+      src={`${imgPath}Queen-Elizabeth-2nd.webp`}
       alt='Queen Elizabeth II'
       caption='Queen Elizabeth II'
     />
     <SmallBlogImg
-      src={`${imgPath}Queen-Elizabeth-II.avif`}
+      src={`${imgPath}Queen-Elizabeth-II.webp`}
       alt='Queen Elizabeth II Coronation'
       caption='Queen Elizabeth II Coronation'
     />
@@ -140,7 +140,7 @@ const IndonesianBlog = (
       Anglia", "Wessex" dll... Setiap kerajaan memiliki penguasanya sendiri.
     </Text>
     <SmallBlogImg
-      src={`${imgPath}pre-eng-kingdoms.avif`}
+      src={`${imgPath}pre-eng-kingdoms.webp`}
       alt='Pre England kingdoms'
       caption='Kerajaan Inggris di tahun 800'
     />
@@ -151,7 +151,7 @@ const IndonesianBlog = (
       Inggris, tapi itu bukan klaim yang paling kuat, mari selami lebih dalam
       masa lalu...
     </Text>
-    <SmallBlogImg src={`${imgPath}Egbert.avif`} alt='Egbert' caption='Egbert' />
+    <SmallBlogImg src={`${imgPath}Egbert.webp`} alt='Egbert' caption='Egbert' />
     <Text>
       Lebih aman untuk mengatakan bahwa asal usul monarki modern kita dapat
       ditentukan tanggalnya kembali ke akhir 800-an dan awal 900-an, ketika
@@ -160,7 +160,7 @@ const IndonesianBlog = (
       Inggris.
     </Text>
     <SmallBlogImg
-      src={`${imgPath}Æthelstan.avif`}
+      src={`${imgPath}Æthelstan.webp`}
       alt='Æthelstan'
       caption='Æthelstan'
     />
@@ -202,7 +202,7 @@ const IndonesianBlog = (
       {new Date().getFullYear()}.
     </Text>
     <SmallBlogImg
-      src={`${imgPath}Hengist.avif`}
+      src={`${imgPath}Hengist.webp`}
       alt='Hengist King of Kent'
       caption='Hengist King of Kent'
     />
@@ -213,7 +213,7 @@ const IndonesianBlog = (
       mendirikan dasar Kekristenan Inggris.
     </Text>
     <SmallBlogImg
-      src={`${imgPath}Æthelberht.avif`}
+      src={`${imgPath}Æthelberht.webp`}
       alt='Æthelberht of Kent'
       caption='Æthelberht of Kent'
     />
@@ -224,12 +224,12 @@ const IndonesianBlog = (
       membangun keluarga kerajaan dan negara yang kita kenal sekarang.
     </Text>
     <SmallBlogImg
-      src={`${imgPath}Queen-Elizabeth-2nd.avif`}
+      src={`${imgPath}Queen-Elizabeth-2nd.webp`}
       alt='Queen Elizabeth II'
       caption='Queen Elizabeth II'
     />
     <SmallBlogImg
-      src={`${imgPath}Queen-Elizabeth-II.avif`}
+      src={`${imgPath}Queen-Elizabeth-II.webp`}
       alt='Queen Elizabeth II Coronation'
       caption='Queen Elizabeth II Coronation'
     />

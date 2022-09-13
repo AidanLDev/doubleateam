@@ -85,7 +85,7 @@ export default function PostCard({ blog, idx, filterValue }) {
         </Flex>
         <Link href={`/posts/${blog.path}`} passHref maxH='600px'>
           <MotionContainer
-            backgroundImage={`/images/blog/${blog.path}.avif`}
+            backgroundImage={`/images/blog/${blog.path}.webp`}
             backgroundSize='cover'
             cursor='pointer'
             colSpan={blog.size.colSpan}

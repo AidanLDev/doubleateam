@@ -60,7 +60,7 @@ export default function Posts({ blogs }) {
         title='Double A Team | Blogs'
         description='All of the blogs available on double a team, scroll through and pick whatever takes your fancy or search via tags or by blog title if you have something specific in mind.'
         url='https://doubleateam.co.uk/posts'
-        image='/images/IstanbulHagiaSopia.avif'
+        image='/images/IstanbulHagiaSopia.webp'
       />
       <Box borderBottom='2px solid red' paddingBottom='12px'>
         <Topbar />

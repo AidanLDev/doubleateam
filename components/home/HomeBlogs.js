@@ -37,7 +37,7 @@ export default function HomeBlogs({ blogs, lang }) {
                     pos='absolute'
                   />
                   <Image
-                    src={blog.img || `/images/blog/${blog.path}.avif`}
+                    src={blog.img || `/images/blog/${blog.path}.webp`}
                     alt={`${blog.title} image`}
                     width={isMobile ? '250px' : '500px'}
                     height={isMobile ? '500px' : '700px'}

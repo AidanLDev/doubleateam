@@ -232,7 +232,7 @@ export default function PrivacyPolicy() {
         title='Double A Team | Privacy Policy'
         description='Privacy policy information'
         url='https://doubleateam.co.uk/privacy-policy'
-        image='/images/IstanbulHagiaSopia.avif'
+        image='/images/IstanbulHagiaSopia.webp'
       />
       <Topbar />
       <Layout>

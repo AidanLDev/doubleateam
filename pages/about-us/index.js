@@ -18,12 +18,14 @@ export default function AboutUs() {
         title='Double A Team | About Us'
         description='A little background on who the double A team are'
         url='https://doubleateam.co.uk/about-us'
-        image='/images/IstanbulHagiaSopia.avif'
+        image='/images/IstanbulHagiaSopia.webp'
       />
       <Topbar />
       <Layout>
         <Center>
-          <Heading>{lang !== 'Ind' ? 'About us' : 'Tentang kami'}</Heading>
+          <Heading>
+            {lang !== 'Ind' ? 'About us' : 'Tentang kami'}
+          </Heading>
         </Center>
         <VStack>
           <Card>
@@ -41,7 +43,7 @@ export default function AboutUs() {
           <Heading>Arni Riani</Heading>
           <Image
             alt='Photo of Arni'
-            src='/images/us/ArniAvatar.avif'
+            src='/images/us/ArniAvatar.webp'
             width='250px'
             border='1px solid red'
             borderRadius='125px'
@@ -56,7 +58,7 @@ export default function AboutUs() {
           <Heading>Aidan Lowson</Heading>
           <Image
             alt='Photo of Aidan'
-            src='/images/us/AidanAvatar.avif'
+            src='/images/us/AidanAvatar.webp'
             width='250px'
             border='1px solid red'
             borderRadius='125px'

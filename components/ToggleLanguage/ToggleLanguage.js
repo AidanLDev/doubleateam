@@ -32,7 +32,7 @@ export default function ToggleLanguage({ lang, setLang }) {
         }
         <Image
           src={
-            lang !== 'Ind' ? '/images/Ind.png' : '/images/Eng.avif'
+            lang !== 'Ind' ? '/images/Ind.png' : '/images/Eng.webp'
           }
           alt='Translate Flags'
           w='350px'
