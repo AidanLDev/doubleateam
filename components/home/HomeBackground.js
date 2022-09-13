@@ -14,7 +14,7 @@ export default function HomeBackground() {
       <Image
         src={`/images/IstanbulHagiaSopia${
           isMobile ? 'Mobile' : ''
-        }.avif`}
+        }.webp`}
         alt='Hagia Sopia home image'
         layout='fill'
         priority
