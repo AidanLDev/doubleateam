@@ -1,7 +1,14 @@
-import { useState } from 'react';
-import { Box, Text } from '@chakra-ui/react';
-import HomeBackground from '../components/home/HomeBackground';
-import HomeHeader from '../components/home/homeHeader/HomeHeader';
+import { useState, Suspense } from 'react';
+import dynamic from 'next/dynamic';
+import { Box, Text, Spinner } from '@chakra-ui/react';
+const HomeBackground = dynamic(
+  () => import('../components/home/HomeBackground'),
+  { suspense: true }
+);
+const HomeHeader = dynamic(
+  () => import('../components/home/homeHeader/HomeHeader'),
+  { suspense: true }
+);
 import HomeBlogs from '../components/home/HomeBlogs';
 import Footer from '../components/Footer';
 import { getBlogPostPaths } from '../lib/posts';
@@ -31,8 +38,10 @@ export default function Home({ blogs }) {
         image='/images/IstanbulHagiaSopia.webp'
       />
       <Box className={styles.main}>
-        <HomeBackground />
-        <HomeHeader />
+        <Suspense fallback={<Spinner />}>
+          <HomeBackground />
+          <HomeHeader />
+        </Suspense>
       </Box>
 
       <Box m='2% 6%' minH='1000px'>
