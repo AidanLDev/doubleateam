@@ -1,12 +1,8 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { Box, Text } from '@chakra-ui/react';
-const HomeBackground = dynamic(() =>
-  import('../components/home/HomeBackground')
-);
-const HomeHeader = dynamic(() =>
-  import('../components/home/homeHeader/HomeHeader')
-);
+import HomeBackground from '../components/home/HomeBackground';
+import HomeHeader from '../components/home/homeHeader/HomeHeader';
 const HomeBlogs = dynamic(() => import('../components/home/HomeBlogs'));
 const Footer = dynamic(() => import('../components/Footer'));
 import { getBlogPostPaths } from '../lib/posts';
