@@ -1,14 +1,15 @@
-import { Box, Divider, Flex, Text } from '@chakra-ui/react';
+import { memo } from 'react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import {
   FaInstagram,
   FaYoutube,
-  FaTwitter,
-  FaFacebookF,
+  // FaTwitter,
+  // FaFacebookF,
 } from 'react-icons/fa';
 import FooterIcon from './functional/FooterIcon';
 import Links from './Nav/Links';
 
-export default function Footer() {
+export default memo(function Footer() {
   const igPink = '#e04d93';
   const youtubeRed = '#fe2c3c';
   const twitterBlue = '#61b9ff';
@@ -55,4 +56,4 @@ export default function Footer() {
       </Text>
     </footer>
   );
-}
+})

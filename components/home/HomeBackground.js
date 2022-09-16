@@ -1,8 +1,9 @@
+import { memo } from 'react';
 import { Box } from '@chakra-ui/react';
 import Image from 'next/image';
 import useIsMobile from '../../hooks/useIsMobile';
 
-export default function HomeBackground() {
+export default memo(function HomeBackground() {
   const isMobile = useIsMobile();
   return (
     <Box
@@ -21,4 +22,4 @@ export default function HomeBackground() {
       />
     </Box>
   );
-}
+})
