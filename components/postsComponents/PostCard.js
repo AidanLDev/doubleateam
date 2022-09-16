@@ -13,8 +13,8 @@ import {
 } from '@chakra-ui/react';
 import CardTitle from '../CardTitle';
 import { AiFillTag } from 'react-icons/ai';
+import { useTranslation } from 'react-i18next';
 import useIsMobile from '../../hooks/useIsMobile';
-import useSetLang from '../../hooks/useSetLang';
 import useIsTablet from '../../hooks/useIsTablet';
 
 import styles from './styles.module.scss';
@@ -22,17 +22,19 @@ import CopyClipboard from '../CopyClipboard';
 
 const MotionContainer = motion(Box);
 
+const transPath = 'blogs.';
+
 export default function PostCard({ blog, idx, filterValue }) {
+  const { t } = useTranslation();
+
   const [isLaptop, setIsLaptop] = useState(false);
   const [mediaQuery] = useMediaQuery('(max-width: 1500px)');
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
-  const lang = useSetLang();
 
   useEffect(() => {
     setIsLaptop(mediaQuery);
   }, [mediaQuery]);
-
   return (
     <GridItem
       overflow='hidden'
@@ -57,7 +59,7 @@ export default function PostCard({ blog, idx, filterValue }) {
           <Box>
             <Flex maxW={isLaptop ? '300px' : '500px'} alignItems='baseline'>
               <CardTitle
-                titleText={lang !== 'Ind' ? blog.title : blog.indTitle}
+                titleText={t(`${transPath}${blog.title}.title`)}
                 fontSize={
                   isTablet && !isMobile
                     ? '26px'
@@ -100,13 +102,12 @@ export default function PostCard({ blog, idx, filterValue }) {
           gap='2px'
         >
           <Icon as={AiFillTag} fill='white' />
-          {lang !== 'Ind'
-            ? blog.tags.map((tag, tagIdx) => (
-                <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
-              ))
-            : blog.indTags.map((tag, tagIdx) => (
-                <Tag key={`${tag}__${idx}__${tagIdx}`}>{tag}</Tag>
-              ))}
+          {blog.tags.map((tag, tagIdx) => (
+            <Tag key={`${tag}__${idx}__${tagIdx}`}>
+              {t(`${transPath}tags.${tag}`)}
+            </Tag>
+          ))}
+          ;
         </HStack>
       </Box>
     </GridItem>

@@ -3,12 +3,14 @@ import { Tooltip, Icon } from '@chakra-ui/react';
 
 import { AiFillCheckCircle } from 'react-icons/ai';
 import { BsClipboard } from 'react-icons/bs';
+import { useTranslation } from 'react-i18next';
 
 export default function CopyClipboard({ postUrl }) {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
   return (
     <Tooltip
-      label={copied ? 'Copied!' : 'Copy Blog to clipboard'}
+      label={copied ? t('copied') : t('copy')}
       zIndex={20}
       shouldWrapChildren
     >

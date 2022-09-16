@@ -1,14 +1,6 @@
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import {
-  Box,
-  Flex,
-  Center,
-  Input,
-  Tag,
-  Text,
-  Grid,
-} from '@chakra-ui/react';
+import { Box, Flex, Center, Input, Tag, Text, Grid } from '@chakra-ui/react';
 import { getBlogPostPaths } from '../../lib/posts';
 const Footer = dynamic(() => import('../../components/Footer'));
 import SEO from '../../components/SEO';
@@ -29,33 +21,7 @@ export async function getStaticProps() {
   };
 }
 
-const lang = 'Eng';
-
-const tags = [
-  'Education',
-  'Visa',
-  'Travel',
-  'Indonesia',
-  'Marriage',
-  'UK',
-  'Days out',
-  'Roller coasters',
-  'Web dev',
-  'Programming',
-  'Astro',
-  'JS frameworks',
-  'React',
-  'Svelt',
-  'Vue',
-  'Solid-js',
-  'lit',
-  'Preact',
-  'Netlify',
-  'Hosting',
-  'CI/CD',
-  'CircleCI',
-  'All',
-];
+const transPath = 'posts.';
 
 export default function Posts({ blogs }) {
   const { t } = useTranslation();
@@ -63,9 +29,36 @@ export default function Posts({ blogs }) {
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
 
-  const handleInputChange = e => {
+  const handleInputChange = (e) => {
     setFilterValue(e.target.value);
   };
+
+  const tags = [
+    'education',
+    'visa',
+    'travel',
+    'ind',
+    'marriage',
+    'UK',
+    'daysOut',
+    'rollerCoasters',
+    'webDev',
+    'programming',
+    'astro',
+    'jsFrameworks',
+    'react',
+    'svelt',
+    'vue',
+    'solidJs',
+    'lit',
+    'preact',
+    'netlify',
+    'hosting',
+    'ciCd',
+    'circleCI',
+    'history',
+    'all',
+  ];
 
   return (
     <>
@@ -84,18 +77,18 @@ export default function Posts({ blogs }) {
           padding='24px 0'
           cursor='default'
         >
-          {t('allBlogsHeading')}
+          {t(`${transPath}allBlogsHeading`)}
         </Text>
       </Box>
       <Text align='center' color='red' fontSize='18px' p='12px 0'>
-        Filter by tag
+        {t(`${transPath}filterHeading`)}
       </Text>
       <Flex p='0 12px' flexWrap='wrap' gap='4px' justify='center'>
         {tags.map((tag, id) => (
           <Tag
             key={`${id}__${tag}`}
             onClick={() => {
-              if (tag === 'All') {
+              if (tag === 'all') {
                 setFilterValue('');
               } else {
                 setFilterValue(tag);
@@ -104,14 +97,14 @@ export default function Posts({ blogs }) {
             colorScheme={tag === filterValue ? 'green' : 'blue'}
             cursor='pointer'
           >
-            {tag}
+            {t(`blogs.tags.${tag}`)}
           </Tag>
         ))}
       </Flex>
       <Center padding='12px 0'>
         <Input
           variant='filled'
-          placeholder={t('blogSearchPlaceHolder')}
+          placeholder={t(`${transPath}blogSearchPlaceHolder`)}
           width='25%'
           value={filterValue}
           onChange={handleInputChange}

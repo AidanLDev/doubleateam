@@ -12,16 +12,12 @@ import Links from './Nav/Links';
 export default memo(function Footer() {
   const igPink = '#e04d93';
   const youtubeRed = '#fe2c3c';
-  const twitterBlue = '#61b9ff';
-  const fbBlue = '#3e55aa';
+  // const twitterBlue = '#61b9ff';
+  // const fbBlue = '#3e55aa';
 
   return (
     <footer className='footer'>
-      <Box
-        p='20px 0 50px 0'
-        w='100%'
-        borderBottom='2px solid #868484'
-      >
+      <Box p='20px 0 50px 0' w='100%' borderBottom='2px solid #868484'>
         <Flex
           justify='center'
           gap='5%'
@@ -56,4 +52,4 @@ export default memo(function Footer() {
       </Text>
     </footer>
   );
-})
+});
