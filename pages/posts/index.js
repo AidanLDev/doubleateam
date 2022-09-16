@@ -1,11 +1,19 @@
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import { Box, Flex, Center, Input, Tag, Text, Grid } from '@chakra-ui/react';
-import useSetLang from '../../hooks/useSetLang';
+import {
+  Box,
+  Flex,
+  Center,
+  Input,
+  Tag,
+  Text,
+  Grid,
+} from '@chakra-ui/react';
 import { getBlogPostPaths } from '../../lib/posts';
 const Footer = dynamic(() => import('../../components/Footer'));
 import SEO from '../../components/SEO';
 const Topbar = dynamic(() => import('../../components/Nav/Topbar'));
+import { useTranslation } from 'react-i18next';
 import useIsMobile from '../../hooks/useIsMobile';
 import useIsTablet from '../../hooks/useIsTablet';
 const PostCard = dynamic(() =>
@@ -20,6 +28,8 @@ export async function getStaticProps() {
     },
   };
 }
+
+const lang = 'Eng';
 
 const tags = [
   'Education',
@@ -48,12 +58,12 @@ const tags = [
 ];
 
 export default function Posts({ blogs }) {
+  const { t } = useTranslation();
   const [filterValue, setFilterValue] = useState('');
-  const lang = useSetLang();
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     setFilterValue(e.target.value);
   };
 
@@ -74,9 +84,7 @@ export default function Posts({ blogs }) {
           padding='24px 0'
           cursor='default'
         >
-          {lang !== 'Ind'
-            ? 'Spreading what we know, with those who want to know'
-            : 'Menyebarkan apa yang kita ketahui, dengan mereka yang ingin tahu'}
+          {t('allBlogsHeading')}
         </Text>
       </Box>
       <Text align='center' color='red' fontSize='18px' p='12px 0'>
@@ -103,7 +111,7 @@ export default function Posts({ blogs }) {
       <Center padding='12px 0'>
         <Input
           variant='filled'
-          placeholder={lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'}
+          placeholder={t('blogSearchPlaceHolder')}
           width='25%'
           value={filterValue}
           onChange={handleInputChange}

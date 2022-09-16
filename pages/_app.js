@@ -1,9 +1,27 @@
+import { Suspense } from 'react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
 import '../styles/globals.scss';
+
 import '@fontsource/aldrich';
 import '@fontsource/open-sans';
 import '@fontsource/nerko-one';
 import '@fontsource/aguafina-script';
+
+import { translationsEn, translationsId } from '../lib/Translations';
+
+// Set up i18
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: translationsEn },
+    id: { translation: translationsId },
+  },
+  lng: 'en',
+  fallbackLng: 'en',
+  interpolation: { escapeValue: false },
+});
 
 // 2. Extend the theme to include custom colors, fonts, etc
 const theme = extendTheme({
@@ -19,12 +37,13 @@ const theme = extendTheme({
 });
 
 // 3. Pass the `theme` prop to the `ChakraProvider`
-
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <Suspense fallback='loading'>
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </Suspense>
   );
 }
 
