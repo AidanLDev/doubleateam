@@ -1,13 +1,16 @@
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { Box, Flex, Center, Input, Tag, Text, Grid } from '@chakra-ui/react';
 import useSetLang from '../../hooks/useSetLang';
 import { getBlogPostPaths } from '../../lib/posts';
-import Footer from '../../components/Footer';
+const Footer = dynamic(() => import('../../components/Footer'));
 import SEO from '../../components/SEO';
-import Topbar from '../../components/Nav/Topbar';
+const Topbar = dynamic(() => import('../../components/Nav/Topbar'));
 import useIsMobile from '../../hooks/useIsMobile';
 import useIsTablet from '../../hooks/useIsTablet';
-import PostCard from '../../components/postsComponents/PostCard';
+const PostCard = dynamic(() =>
+  import('../../components/postsComponents/PostCard')
+);
 
 export async function getStaticProps() {
   const blogs = getBlogPostPaths();
@@ -100,9 +103,7 @@ export default function Posts({ blogs }) {
       <Center padding='12px 0'>
         <Input
           variant='filled'
-          placeholder={
-            lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'
-          }
+          placeholder={lang !== 'Ind' ? 'Blog Search...' : 'Pencarian blog...'}
           width='25%'
           value={filterValue}
           onChange={handleInputChange}

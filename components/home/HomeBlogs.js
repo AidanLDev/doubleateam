@@ -20,7 +20,7 @@ export default function HomeBlogs({ blogs, lang }) {
               >
                 <ListItem
                   w={isMobile ? '250px' : '500px'}
-                  h={isMobile ? '500px' : '700px'}
+                  h={isMobile ? '450px' : '700px'}
                   cursor='pointer'
                   m='10px 20px'
                   overflow='hidden'
@@ -30,9 +30,7 @@ export default function HomeBlogs({ blogs, lang }) {
                   className='blogCard'
                 >
                   <CardTitle
-                    titleText={
-                      lang !== 'Ind' ? blog.title : blog.indTitle
-                    }
+                    titleText={lang !== 'Ind' ? blog.title : blog.indTitle}
                     fontSize={isMobile ? '26px' : '30px'}
                     pos='absolute'
                   />
@@ -41,6 +39,7 @@ export default function HomeBlogs({ blogs, lang }) {
                     alt={`${blog.title} image`}
                     width={isMobile ? '250px' : '500px'}
                     height={isMobile ? '500px' : '700px'}
+                    layout='responsive'
                   />
                 </ListItem>
               </Link>
