@@ -3,7 +3,6 @@ import {
   Box,
   Center,
   Heading,
-  Text,
   VStack,
   Image,
   Icon,
@@ -16,7 +15,7 @@ import Footer from '../../components/Footer';
 import Layout from '../../components/Layout';
 import Topbar from '../../components/Nav/Topbar';
 import SEO from '../../components/SEO';
-import useSetLang from '../../hooks/useSetLang';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 // Icons
@@ -36,8 +35,10 @@ const twitterBlue = '#61b9ff';
 const fbBlue = '#3e55aa';
 const linkedInBlue = '#2867b2';
 
+const translatePath = 'contactUs.';
+
 export default function ContactUs() {
-  const lang = useSetLang();
+  const { t } = useTranslation();
   return (
     <Box className={styles.contactUsContainer}>
       <SEO
@@ -49,9 +50,7 @@ export default function ContactUs() {
       <Topbar />
       <Layout>
         <Center>
-          <Heading>
-            {lang !== 'Ind' ? 'Contact Us' : 'Hubungi kami'}
-          </Heading>
+          <Heading>{t(`${translatePath}heading`)}</Heading>
         </Center>
         <VStack>
           <Card>
@@ -72,13 +71,7 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span>
-                {' '}
-                -{' '}
-                {lang !== 'Ind'
-                  ? 'Send an email to our double a team mailbox'
-                  : 'Kirim email ke kotak surat tim ganda kami'}
-              </span>
+              <span> - {t(`${translatePath}email`)}</span>
             </Box>
             <Box>
               <Link
@@ -103,20 +96,11 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span>
-                {' '}
-                -{' '}
-                {lang !== 'Ind'
-                  ? 'Be sure to visit our YouTube channel!'
-                  : 'Pastikan untuk mengunjungi saluran YouTube kami!'}
-              </span>
+              <span> - {t(`${translatePath}youTube`)}</span>
             </Box>
             <Divider margin='12px 0' />
             <Center>
-              <Heading>
-                {' '}
-                {lang !== 'Ind' ? "Arni's Socials" : 'Sosial Arni'}
-              </Heading>
+              <Heading>{t(`${translatePath}arSocialsHeader`)}</Heading>
             </Center>
             <Center>
               <Image
@@ -150,13 +134,7 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span>
-                {' '}
-                -{' '}
-                {lang !== 'Ind'
-                  ? "You're missing out if you're not following Arni's Insta"
-                  : 'Anda rugi jika tidak mengikuti Insta Arni'}
-              </span>
+              <span> - {t(`${translatePath}arIg`)}</span>
             </Box>
             <Box>
               <Link
@@ -181,20 +159,11 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span>
-                {' '}
-                -{' '}
-                {lang !== 'Ind'
-                  ? 'Not much of a tweeter, but worth a follow in-case she finds her voice'
-                  : 'Tidak banyak tweeter, tetapi patut diikuti jika dia menemukan suaranya'}
-              </span>
+              <span> - {t(`${translatePath}arTwitter`)}</span>
             </Box>
             <Divider margin='12px 0' />
             <Center>
-              <Heading>
-                {' '}
-                {lang !== 'Ind' ? "Aidan's Socials" : 'Sosial Aidan'}
-              </Heading>
+              <Heading> {t(`${translatePath}aiSocialsHeader`)}</Heading>
             </Center>
             <Center>
               <Image
@@ -228,14 +197,7 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span>
-                {' '}
-                -{' '}
-                {lang !== 'Ind'
-                  ? 'Not quite as good a photographer as Arni, however we try to keep IG relatively up to date so give us a follow'
-                  : 'Tidak sebagus fotografer Arni, namun kami mencoba untuk menjaga IG relatif up to date, jadi ikuti kami'}{' '}
-                😉
-              </span>
+              <span> - {t(`${translatePath}aiIg`)} 😉</span>
             </Box>
             <Box>
               <Link href='https://twitter.com/AidanL94' passHref>
@@ -257,18 +219,12 @@ export default function ContactUs() {
               </Link>{' '}
               <span>
                 {' '}
-                -{' '}
-                {lang !== 'Ind'
-                  ? 'Again... much of a tweeter, but you never know if that will change'
-                  : 'Tidak sebagus fotografer Arni, namun kami mencoba untuk menjaga IG relatif up to date, jadi ikuti kami'}
+                - {t(`${translatePath}aiTwitter`)}
                 ?!
               </span>
             </Box>
             <Box>
-              <Link
-                href='https://www.facebook.com/aidan.lowson'
-                passHref
-              >
+              <Link href='https://www.facebook.com/aidan.lowson' passHref>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
@@ -285,10 +241,7 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span>
-                {' '}
-                - {lang !== 'Ind' ? 'The classic FB' : 'FB klasik'}
-              </span>
+              <span> - {t(`${translatePath}aiFb`)}</span>
             </Box>
             <Box>
               <Link href='https://aidanlowson.com' passHref>
@@ -308,19 +261,10 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span>
-                {' '}
-                -{' '}
-                {lang !== 'Ind'
-                  ? 'My personal portfolio website'
-                  : 'Situs web portofolio pribadi saya'}
-              </span>
+              <span> - {t(`${translatePath}aiWeb`)}</span>
             </Box>
             <Box>
-              <Link
-                href='https://www.linkedin.com/in/aidanlowson1/'
-                passHref
-              >
+              <Link href='https://www.linkedin.com/in/aidanlowson1/' passHref>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
@@ -337,13 +281,7 @@ export default function ContactUs() {
                   />
                 </a>
               </Link>{' '}
-              <span>
-                {' '}
-                -{' '}
-                {lang !== 'Ind'
-                  ? 'For the professionals out there'
-                  : 'Untuk para profesional'}
-              </span>
+              <span> - {t(`${translatePath}aiLinkedIn`)}</span>
             </Box>
           </Card>
         </VStack>

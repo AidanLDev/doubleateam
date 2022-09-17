@@ -1,17 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Box, Center, Heading, Text, VStack, Image } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Card from '../../components/card/Card';
 import Layout from '../../components/Layout';
 import Topbar from '../../components/Nav/Topbar';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
-import useSetLang from '../../hooks/useSetLang';
 
 import styles from './styles.module.scss';
 
+const langPath = 'aboutUs.';
+
 export default function AboutUs() {
-  const lang = useSetLang();
+  const { t } = useTranslation();
   return (
     <Box className={styles.aboutUsContainer}>
       <SEO
@@ -23,16 +25,12 @@ export default function AboutUs() {
       <Topbar />
       <Layout>
         <Center>
-          <Heading>
-            {lang !== 'Ind' ? 'About us' : 'Tentang kami'}
-          </Heading>
+          <Heading>{t(`${langPath}heading`)}</Heading>
         </Center>
         <VStack>
           <Card>
             <Text>
-              {lang !== 'Ind'
-                ? "Arni and Aidan are two individuals, an Indonesian woman and English man, who when put together make the double A team 😎 We're passionate about traveling, living life to the full and helping others."
-                : 'Arni dan Aidan adalah dua individu, seorang wanita Indonesia dan pria Inggris, yang ketika disatukan menjadi tim ganda A 😎 Kami bersemangat bepergian, menjalani hidup sepenuhnya, dan membantu orang lain.'}
+              {t(`${langPath}jointIntro`)}
               {/* But you’re a young 28 year old Sundanese woman from Bandung
                   You graduated in Finance
                   Have experience as an events organiser, retail and finance and administration 
@@ -49,11 +47,7 @@ export default function AboutUs() {
             borderRadius='125px'
           />
           <Card>
-            <Text>
-              {lang !== 'Ind'
-                ? 'Originally from Bandung Indonesia. I have a affection for painting, nail art and anything creative. A lover of the outdoors, hiking is a big hobby of mine.'
-                : 'Berasal dari Bandung Indonesia. Saya memiliki kasih sayang untuk melukis, seni kuku, dan segala sesuatu yang kreatif. Seorang pecinta alam bebas, hiking adalah hobi besar saya.'}
-            </Text>
+            <Text>{t(`${langPath}arniIntro`)}</Text>
           </Card>
           <Heading>Aidan Lowson</Heading>
           <Image
@@ -64,11 +58,7 @@ export default function AboutUs() {
             borderRadius='125px'
           />
           <Card>
-            <Text>
-              {lang !== 'Ind'
-                ? 'Aidan Lowson, originally a mackem lad from Sunderland, now living in the south of England. I love all things tech, be it playing around with hardware to learning the latest in web technologies. Always keen to learn anything new, reading and running are my main hobbies.'
-                : 'Berasal dari Sunderland, sekarang tinggal di selatan Inggris. Saya menyukai semua hal tentang teknologi, baik itu bermain-main dengan perangkat keras hingga mempelajari teknologi web terbaru. Selalu ingin belajar sesuatu yang baru, membaca dan berlari adalah hobi utama saya.'}
-            </Text>
+            <Text>{t(`${langPath}aidanIntro`)}</Text>
           </Card>
         </VStack>
       </Layout>

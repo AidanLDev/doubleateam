@@ -10,7 +10,10 @@ import '@fontsource/open-sans';
 import '@fontsource/nerko-one';
 import '@fontsource/aguafina-script';
 
-import { translationsEn, translationsId } from '../lib/Translations';
+import {
+  translationsEn,
+  translationsId,
+} from '../lib/translations/Translations';
 
 // Set up i18
 i18n.use(initReactI18next).init({
