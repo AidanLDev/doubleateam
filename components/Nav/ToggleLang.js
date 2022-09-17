@@ -3,6 +3,7 @@ import i18n from 'i18next';
 import Image from 'next/image';
 import { Tooltip } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
+// Push this
 
 export default function ToggleLang() {
   const [lang, setLang] = useState(i18n.language);
