@@ -15,7 +15,7 @@ export default function ToggleLang() {
         src={`/images/${lang === 'en' ? 'Eng.webp' : 'Ind.png'}`}
         alt='Language Flags'
         onClick={() =>
-          setLang(curLang => {
+          setLang((curLang) => {
             i18n.changeLanguage(curLang === 'en' ? 'id' : 'en');
             return curLang === 'en' ? 'id' : 'en';
           })
