@@ -15,6 +15,7 @@
     "@chakra-ui/react": "latest",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/abril-fatface": "^4.5.8",
     "@fontsource/aguafina-script": "^4.5.8",
     "@fontsource/aldrich": "^4.5.1",
     "@fontsource/nerko-one": "^4.5.2",

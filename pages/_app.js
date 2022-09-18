@@ -9,6 +9,7 @@ import '@fontsource/aldrich';
 import '@fontsource/open-sans';
 import '@fontsource/nerko-one';
 import '@fontsource/aguafina-script';
+import '@fontsource/abril-fatface';
 
 import {
   translationsEn,
