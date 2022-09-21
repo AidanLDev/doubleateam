@@ -3,11 +3,11 @@
 .topbarContainer {
     color: $link-blue;
     gap: 5%;
-    padding-right: 24px;
+    // padding-right: 24px;
     .logo {
         color: white;
         padding: 8px 8px 8px 10px;
-        background-color: red;
+        background-color:$primary;
         cursor: pointer;
         width: 40px;
         z-index: 1;
@@ -23,7 +23,7 @@
         height: 100%;
         transform: scaleY(0);
         transform-origin: bottom center;
-        background: darken(red, 10%);
+        background: darken($primary, 10%);
         z-index: -1;
         transition: transform 0.2s ease-in;
     }

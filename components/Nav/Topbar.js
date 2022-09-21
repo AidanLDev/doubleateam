@@ -19,8 +19,8 @@ export default function Topbar({ isHome }) {
   const isMobile = useIsMobile();
 
   return (
-    <Flex className={styles.topbarContainer} zIndex={20}>
-      {!isMobile && !isHome && (
+    <Flex className={styles.topbarContainer} zIndex={100}>
+      {!isMobile && (
         <Box flexGrow={1}>
           <Link href='/' passHref>
             <Text className={styles.logo}>AA</Text>

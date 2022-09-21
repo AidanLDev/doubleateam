@@ -5,7 +5,15 @@ import { useTranslation } from 'react-i18next';
 
 const transPath = 'topBar.';
 
-export default function Links() {
+export async function getStaticProps() {
+  return {
+    props: {
+      isHome,
+    },
+  };
+}
+
+export default function Links({ isHome }) {
   const { t } = useTranslation();
   const isMobile = useIsMobile();
   return (
@@ -13,7 +21,7 @@ export default function Links() {
       <Link href='/posts'>
         <a>{t(`${transPath}allBlogs`)}</a>
       </Link>
-      {!isMobile && <span>|</span>}
+      {!isMobile && !isHome && <span>|</span>}
       <Link href='/about-us' passHref>
         <a>{t(`${transPath}aboutUs`)}</a>
       </Link>

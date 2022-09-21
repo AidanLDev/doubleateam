@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 export default function HomeHeader() {
   return (
     <Box
-      p='180px 6%'
+      p='90px 6% 0'
       zIndex='20'
       pos='relative'
       bottom='75px'
@@ -14,7 +14,6 @@ export default function HomeHeader() {
       <Heading
         as='h1'
         fontSize='11vw'
-        color='primary'
         cursor='default'
         className={styles.heading}
       >

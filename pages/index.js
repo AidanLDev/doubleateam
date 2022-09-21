@@ -1,15 +1,15 @@
 import dynamic from 'next/dynamic';
 import { Box } from '@chakra-ui/react';
-const HomeBackground = dynamic(() => import('../components/home/HomeBackground'));
-const Topbar = dynamic(() => import('../components/Nav/Topbar'));
+const HomeBackground = dynamic(() =>
+  import('../components/home/HomeBackground')
+);
+const HomeLinks = dynamic(() => import('../components/Home/HomeLinks'));
 import HomeHeader from '../components/home/homeHeader/HomeHeader';
 import SEO from '../components/SEO';
-
 
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
-  
   return (
     <Box w='100%' h='100%'>
       <SEO
@@ -19,9 +19,9 @@ export default function Home() {
         image='/images/IstanbulHagiaSopia.webp'
       />
       <Box className={styles.main}>
+        <HomeLinks />
         <HomeBackground />
         <HomeHeader />
-        <Topbar isHome/>
       </Box>
     </Box>
   );
