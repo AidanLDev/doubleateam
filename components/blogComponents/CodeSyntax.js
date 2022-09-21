@@ -6,14 +6,16 @@ import { Tooltip, Icon, Box } from '@chakra-ui/react';
 
 import { AiFillCheckCircle } from 'react-icons/ai';
 import { BsClipboard } from 'react-icons/bs';
+import { useTranslation } from 'react-i18next';
 
 export default function CodeSyntax({ children, language }) {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
   return (
     <>
       <Box pos='relative' top='65px' left='90%' w='fit-content'>
         <Tooltip
-          label={copied ? 'Copied!' : 'Copy code snippet'}
+          label={copied ? t('copied') : t('copyCodeSnippet')}
           shouldWrapChildren
         >
           <CopyToClipboard text={children}>
