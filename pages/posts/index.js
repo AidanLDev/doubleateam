@@ -57,6 +57,7 @@ export default function Posts({ blogs }) {
     'ciCd',
     'circleCI',
     'history',
+    'language',
     'all',
   ];
 

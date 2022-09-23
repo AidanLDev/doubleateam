@@ -2,7 +2,6 @@
 import React from 'react';
 import { Heading, Text } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
-import useSetLang from '../../hooks/useSetLang';
 import BlogLayout from '../../components/blogLayout/BlogLayout';
 import SimpleLink from '../../components/SimpleLink';
 
