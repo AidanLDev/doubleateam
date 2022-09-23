@@ -21,7 +21,7 @@ export default function MostCommonIndonesianWords() {
   const { t } = useTranslation();
   return (
     <BlogLayout
-      title='Double A Team | Astro Frameworks'
+      title='Double A Team | Popular Indonesian Words'
       description={t(`${tp}blogTitle`)}
       postUrl='1000most-common-indonesian-words'
     >
