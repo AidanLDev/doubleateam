@@ -11,7 +11,12 @@ import styles from './styles.module.scss';
 import Footer from '../Footer';
 import Topbar from '../Nav/Topbar';
 
-export default function BlogLayout({ title, description, children, postUrl }) {
+export default function BlogLayout({
+  title,
+  description,
+  children,
+  postUrl,
+}) {
   const isMobile = useIsMobile();
   const url = `https://doubleateam.co.uk/posts/${postUrl}`;
 
@@ -28,7 +33,7 @@ export default function BlogLayout({ title, description, children, postUrl }) {
           title={title}
           description={description}
           url={url}
-          image='/images/IstanbulHagiaSopia.webp'
+          image={`/images/blog/${postUrl}.webp`}
         />
         <StraightLineProgress />
         <Flex alignItems='baseline' gap='24px'>
