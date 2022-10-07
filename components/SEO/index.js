@@ -1,5 +1,5 @@
+/* eslint-disable react/no-unknown-property */
 import Head from 'next/head';
-import Script from 'next/script';
 
 const socialTags = ({
   url,
@@ -41,7 +41,7 @@ const socialTags = ({
   return metaTags;
 };
 
-const SEO = ({ title, description, image, url }) => {
+const SEO = ({ title, description, image, url, dontShowAds }) => {
   return (
     <Head>
       <title>{title}</title>
@@ -55,9 +55,15 @@ const SEO = ({ title, description, image, url }) => {
           return <meta key={name} name={name} content={content} />;
         }
       )}
+      {dontShowAds ? null : (
+        <script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8647500966281017'
+          crossorigin='anonymous'
+        />
+      )}
       <script
         async
-        src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8647500966281017'
         crossOrigin='anonymous'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
