@@ -1,5 +1,12 @@
 @import '../../styles/variables.scss';
 
+.active {
+    border-bottom: 3px solid  $link-blue;
+    &:hover {
+        border-bottom: 3px solid  $link-blue;
+    }
+}
+
 .topbarContainer {
     color: $link-blue;
     gap: 5%;
