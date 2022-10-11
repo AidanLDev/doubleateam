@@ -4,6 +4,7 @@ import Signature from '../Signature';
 import StraightLineProgress from '../scrollProgress/StraightLineProgress';
 import BlogTitle from '../BlogTitle';
 import SEO from '../SEO';
+import AdsenseScript from '../SEO/AdsenseScript';
 import CopyClipboard from '../CopyClipboard';
 import useIsMobile from '../../hooks/useIsMobile';
 
@@ -35,6 +36,7 @@ export default function BlogLayout({
           url={url}
           image={`/images/blog/${postUrl}.webp`}
         />
+        <AdsenseScript />
         <StraightLineProgress />
         <Flex alignItems='baseline' gap='24px'>
           <BlogTitle text={description} />

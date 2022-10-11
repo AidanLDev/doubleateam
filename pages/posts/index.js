@@ -4,6 +4,7 @@ import { Box, Flex, Center, Input, Tag, Text, Grid } from '@chakra-ui/react';
 import { getBlogPostPaths } from '../../lib/posts';
 const Footer = dynamic(() => import('../../components/Footer'));
 import SEO from '../../components/SEO';
+import AdsenseScript from '../../components/SEO/AdsenseScript';
 const Topbar = dynamic(() => import('../../components/Nav/Topbar'));
 import { useTranslation } from 'react-i18next';
 import useIsMobile from '../../hooks/useIsMobile';
@@ -29,7 +30,7 @@ export default function Posts({ blogs }) {
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     setFilterValue(e.target.value);
   };
 
@@ -69,6 +70,7 @@ export default function Posts({ blogs }) {
         url='https://doubleateam.co.uk/posts'
         image='/images/IstanbulHagiaSopia.webp'
       />
+      <AdsenseScript />
       <Box borderBottom='2px solid red' paddingBottom='12px'>
         <Topbar />
         <Text

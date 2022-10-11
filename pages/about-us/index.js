@@ -21,7 +21,6 @@ export default function AboutUs() {
         description='A little background on who the double A team are'
         url='https://doubleateam.co.uk/about-us'
         image='/images/IstanbulHagiaSopia.webp'
-        dontShowAds
       />
       <Topbar />
       <Layout>

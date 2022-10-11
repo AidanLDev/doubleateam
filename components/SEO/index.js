@@ -41,7 +41,7 @@ const socialTags = ({
   return metaTags;
 };
 
-const SEO = ({ title, description, image, url, dontShowAds }) => {
+const SEO = ({ title, description, image, url }) => {
   return (
     <Head>
       <title>{title}</title>
@@ -54,13 +54,6 @@ const SEO = ({ title, description, image, url, dontShowAds }) => {
         ({ name, content }) => {
           return <meta key={name} name={name} content={content} />;
         }
-      )}
-      {dontShowAds ? null : (
-        <script
-          async
-          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8647500966281017'
-          crossorigin='anonymous'
-        />
       )}
       <script
         async

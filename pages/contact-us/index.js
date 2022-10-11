@@ -46,7 +46,6 @@ export default function ContactUs() {
         description='Get in touch with the Double A Team!'
         url='https://doubleateam.co.uk/contact-us'
         image='/images/IstanbulHagiaSopia.webp'
-        dontShowAds
       />
       <Topbar />
       <Layout>
