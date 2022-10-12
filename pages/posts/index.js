@@ -8,9 +8,8 @@ import AdsenseScript from '../../components/SEO/AdsenseScript';
 const Topbar = dynamic(() => import('../../components/Nav/Topbar'));
 import { useTranslation } from 'react-i18next';
 import useIsMobile from '../../hooks/useIsMobile';
-import useIsTablet from '../../hooks/useIsTablet';
-const PostCard = dynamic(() =>
-  import('../../components/postsComponents/PostCard')
+const HomeBlogs = dynamic(() =>
+  import('../../components/home/HomeBlogs')
 );
 
 export async function getStaticProps() {
@@ -28,7 +27,6 @@ export default function Posts({ blogs }) {
   const { t } = useTranslation();
   const [filterValue, setFilterValue] = useState('');
   const isMobile = useIsMobile();
-  const isTablet = useIsTablet();
 
   const handleInputChange = e => {
     setFilterValue(e.target.value);
@@ -74,7 +72,7 @@ export default function Posts({ blogs }) {
       <Box borderBottom='2px solid red' paddingBottom='12px'>
         <Topbar />
         <Text
-          fontSize={isMobile ? '32px' : '42px'}
+          fontSize={isMobile ? '28px' : '42px'}
           align='center'
           color='red'
           padding='24px 0'
@@ -116,29 +114,9 @@ export default function Posts({ blogs }) {
           minW='200px'
         />
       </Center>
-      <Grid
-        gap={24}
-        templateColumns={`repeat(${isTablet ? '1' : '3'}, 1fr)`}
-        templateRows={`repeat(${isTablet ? '1' : '2'}, 1fr)`}
-        p='0 24px'
-      >
-        {blogs.map((blog, idx) => {
-          if (
-            filterValue === '' ||
-            RegExp(filterValue, 'i').test(blog.title) ||
-            blog.tags.includes(filterValue)
-          ) {
-            return (
-              <PostCard
-                blog={blog}
-                idx={idx}
-                filterValue={filterValue}
-                key={`${blog}__${idx}`}
-              />
-            );
-          }
-        })}
-      </Grid>
+      <Box p='0 24px'>
+        <HomeBlogs blogs={blogs} filterValue={filterValue} />
+      </Box>
       <Footer />
     </>
   );
