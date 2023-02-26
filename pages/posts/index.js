@@ -1,6 +1,15 @@
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import { Box, Flex, Center, Input, Tag, Text, Grid } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Center,
+  Input,
+  Tag,
+  Text,
+  Grid,
+  filter,
+} from '@chakra-ui/react';
 import { getBlogPostPaths } from '../../lib/posts';
 const Footer = dynamic(() => import('../../components/Footer'));
 import SEO from '../../components/SEO';
@@ -8,9 +17,7 @@ import AdsenseScript from '../../components/SEO/AdsenseScript';
 const Topbar = dynamic(() => import('../../components/Nav/Topbar'));
 import { useTranslation } from 'react-i18next';
 import useIsMobile from '../../hooks/useIsMobile';
-const HomeBlogs = dynamic(() =>
-  import('../../components/home/HomeBlogs')
-);
+const HomeBlogs = dynamic(() => import('../../components/home/HomeBlogs'));
 
 export async function getStaticProps() {
   const blogs = getBlogPostPaths();
@@ -28,11 +35,13 @@ export default function Posts({ blogs }) {
   const [filterValue, setFilterValue] = useState('');
   const isMobile = useIsMobile();
 
-  const handleInputChange = e => {
+  const handleInputChange = (e) => {
     setFilterValue(e.target.value);
   };
 
   const tags = [
+    'aws',
+    'backend',
     'education',
     'visa',
     'travel',
@@ -89,7 +98,7 @@ export default function Posts({ blogs }) {
           <Tag
             key={`${id}__${tag}`}
             onClick={() => {
-              if (tag === 'all') {
+              if (tag === 'all' || filterValue === tag) {
                 setFilterValue('');
               } else {
                 setFilterValue(tag);
