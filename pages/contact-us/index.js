@@ -44,7 +44,7 @@ export default function ContactUs() {
       <SEO
         title='Double A Team | Contact Us'
         description='Get in touch with the Double A Team!'
-        url='https://doubleateam.co.uk/contact-us'
+        url='https://www.doubleateam.co.uk/contact-us'
         image='/images/IstanbulHagiaSopia.webp'
       />
       <Topbar />
@@ -100,9 +100,7 @@ export default function ContactUs() {
             </Box>
             <Divider margin='12px 0' />
             <Center>
-              <Heading>
-                {t(`${translatePath}arSocialsHeader`)}
-              </Heading>
+              <Heading>{t(`${translatePath}arSocialsHeader`)}</Heading>
             </Center>
             <Center>
               <Image
@@ -165,10 +163,7 @@ export default function ContactUs() {
             </Box>
             <Divider margin='12px 0' />
             <Center>
-              <Heading>
-                {' '}
-                {t(`${translatePath}aiSocialsHeader`)}
-              </Heading>
+              <Heading> {t(`${translatePath}aiSocialsHeader`)}</Heading>
             </Center>
             <Center>
               <Image
@@ -229,10 +224,7 @@ export default function ContactUs() {
               </span>
             </Box>
             <Box>
-              <Link
-                href='https://www.facebook.com/aidan.lowson'
-                passHref
-              >
+              <Link href='https://www.facebook.com/aidan.lowson' passHref>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
@@ -272,10 +264,7 @@ export default function ContactUs() {
               <span> - {t(`${translatePath}aiWeb`)}</span>
             </Box>
             <Box>
-              <Link
-                href='https://www.linkedin.com/in/aidanlowson1/'
-                passHref
-              >
+              <Link href='https://www.linkedin.com/in/aidanlowson1/' passHref>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'

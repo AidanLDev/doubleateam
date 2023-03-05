@@ -46,6 +46,7 @@ const SEO = ({ title, description, image, url }) => {
     <Head>
       <title>{title}</title>
       <link rel='icon' href='/favicon.ico' />
+      <link rel='canonical' href={url} />
       <meta name='description' content={description} />
       <meta itemProp='name' content={title} />
       <meta itemProp='description' content={description} />

@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
       <SEO
         title='Double A Team | Privacy Policy'
         description='Privacy policy information'
-        url='https://doubleateam.co.uk/privacy-policy'
+        url='https://www.doubleateam.co.uk/privacy-policy'
         image='/images/IstanbulHagiaSopia.webp'
       />
       <Topbar />

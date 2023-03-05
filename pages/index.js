@@ -15,7 +15,7 @@ export default function Home() {
       <SEO
         title='Double A Team'
         description='We are the Double A Team and together we built a website through our passion for helping others, learning and growing. Come learn what we know, if you want to know that is!'
-        url='https://doubleateam.co.uk/'
+        url='https://www.doubleateam.co.uk/'
         image='/images/IstanbulHagiaSopia.webp'
       />
       <Box className={styles.main}>
