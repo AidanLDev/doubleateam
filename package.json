@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "ship": "npm run build && npm run postbuild && npm run export"
+    "ship": "npm run build && npm run export"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.9",
