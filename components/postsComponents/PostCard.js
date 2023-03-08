@@ -70,7 +70,7 @@ export default function PostCard({ blog, idx, filterValue }) {
                 pos="relative"
               />
               <CopyClipboard
-                postUrl={`https://www.doubleateam.co.uk/posts/${blog.path}`}
+                postUrl={`https://doubleateam.co.uk/posts/${blog.path}`}
               />
             </Flex>
             <CardTitle

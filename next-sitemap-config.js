@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.doubleateam.co.uk",
+  siteUrl: "https://doubleateam.co.uk",
   generateRobotsTxt: true, // (optional)
   // ...other options
 };

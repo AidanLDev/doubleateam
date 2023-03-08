@@ -44,7 +44,7 @@ export default function ContactUs() {
       <SEO
         title='Double A Team | Contact Us'
         description='Get in touch with the Double A Team!'
-        url='https://www.doubleateam.co.uk/contact-us'
+        url='https://doubleateam.co.uk/contact-us'
         image='/images/IstanbulHagiaSopia.webp'
       />
       <Topbar />

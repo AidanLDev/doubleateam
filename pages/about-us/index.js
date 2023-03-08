@@ -19,7 +19,7 @@ export default function AboutUs() {
       <SEO
         title='Double A Team | About Us'
         description='A little background on who the double A team are'
-        url='https://www.doubleateam.co.uk/about-us'
+        url='https://doubleateam.co.uk/about-us'
         image='/images/IstanbulHagiaSopia.webp'
       />
       <Topbar />

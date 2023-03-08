@@ -14,7 +14,7 @@ import Topbar from '../Nav/Topbar';
 
 export default function BlogLayout({ title, description, children, postUrl }) {
   const isMobile = useIsMobile();
-  const url = `https://www.doubleateam.co.uk/posts/${postUrl}`;
+  const url = `https://doubleateam.co.uk/posts/${postUrl}`;
 
   return (
     <>
