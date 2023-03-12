@@ -14,7 +14,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props
 
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+	(a, b) => b.data.pubDate - a.data.pubDate
 );
 ---
 
@@ -35,9 +35,6 @@ const posts = (await getCollection('blog')).sort(
   <section class="my-12">
     <div class="container">
       <p class="text-sm"><em>Post {page.start + 1} through {page.end + 1} of {page.total} total posts</em></p>
-      {
-        posts.map(post => <li>{post.data.title}</li>)
-      }
       <ul class="my-3">
         {
           posts.map((post) => (
