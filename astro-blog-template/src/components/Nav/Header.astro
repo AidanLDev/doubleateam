@@ -1,19 +1,21 @@
 ---
-import Navigation from '../components/Navigation.astro'
+import Navigation from './Navigation.astro'
+import Link from './Link.astro'
 import { SkipLinks } from 'accessible-astro-components'
-import { Icon } from 'astro-icon'
+// import { Icon } from 'astro-icon'
 ---
 
 <header>
   <SkipLinks />
   <Navigation>
-    <li class="menu-item">
-      <a href="/">Home</a>
-    </li>
-    <li class="menu-item">
-      <a href="/posts/">Posts</a>
-    </li>
-    <li class="menu-item has-dropdown">
+    <Link link="/" linkName="Home" />
+    <Link link="/posts/" linkName="Posts" />
+    <Link link="/about-us/" linkName="About Us" />
+    <Link link="/contact-us/" linkName="Contact Us" />
+    <Link link="/privacy-policy/" linkName="Privacy Policy" />
+    <Link isExternal link="https://aidanlowson.com" linkName="Aidan's Portfolio" />
+    <!-- Example of how to implement a dropdown of links -->
+    <!-- <li class="menu-item has-dropdown">
       <button aria-haspopup="true" aria-expanded="false">Example Pages</button>
       <ul class="dropdown-menu">
         <li class="submenu-item">
@@ -26,20 +28,15 @@ import { Icon } from 'astro-icon'
           <a href="/accessible-components">Accessible Components</a>
         </li>
       </ul>
-    </li>
-    <li class="menu-item">
-      <a href="https://accessible-astro.dev" title="external link" rel="external noopener noreferrer">External Link</a>
-    </li>
-    <li class="menu-item type-icon">
-      <a href="https://github.com/markteekman/accessible-astro-starter" title="Go to the GitHub page">
-        <Icon pack="ion" name="logo-github" />
-      </a>
-    </li>
+    </li> -->
+
+    <!-- Example of how to use an Icon -->
+    <!-- <Icon pack="ion" name="logo-github" /> -->
   </Navigation>
 </header>
 
 <style lang="scss" is:global>
-  @use '../assets/scss/base/outline' as *;
+  @use '../../assets/scss/base/outline' as *;
 
   header {
     .type-icon a {

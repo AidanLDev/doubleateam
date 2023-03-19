@@ -1,5 +1,9 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
+import IconText from '../components/contact-us/IconText.astro'
+
+// Icon Colours
+import { ytRed, igPink, twitterBlue, fbBlue, linkedInBlue } from '../lib/Consts'
 ---
 
 <DefaultLayout title="Contact Us">
@@ -8,10 +12,61 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
       <h1>Contact Us</h1>
     </div>
   </section>
-  <section class="my-12">
-    <div class="space-content container">
-      <p class="text-2xl">This page does not exist. Don't worry though, we got you.</p>
-      <a class="button" href="/">Let's get you home Astronout 🚀</a>
-    </div>
-  </section>
+  <div class="container">
+    <IconText
+      colour=""
+      iconName="email"
+      text="Send an email to our Double A Team mailbox"
+      link="mailto:weare@doubleateam.co.uk"
+    />
+    <IconText
+      link="https://www.youtube.com/channel/UCp_GPf9RaLenpBBtmjMjrLg"
+      colour={ytRed}
+      iconName="youtube"
+      text="Be sure to visit our YouTube channel!"
+    />
+    <!-- Arni's socials -->
+    <h1>Arni's Socials</h1>
+    <img src="/us/ARSelfie.webp" alt="the beautiful Arni Riani" width="250" />
+    <IconText
+      link="https://www.instagram.com/mynameisarni/"
+      colour={igPink}
+      iconName="instagram"
+      text="You're missing out if you're not following Arni's Insta"
+    />
+    <IconText
+      link="https://twitter.com/MyNameIsArni"
+      colour={twitterBlue}
+      iconName="twitter"
+      text="Not much of a tweeter, but worth a follow in-case she finds her voice"
+    />
+    <!-- Aidan's socials -->
+    <h1>Aidan's socials</h1>
+    <img src="/us/sunnyAidanBalcony.webp" alt="the handsome Aidan Lowson" width="250" />
+    <IconText
+      link="https://www.instagram.com/lowsonaidan/"
+      colour={igPink}
+      iconName="instagram"
+      text=" Not quite as good a photographer as Arni, however we try to keep IG relatively up to date so give us a follow 😉"
+    />
+    <IconText
+      link="https://twitter.com/AidanL94"
+      colour={twitterBlue}
+      iconName="twitter"
+      text="Again... much of a tweeter, but you never know if that will change?!"
+    />
+    <IconText link="https://www.facebook.com/aidan.lowson" colour={fbBlue} iconName="facebook" text="The classic FB" />
+    <IconText link="https://aidanlowson.com" colour="" iconName="web" text="My personal portfolio website" />
+    <IconText
+      link="https://www.linkedin.com/in/aidanlowson1/"
+      colour={linkedInBlue}
+      iconName="linkedin"
+      text="For the professionals out there"
+    />
+  </div>
 </DefaultLayout>
+
+<style lang="sass">
+  img
+    border-radius: 60px
+</style>

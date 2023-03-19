@@ -1,0 +1,15 @@
+---
+const { link, linkName, isExternal } = Astro.props
+---
+
+<li class="menu-item">
+  {
+    isExternal ? (
+      <a href={link} title="external link" rel="external noopener noreferrer" target="_blank">
+        {linkName}
+      </a>
+    ) : (
+      <a href={link}>{linkName}</a>
+    )
+  }
+</li>
