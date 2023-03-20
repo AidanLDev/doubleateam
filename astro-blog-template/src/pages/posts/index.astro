@@ -1,0 +1,57 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import { Card } from 'accessible-astro-components'
+
+import { getCollection } from 'astro:content'
+
+const posts = (await getCollection('blog')).sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate))
+---
+
+<DefaultLayout
+  title="Post"
+  description="An example of a post with dynamic content fetched from JSONPlaceholder using the title, body and userId."
+>
+  <section class="my-12">
+    <div class="space-content container">
+      <h1>Blog</h1>
+    </div>
+  </section>
+  <section class="my-12">
+    <div class="container">
+      <ul class="my-3">
+        {
+          posts.map((post) => (
+            <li>
+              <Card
+                url={'/posts/' + post.slug}
+                title={post.data.title}
+                footer={post.data.pubDate}
+                img={post.data.heroImage}
+              >
+                {post.data.description}
+              </Card>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="mt-12 grid place-content-center"></div>
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss">
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+
+    @media (min-width: 550px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    @media (min-width: 950px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

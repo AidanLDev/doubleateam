@@ -1,27 +1,27 @@
 ---
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import { Breadcrumbs, BreadcrumbsItem } from 'accessible-astro-components'
-import { CollectionEntry, getCollection } from 'astro:content';
+import { CollectionEntry, getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
-  }
-  type Props = CollectionEntry<'blog'>;
+  const posts = await getCollection('blog')
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }))
+}
+type Props = CollectionEntry<'blog'>
 
-  const post = Astro.props;
+const post = Astro.props
 ---
 
-<DefaultLayout title={post.title} description={post.body} url={post.title}>
+<DefaultLayout title={post.data.title} description={post.body} url={post.data.title}>
   <div class="container">
     <div class="mt-12">
       <Breadcrumbs>
         <BreadcrumbsItem href="/" label="Home" />
         <BreadcrumbsItem href="/posts" label="Posts" />
-        <BreadcrumbsItem currentPage={true} label={post.title} />
+        <BreadcrumbsItem currentPage={true} label={post.data.title} />
       </Breadcrumbs>
     </div>
   </div>
