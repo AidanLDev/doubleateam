@@ -12,3 +12,16 @@
 @use 'base/color';
 @use 'base/outline';
 @use 'base/space-content';
+
+// Table styles
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.darkmode tr:nth-child(even) {
+  background-color: black;
+}
+
+.main-blog-img {
+  max-height: 750px;
+}

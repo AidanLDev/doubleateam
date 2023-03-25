@@ -9,10 +9,6 @@ html {
   @media (prefers-reduced-motion: reduce) {
     scroll-behavior: auto;
 
-    body * {
-      animation-duration: 0s !important;
-      animation-delay: 0s !important;
-    }
   }
 }
 
@@ -22,24 +18,6 @@ html {
   box-sizing: inherit;
 }
 
-blockquote,
-body,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-li,
-ol,
-p,
-pre,
-ul {
-  margin: 0;
-  padding: 0;
-}
 
 ul:where([class]) {
   list-style: none;

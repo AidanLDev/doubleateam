@@ -29,12 +29,12 @@ const { Content } = await post.render()
   <section class="my-12">
     <div class="container">
       <h1>{post.title}</h1><br />
-      <img src={post.data.heroImage} alt={post.data.title} class="mb-3" />
+      <img src={post.data.heroImage} alt={post.data.title} class="mb-3 main-blog-img" />
       <p>Published: {post.data.pubDate}</p>
     </div>
   </section>
   <section class="my-12">
-    <div class="container">
+    <div class="container blog-container">
       <Content />
     </div>
   </section>
@@ -55,4 +55,5 @@ const { Content } = await post.render()
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
 </style>
