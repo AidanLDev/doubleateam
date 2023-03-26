@@ -5,12 +5,31 @@ pubDate: 'August 27 2022'
 heroImage: '/blog/netlify-free-static-hosting.webp'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+# Hosting a website for free using Netlify
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+First off, a huge shoutout to Netlify for simplifying the process of website hosting, they make it so simple as you will soon see. Let's go through the steps for hosting a static site using Netlify.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+## Pre requisites
+There really isn't much involved to get your site hosted up on Netlify for the world to see, just a couple of steps:
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+- Your code is hosted on [GitHub](https://github.com/)
+- You have a [Netlify](https://www.netlify.com/) account
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+## Getting started
+
+Head on over to Netlify and on choose to connect your GitHub. If you haven't authorised Netlify to use GitHub, you will quickly have to go through some dialogue to give Netlify relevant access.
+
+On the next screen select the repo that stores the code of the website you want to host.
+
+Finally, go through and customise the settings to your liking. One thing you will want to change is the domain name, as by default it will be a random pile of letters and numbers. Under Custom Domains click the options and click Edit site name. Now you can't completely modify the site name here as it will always have a suffix of .netlify.app. However, you can make it something memorable and relevant to your site which is nice as it saves you from having to go out and buy your own domain name, which can be pretty pricy especially if you want a good name with a .com Top Level Domain (TLD). However, if you do already have a domain, you can hook this up to your newly hosted website too.
+
+## Updating your website
+
+When building a website, we constantly make changes. Now to deploy those changes, with Netlify it's as simple as committing and pushing those commits to `GitHub`
+
+![Netlify Deploying message](/blog/deploying-netlify/netlify-deploy-message.png)
+
+For anyone, like me, who's spent far too long setting up, debugging and even waiting for a CI/CD pipeline, you will be amazed at the speed at which Netlify deploys updates. Within the same minute of pushing to `master`/`main`...
+
+![Netlify Deployed message](/blog/deploying-netlify/netlify-deployed-message.png)
+

@@ -5,12 +5,64 @@ pubDate: 'July 15 2022'
 heroImage: '/blog/what-to-do-in-indonesia.webp'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+# How to spend your time in Indonesia
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+This is going to be a quick summary of a few places we visited and a alittle bit of insight into them to help you plan your Indonesiangetaway. We will go into more depth on places we think to deserve moreattention in separate blogs but for a nice overview, here is ourIndonesian travel guide.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+## Bandung
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+My wife could go on for days about what Bandung is like as a city in general as she has spent most of her life living there! From a western perspective, Bandung is a breath of fresh air, it's the first city I visited after Jakarta and the climate is so much fresher. The air feels clean as it's surrounded by mountains/volcanos and the temperature is cooler as a result.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+### Gunung Tangkuban Perahu
+
+This active volcano is stunning, it's about 30km north of Bandung city and it last erupted in 2019. In fact, it just recently started smoking again when we went back in February 2022
+
+![Kawa Ratu volcano](/blog/whatToDoInIndonesia/Bandung/KawaRatu.webp)
+
+Because of the weather, it was nice and quiet when we went too, plenty  of space for photos and exploration.
+
+![Aidan and Arni enjoying Kawa Ratu volcano](/blog/whatToDoInIndonesia/Bandung/TogetherByKawaRatuSign.webp)
+
+## Jogja
+
+Jogja is a historical beauty of a place, countless choices to be made as there's a lot to see in this special city in Indonesia. [We go into detail here about what there is to see in Jogja](/posts/what-to-do-in-jogja) and where we'd recommend based on our experience. A few places to note are:
+
+### Candhari Heaven restaurant
+
+![Candhari Heaven](/blog/whatToDoInIndonesia/Jogja/niceResturant.webp)
+
+To eat some delicious food with the most stunning backdrop and multiple places for memorable photos. We couldn't recommend this place enough. They sell a selection of refreshing drinks too so even after you're done eating, you can just relax with a few drinks and soak up that unique view of Jogja.
+
+### Malioboro
+
+![Malioboro street](/blog/whatToDoInIndonesia/Jogja/malioboro.webp)
+
+This is where it all happens, with countless shops and various street entertainers. The centre of Jogja is an active vibrant street, plenty to see here.
+
+### Borobudur
+
+![Borobudur](/blog/whatToDoInIndonesia/Jogja/boroboudor.webp)
+
+Jogja is a historic place with ancient temples that date way back. Borobudur dates back to the 9th century and is the largest Buddhist temple. If you're in the region, this is a must-see.
+
+### Malang
+
+During our journey through Java, we made our way east to Malang, this city feels so refreshing, surrounded by the most beautiful mountainous scenery. We had a tour with
+
+and we were so chuffed we chose them. They were very reasonable in price compared to some others and it only cost a little extra to include a cameraman who showed us all the best spots gave plenty of background and of course, took some stunning photos:
+
+![Bromo tour pic](/blog/whatToDoInIndonesia/Malang/DSC01948.webp)
+
+![Bromo tour pic](/blog/whatToDoInIndonesia/Malang/DSC01999.webp)
+
+![Bromo tour pic](/blog/whatToDoInIndonesia/Malang/DSC02006.webp)
+
+![Bromo tour pic](/blog/whatToDoInIndonesia/Malang/DSC02153.webp)
+
+![Bromo tour pic](/blog/whatToDoInIndonesia/Malang/20220603_012448778_iOS.webp)
+
+
+You can visit this country time and time again and have a different experience every time.
+
+We hope you enjoy your time and have safe travels ✈️🌍☀️🏔️
+

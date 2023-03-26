@@ -19,7 +19,7 @@ ol:not([class]) {
 }
 
 ul:not([class]) {
-  > li::marker {
+  >li::marker {
     display: block;
     color: var(--primary-800);
   }

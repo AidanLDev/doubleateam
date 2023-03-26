@@ -5,18 +5,57 @@ pubDate: 'September 10 2022'
 heroImage: '/blog/royal-family-origin.webp'
 ---
 
-# Title
+# The Origin of the Royal Family
 
-## Sub title
+During one of my many daydreams, I wondered how strange it is that just being the son or daughter of specific parents will make you heir to the throne. Then I asked, how did that actually begin? How did we decide "Ok you guys will be our rulers now." This is the rabbit hole I went down.
 
-### Sub Section
+Before England was, well England, the country we now know was split into different kingdoms such as "Northumbria", "Mercia", "East Anglia", "Wessex" etc... Each kingdom having their own rulers.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+![Pre England kingdoms](/blog/royal-family/pre-eng-kingdoms.webp)
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+### Egbert (827 - 839)
+was known as the first king who established rule overall Anglo-Saxon England, although it is not certain he had overlordship in Northumbria. So we could call him the first king of England, but it's not the strongest of claims, let's diver deeper into the past...
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+![Egbert](/blog/royal-family/Egbert.webp)
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+It's safer to say that the origins of our modern monarchy can be dated back to the late 800s and early 900s, when all of the various Anglo-Saxon Kingdoms were united by Æthelstan (895-939 AD), also known as Athelstan, of the House of Wessex to form the Kingdom of England.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+So the modern-day royal family can be traced back all the way to the 900s... But what about the rulers of the Saxon kingdoms? Which was the first? And who was the first king of the first kingdom? How did this ancient hierarchy begin?
+
+## Anglo-Saxons (410 - 1066)
+
+It's hard to get much information about this period as there aren\'t many written records that still exist until this day, which is why it used to be known as the "Dark Ages". It was a time of war and separation from the Roman rule.
+
+The Angles, Saxons and other German-speaking invaders saw resistance from the Romano-British, there's talk of their British Christian leader called Ambrosius who was famed for winning 12 battles against the invaders, later accounts call this leader Arthur. Although there's no hard evidence of this \"King Arthur\" who lead the British actually existed so that doesn't answer our question of how this all began...
+
+Various Anglo-Saxon groups began to settle in different parts of the country and set up individual kingdoms. The above-mentioned kingdoms were constantly changing and in conflict with one another. Until they eventually formed the kingdoms we see on the map of 800 AD Britain.
+
+### Kent
+
+was one of the first of Anglo-Saxon kingdoms to form in 449. In which Hengist, possibly a prince of Angeln was their ruler. That makes Hengist was the first link in our chain of Anglo-Saxon rulers, who would become the first Monarchs of Britain. The royal family as we know dates between 449 - 2023
+
+Æthelberht (Ethelbert) was the first Christian king, converted by St Augustine around 595 AD. This had a significant impact on the landscape of the UK, as churches were built in Canterbury, helping establish the foundation of English Christianity.
+
+![Æthelberht](/blog/royal-family/Æthelberht.webp)
+
+So now we know the first Christian king of one of the kingdoms based on the island of Britain, and we know the first of these kingdoms too, Kent. It's satisfying seeing how the past was pieced together, establishing the royal family and country we know today.
+
+![Queen Elizabeth II](/blog/royal-family/Queen-Elizabeth-2nd.webp)
+
+![Queen Elizabeth II Coronation](/blog/royal-family/Queen-Elizabeth-II.webp)
+
+1926 - 2022, may her majesty rest in peace, a thoughtless Queen who served her country right until the end. She deserves her rest.
+
+
+<!-- 
+
+  anglosP1:
+    "",
+  anglosP2:
+    '',
+  kent: '  ',
+  Ethelbert:
+    '',
+  conclusion:
+',
+ -->
