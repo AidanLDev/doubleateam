@@ -1,0 +1,43 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import { Card } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-4">
+    <div class="container">
+      <div class="flex mb-4">
+      <h2 class="text-3xl">Latest Blogs /</h2>
+      <a class="text-3xl" href="/posts/">View all blogs -></a>
+    </div>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Card
+          url="/posts/1000most-common-indonesian-words"
+          title="The 1,000 most common Indonesian Words"
+          footer="August 28 2022"
+          img="/blog/1000most-common-indonesian-words.webp"
+        >
+        A collection of the top 1,000 most used Indonesian words and phrases to help boost your language learning
+        </Card>
+        <Card
+        url="/posts/building-ci-cd-for-free"
+        title="Setting up CI/CD for free"
+        footer="August 28 2022"
+        img="/blog/building-ci-cd-for-free.webp"
+      >
+      Step by step guide on how you can save hours of work by setting up CI/CD all for free
+      </Card>
+      <Card
+        url="/posts/netlify-free-static-hosting"
+        title="Hosting a website for free"
+        footer="August 27 2022"
+        img="/blog/netlify-free-static-hosting.webp"
+      >
+      How you can quickly and easily host a static website for free
+    </Card>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

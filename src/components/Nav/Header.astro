@@ -1,0 +1,62 @@
+---
+import Navigation from './Navigation.astro'
+import Link from './Link.astro'
+import { SkipLinks } from 'accessible-astro-components'
+// import { Icon } from 'astro-icon'
+---
+
+<header>
+  <SkipLinks />
+  <Navigation>
+    <Link link="/" linkName="Home" />
+    <Link link="/posts/" linkName="Posts" />
+    <Link link="/about-us/" linkName="About Us" />
+    <Link link="/contact-us/" linkName="Contact Us" />
+    <Link link="/privacy-policy/" linkName="Privacy Policy" />
+    <Link isExternal link="https://aidanlowson.com" linkName="Portfolio" />
+    <!-- Example of how to implement a dropdown of links -->
+    <!-- <li class="menu-item has-dropdown">
+      <button aria-haspopup="true" aria-expanded="false">Example Pages</button>
+      <ul class="dropdown-menu">
+        <li class="submenu-item">
+          <a href="/mdx-page/">MDX Page</a>
+        </li>
+        <li class="submenu-item">
+          <a href="/markdown-page/">Markdown Page</a>
+        </li>
+        <li class="submenu-item">
+          <a href="/accessible-components">Accessible Components</a>
+        </li>
+      </ul>
+    </li> -->
+
+    <!-- Example of how to use an Icon -->
+    <!-- <Icon pack="ion" name="logo-github" /> -->
+  </Navigation>
+</header>
+
+<style lang="scss" is:global>
+  @use '../../assets/scss/base/outline' as *;
+
+  header {
+    .type-icon a {
+      display: block;
+
+      [astro-icon] {
+        margin-top: -4px;
+        width: 30px;
+
+        path {
+          fill: var(--action-color);
+          transition: fill 0.2s ease-in-out;
+        }
+      }
+
+      &:hover {
+        [astro-icon] path {
+          fill: var(--action-color-state);
+        }
+      }
+    }
+  }
+</style>
