@@ -1,5 +1,5 @@
 # build output
-dist
+## dist # Don't ignore because circleci needs to see these changes?
 
 # dependencies
 node_modules/
