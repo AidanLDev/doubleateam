@@ -6,6 +6,6 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://doubleateam.co.uk',
+  site: 'https://blog.aidanlowson.com',
   integrations: [compress(), mdx(), tailwind(), sitemap()],
 })

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://doubleateam.co.uk
+Host: https://blog.aidanlowson.com
 
 # Sitemaps
-Sitemap: https://doubleateam.co.uk/sitemap.xml
+Sitemap: https://blog.aidanlowson.com/sitemap.xml
