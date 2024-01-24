@@ -12,12 +12,6 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: Install Dependencies
-          command: npm run install
-      - run:
-          name: Build
-          command: npm run build
       - aws-s3/sync:
           from: dist
           to: 's3://blog.aidanlowson.com'
