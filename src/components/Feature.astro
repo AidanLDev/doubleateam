@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components'
 
 const { icon = 'mdi:rocket', title = 'Title' } = Astro.props
 ---
@@ -40,7 +40,7 @@ const { icon = 'mdi:rocket', title = 'Title' } = Astro.props
     }
   }
 
-  :global(.feature [astro-icon]) {
+  :global(.feature [data-icon]) {
     width: 4rem;
     color: var(--action-color);
   }
