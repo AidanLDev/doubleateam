@@ -241,6 +241,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"survivng-redundancy.md": {
+	id: "survivng-redundancy.md";
+  slug: "survivng-redundancy";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "what-to-do-in-indonesia.md": {
 	id: "what-to-do-in-indonesia.md";
   slug: "what-to-do-in-indonesia";
