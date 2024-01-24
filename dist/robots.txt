@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://blog.aidanlowson.com
+
+# Sitemaps
+Sitemap: https://blog.aidanlowson.com/sitemap.xml

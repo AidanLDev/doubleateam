@@ -8,8 +8,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "install": "npm install"
+    "preview": "astro preview"
   },
   "devDependencies": {
     "@astrojs/mdx": "^2.1.0",
