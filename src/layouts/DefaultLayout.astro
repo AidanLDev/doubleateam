@@ -1,8 +1,8 @@
 ---
 import '../assets/scss/globals.scss'
-import Header from '../components/nav/Header.astro'
-import Footer from '../components/Footer.astro'
-import BaseHead from '../components/BaseHead.astro'
+import Header from '@components/nav/Header.astro'
+import Footer from '@components/Footer.astro'
+import BaseHead from '@components/BaseHead.astro'
 
 const {
   title = 'Double A Team',
@@ -20,18 +20,19 @@ const {
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZQ2699YSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
 
+      gtag('config', 'G-YZQ2699YSL')
+    </script>
   </head>
   <!-- Google tag (gtag.js) -->
   <!-- Scripts used for Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZQ2699YSL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-YZQ2699YSL');
-  </script>
 
   <body>
     <Header />

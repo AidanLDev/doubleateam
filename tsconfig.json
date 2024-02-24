@@ -1,0 +1,16 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      },
+    ],
+    "typeRoots" : ["./node_modules/@types", "./types/global.d.ts"],
+      "baseUrl": ".",
+      "paths": {
+        "@components/*": ["src/components/*"],
+        "@layouts/*": ["src/layouts/*"]
+      }
+  }
+}
