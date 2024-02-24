@@ -4,14 +4,15 @@
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
-      },
-    ],
-    "typeRoots" : ["./node_modules/@types", "./types/global.d.ts"],
-      "baseUrl": ".",
-      "paths": {
-        "@components/*": ["src/components/*"],
-        "@layouts/*": ["src/layouts/*"],
-        "@lib/*": ["src/lib/*"]
       }
-  }
+    ],
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@lib/*": ["src/lib/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
 }

@@ -37,7 +37,7 @@ import { DarkMode } from 'accessible-astro-components'
     const currentPathname = window.location.pathname
 
     mobileDesktopMenus.forEach((menu) => {
-      const menuItems = [...menu.querySelectorAll('a:not([rel*="external"])')]
+      const menuItems = [...menu.querySelectorAll('a:not([rel*="external"])')] as HTMLAnchorElement[];
 
       menuItems.forEach((menuItem) => {
         if (currentPathname.includes(menuItem.pathname.replaceAll('/', '')) && menuItem.textContent !== 'Home') {
@@ -53,9 +53,9 @@ import { DarkMode } from 'accessible-astro-components'
 
   const checkMenuSize = () => {
     const mainNavWidth = mainNav.getBoundingClientRect().width
-    const desktopMenuWidth = document.querySelector('.desktop-menu').getBoundingClientRect().width
-    const logoWidthBuffer = 300
-    const totalMenuWidth = parseInt(desktopMenuWidth) + logoWidthBuffer
+    const desktopMenuWidth: number = document.querySelector('.desktop-menu').getBoundingClientRect().width
+    const logoWidthBuffer: number = 300
+    const totalMenuWidth = parseInt(desktopMenuWidth.toString()) + logoWidthBuffer
 
     if (totalMenuWidth >= mainNavWidth) {
       mainNav.classList.remove('is-desktop')
@@ -105,10 +105,11 @@ import { DarkMode } from 'accessible-astro-components'
   // execution
   mainMenu &&
     mainMenu.addEventListener('keydown', (event) => {
-      const currentMenuItem = event.target.closest('li')
+      const targetElement = event.target as Element;
+      const currentMenuItem = targetElement.closest('li')
       const menuItems = [...mainMenu.querySelectorAll('.menu-item')]
-      const currentDropdownMenu = event.target.closest('.has-dropdown button')
-      const currentDropdownMenuItem = event.target.closest('.has-dropdown li')
+      const currentDropdownMenu = targetElement.closest('.has-dropdown button')
+      const currentDropdownMenuItem: HTMLLIElement = targetElement.closest('.has-dropdown li')
       const currentIndex = menuItems.findIndex((item) => item === currentMenuItem)
 
       const key = event.key
@@ -149,7 +150,7 @@ import { DarkMode } from 'accessible-astro-components'
       }
 
       if (currentDropdownMenuItem) {
-        const currentDropdownList = currentDropdownMenuItem.parentNode
+        const currentDropdownList = currentDropdownMenuItem.parentNode as Element;
         const dropdownMenuItems = [...currentDropdownList.querySelectorAll('li')]
         const currentIndex = dropdownMenuItems.findIndex((item) => item === currentDropdownMenuItem)
 
@@ -195,7 +196,8 @@ import { DarkMode } from 'accessible-astro-components'
 
   window.addEventListener('resize', checkMenuSize)
   window.addEventListener('click', (event) => {
-    if (!event.target.hasAttribute('aria-haspopup') && !event.target.classList.contains('submenu-item')) {
+    const targetElement = event.target as Element;
+    if (!targetElement.hasAttribute('aria-haspopup') && !targetElement.classList.contains('submenu-item')) {
       closeAllDropdownMenus()
     }
   })

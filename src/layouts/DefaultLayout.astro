@@ -4,6 +4,10 @@ import Header from '@components/nav/Header.astro'
 import Footer from '@components/Footer.astro'
 import BaseHead from '@components/BaseHead.astro'
 
+declare global {
+  interface Window { dataLayer: unknown[] }
+}
+
 const {
   title = 'Double A Team',
   description = 'We are the Double A Team and together we built a website through our passion for helping others, learning and growing. Come learn what we know, if you want to know that is!',
@@ -23,8 +27,8 @@ const {
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZQ2699YSL"></script>
     <script>
       window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args)
       }
       gtag('js', new Date())
 
