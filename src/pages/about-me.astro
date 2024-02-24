@@ -1,0 +1,37 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+---
+
+<DefaultLayout title="About Me">
+  <section class="my-12">
+    <div class="about-me-container container">
+      <h1>About Me</h1>
+
+      <section class="main-section my-12">
+        <div class="space-content">
+          <h1>Aidan Lowson</h1>
+          <img src={'/us/AidanAvatar.webp'} alt="Aidan Lowson photo" width="250" />
+          <p class="text-2xl">
+            Aidan Lowson, from the UK. I love all things tech, be it playing around with hardware to learning the latest
+            new trend. Always keen to learn anything new, reading, running and playing guitar are my main hobbies.
+          </p>
+        </div>
+        <a class="button about-me-button" href="/posts/">Find out what I've written about here</a>
+      </section>
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss">
+  .about-me-container {
+    text-align: center;
+    .main-section {
+      img {
+        margin: 1rem auto;
+      }
+    }
+    .about-me-button {
+      margin: 2rem 0;
+    }
+  }
+</style>
