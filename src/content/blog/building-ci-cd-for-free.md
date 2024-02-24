@@ -10,10 +10,13 @@ heroImage: '/blog/building-ci-cd-for-free.webp'
 CI/CD can speed up the process of updating websites. If you're going to be working on a website over the course of days, months and even years, you will spend a lot of time deploying changes you've made. This is where a CI/CD pipeline comes in. Push up changes to your GitHub and boom, those changes will be automatically deployed. No logging into and manually uploading your files to wherever they're being hosted from.
 
 This guide we will utilize a services.
+
 - AWS S3
 - GitHub
 - CircleCI
+
 ## Setting up S3 bucket for static hosting
+
 Head on over to the [AWS Console.](https://eu-west-2.console.aws.amazon.com/console/home) Search for the S3 service and hit create a new bucket. The bucket name should be the same as whatever domain, so if you owned the Google domain you would name it "google.com", and take a note of the region.
 
 ![Creating an S3 bucket](/blog/ci-cd-pipeline/create-s3-bucket.webp)
@@ -35,9 +38,11 @@ Now we want to add the S3 permissions to this user, you can write the policy you
 Go through the rest of the create user Wizard and when you have added the user make sure to save the "Access Key ID" and "Secret access key" somewhere safe. I like to use [LastPass](https://www.lastpass.com/) to store my passwords as it works across all devices.
 
 ## Commit code to GitHub
+
 If for whatever reason your code isn't on [GitHub](https://github.com/), create a repo and get it up on there.
 
 ## Set-up CircleCI account
+
 Open up [CircleCI](https://circleci.com/) and create an account, I reccomend signing up using your GitHub accoutn as you\'re going to link it to your CircleCI account anyways. Once you\'re in and have your GitHub account connected, you should be able to see your Repos. Click the "Set Up Project" button next to the repo you want to make a CI/CD pipeline for.
 
 ![CircleCI set up 1](/blog/ci-cd-pipeline/circleci-setup-yml-file.png)
@@ -78,10 +83,11 @@ jobs:
             --exclude ".circleci/*" \
 
           overwrite: true
-          
+
 ```
 
 Swap out the following:
+
 - To s3://example.com'to be s3://yourbucketname
 - from: . should be updated to the folder that holds the files you want to serve are such as dist, build, out etc.
 

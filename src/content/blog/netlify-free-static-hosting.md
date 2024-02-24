@@ -10,6 +10,7 @@ heroImage: '/blog/netlify-free-static-hosting.webp'
 First off, a huge shoutout to Netlify for simplifying the process of website hosting, they make it so simple as you will soon see. Let's go through the steps for hosting a static site using Netlify.
 
 ## Pre requisites
+
 There really isn't much involved to get your site hosted up on Netlify for the world to see, just a couple of steps:
 
 - Your code is hosted on [GitHub](https://github.com/)
@@ -32,4 +33,3 @@ When building a website, we constantly make changes. Now to deploy those changes
 For anyone, like me, who's spent far too long setting up, debugging and even waiting for a CI/CD pipeline, you will be amazed at the speed at which Netlify deploys updates. Within the same minute of pushing to `master`/`main`...
 
 ![Netlify Deployed message](/blog/deploying-netlify/netlify-deployed-message.png)
-

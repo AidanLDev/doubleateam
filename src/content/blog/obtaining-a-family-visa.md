@@ -14,6 +14,7 @@ The family visa, in the past there were a couple more visas such as the parent v
 The family visa is quite expensive. It cost us £1,682 for the application and an extra £2,047 for the IHS (health insurance surge) a payment that’s required as part of the application. We needed to get it right, to live our lives together and build our future.
 
 ## Visa Consultant
+
 That’s why we hired a visa consultant from [I-vars](https://www.i-vars.com/). Their service was unbelievably helpful, they start with an initial call, going through the process itself and they get to understand you and your situation so they can know how to best help. Once signed up they send a pack with all the information about the visa application process and documents required to get the approval we all need. They will review any documents and give guidance throughout the process.
 
 # The application
@@ -55,6 +56,7 @@ The actual documents checklist is relatively short. However, if you want a reall
 The TB test and Secure English language test are two bits of documents you may not even need to gather. However, if you do, you will need to study for the English test and book an appointment for the TB test which could take some time, so let us get those out the way first.
 
 ### TB Test
+
 To find out if your country is listed as needing a TB test, [visit this site provided by the British Government](https://www.gov.uk/tb-test-visa/countries-where-you-need-a-tb-test-to-enter-the-uk)
 
 ### English Test

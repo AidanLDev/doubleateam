@@ -12,7 +12,10 @@
   background-color: var(--primary-100);
   border: 3px solid var(--primary-100);
   border-radius: 3px;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 
   &:hover,
   &:focus {

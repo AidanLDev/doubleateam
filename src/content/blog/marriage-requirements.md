@@ -14,14 +14,16 @@ If you’re a British citizen this will ask you to go through a short series of 
 ## Foreign spouse documents
 
 There are a few documents the foreign spouse will need for getting married in Indonesia.
+
 - Affidavit/affirmation to prove that all previous relationships have ended
 - Email the relevant embassy in Jakarta and book an appointment to swear an Affidavit – The British Embassy was very responsive and managed to get us an appointment the very week we emailed. They charge a fee of £50
 - If the Indonesian spouse is Muslim, you will need a shahada certificate. I got mine from the central London Mosque, you can contact them here. Although some KUAs (the Indonesian registry office) will allow the foreign spouse to take their shahada as part of the wedding ceremony or privately with them just before the wedding.
-- ID - Your passport, which you should have with you anyways! So, this requirement is a freebee yay. Just in case you might want to bring along something like a driving licence if you have one 
+- ID - Your passport, which you should have with you anyways! So, this requirement is a freebee yay. Just in case you might want to bring along something like a driving licence if you have one
 
 Here’s where you can [contact the London Mosque](https://www.iccuk.org/page2.php?section=contact&page=contact) if you are from the UK and need to get your hands on a shahada certificate
 
 These docs may not be necessary however some areas may have stricter KUAs who will require the following:
+
 - Birth Certificate
 - Certificate of domicile
 
@@ -38,6 +40,7 @@ Again these docs may not be necessary however some KUAs will ask for the followi
 - ID cards of 2 witnesses
 
 ## Photos
+
 You will both need to get professional photos taken where with the following format: 2 x 3 with a blue background – 3 sheets
 
 English documents will need to be translated by an approved sworn translator; we used the Juliani Language Centre [A list of translators provided by the British gov site.](https://www.gov.uk/government/publications/indonesia-list-of-lawyers/list-of-translatorsinterpreters-in-indonesia)

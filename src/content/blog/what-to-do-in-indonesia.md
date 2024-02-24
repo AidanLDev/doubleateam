@@ -19,7 +19,7 @@ This active volcano is stunning, it's about 30km north of Bandung city and it la
 
 ![Kawa Ratu volcano](/blog/whatToDoInIndonesia/Bandung/KawaRatu.webp)
 
-Because of the weather, it was nice and quiet when we went too, plenty  of space for photos and exploration.
+Because of the weather, it was nice and quiet when we went too, plenty of space for photos and exploration.
 
 ![Aidan and Arni enjoying Kawa Ratu volcano](/blog/whatToDoInIndonesia/Bandung/TogetherByKawaRatuSign.webp)
 
@@ -61,8 +61,6 @@ and we were so chuffed we chose them. They were very reasonable in price compare
 
 ![Bromo tour pic](/blog/whatToDoInIndonesia/Malang/20220603_012448778_iOS.webp)
 
-
 You can visit this country time and time again and have a different experience every time.
 
 We hope you enjoy your time and have safe travels ✈️🌍☀️🏔️
-

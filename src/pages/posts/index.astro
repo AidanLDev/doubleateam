@@ -4,7 +4,9 @@ import { Card } from 'accessible-astro-components'
 
 import { getCollection } from 'astro:content'
 
-const posts = (await getCollection('blog')).sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
+)
 ---
 
 <DefaultLayout

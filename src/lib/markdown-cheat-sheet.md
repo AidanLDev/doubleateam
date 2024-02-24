@@ -9,6 +9,7 @@ This Markdown cheat sheet provides a quick overview of all the Markdown syntax e
 These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
 
 ### Spacing
+
 Adding a line break
 \
 \
@@ -16,7 +17,9 @@ Adding a line break
 ### Heading
 
 # H1
+
 ## H2
+
 ### H3
 
 ### Bold
@@ -25,7 +28,7 @@ Adding a line break
 
 ### Italic
 
-*italicized text*
+_italicized text_
 
 ### Blockquote
 
@@ -65,17 +68,19 @@ These elements extend the basic syntax by adding additional features. Not all Ma
 
 ### Table
 
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
 
 ### Table with alignment
-| Left-aligned  | centered      | right |
-|:------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| col 1 is      | left-aligned  |   $42 |
+
+| Left-aligned |   centered    | right |
+| :----------- | :-----------: | ----: |
+| col 3 is     | right-aligned | $1600 |
+| col 2 is     |   centered    |   $12 |
+| col 1 is     | left-aligned  |   $42 |
+
 <!-- Note the colons: -->
 
 ### Fenced Code Block

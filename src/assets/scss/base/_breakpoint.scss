@@ -3,10 +3,10 @@
 // | -------------------------------------------------------------
 
 $breakpoints: (
-  "default": 0,
-  "small": 24em,
-  "medium": 48em,
-  "large": 75em
+  'default': 0,
+  'small': 24em,
+  'medium': 48em,
+  'large': 75em,
 ) !default;
 
 @mixin breakpoint($breakpoint) {
@@ -15,11 +15,10 @@ $breakpoints: (
       @content;
     }
   } @else if (type_of($breakpoint) == number) {
-    @media (min-width: $breakpoint+"px") {
+    @media (min-width: $breakpoint+'px') {
       @content;
     }
-  }
-  @else {
+  } @else {
     @error "Not a correct value, check _base-breakpoints for availible values.";
   }
 }

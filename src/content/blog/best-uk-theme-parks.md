@@ -6,9 +6,11 @@ heroImage: '/blog/best-uk-theme-parks.webp'
 ---
 
 # UKs Best Theme parks
+
 This island holds a lot of thrill, with some of the world's best coasters scattered between various parks. Let's dive deep into what parks are here in the UK.
 
 ## 1. Alton Towers
+
 ![Towers](/blog/best-uk-theme-parks.webp)
 Stoke-On-Trent | £36 online or free with a Merlin Pass
 
@@ -21,6 +23,7 @@ There's something for everyone at Alton Towers, with CBeebies land, hosting the 
 [Find out more here from our personal Alton Towers guide](/posts/alton-towers)
 
 ## 2. Thorpe Park
+
 ![Thorpe Park](/blog/theme-parks/thorpe-park/stealth.webp)
 Staines | £37 online or free with a Merlin Pass
 
@@ -29,6 +32,7 @@ The Island like no other... Located in Staines, not too far from London, this pa
 Thorpe park as some incredibly well themes rides, such as the terrifying Walking Dead ride where you'll be chased by live actors, to Swarm, a fantastic wing coaster, where you fly past a crashed plane and through a billboard. SAW the ride branded as the first horror coaster will have you screaming as you rocket down a beyond vertical drop dodging sharp blades as you plumbit down.
 
 ## 3. Chessington World of Adventure
+
 ![Chessington World of Adventure](/blog/theme-parks/chessington/crock-drop-img.webp)
 Surrey, Greater London | £39 online or free with a Merlin Pass
 
@@ -41,6 +45,7 @@ The Vampire is a must ride, a well themed suspended coaster that has you flying 
 The coaster line-up is a bit light, but as of writting this artical, a B&M wing coaster in the Jemanji land will be opening in 2023!
 
 ## 4. Legoland Windsor
+
 ![Legoland Windsor](/blog/theme-parks/legoland-windsor.webp)
 Windsor | £32 Online or free with a Merlin Pass
 
@@ -51,6 +56,7 @@ It offers a few nicely themed coasters, Dragon and Dragon's Apprentice being two
 Miniland is a must visit while you're here, you can see some of the most famous attractions built in Lego with fantastic attention to detail.
 
 ## 5. Blackpool Pleasure Beach
+
 ![](/blog/theme-parks/blackpool/icon.webp)
 Blackpool | £30 - £40 Online
 
@@ -61,6 +67,7 @@ There's many unique attractions here, such as Revolution, a launch into a loop..
 The Icon is regarded as the best in the UK by many thrill seekers, this double launch coaster is such a blast every time I ride it. Talking of coasters, you can't forget the BIG ONE, still the tallest in the UK, a title it's held since 1994 (the best year). Although Thorpe Park might have there eyes on that record (if planning permissions ever get accepted).
 
 ## 6. Paultons
+
 ![Paultons](/blog/theme-parks/paultons.webp)
 Romsey, Hampshire | £40 Online (under 1m get in for free)
 
@@ -69,6 +76,7 @@ Paultons, home of Pepper Pig land, a family friendly theme park that has plenty 
 We can't talk about Paultons without mentioning one of the best UK coasters, Storm Chaser, a fun spinning coaster that will have you smiling from ear to ear. In fact the new Tornado Springs area that opened in 2021 is so well themed throughout.
 
 ## 7. Adventure Island
+
 ![Adventure Island](/blog/theme-parks/adventure-island.webp)
 Southend-on-Sea | Free entry to the park and Pay n Play or £22.50 wristband for unlimited rides
 
@@ -77,6 +85,7 @@ This theme park has a classic amusement park feel to it. Located right on the co
 The park offers some classic attractions such as the Crooked House and Helter Skelter.
 
 ## 8. Flamingo Land
+
 ![Flamingo Land](/blog/theme-parks/flamingoland.webp)
 Kirby Misperton, North Yorkshire | £29 - 40 Online
 
@@ -87,6 +96,7 @@ The park offers plenty of attractions for children too with the likes of Mumbo J
 The park's latest coaster "Sik", which packs in a whopping 10 inversions, just opened this year and is well worth a ride.
 
 ## 9. Drayton Manor
+
 ![Drayton Manor](/blog/theme-parks/drayton-manor.webp)
 Mileoak, Brighton | £27.50
 
@@ -97,6 +107,7 @@ For younger children there's an entire Thomas the Tank Engine section. Other fam
 Overall this park has improved in recent years, the theming of it's new Viking land has a lot of attention to detail. I mean just look at Loki... How can you take your eyes off it?!
 
 ## 10. Oakwood Theme Park
+
 ![Oakwood Theme Park](/blog/theme-parks/oakwood.webp)
 Pembrokeshire, South Wales | £27 - £37
 

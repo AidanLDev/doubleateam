@@ -13,7 +13,7 @@ We stayed very central in the Jambuluwuk Malioboro Hotel. This is a large hotel 
 
 ![Jambuluwuk Malioboro Hotel Garden](/blog/whatToDoInIndonesia/Jogja/hotelBreakfastGarden.webp)
 
-The hotel has a laundry service and is within walking distance to the popular shopping district in Malioboro. Plenty to see and do just on your doorstep! The hotel was reasonable considering the location and especially considering the 5* service we were getting, the staff were stars and the hotel itself was so well furnished. It cost around £27 (est 487.000 IDR) a night
+The hotel has a laundry service and is within walking distance to the popular shopping district in Malioboro. Plenty to see and do just on your doorstep! The hotel was reasonable considering the location and especially considering the 5\* service we were getting, the staff were stars and the hotel itself was so well furnished. It cost around £27 (est 487.000 IDR) a night
 
 ## restaurant
 
@@ -54,11 +54,11 @@ The breakfast was tasty and traditional, although we do love our breakfast buffe
 
 The reason why we trecked outside of the city, and my god was it worth it.
 
-![Punthuk Setumbu](/blog/whatToDoInIndonesia/Jogja/sunriseSignCrop.webp) 
+![Punthuk Setumbu](/blog/whatToDoInIndonesia/Jogja/sunriseSignCrop.webp)
 
 This popular sunrise location is popular for a reason. Sadly it was a a bit cloudy for us to get the full sunrise experience, but we did however get blown away by the beauty of the place.
 
-![Punthuk Setumbu](/blog/whatToDoInIndonesia/Jogja/sunrisePlace.webp) 
+![Punthuk Setumbu](/blog/whatToDoInIndonesia/Jogja/sunrisePlace.webp)
 
 There are plenty of places for some the most memorable photos too if that's what you're into.
 
