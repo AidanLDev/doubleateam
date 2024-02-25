@@ -96,7 +96,7 @@ During this process I could see my health and energy deteriorating, so I forced 
 
 Don't just go into survival mode, but use it as an opportunity to push you out of your comfort zone and thrive. Force yourself to pick up a healthy habit, even if it doesn't seem like it, that'll help you succeed. Remember the important things ❤️
 
-## Concultion
+## Conclusion
 
 I was very much in my comfort zone, but this has forced me to re-evaluate, learn new skills, and get into new routines. In a way, it's re-sparked my passion for development and I'll be sure to always keep my interview skills up-to-date as we will always need them. Don't get too comfortable, at the end of the day we're not in control of everything and that's okay because we can choose to focus on the things we **can** control
 

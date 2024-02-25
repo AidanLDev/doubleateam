@@ -1,7 +1,8 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import { Breadcrumbs, BreadcrumbsItem } from 'accessible-astro-components'
+import BlogBreadCrumbs from '@components/BlogBreadcrumbs.astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
+import LatestPosts from '@components/LatestPosts.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog')
@@ -21,11 +22,7 @@ const { Content } = await post.render()
   <div class="overlay"></div>
   <div class="container">
     <div class="mt-12">
-      <Breadcrumbs>
-        <BreadcrumbsItem href="/" label="Home" />
-        <BreadcrumbsItem href="/posts" label="Posts" />
-        <BreadcrumbsItem currentPage={true} label={post.data.title} />
-      </Breadcrumbs>
+      <BlogBreadCrumbs currentPageTitle={post.data.title} />
     </div>
   </div>
   <section class="my-12">
@@ -38,6 +35,13 @@ const { Content } = await post.render()
   <section class="my-12">
     <div class="blog-container container">
       <Content />
+      <div class="blog-footer">
+        <h2>Thanks for reading!</h2>
+        <p>Feel free to checkout some of my most recent posts</p>
+        <LatestPosts />
+        <p>Or navigate back to the rest of the posts</p>
+        <BlogBreadCrumbs currentPageTitle={post.data.title} />
+      </div>
     </div>
   </section>
 </DefaultLayout>
@@ -73,6 +77,9 @@ const { Content } = await post.render()
       opacity: 1;
       visibility: visible;
     }
+  }
+  .blog-footer {
+    padding: 2rem 0;
   }
 </style>
 

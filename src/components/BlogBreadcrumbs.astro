@@ -1,0 +1,13 @@
+---
+import { Breadcrumbs, BreadcrumbsItem } from 'accessible-astro-components'
+interface Props {
+  currentPageTitle: string
+}
+const { currentPageTitle } = Astro.props
+---
+
+<Breadcrumbs>
+  <BreadcrumbsItem href="/" label="Home" />
+  <BreadcrumbsItem href="/posts" label="Posts" />
+  <BreadcrumbsItem currentPage={true} label={currentPageTitle} />
+</Breadcrumbs>

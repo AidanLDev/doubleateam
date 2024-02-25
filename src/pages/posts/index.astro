@@ -21,8 +21,7 @@ const posts: BlogProps[] = (await getCollection('blog')).sort(
       <h1>Blog Posts</h1>
     </div>
   </section>
-  <section class="my-12">
-    <div class="container">
+  <section class="my-12 container">
       <ul class="my-3">
         {
           posts.map((post) => {
@@ -49,8 +48,6 @@ const posts: BlogProps[] = (await getCollection('blog')).sort(
           })
         }
       </ul>
-      <div class="mt-12 grid place-content-center"></div>
-    </div>
   </section>
 </DefaultLayout>
 
