@@ -3,6 +3,7 @@ title: 'Best UK Theme Parks'
 description: 'Best UK Theme Parks'
 pubDate: 'August 15 2022'
 heroImage: '/blog/best-uk-theme-parks.webp'
+tags: ['Entertainment', 'Theme Parks']
 ---
 
 # UKs Best Theme parks

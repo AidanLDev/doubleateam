@@ -3,6 +3,7 @@ title: 'Jogja Guide'
 description: 'Jogja Guide'
 pubDate: 'July 17 2022'
 heroImage: '/blog/what-to-do-in-jogja.webp'
+tags: ['Travel', 'Indonesia', 'Entertainment']
 ---
 
 # Our Jogja recommendations

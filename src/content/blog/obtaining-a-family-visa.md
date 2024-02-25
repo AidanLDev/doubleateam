@@ -3,6 +3,7 @@ title: 'How to get a UK family visa'
 description: 'How to get a UK family visa'
 pubDate: 'June 12 2022'
 heroImage: '/blog/obtaining-a-family-visa.webp'
+tags: ['Visa']
 ---
 
 # Getting a UK Family Visa

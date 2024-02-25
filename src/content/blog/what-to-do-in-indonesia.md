@@ -3,6 +3,7 @@ title: 'Indonesia travel guide'
 description: 'Indonesia travel guide'
 pubDate: 'July 15 2022'
 heroImage: '/blog/what-to-do-in-indonesia.webp'
+tags: ['Travel', 'Indonesia', 'Entertainment']
 ---
 
 # How to spend your time in Indonesia

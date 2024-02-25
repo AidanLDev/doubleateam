@@ -3,6 +3,7 @@ title: 'Hosting a website for free'
 description: 'Hosting a website for free'
 pubDate: 'August 27 2022'
 heroImage: '/blog/netlify-free-static-hosting.webp'
+tags: ['DevOps', 'Hosting']
 ---
 
 # Hosting a website for free using Netlify

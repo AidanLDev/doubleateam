@@ -3,6 +3,7 @@ title: 'Things to know about Alton Towers'
 description: 'Things to know about Alton Towers'
 pubDate: 'August 21 2022'
 heroImage: '/blog/alton-towers.webp'
+tags: ['Entertainment', 'Theme Parks']
 ---
 
 # All you need to know about Alton Towers

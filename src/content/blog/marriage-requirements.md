@@ -3,6 +3,7 @@ title: 'International Marriage in Indonesia'
 description: 'International Marriage in Indonesia'
 pubDate: 'July 20 2022'
 heroImage: '/blog/marriage-requirements.webp'
+tags: ['Marriage', 'Indonesia']
 ---
 
 # International Marriage in Indonesia guide

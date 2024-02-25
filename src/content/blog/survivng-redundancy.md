@@ -3,6 +3,7 @@ title: 'Surviving Redundancy'
 description: 'Surviving the Redundancy process: My Journey of Reclaiming My Job'
 pubDate: 'January 24 2024'
 heroImage: '/blog/interview_stock_photo.webp'
+tags: ['Personal', 'Jobs', 'Work']
 ---
 
 # Surviving the Redundancy: My Journey of Reclaiming My Job

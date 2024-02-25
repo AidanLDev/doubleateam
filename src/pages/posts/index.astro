@@ -1,10 +1,13 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 import { Card } from 'accessible-astro-components'
+import Tag from '@components/Tag.astro'
 
-import { getCollection } from 'astro:content'
+import { getCollection, type CollectionEntry } from 'astro:content'
 
-const posts = (await getCollection('blog')).sort(
+type BlogProps = CollectionEntry<'blog'> & { data: { title?: string; tags?: string[] } }
+
+const posts: BlogProps[] = (await getCollection('blog')).sort(
   (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
 )
 ---
@@ -15,25 +18,35 @@ const posts = (await getCollection('blog')).sort(
 >
   <section class="my-12">
     <div class="space-content container">
-      <h1>Blog</h1>
+      <h1>Blog Posts</h1>
     </div>
   </section>
   <section class="my-12">
     <div class="container">
       <ul class="my-3">
         {
-          posts.map((post) => (
-            <li>
-              <Card
-                url={'/posts/' + post.slug}
-                title={post.data.title}
-                footer={post.data.pubDate}
-                img={post.data.heroImage}
-              >
-                {post.data.description}
-              </Card>
-            </li>
-          ))
+          posts.map((post) => {
+            const {
+              slug,
+              data: { title, pubDate, heroImage, description, tags },
+            } = post
+            return (
+              <li>
+                <Card url={'/posts/' + slug} title={title} footer={pubDate} img={heroImage}>
+                  <div>
+                    <span>{description}</span>
+                    {tags && tags.length > 0 && (
+                      <div class="tags-container">
+                        {tags.map((tag) => (
+                          <Tag tag={tag} />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </Card>
+              </li>
+            )
+          })
         }
       </ul>
       <div class="mt-12 grid place-content-center"></div>
@@ -55,5 +68,11 @@ const posts = (await getCollection('blog')).sort(
     @media (min-width: 950px) {
       grid-template-columns: repeat(3, 1fr);
     }
+  }
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 0;
   }
 </style>

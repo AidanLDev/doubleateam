@@ -3,6 +3,7 @@ title: 'How to pass the IELTS Exam'
 description: 'How to pass the IELTS Exam'
 pubDate: 'June 06 2022'
 heroImage: '/blog/how-to-pass-ielts.webp'
+tags: ['Education', 'Visa']
 ---
 
 # How to get an IELTS A1 Certification for UKVI Family Visa Applications

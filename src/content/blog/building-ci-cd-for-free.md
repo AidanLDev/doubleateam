@@ -3,6 +3,7 @@ title: 'Setting up CI/CD for free'
 description: 'Setting up CI/CD for free'
 pubDate: 'August 28 2022'
 heroImage: '/blog/building-ci-cd-for-free.webp'
+tags: ['CI/CD', 'AWS', 'CircleCI', 'DevOps']
 ---
 
 # Building a free CI/CD pipeline using AWS S3 and CircleCI
