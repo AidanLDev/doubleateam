@@ -1,12 +1,18 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import AboutMeLogo from '../components/contact-me/AboutMeLogo.astro'
+import MediaLinksLogo from '@components/contact-me/MediaLinksLogo.astro'
+import { socialMediaData } from '@lib/SocialMediaCardData'
 ---
 
 <DefaultLayout title="Contact Me">
   <section class="my-12">
     <h1>Find Me On...</h1>
     <div class="contact-me-container container">
+      {
+        socialMediaData.map((mediaData) => (
+          <MediaLinksLogo imgSrc={mediaData.imgSrc} imgAlt={mediaData.imgAlt} link={mediaData.link} />
+        ))
+      }
     </div>
   </section>
 </DefaultLayout>
@@ -14,8 +20,13 @@ import AboutMeLogo from '../components/contact-me/AboutMeLogo.astro'
 <style lang="scss">
   h1 {
     text-align: center;
+    padding: 3rem 0;
   }
   .contact-me-container {
-    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 4rem;
   }
 </style>
