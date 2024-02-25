@@ -8,13 +8,21 @@ export interface Props {
 const { imgSrc, imgAlt, link } = Astro.props
 ---
 
-<a href={link} target="_blank" rel="noreferrer">
-  <div class="logo-container" style={{ backgroundImage: `url(${imgSrc})` }}>
+<a href={link} target="_blank" rel="noreferrer" class="logo-container-link">
+  <div class="logo-container" style={{ backgroundImage: `url(${imgSrc})` }}></div>
+  <div class="logo-text-container">
     <span>{imgAlt}</span>
   </div>
 </a>
 
 <style lang="scss">
+  .logo-container-link {
+    color: #fff !important;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+    }
+  }
   .logo-container {
     background-size: contain;
     width: 160px;
@@ -27,6 +35,14 @@ const { imgSrc, imgAlt, link } = Astro.props
     flex-direction: column-reverse;
     &:hover {
       filter: brightness(1);
+    }
+  }
+  .logo-text-container {
+    text-align: center;
+    span {
+      position: relative;
+      bottom: 40px;
+      filter: brightness(1.5);
     }
   }
 </style>
