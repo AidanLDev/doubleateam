@@ -5,7 +5,7 @@ import { socialMediaData } from '@lib/SocialMediaCardData'
 ---
 
 <DefaultLayout title="Contact Me">
-  <section class="my-12">
+  <section>
     <h1>Find Me On...</h1>
     <div class="contact-me-container container">
       {
@@ -20,7 +20,7 @@ import { socialMediaData } from '@lib/SocialMediaCardData'
 <style lang="scss">
   h1 {
     text-align: center;
-    padding: 3rem 0;
+    padding: 1rem 0;
   }
   .contact-me-container {
     display: flex;
@@ -28,5 +28,9 @@ import { socialMediaData } from '@lib/SocialMediaCardData'
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 0 4rem;
+    @media (max-width: 750px) {
+      gap: 0.5rem;
+      padding: 0 1rem;
+    }
   }
 </style>
