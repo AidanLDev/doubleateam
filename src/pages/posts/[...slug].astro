@@ -18,6 +18,7 @@ const { Content } = await post.render()
 ---
 
 <DefaultLayout title={post.data.title} description={post.body} url={post.data.title}>
+  <div class="overlay"></div>
   <div class="container">
     <div class="mt-12">
       <Breadcrumbs>
@@ -56,4 +57,56 @@ const { Content } = await post.render()
       grid-template-columns: repeat(3, 1fr);
     }
   }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 </style>
+
+<script>
+  const blogImages = document.querySelectorAll('.blog-container img')
+  const overlay = document.querySelector('.overlay')
+
+  // Add click event to each image
+  blogImages.forEach((img) => {
+    img.addEventListener('click', (event) => {
+      const eventTarget = event.target as Element
+      eventTarget.classList.toggle('enlarged')
+      overlay.classList.toggle('active')
+    })
+  })
+
+  // Remove 'enlarged' class when clicking anywhere else
+  document.addEventListener('click', (event) => {
+    const eventTarget = event.target as Element
+    if (!eventTarget.closest('.blog-container img')) {
+      blogImages.forEach((img) => {
+        img.classList.remove('enlarged')
+      })
+      overlay.classList.remove('active')
+    }
+  })
+
+  document.addEventListener('keydown', (event) => {
+    const { key } = event
+    if (key.toLowerCase() === 'escape') {
+      blogImages.forEach((img) => {
+        img.classList.remove('enlarged')
+      })
+      overlay.classList.remove('active')
+    }
+  })
+</script>

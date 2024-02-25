@@ -114,14 +114,3 @@ And the path for the folder just needed to be the folder name `out` without the 
 A quick aside, sometimes you just want to commit your work up and not actually deploy said code to your server. To do this, in your commit message just add the following `[ci skip]`. For example `$ git commit -m "Chore: Just making a tiny adjustment, don't want to deploy this [ci skip]`
 
 I hope this was helpful and you managed to deploy a pipeline, if you have an issues please, [get in touch](/contact-us), and I will do what I can to help.
-
-<!--
-  iHadTo2p2: '',
-  iHadTo2p3: 'without the ',
-  quickAside:
-    '',
-  forExample: 'For example,',
-  commitMsg: "Just making a tiny adjustment, don't want to deploy this ",
-  conclusion:
-    '',
-  -->
