@@ -4,11 +4,12 @@ import { Card } from 'accessible-astro-components'
 import Tag from '@components/Tag.astro'
 
 import { getCollection, type CollectionEntry } from 'astro:content'
+import Input from '@components/nav/Input.astro'
 
 type BlogProps = CollectionEntry<'blog'> & { data: { title?: string; tags?: string[] } }
 
 const posts: BlogProps[] = (await getCollection('blog')).sort(
-  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
 )
 ---
 
@@ -17,37 +18,40 @@ const posts: BlogProps[] = (await getCollection('blog')).sort(
   description="An example of a post with dynamic content fetched from JSONPlaceholder using the title, body and userId."
 >
   <section class="my-12">
-    <div class="space-content container">
+    <div class="space-content posts-title container">
       <h1>Blog Posts</h1>
+      <div>
+        <Input name="blog-search" label="Search for a blog" placeholder="Blog Search" />
+      </div>
     </div>
   </section>
-  <section class="my-12 container">
-      <ul class="my-3">
-        {
-          posts.map((post) => {
-            const {
-              slug,
-              data: { title, pubDate, heroImage, description, tags },
-            } = post
-            return (
-              <li>
-                <Card url={'/posts/' + slug} title={title} footer={pubDate} img={heroImage}>
-                  <div>
-                    <span>{description}</span>
-                    {tags && tags.length > 0 && (
-                      <div class="tags-container">
-                        {tags.map((tag) => (
-                          <Tag tag={tag} />
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </Card>
-              </li>
-            )
-          })
-        }
-      </ul>
+  <section class="container my-12">
+    <ul class="my-3">
+      {
+        posts.map((post) => {
+          const {
+            slug,
+            data: { title, pubDate, heroImage, description, tags },
+          } = post
+          return (
+            <li>
+              <Card url={'/posts/' + slug} title={title} footer={pubDate} img={heroImage}>
+                <div>
+                  <span>{description}</span>
+                  {tags && tags.length > 0 && (
+                    <div class="tags-container">
+                      {tags.map((tag) => (
+                        <Tag tag={tag} />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </Card>
+            </li>
+          )
+        })
+      }
+    </ul>
   </section>
 </DefaultLayout>
 
@@ -71,5 +75,12 @@ const posts: BlogProps[] = (await getCollection('blog')).sort(
     flex-wrap: wrap;
     gap: 0.5rem;
     padding: 1rem 0;
+  }
+  .posts-title {
+    display: flex;
+    justify-content: space-between;
+    div {
+      margin-top: 0;
+    }
   }
 </style>

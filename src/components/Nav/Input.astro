@@ -1,0 +1,24 @@
+---
+interface Props {
+  label: string
+  name: string
+  placeholder?: string
+}
+
+const { label, name, placeholder } = Astro.props
+---
+
+<label for={name}>{label}</label>
+<input id={name} placeholder={placeholder} type="text" name={name} />
+
+<style lang="scss">
+  input {
+    align-self: center;
+    color: black;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    &:focus-visible {
+      outline: 2px solid var(--action-color);
+    }
+  }
+</style>
