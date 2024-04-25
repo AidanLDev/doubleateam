@@ -28,20 +28,6 @@ const posts: BlogProps[] = (await getCollection('blog')).sort(
 </DefaultLayout>
 
 <style lang="scss">
-  ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 4rem;
-
-    @media (min-width: 550px) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 2rem;
-    }
-
-    @media (min-width: 950px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
   .posts-title {
     display: flex;
     justify-content: space-between;
