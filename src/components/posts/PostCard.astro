@@ -1,0 +1,40 @@
+---
+import { Card } from 'accessible-astro-components'
+import Tag from '@components/posts/Tag.astro'
+
+interface Props {
+  slug: string
+  title: string
+  pubDate: string
+  heroImage: string
+  description: string
+  tags: string[]
+}
+const { slug, title, pubDate, heroImage, description, tags } = Astro.props
+---
+
+<li>
+  <Card url={'/posts/' + slug} title={title} footer={pubDate} img={heroImage}>
+    <div>
+      <span>{description}</span>
+      {
+        tags && tags.length > 0 && (
+          <div class="tags-container">
+            {tags.map((tag) => (
+              <Tag tag={tag} />
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </Card>
+</li>
+
+<style>
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+</style>

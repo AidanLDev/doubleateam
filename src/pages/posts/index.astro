@@ -1,10 +1,9 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import { Card } from 'accessible-astro-components'
-import Tag from '@components/Tag.astro'
 
 import { getCollection, type CollectionEntry } from 'astro:content'
-import Input from '@components/nav/Input.astro'
+import Input from '@components/Input'
+import PostsContainer from '@components/posts/PostsContainer'
 
 type BlogProps = CollectionEntry<'blog'> & { data: { title?: string; tags?: string[] } }
 
@@ -21,38 +20,11 @@ const posts: BlogProps[] = (await getCollection('blog')).sort(
     <div class="space-content posts-title container">
       <h1>Blog Posts</h1>
       <div>
-        <Input name="blog-search" label="Search for a blog" placeholder="Blog Search" />
+        <Input client:load name={'blog-search'} label={'Search for a blog'} placeholder={'Blog Search'} />
       </div>
     </div>
   </section>
-  <section class="container my-12">
-    <ul class="my-3">
-      {
-        posts.map((post) => {
-          const {
-            slug,
-            data: { title, pubDate, heroImage, description, tags },
-          } = post
-          return (
-            <li>
-              <Card url={'/posts/' + slug} title={title} footer={pubDate} img={heroImage}>
-                <div>
-                  <span>{description}</span>
-                  {tags && tags.length > 0 && (
-                    <div class="tags-container">
-                      {tags.map((tag) => (
-                        <Tag tag={tag} />
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </Card>
-            </li>
-          )
-        })
-      }
-    </ul>
-  </section>
+  <PostsContainer client:load posts={posts} />
 </DefaultLayout>
 
 <style lang="scss">
@@ -69,12 +41,6 @@ const posts: BlogProps[] = (await getCollection('blog')).sort(
     @media (min-width: 950px) {
       grid-template-columns: repeat(3, 1fr);
     }
-  }
-  .tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 1rem 0;
   }
   .posts-title {
     display: flex;
