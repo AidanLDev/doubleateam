@@ -20,6 +20,12 @@ dependencies:
   '@iconify-json/mdi':
     specifier: ^1.1.66
     version: 1.1.66
+  '@nanostores/preact':
+    specifier: ^0.5.1
+    version: 0.5.1(nanostores@0.10.3)(preact@10.20.2)
+  nanostores:
+    specifier: ^0.10.3
+    version: 0.10.3
   preact:
     specifier: ^10.20.2
     version: 10.20.2
@@ -1467,6 +1473,17 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@nanostores/preact@0.5.1(nanostores@0.10.3)(preact@10.20.2):
+    resolution: {integrity: sha512-kofyeDwzM3TrOd37ay+Xxgk3Cn6jih23dxELc7Mr9IJV55jmWATfNP9b7O/awwCL7CE5z5PfzFnNk/W+tMaWGw==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      nanostores: ^0.9.0 || ^0.10.0
+      preact: '>=10.0.0'
+    dependencies:
+      nanostores: 0.10.3
+      preact: 10.20.2
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -5735,6 +5752,11 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  /nanostores@0.10.3:
+    resolution: {integrity: sha512-Nii8O1XqmawqSCf9o2aWqVxhKRN01+iue9/VEd1TiJCr9VT5XxgPFbF1Edl1XN6pwJcZRsl8Ki+z01yb/T/C2g==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    dev: false
+
   /napi-build-utils@1.0.2:
     resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==}
     requiresBuild: true
@@ -5869,6 +5891,7 @@ packages:
 
   /once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
+    requiresBuild: true
     dependencies:
       wrappy: 1.0.2
     dev: true
@@ -7965,6 +7988,7 @@ packages:
 
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
+    requiresBuild: true
     dev: true
 
   /yallist@3.1.1:

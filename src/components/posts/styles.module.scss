@@ -25,7 +25,7 @@
   overflow: hidden;
   transition: box-shadow .15s ease-in-out;
   &:focus-within, &:hover {
-    box-shadow: 0 0 0 0.25rem;
+    box-shadow: 0 0 0 0.25rem var(--action-color);
   }
   .cardImage {
     height: 10rem;
@@ -53,6 +53,11 @@
       content: "";
       position: absolute;
       inset: 0;
+    }
+    &:hover, &:focus-within, &:focus {
+      text-decoration: none;
+      box-shadow: none;
+      outline: 0;
     }
   }
 }
