@@ -171,6 +171,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"leetcode-1-two-sums.md": {
+	id: "leetcode-1-two-sums.md";
+  slug: "leetcode-1-two-sums";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "marriage-requirements.md": {
 	id: "marriage-requirements.md";
   slug: "marriage-requirements";

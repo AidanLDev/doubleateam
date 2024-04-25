@@ -43,4 +43,9 @@ export const socialMediaData: ISocialMedia[] = [
     imgAlt: 'aidanlowson.com',
     link: 'https://www.aidanlowson.com',
   },
+  {
+    imgSrc: `${baseLink}YTNoBackGround.webp`,
+    imgAlt: 'aidanl94',
+    link: 'https://youtube.com/channel/UCDJAFkcMY5Ze3SKQS-fhg0A',
+  },
 ]
