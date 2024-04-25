@@ -1,4 +1,4 @@
-import PostCard from "./PostCard.astro";
+import PostCard from "./PostCard";
 
 
 export default function PostsContainer({posts}) {
@@ -12,7 +12,6 @@ export default function PostsContainer({posts}) {
               data: { title, pubDate, heroImage, description, tags }
             } = post;
             return (
-              <astro-fragment>
                 <PostCard
                   description={description}
                   slug={slug}
@@ -21,7 +20,6 @@ export default function PostsContainer({posts}) {
                   heroImage={heroImage}
                   tags={tags}
                 />
-              </astro-fragment>
             )
           })
         }

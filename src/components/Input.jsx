@@ -5,7 +5,6 @@ export default function Input({ label, name, placeholder }) {
   function handleInputChange(e) {
     setValue(e.currentTarget.value)
   }
-  console.log(value);
   return (
     <>
       <label for={name}>{label}</label>

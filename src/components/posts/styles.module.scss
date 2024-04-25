@@ -1,0 +1,23 @@
+.tagContainer {
+    padding: 0.5rem;
+    border: 2px solid var(--action-color);
+    span {
+      font-weight: 600;
+    }
+}
+
+.cardContainer {
+  max-width: 60ch;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .15s ease-in-out;
+  &:focus-within, &:hover {
+    box-shadow: 0 0 0 .25rem;
+  }
+}
