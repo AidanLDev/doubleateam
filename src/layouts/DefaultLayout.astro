@@ -26,19 +26,20 @@ const {
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZQ2699YSL"></script>
-    <script>
-      // Google Analytics tags
+    <!-- Google tag (gtag.js) -->
+    <script is:inline type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-YZQ2699YSL"
+    ></script>
+    <script is:inline type="text/partytown">
       window.dataLayer = window.dataLayer || []
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args)
+      function gtag() {
+        dataLayer.push(arguments)
       }
       gtag('js', new Date())
 
       gtag('config', 'G-YZQ2699YSL')
     </script>
     <!-- Plausible analytics tag -->
-    <script defer data-domain="blog.aidanlowson.com" src="https://plausible.io/js/script.js"></script>
+    <script is:inline defer data-domain="blog.aidanlowson.com" src="https://plausible.io/js/script.js"></script>
   </head>
   <body>
     <Header />
