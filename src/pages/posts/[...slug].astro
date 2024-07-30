@@ -1,8 +1,8 @@
 ---
-import DefaultLayout from '@layouts/DefaultLayout.astro'
-import BlogBreadCrumbs from '@components/BlogBreadcrumbs.astro'
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import BlogBreadCrumbs from '../../components/BlogBreadcrumbs.astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
-import LatestPosts from '@components/LatestPosts.astro'
+import LatestPosts from '../../components/LatestPosts.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog')

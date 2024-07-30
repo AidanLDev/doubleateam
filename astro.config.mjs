@@ -5,6 +5,7 @@ import mdx from '@astrojs/mdx'
 import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import partytown from '@astrojs/partytown'
+import path from 'path'
 
 import preact from '@astrojs/preact'
 
@@ -24,4 +25,15 @@ export default defineConfig({
       },
     }),
   ],
+  vite: {
+    resolve: {
+      alias: {
+        '@': path.resolve('./src'),
+        '@components': path.resolve('./src/components'),
+        '@layouts': path.resolve('./src/layouts'),
+        '@lib': path.resolve('./src/lib'),
+        '@interfaces': path.resolve('./src/interfaces'),
+      },
+    },
+  },
 })

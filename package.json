@@ -8,37 +8,39 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "clean": "rm -rf node_modules package-lock.json pnpm-lock.yaml"
   },
   "devDependencies": {
     "@astrojs/mdx": "^2.3.1",
-    "@astrojs/partytown": "^2.1.0",
-    "@astrojs/sitemap": "^3.1.4",
+    "@astrojs/partytown": "^2.1.1",
+    "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
-    "@typescript-eslint/eslint-plugin": "^7.7.1",
-    "@typescript-eslint/parser": "^7.7.1",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "accessible-astro-components": "^2.3.6",
-    "astro": "^4.7.0",
+    "astro": "^4.12.3",
     "astro-compress": "2.2.22",
     "astro-icon": "^1.1.0",
-    "eslint": "^9.1.1",
-    "eslint-plugin-astro": "^0.34.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "prettier": "^3.2.5",
+    "eslint": "8.57.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "sass": "^1.75.0",
-    "svgo": "^3.2.0",
-    "tailwindcss": "^3.4.3"
+    "sass": "^1.77.8",
+    "svgo": "^3.3.2",
+    "tailwindcss": "^3.4.7"
   },
   "dependencies": {
-    "@astrojs/preact": "^3.2.0",
-    "@astrojs/ts-plugin": "^1.6.1",
-    "@iconify-json/carbon": "^1.1.31",
-    "@iconify-json/ion": "^1.1.17",
-    "@iconify-json/mdi": "^1.1.66",
+    "@astrojs/preact": "^3.5.1",
+    "@astrojs/ts-plugin": "^1.9.0",
+    "@iconify-json/carbon": "^1.1.36",
+    "@iconify-json/ion": "^1.1.18",
+    "@iconify-json/mdi": "^1.1.67",
     "@nanostores/preact": "^0.5.1",
     "nanostores": "^0.10.3",
-    "preact": "^10.20.2"
+    "preact": "^10.23.1",
+    "sharp": "^0.33.4"
   }
 }
