@@ -1,8 +1,8 @@
-import { blogFilter } from 'src/blogSearchStore';
+import { blogFilter } from '../blogSearchStore'
 
 export default function Input({ label, name, placeholder }) {
   function handleInputChange(e) {
-    blogFilter.set(e.currentTarget.value);
+    blogFilter.set(e.currentTarget.value)
   }
   return (
     <>
