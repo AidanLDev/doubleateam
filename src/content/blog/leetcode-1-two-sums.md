@@ -4,6 +4,7 @@ description: 'A TypeScript solution to the Two Sums problem, an efficient algori
 pubDate: 'April 26 2024'
 heroImage: '/blog/leetcode-1-two-sums.webp'
 tags: ['LeetCode', 'DSA', 'TypeScript', 'Education']
+redirectLink: 'https://devdailyhub.com/posts/leetcode-1-two-sums'
 ---
 
 # LeetCode 1. Two Sums

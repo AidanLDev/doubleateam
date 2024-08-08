@@ -10,6 +10,7 @@ const blog = defineCollection({
     updatedDate: z.string().optional(),
     heroImage: z.string().optional(),
     tags: z.string().array().optional(),
+    redirectLink: z.string().optional()
   }),
 })
 

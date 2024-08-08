@@ -4,6 +4,7 @@ description: 'Hosting a website for free'
 pubDate: 'August 27 2022'
 heroImage: '/blog/netlify-free-static-hosting.webp'
 tags: ['DevOps', 'Hosting']
+redirectLink: 'https://devdailyhub.com/posts/netlify-free-static-hosting'
 ---
 
 # Hosting a website for free using Netlify

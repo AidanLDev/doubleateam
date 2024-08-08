@@ -27,7 +27,7 @@ export default function PostsContainer({ posts }) {
           .map((post) => {
             const {
               slug,
-              data: { title, pubDate, heroImage, description, tags },
+              data: { title, pubDate, heroImage, description, tags, redirectLink },
             } = post
             return (
               <PostCard
@@ -37,6 +37,7 @@ export default function PostsContainer({ posts }) {
                 pubDate={pubDate}
                 heroImage={heroImage}
                 tags={tags}
+                redirectLink={redirectLink}
               />
             )
           })}
