@@ -156,91 +156,91 @@ declare module 'astro:content' {
   slug: "1000most-common-indonesian-words";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "alton-towers.md": {
 	id: "alton-towers.md";
   slug: "alton-towers";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "best-uk-theme-parks.md": {
 	id: "best-uk-theme-parks.md";
   slug: "best-uk-theme-parks";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "building-ci-cd-for-free.md": {
 	id: "building-ci-cd-for-free.md";
   slug: "building-ci-cd-for-free";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "custom-qr-codes.md": {
 	id: "custom-qr-codes.md";
   slug: "custom-qr-codes";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "how-to-pass-ielts.md": {
 	id: "how-to-pass-ielts.md";
   slug: "how-to-pass-ielts";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "leetcode-1-two-sums.md": {
 	id: "leetcode-1-two-sums.md";
   slug: "leetcode-1-two-sums";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "marriage-requirements.md": {
 	id: "marriage-requirements.md";
   slug: "marriage-requirements";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "netlify-free-static-hosting.md": {
 	id: "netlify-free-static-hosting.md";
   slug: "netlify-free-static-hosting";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "obtaining-a-family-visa.md": {
 	id: "obtaining-a-family-visa.md";
   slug: "obtaining-a-family-visa";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "survivng-redundancy.md": {
 	id: "survivng-redundancy.md";
   slug: "survivng-redundancy";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "what-to-do-in-indonesia.md": {
 	id: "what-to-do-in-indonesia.md";
   slug: "what-to-do-in-indonesia";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "what-to-do-in-jogja.md": {
 	id: "what-to-do-in-jogja.md";
   slug: "what-to-do-in-jogja";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
 
@@ -252,5 +252,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../../src/content/config.js");
 }
