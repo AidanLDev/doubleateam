@@ -64,3 +64,34 @@ jobs:
               --exclude ".gitignore" \
               --exclude ".circleci/*" \
               --delete
+
+      # Invalidate CloudFront cache to show updated content immediately
+      - run:
+          name: Invalidate CloudFront Cache
+          command: |
+            # AWS CLI expects AWS_ACCESS_KEY_ID, so export it from AWS_ACCESS_KEY
+            export AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY}"
+            # AWS CLI prefers AWS_DEFAULT_REGION, so export it from AWS_REGION
+            if [ -n "${AWS_REGION}" ]; then
+              export AWS_DEFAULT_REGION="${AWS_REGION}"
+            elif [ -z "${AWS_DEFAULT_REGION}" ]; then
+              export AWS_DEFAULT_REGION=us-east-1
+            fi
+
+            # Check if CloudFront distribution ID is set
+            if [ -z "${CLOUDFRONT_DISTRIBUTION_ID}" ]; then
+              echo "WARNING: CLOUDFRONT_DISTRIBUTION_ID not set. Skipping CloudFront invalidation."
+              echo "To enable cache invalidation, add CLOUDFRONT_DISTRIBUTION_ID in CircleCI Environment Variables."
+              echo "Old content may still be cached and visible on your site until cache expires."
+              exit 0
+            fi
+
+            echo "Creating CloudFront invalidation for distribution: ${CLOUDFRONT_DISTRIBUTION_ID}"
+            INVALIDATION_ID=$(aws cloudfront create-invalidation \
+              --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" \
+              --paths "/*" \
+              --query 'Invalidation.Id' \
+              --output text)
+
+            echo "CloudFront invalidation created: ${INVALIDATION_ID}"
+            echo "Cache will be cleared within a few minutes. Your updated content will be visible shortly."
