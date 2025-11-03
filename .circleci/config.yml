@@ -1,6 +1,5 @@
 version: 2.1
-orbs:
-  aws-s3: circleci/aws-s3@1.0.6
+
 description: |
   copy files to S3 bucket and then create an Cloudfront invalidation
   on the distribution.
@@ -8,17 +7,29 @@ description: |
 jobs:
   build:
     docker:
-      - image: 'circleci/python:latest'
+      # Next-gen CircleCI image (replaces deprecated circleci/python:latest)
+      - image: cimg/python:3.12
 
     steps:
       - checkout
-      - aws-s3/sync:
-          from: dist
-          to: 's3://blog.aidanlowson.com'
-          arguments: |
-            --acl public-read \
-            --cache-control "max-age=86400" \
-            --exclude ".git/*" \
-            --exclude ".gitignore" \
-            --exclude ".circleci/*" \
-          overwrite: true
+
+      # Install AWS CLI v2
+      - run:
+          name: Install AWS CLI
+          command: |
+            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip -q awscliv2.zip
+            sudo ./aws/install
+            aws --version
+
+      # Sync dist directory to S3
+      - run:
+          name: Deploy to S3
+          command: |
+            aws s3 sync dist s3://blog.aidanlowson.com \
+              --acl public-read \
+              --cache-control "max-age=86400" \
+              --exclude ".git/*" \
+              --exclude ".gitignore" \
+              --exclude ".circleci/*" \
+              --delete
