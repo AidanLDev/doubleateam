@@ -7,8 +7,9 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "npm run clear:cache && astro build",
     "preview": "astro preview",
+    "clear:cache": "rm -rf .astro .dist",
     "clean": "rm -rf node_modules package-lock.json pnpm-lock.yaml"
   },
   "devDependencies": {
