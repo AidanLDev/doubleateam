@@ -4,6 +4,7 @@ declare module 'astro:content' {
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
 			remarkPluginFrontmatter: Record<string, any>;
+			components: import('astro').MDXInstance<{}>['components'];
 		}>;
 	}
 }
@@ -172,20 +173,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"building-ci-cd-for-free.md": {
-	id: "building-ci-cd-for-free.md";
-  slug: "building-ci-cd-for-free";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"custom-qr-codes.md": {
-	id: "custom-qr-codes.md";
-  slug: "custom-qr-codes";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 "how-to-pass-ielts.md": {
 	id: "how-to-pass-ielts.md";
   slug: "how-to-pass-ielts";
@@ -193,23 +180,9 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"leetcode-1-two-sums.md": {
-	id: "leetcode-1-two-sums.md";
-  slug: "leetcode-1-two-sums";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 "marriage-requirements.md": {
 	id: "marriage-requirements.md";
   slug: "marriage-requirements";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"netlify-free-static-hosting.md": {
-	id: "netlify-free-static-hosting.md";
-  slug: "netlify-free-static-hosting";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
