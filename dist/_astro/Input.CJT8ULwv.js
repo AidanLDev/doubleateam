@@ -1,0 +1,1 @@
+import{u as r,b as i}from"./jsxRuntime.module.C88wzqB_.js";import{k as l}from"./preact.module.B5PsXcXZ.js";function f({label:e,name:t,placeholder:a}){return r(l,{children:[r("label",{for:t,children:e}),r("input",{id:t,name:t,placeholder:a,type:"text",onInput:function(e){i.set(e.currentTarget.value)}})]})}export{f as default};
