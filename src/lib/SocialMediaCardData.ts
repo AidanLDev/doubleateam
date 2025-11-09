@@ -2,7 +2,7 @@ import { type ISocialMedia } from '../../interfaces/socialMediaData'
 
 const baseLink = '/images/logos/'
 
-export const socialMediaData: ISocialMedia[] = [
+export const socialMediaDataAidan: ISocialMedia[] = [
   {
     imgSrc: `${baseLink}InstagramCircle.webp`,
     imgAlt: '@LowsonAidan',
@@ -29,11 +29,6 @@ export const socialMediaData: ISocialMedia[] = [
     link: 'https://github.com/AidanLDev',
   },
   {
-    imgSrc: `${baseLink}ThradsLogoSmall.webp`,
-    imgAlt: '@LowsonAidan',
-    link: 'https://www.threads.net/@lowsonaidan',
-  },
-  {
     imgSrc: `${baseLink}leetCodeIcon.webp`,
     imgAlt: 'AidanLDev',
     link: 'https://leetcode.com/AidanLDev/',
@@ -47,5 +42,28 @@ export const socialMediaData: ISocialMedia[] = [
     imgSrc: `${baseLink}YTNoBackGround.webp`,
     imgAlt: 'aidanl94',
     link: 'https://youtube.com/channel/UCDJAFkcMY5Ze3SKQS-fhg0A',
+  },
+]
+
+export const socialMediaDataArni: ISocialMedia[] = [
+  {
+    imgSrc: `${baseLink}InstagramCircle.webp`,
+    imgAlt: '@mynameisarni',
+    link: 'https://www.instagram.com/mynameisarni/',
+  },
+  {
+    imgSrc: `${baseLink}x_icon.webp`,
+    imgAlt: '@MyNameIsArni',
+    link: 'https://twitter.com/MyNameIsArni',
+  },
+  {
+    imgSrc: `${baseLink}TikTokLogo.webp`,
+    imgAlt: '@mynameisarni',
+    link: 'https://www.tiktok.com/@mynameisarni',
+  },
+  {
+    imgSrc: `${baseLink}LinkedInLogoRound.webp`,
+    imgAlt: 'Arni Riani',
+    link: 'https://www.linkedin.com/in/arni-riani-012174162/',
   },
 ]

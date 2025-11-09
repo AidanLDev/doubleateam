@@ -2,19 +2,19 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 ---
 
-<DefaultLayout title="About Me">
+<DefaultLayout title="About Us">
   <section class="my-12">
     <div class="about-me-container container">
       <section class="main-section my-12">
         <div class="space-content">
           <h1>Aidan & Arni</h1>
-          <img src={'/us/AidanAvatar.webp'} alt="Aidan Lowson" width="250" />
+          <img src={'/us/Aidan_Arni_Balloons.JPG'} alt="Aidan Lowson" width="250" />
           <p class="text-2xl">
             Aidan & Arni, from the UK and Indonesia. We love traveling, exploring new places and trying new experiences.
             We will document places we've found and hope we can help you explore too.
           </p>
         </div>
-        <a class="button about-me-button" href="/posts/">Find out what I've written about here</a>
+        <a class="button about-me-button" href="/posts/">Read what we've written about here!</a>
       </section>
     </div>
   </section>
@@ -26,6 +26,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
     .main-section {
       img {
         margin: 1rem auto;
+        border-radius: 50%;
       }
     }
     .about-me-button {

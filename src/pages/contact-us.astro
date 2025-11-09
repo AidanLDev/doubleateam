@@ -1,0 +1,50 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import MediaLinksLogo from '../components/contact-me/MediaLinksLogo.astro'
+import { socialMediaDataAidan, socialMediaDataArni } from '../lib/SocialMediaCardData'
+---
+
+<DefaultLayout title="Contact Us">
+  <section>
+    <div class="mb-4 flex items-center justify-center gap-4 border-b border-gray-600 pb-8">
+      <img src="/us/AidanAvatar.webp" alt="Aidan pretending he's on the phone" width="150px" height="150px" />
+      <h1>Find Aidan On...</h1>
+    </div>
+    <div class="contact-me-container container">
+      {
+        socialMediaDataAidan.map((mediaData) => (
+          <MediaLinksLogo imgSrc={mediaData.imgSrc} imgAlt={mediaData.imgAlt} link={mediaData.link} />
+        ))
+      }
+    </div>
+    <div class="mb-4 flex items-center justify-center gap-4 border-b border-gray-600 pb-8">
+      <img src="/us/ArniAvatar.png" alt="Arni posing in a cafe" width="150px" height="150px" />
+      <h1>Find Arni On...</h1>
+    </div>
+    <div class="contact-me-container container">
+      {
+        socialMediaDataArni.map((mediaData) => (
+          <MediaLinksLogo imgSrc={mediaData.imgSrc} imgAlt={mediaData.imgAlt} link={mediaData.link} />
+        ))
+      }
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss">
+  h1 {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .contact-me-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 4rem;
+    @media (max-width: 750px) {
+      gap: 0.5rem;
+      padding: 0 1rem;
+    }
+  }
+</style>
