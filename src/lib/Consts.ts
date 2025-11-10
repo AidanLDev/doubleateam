@@ -21,4 +21,5 @@ export const uniqueTags = [
   'Personal',
   'Jobs',
   'Work',
+  'Music',
 ]
