@@ -34,6 +34,8 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.5.4",
     "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.1",
@@ -51,5 +53,9 @@
     "nanostores": "^0.11.4",
     "preact": "^10.27.2",
     "sharp": "^0.33.5"
+  },
+    "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,css,md,astro}": "prettier --write --config .prettierrc",
+    "**/*.d.ts": "prettier --write --config .prettierrc"
   }
 }
