@@ -24,6 +24,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
+      - name: Run linting
+        run: pnpm run lint
+
+      - name: Build site
+        run: pnpm run build
+
+      # TODO: Add test step here when tests are implemented
+      # - name: Run tests
+      #   run: pnpm test
+
       - name: CircleCI Deploy
         run: |
           response=$(curl -s -w "\n%{http_code}" -X POST \

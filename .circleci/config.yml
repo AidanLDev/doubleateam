@@ -95,11 +95,3 @@ jobs:
 
             echo "CloudFront invalidation created: ${INVALIDATION_ID}"
             echo "Cache will be cleared within a few minutes. Your updated content will be visible shortly."
-
-workflows:
-  version: 2
-  build:
-    jobs:
-      - build
-    branches:
-      ignore: main
