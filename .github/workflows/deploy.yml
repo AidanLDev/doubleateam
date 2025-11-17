@@ -1,0 +1,45 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        run: npm i -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: CircleCI Deploy
+        run: |
+          response=$(curl -s -w "\n%{http_code}" -X POST \
+            -H "Content-Type: application/json" \
+            -H "Circle-Token: ${{ secrets.CIRCLE_TOKEN }}" \
+            -d '{"branch": "main"}' \
+            https://circleci.com/api/v2/project/gh/AidanLDev/doubleateam/pipeline)
+          
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | head -n -1)
+          
+          echo "Response: $body"
+          echo "HTTP Status: $http_code"
+          
+          if [ "$http_code" -ne 201 ] && [ "$http_code" -ne 200 ]; then
+            echo "Failed to trigger CircleCI pipeline"
+            exit 1
+          fi
+          echo "Successfully triggered CircleCI pipeline"
