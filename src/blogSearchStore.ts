@@ -1,3 +1,3 @@
 import { atom } from 'nanostores'
 
-export const blogFilter = atom("");
+export const blogFilter = atom('')

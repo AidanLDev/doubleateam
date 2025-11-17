@@ -8,7 +8,7 @@ import PostsContainer from '../../components/posts/PostsContainer'
 type BlogProps = CollectionEntry<'blog'> & { data: { title?: string; tags?: string[] } }
 
 const posts: BlogProps[] = (await getCollection('blog')).sort(
-  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
 )
 ---
 

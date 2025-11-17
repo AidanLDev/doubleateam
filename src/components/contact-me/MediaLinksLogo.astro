@@ -8,7 +8,7 @@ export interface Props {
 const { imgSrc, imgAlt, link } = Astro.props
 ---
 
-<a href={link} target="_blank" rel="noreferrer" class="logo-container-link">
+<a href={link} target="_blank" rel="noreferrer" class="logo-container-link" aria-label={imgAlt}>
   <div class="logo-container" style={{ backgroundImage: `url(${imgSrc})` }}></div>
   <div class="logo-text-container">
     <span>{imgAlt}</span>
