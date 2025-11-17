@@ -30,9 +30,11 @@ jobs:
       - name: Build site
         run: pnpm run build
 
-      # TODO: Add test step here when tests are implemented
-      # - name: Run tests
-      #   run: pnpm test
+      - name: Install Playwright browsers
+        run: pnpm dlx playwright install --with-deps
+
+      - name: Run E2E tests
+        run: pnpm run test:e2e
 
       - name: CircleCI Deploy
         run: |

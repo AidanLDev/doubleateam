@@ -13,7 +13,9 @@
     "lint": "eslint .",
     "preview": "astro preview",
     "clear:cache": "rm -rf .astro .dist",
-    "clean": "rm -rf node_modules package-lock.json pnpm-lock.yaml"
+    "clean": "rm -rf node_modules package-lock.json pnpm-lock.yaml",
+    "test:e2e": "playwright test",
+    "test:e2e-open": "playwright test --ui"
   },
   "devDependencies": {
     "@astrojs/mdx": "^4.3.10",
@@ -21,6 +23,7 @@
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/tailwind": "^6.0.2",
     "@eslint/eslintrc": "^3.3.1",
+    "@playwright/test": "^1.56.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "accessible-astro-components": "^2.4.0",
@@ -36,6 +39,7 @@
     "globals": "^16.5.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
+    "playwright": "^1.56.1",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.1",
@@ -54,7 +58,7 @@
     "preact": "^10.27.2",
     "sharp": "^0.33.5"
   },
-    "lint-staged": {
+  "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json,css,md,astro}": "prettier --write --config .prettierrc",
     "**/*.d.ts": "prettier --write --config .prettierrc"
   }
