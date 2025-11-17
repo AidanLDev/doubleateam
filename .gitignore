@@ -1,5 +1,5 @@
 # build output
-## dist # Don't ignore because circleci needs to see these changes?
+dist
 
 # dependencies
 node_modules/
@@ -25,3 +25,6 @@ yarn-error.log*
 
 # package lock
 package-lock.json
+
+# sst
+.sst

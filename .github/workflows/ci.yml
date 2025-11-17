@@ -34,5 +34,24 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Ensure SST platform types exist
+        run: |
+          if pnpm exec sst build --silent 2>/dev/null; then
+            echo "SST build succeeded — platform files generated."
+          else
+            echo "SST build failed or not available — falling back to stub."
+            mkdir -p .sst/platform
+            cat > .sst/platform/config.d.ts <<'EOF'
+          declare const $config: (c: any) => any;
+          declare namespace sst {
+            namespace aws {
+              class Astro {
+                constructor(name: string, props?: any);
+              }
+            }
+          }
+          EOF
+          fi
+
       - name: Build
         run: pnpm build

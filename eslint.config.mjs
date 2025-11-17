@@ -10,7 +10,7 @@ import globals from 'globals'
 const config = [
   // global ignores
   {
-    ignores: ['.astro/**', 'node_modules/**', 'dist/**'],
+    ignores: ['.astro/**', 'node_modules/**', 'dist/**', '.sst/**'],
   },
 
   // base settings for JS/TS

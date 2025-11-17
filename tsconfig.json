@@ -7,16 +7,15 @@
       }
     ],
     "typeRoots": ["./node_modules/@types", "./types"],
-    "baseUrl": "C:/Users/Aidan/Repos/doubleateam",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@lib/*": ["src/lib/*"],
-      "@interfaces/*": ["src/interfaces/*"]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@interfaces/*": ["./src/interfaces/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", "sst.config.ts"]
 }

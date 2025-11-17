@@ -8,6 +8,7 @@ import partytown from '@astrojs/partytown'
 import path from 'path'
 
 import preact from '@astrojs/preact'
+import aws from 'astro-sst'
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,4 +37,6 @@ export default defineConfig({
       },
     },
   },
+  adapter: aws(),
+  output: 'static',
 })

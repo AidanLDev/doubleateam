@@ -5,17 +5,20 @@
   "author": "Aidan Lowson <dev@aidanlowson.com>",
   "homepage": "blog.aidanlowson.com",
   "scripts": {
+    "build": "astro check --minimumSeverity warning && astro build",
+    "clean": "rm -rf node_modules package-lock.json pnpm-lock.yaml",
+    "clear:cache": "rm -rf .astro .dist",
+    "deploy": "npx sst deploy --stage production",
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "pnpm run clear:cache && astro build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "preview": "astro preview",
-    "clear:cache": "rm -rf .astro .dist",
-    "clean": "rm -rf node_modules package-lock.json pnpm-lock.yaml",
+    "start": "astro dev",
     "test:e2e": "playwright test",
-    "test:e2e-open": "playwright test --ui"
+    "test:e2e-open": "playwright test --ui",
+    "sst:refresh": "npx sst refresh --stage production",
+    "sst:remove": "sst remove --stage production"
   },
   "devDependencies": {
     "@astrojs/mdx": "^4.3.10",
@@ -31,6 +34,7 @@
     "astro-compress": "2.3.0",
     "astro-eslint-parser": "^1.2.2",
     "astro-icon": "^1.1.5",
+    "astro-sst": "^3.1.4",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.5.0",
@@ -44,22 +48,27 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "sass": "^1.94.0",
+    "sst": "^3.17.23",
     "svgo": "^3.3.2",
     "tailwindcss": "^3.4.18"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.5",
     "@astrojs/preact": "^4.1.3",
     "@astrojs/ts-plugin": "^1.10.5",
     "@iconify-json/carbon": "^1.2.14",
     "@iconify-json/ion": "^1.2.6",
     "@iconify-json/mdi": "^1.2.3",
     "@nanostores/preact": "^0.5.2",
+    "astro-sst": "3.1.4",
     "nanostores": "^0.11.4",
     "preact": "^10.27.2",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "sst": "3.17.23",
+    "typescript": "^5.9.3"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,json,css,md,astro}": "prettier --write --config .prettierrc",
-    "**/*.d.ts": "prettier --write --config .prettierrc"
+    "**/*.d.ts": "prettier --write --config .prettierrc",
+    "**/*.{js,jsx,ts,tsx,json,css,md,astro}": "prettier --write --config .prettierrc"
   }
 }

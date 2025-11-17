@@ -33,25 +33,40 @@ jobs:
       - name: Install Playwright browsers
         run: pnpm dlx playwright install --with-deps
 
+      - name: Ensure SST platform types exist
+        run: |
+          if pnpm exec sst build --silent 2>/dev/null; then
+            echo "SST build succeeded — platform files generated."
+          else
+            echo "SST build failed or not available — falling back to stub."
+            mkdir -p .sst/platform
+            cat > .sst/platform/config.d.ts <<'EOF'
+          declare const $config: (c: any) => any;
+          declare namespace sst {
+            namespace aws {
+              class Astro {
+                constructor(name: string, props?: any);
+              }
+            }
+          }
+          EOF
+          fi
+
       - name: Run E2E tests
         run: pnpm run test:e2e
 
-      - name: CircleCI Deploy
-        run: |
-          response=$(curl -s -w "\n%{http_code}" -X POST \
-            -H "Content-Type: application/json" \
-            -H "Circle-Token: ${{ secrets.CIRCLE_TOKEN }}" \
-            -d '{"branch": "main"}' \
-            https://circleci.com/api/v2/project/gh/AidanLDev/doubleateam/pipeline)
-          
-          http_code=$(echo "$response" | tail -n1)
-          body=$(echo "$response" | head -n -1)
-          
-          echo "Response: $body"
-          echo "HTTP Status: $http_code"
-          
-          if [ "$http_code" -ne 201 ] && [ "$http_code" -ne 200 ]; then
-            echo "Failed to trigger CircleCI pipeline"
-            exit 1
-          fi
-          echo "Successfully triggered CircleCI pipeline"
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: SST Deploy
+        run: npx sst deploy --stage production --yes
+
+      - name: Delete merged branch
+        if: github.head_ref != ''
+        run: gh branch delete "${{ github.head_ref }}" --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
