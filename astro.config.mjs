@@ -10,6 +10,8 @@ import path from 'path'
 import preact from '@astrojs/preact'
 import aws from 'astro-sst'
 
+import sentry from '@sentry/astro'
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://blog.aidanlowson.com',
@@ -24,6 +26,11 @@ export default defineConfig({
       config: {
         forward: ['datalayer.push'],
       },
+    }),
+    sentry({
+      project: 'double-a-team',
+      org: 'processvision',
+      authToken: process.env.SENTRY_AUTH_TOKEN,
     }),
   ],
   vite: {

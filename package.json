@@ -60,6 +60,7 @@
     "@iconify-json/ion": "^1.2.6",
     "@iconify-json/mdi": "^1.2.3",
     "@nanostores/preact": "^0.5.2",
+    "@sentry/astro": "^10.26.0",
     "astro-sst": "3.1.4",
     "nanostores": "^0.11.4",
     "preact": "^10.27.2",
