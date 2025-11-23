@@ -66,6 +66,7 @@ jobs:
         run: npx sst deploy --stage production --yes
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_DNS: ${{ secrets.SENTRY_DNS }}
 
       - name: Delete merged branch
         if: github.head_ref != ''
