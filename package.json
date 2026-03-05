@@ -65,7 +65,7 @@
     "nanostores": "^0.11.4",
     "preact": "^10.27.2",
     "sharp": "^0.33.5",
-    "sst": "3.17.23",
+    "sst": "4.1.10",
     "typescript": "^5.9.3"
   },
   "lint-staged": {
