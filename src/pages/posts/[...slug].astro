@@ -1,13 +1,13 @@
 ---
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import BlogBreadCrumbs from '../../components/BlogBreadcrumbs.astro'
-import { type CollectionEntry, getCollection } from 'astro:content'
+import { type CollectionEntry, getCollection, render } from 'astro:content'
 import LatestPosts from '../../components/LatestPosts.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog')
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id.replace(/\.mdx?$/, '') },
     props: post,
   }))
 }
@@ -15,7 +15,7 @@ type BlogProps = CollectionEntry<'blog'>
 type Props = BlogProps & { title?: string; tags?: string[] }
 
 const post = Astro.props
-const { Content } = await post.render()
+const { Content } = await render(post)
 ---
 
 <DefaultLayout title={post.data.title} description={post.body} url={post.data.title}>

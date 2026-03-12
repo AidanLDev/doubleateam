@@ -26,13 +26,13 @@ export default function PostsContainer({ posts }) {
           })
           .map((post) => {
             const {
-              slug,
+              id,
               data: { title, pubDate, heroImage, description, tags, redirectLink },
             } = post
             return (
               <PostCard
                 description={description}
-                slug={slug}
+                slug={id.replace(/\.mdx?$/, '')}
                 title={title}
                 pubDate={pubDate}
                 heroImage={heroImage}
