@@ -4,11 +4,15 @@ import MediaLinksLogo from '../components/contact-me/MediaLinksLogo.astro'
 import { socialMediaDataAidan, socialMediaDataArni } from '../lib/SocialMediaCardData'
 ---
 
-<DefaultLayout title="Contact Us">
+<DefaultLayout
+  title="Contact us"
+  description="Find Aidan & Arni on social media. Follow along for travel tips, guides and updates, or get in touch with any questions."
+>
+  <h1 class="sr-only">Contact Aidan & Arni</h1>
   <section>
     <div class="mb-4 flex items-center justify-center gap-4 border-b border-gray-600 pb-8">
       <img src="/us/AidanAvatar.webp" alt="Aidan pretending he's on the phone" width="150px" height="150px" />
-      <h1>Find Aidan On...</h1>
+      <h2>Find Aidan On...</h2>
     </div>
     <div class="contact-me-container container">
       {socialMediaDataAidan.map((mediaData) => (
@@ -17,7 +21,7 @@ import { socialMediaDataAidan, socialMediaDataArni } from '../lib/SocialMediaCar
     </div>
     <div class="mb-4 flex items-center justify-center gap-4 border-b border-gray-600 pb-8">
       <img src="/us/ArniAvatar.png" alt="Arni posing in a cafe" width="150px" height="150px" />
-      <h1>Find Arni On...</h1>
+      <h2>Find Arni On...</h2>
     </div>
     <div class="contact-me-container container">
       {socialMediaDataArni.map((mediaData) => (
@@ -28,9 +32,17 @@ import { socialMediaDataAidan, socialMediaDataArni } from '../lib/SocialMediaCar
 </DefaultLayout>
 
 <style lang="scss">
-  h1 {
+  // Styled like the h1s these used to be; the page h1 is visually hidden
+  h2 {
     text-align: center;
     padding: 1rem 0;
+    font-size: 2.25rem;
+    line-height: 3.375rem;
+
+    @media (min-width: 48em) {
+      font-size: 3rem;
+      line-height: 3.625rem;
+    }
   }
   .contact-me-container {
     display: flex;

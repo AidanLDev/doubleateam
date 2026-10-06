@@ -1,6 +1,6 @@
 ---
 title: 'How to pass the IELTS Exam'
-description: 'How to pass the IELTS Exam'
+description: 'How the IELTS A1 Life Skills speaking test works for UKVI family visa applications, with every section explained and tips to help you pass first time.'
 pubDate: 'June 06 2022'
 heroImage: '/blog/how-to-pass-ielts.webp'
 tags: ['Education', 'Visa']

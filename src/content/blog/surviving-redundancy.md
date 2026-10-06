@@ -1,6 +1,6 @@
 ---
 title: 'Surviving Redundancy'
-description: 'Surviving the Redundancy process: My Journey of Reclaiming My Job'
+description: 'My story of being made redundant as a software developer after a company acquisition, how I handled the process, and how I won my job back.'
 pubDate: 'January 24 2024'
 heroImage: '/blog/interview_stock_photo.webp'
 tags: ['Personal', 'Jobs', 'Work']

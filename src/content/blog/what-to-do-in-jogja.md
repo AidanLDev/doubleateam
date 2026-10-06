@@ -1,6 +1,6 @@
 ---
 title: 'Jogja Guide'
-description: 'Jogja Guide'
+description: 'Our Yogyakarta (Jogja) recommendations: where to stay near Malioboro, restaurants with a view, and the sights we think are worth your time.'
 pubDate: 'July 17 2022'
 heroImage: '/blog/what-to-do-in-jogja.webp'
 tags: ['Travel', 'Indonesia', 'Entertainment']

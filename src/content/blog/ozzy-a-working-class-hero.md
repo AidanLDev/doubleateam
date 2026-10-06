@@ -1,10 +1,12 @@
 ---
 title: 'Ozzy the working class hero'
-description: 'May the prince of darkness rest in peace, on the 22nd of July 2025 we lost one of the greatest rockstars, celebrate his life with us at the Birmingham Art Museum'
+description: 'Visiting Ozzy Osbourne: Working Class Hero at Birmingham Museum & Art Gallery, an exhibition celebrating the Prince of Darkness, open until January 2026.'
 pubDate: 'November 10 2025'
 heroImage: '/blog/ozzy-a-working-class-hero/ozzy-a-working-class-hero.webp'
 tags: ['Travel', 'Music']
 ---
+
+# Ozzy: the working class hero
 
 The working class hero exhibition is running in the Birmingham Art Museum daily, 10am–5pm. 25 June - 18 January 2026. May the prince of darkness rest in peace, while the world mourns one of the worlds greatest rockstars, we celebrate his life and achievements in this exhibition. Visit the [museums website](https://www.birminghammuseums.org.uk/exhibitions/working-class-hero) for more information on the exhibition itself. As a life long metal fan, I have a lot to thank the work Black Sabbath did for founding my favourite genre. Without Black Sabbath there would be no metal. Even today their slow heavy riffs stand the test of time and re-listening to those classic albums will always be a pleasure.
 

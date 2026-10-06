@@ -15,6 +15,10 @@ import sentry from '@sentry/astro'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://blog.aidanlowson.com',
+  redirects: {
+    // Old misspelt slug, kept so existing links and search results still work
+    '/posts/survivng-redundancy': '/posts/surviving-redundancy',
+  },
   integrations: [
     compress(),
     mdx(),
