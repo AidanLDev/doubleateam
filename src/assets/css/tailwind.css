@@ -1,0 +1,26 @@
+/*
+  Tailwind v4 normally puts utilities in a native `@layer utilities`, which the site's
+  unlayered SCSS (e.g. `h1 { font-size }`) would always override. Import the utilities
+  unlayered so they win on specificity like they did in Tailwind v3.
+*/
+@layer theme, base, components;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css';
+
+/* Dark mode is toggled by the `.darkmode` class (accessible-astro-components DarkMode) */
+@custom-variant dark (&:where(.darkmode, .darkmode *));
+
+/*
+  Tailwind v4 changed the default border colour to `currentcolor`.
+  Keep the v3 default (gray-200) so existing borders look the same.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
