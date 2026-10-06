@@ -1,6 +1,6 @@
 ---
 title: 'Best UK Theme Parks'
-description: 'Best UK Theme Parks'
+description: 'Our guide to the best theme parks in the UK, from Alton Towers to Thorpe Park: prices, top roller coasters and what makes each park worth a visit.'
 pubDate: 'August 15 2022'
 heroImage: '/blog/best-uk-theme-parks.webp'
 tags: ['Entertainment', 'Theme Parks']
@@ -58,7 +58,7 @@ Miniland is a must visit while you're here, you can see some of the most famous 
 
 ## 5. Blackpool Pleasure Beach
 
-![](/blog/theme-parks/blackpool/icon.webp)
+![The Icon roller coaster at Blackpool Pleasure Beach at dusk](/blog/theme-parks/blackpool/icon.webp)
 Blackpool | £30 - £40 Online
 
 I always feel like I'm going back in time when I step foot here, in the nicest way possible that is. They do have wooden coasters that have been around since the 1920s after all. The park has such a fun atmosphere and you get a great view of the sea too as it's right on the coast.

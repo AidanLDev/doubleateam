@@ -1,6 +1,6 @@
 ---
 title: 'Indonesia travel guide'
-description: 'Indonesia travel guide'
+description: "An Indonesia travel guide covering the places we loved, from Bandung's volcanoes to Jogja and beyond, with tips to help plan your Indonesian getaway."
 pubDate: 'July 15 2022'
 heroImage: '/blog/what-to-do-in-indonesia.webp'
 tags: ['Travel', 'Indonesia', 'Entertainment']

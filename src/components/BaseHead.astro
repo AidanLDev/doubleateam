@@ -1,43 +1,85 @@
 ---
+import { SITE_NAME } from '../lib/Consts'
+
 export interface Props {
   title: string
   description: string
   image?: string
+  imageAlt?: string
+  type?: 'website' | 'article'
+  publishedTime?: Date
+  modifiedTime?: Date
+  noindex?: boolean
+  jsonLd?: Record<string, unknown>
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const {
+  title,
+  description,
+  image = '/images/Aidan_Arni_Bromo.webp',
+  imageAlt = 'Aidan and Arni at Mount Bromo, Indonesia',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  noindex = false,
+  jsonLd,
+} = Astro.props
 
-const { title, description, image = '/images/Aidan_Arni_Bromo.webp' } = Astro.props
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const imageURL = new URL(image, Astro.site)
+const fullTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  url: Astro.site?.href,
+}
+const structuredData = jsonLd ?? (Astro.url.pathname === '/' ? websiteJsonLd : undefined)
+// Escape `<` so content can never close the JSON-LD script tag early
+const structuredDataJson = structuredData && JSON.stringify(structuredData).replace(/</g, '\\u003c')
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
-<!-- RSS Feed Discovery -->
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+<!-- Sitemap -->
+<link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
+<title>{fullTitle}</title>
 <meta name="description" content={description} />
 <meta name="author" content="Aidan Lowson" />
+{noindex && <meta name="robots" content="noindex, follow" />}
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={imageURL} />
+<meta property="og:image:alt" content={imageAlt} />
+{publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
+{modifiedTime && <meta property="article:modified_time" content={modifiedTime.toISOString()} />}
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageURL} />
+<meta name="twitter:image:alt" content={imageAlt} />
+
+<!-- Structured data -->
+{structuredDataJson && (
+  // JSON-LD has to be injected as raw text; the JSON is escaped above
+  // eslint-disable-next-line astro/no-set-html-directive
+  <script type="application/ld+json" set:html={structuredDataJson} />
+)}

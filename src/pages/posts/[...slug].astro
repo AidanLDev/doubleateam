@@ -3,6 +3,7 @@ import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import BlogBreadCrumbs from '../../components/BlogBreadcrumbs.astro'
 import { type CollectionEntry, getCollection, render } from 'astro:content'
 import LatestPosts from '../../components/LatestPosts.astro'
+import { SITE_NAME } from '../../lib/Consts'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog')
@@ -16,9 +17,37 @@ type Props = BlogProps & { title?: string; tags?: string[] }
 
 const post = Astro.props
 const { Content } = await render(post)
+
+const { title, description, heroImage, pubDate, updatedDate, tags } = post.data
+const publishedTime = new Date(pubDate)
+const modifiedTime = updatedDate ? new Date(updatedDate) : undefined
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+const blogPostingJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  image: heroImage ? new URL(heroImage, Astro.site).href : undefined,
+  datePublished: publishedTime.toISOString(),
+  dateModified: (modifiedTime ?? publishedTime).toISOString(),
+  author: { '@type': 'Person', name: 'Aidan Lowson' },
+  publisher: { '@type': 'Organization', name: SITE_NAME, url: Astro.site?.href },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalURL.href },
+  keywords: tags?.join(', '),
+}
 ---
 
-<DefaultLayout title={post.data.title} description={post.body} url={post.data.title}>
+<DefaultLayout
+  title={title}
+  description={description}
+  image={heroImage}
+  imageAlt={title}
+  type="article"
+  publishedTime={publishedTime}
+  modifiedTime={modifiedTime}
+  jsonLd={blogPostingJsonLd}
+>
   <div class="overlay"></div>
   <div class="container">
     <div class="mt-12">
@@ -27,10 +56,10 @@ const { Content } = await render(post)
   </div>
   <section class="my-12">
     <div class="container">
-      <h1>{post.title}</h1>
-      <br />
       <img src={post.data.heroImage} alt={post.data.title} class="main-blog-img mb-3 rounded-3xl" />
-      <p>Published: {post.data.pubDate}</p>
+      <p>
+        Published: <time datetime={publishedTime.toISOString()}>{pubDate}</time>
+      </p>
     </div>
   </section>
   <section class="my-12">

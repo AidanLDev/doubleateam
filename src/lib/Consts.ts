@@ -23,3 +23,6 @@ export const uniqueTags = [
   'Work',
   'Music',
 ]
+
+// Site-wide SEO
+export const SITE_NAME = 'Double A Team'

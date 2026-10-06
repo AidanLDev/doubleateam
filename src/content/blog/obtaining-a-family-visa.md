@@ -1,6 +1,6 @@
 ---
 title: 'How to get a UK family visa'
-description: 'How to get a UK family visa'
+description: 'Our experience applying for a UK family (spouse) visa: costs, using a visa consultant, the supporting documents you need and how long the visa lasts.'
 pubDate: 'June 12 2022'
 heroImage: '/blog/obtaining-a-family-visa.webp'
 tags: ['Visa']
@@ -18,7 +18,7 @@ The family visa is quite expensive. It cost us £1,682 for the application and a
 
 That’s why we hired a visa consultant from [I-vars](https://www.i-vars.com/). Their service was unbelievably helpful, they start with an initial call, going through the process itself and they get to understand you and your situation so they can know how to best help. Once signed up they send a pack with all the information about the visa application process and documents required to get the approval we all need. They will review any documents and give guidance throughout the process.
 
-# The application
+## The application
 
 On to the application itself then, it’s all done online [here through the gov website.](https://www.gov.uk/uk-family-visa/partner-spouse) The majority of questions are self-explanatory. A few stand-out ones that could do with some further clarification:
 

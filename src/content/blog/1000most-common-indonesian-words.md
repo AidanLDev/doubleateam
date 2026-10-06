@@ -1,6 +1,6 @@
 ---
 title: 'The 1,000 most common Indonesian Words'
-description: 'The 1,000 most common Indonesian Words'
+description: 'Learn Indonesian faster with the 1,000 most common words and phrases, with English translations and tips for memorising them using Anki.'
 pubDate: 'August 28 2022'
 heroImage: '/blog/1000most-common-indonesian-words.webp'
 tags: ['Language Learning', 'Education']

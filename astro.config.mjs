@@ -18,7 +18,11 @@ export default defineConfig({
   integrations: [
     compress(),
     mdx(),
-    sitemap(),
+    sitemap({
+      // Starter-template demo pages are noindexed, so keep them out of the sitemap too
+      filter: (page) =>
+        !['/markdown-page/', '/mdx-page/', '/accessible-components/'].some((path) => page.endsWith(path)),
+    }),
     icon(),
     preact(),
     partytown({

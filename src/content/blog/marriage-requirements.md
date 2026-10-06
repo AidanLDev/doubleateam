@@ -1,6 +1,6 @@
 ---
 title: 'International Marriage in Indonesia'
-description: 'International Marriage in Indonesia'
+description: 'Getting married in Indonesia to a foreign spouse: the documents you need, religious ceremony requirements and the steps we took to make it official.'
 pubDate: 'July 20 2022'
 heroImage: '/blog/marriage-requirements.webp'
 tags: ['Marriage', 'Indonesia']

@@ -1,6 +1,6 @@
 ---
 title: 'Things to know about Alton Towers'
-description: 'Things to know about Alton Towers'
+description: "Planning a trip to Alton Towers? Where to stay nearby, what it costs, the best rides and tips for getting the most out of the UK's biggest theme park."
 pubDate: 'August 21 2022'
 heroImage: '/blog/alton-towers.webp'
 tags: ['Entertainment', 'Theme Parks']
