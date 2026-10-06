@@ -1,4 +1,21 @@
+# Search engines and AI crawlers are welcome to index everything here
 User-agent: *
 Allow: /
+
+# AI search / assistant crawlers, listed explicitly so they are not caught by any future blanket rules
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+Allow: /
+
+# LLM-friendly site index: https://blog.aidanlowson.com/llms.txt
 
 Sitemap: https://blog.aidanlowson.com/sitemap-index.xml

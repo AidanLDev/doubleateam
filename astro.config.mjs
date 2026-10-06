@@ -5,12 +5,32 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import partytown from '@astrojs/partytown'
 import path from 'path'
+import fs from 'fs'
 import tailwindcss from '@tailwindcss/vite'
 
 import preact from '@astrojs/preact'
 import aws from 'astro-sst'
 
 import sentry from '@sentry/astro'
+
+// Last modified date of each blog post, from its frontmatter, so the sitemap can tell crawlers what changed
+const blogDir = './src/content/blog'
+const postLastMod = Object.fromEntries(
+  fs
+    .readdirSync(blogDir)
+    .filter((file) => /\.mdx?$/.test(file))
+    .map((file) => {
+      const source = fs.readFileSync(path.join(blogDir, file), 'utf-8')
+      const date = (source.match(/^updatedDate:\s*['"]?(.+?)['"]?\s*$/m) ??
+        source.match(/^pubDate:\s*['"]?(.+?)['"]?\s*$/m))?.[1]
+      // Format as a plain YYYY-MM-DD in local time, toISOString() would shift BST dates back a day
+      const parsed = date && new Date(date)
+      const lastmod =
+        parsed &&
+        `${parsed.getFullYear()}-${String(parsed.getMonth() + 1).padStart(2, '0')}-${String(parsed.getDate()).padStart(2, '0')}`
+      return [`/posts/${file.replace(/\.mdx?$/, '')}/`, lastmod]
+    }),
+)
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,7 +42,12 @@ export default defineConfig({
   integrations: [
     compress(),
     mdx(),
-    sitemap(),
+    sitemap({
+      serialize(item) {
+        const lastmod = postLastMod[new URL(item.url).pathname]
+        return lastmod ? { ...item, lastmod } : item
+      },
+    }),
     icon(),
     preact(),
     partytown({

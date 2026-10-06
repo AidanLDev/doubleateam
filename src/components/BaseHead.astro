@@ -1,5 +1,5 @@
 ---
-import { SITE_NAME } from '../lib/Consts'
+import { SITE_NAME, SITE_DESCRIPTION, AUTHOR_AIDAN, AUTHOR_ARNI } from '../lib/Consts'
 
 export interface Props {
   title: string
@@ -34,6 +34,9 @@ const websiteJsonLd = {
   '@type': 'WebSite',
   name: SITE_NAME,
   url: Astro.site?.href,
+  description: SITE_DESCRIPTION,
+  inLanguage: 'en-GB',
+  author: [AUTHOR_AIDAN, AUTHOR_ARNI],
 }
 const structuredData = jsonLd ?? (Astro.url.pathname === '/' ? websiteJsonLd : undefined)
 // Escape `<` so content can never close the JSON-LD script tag early
@@ -52,6 +55,12 @@ const structuredDataJson = structuredData && JSON.stringify(structuredData).repl
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap-index.xml" />
 
+<!-- Search engine verification -->
+<meta name="msvalidate.01" content="A1B90C4E68047999157C3B062E05CB34" />
+
+<!-- LLM / AI agent index (https://llmstxt.org) -->
+<link rel="alternate" type="text/markdown" title="llms.txt" href={new URL('llms.txt', Astro.site)} />
+
 <!-- RSS Feed Discovery -->
 <link rel="alternate" type="application/rss+xml" title={SITE_NAME} href={new URL('rss.xml', Astro.site)} />
 
@@ -59,7 +68,10 @@ const structuredDataJson = structuredData && JSON.stringify(structuredData).repl
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
 <meta name="author" content="Aidan Lowson" />
-{noindex && <meta name="robots" content="noindex, follow" />}
+<meta
+  name="robots"
+  content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={type} />
