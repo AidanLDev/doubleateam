@@ -2,10 +2,10 @@ import { defineConfig } from 'astro/config'
 import icon from 'astro-icon'
 import compress from 'astro-compress'
 import mdx from '@astrojs/mdx'
-import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import partytown from '@astrojs/partytown'
 import path from 'path'
+import tailwindcss from '@tailwindcss/vite'
 
 import preact from '@astrojs/preact'
 import aws from 'astro-sst'
@@ -18,7 +18,6 @@ export default defineConfig({
   integrations: [
     compress(),
     mdx(),
-    tailwind(),
     sitemap(),
     icon(),
     preact(),
@@ -34,6 +33,7 @@ export default defineConfig({
     }),
   ],
   vite: {
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
         '@': path.resolve('./src'),

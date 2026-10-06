@@ -19,9 +19,9 @@ import {
     <div class="space-content container">
       <h1>Accessible Components</h1>
       <p class="text-2xl">
-        This theme has a lot of extra a11y components provided by the <a
-          href="https://github.com/markteekman/accessible-astro-components#Pagination">Accessible Astro Component</a
-        > NPM package to help you build accessible pages faster:
+        This theme has a lot of extra a11y components provided by the{' '}
+        <a href="https://github.com/markteekman/accessible-astro-components#Pagination">Accessible Astro Component</a>{' '}
+        NPM package to help you build accessible pages faster:
       </p>
     </div>
   </section>
@@ -31,7 +31,7 @@ import {
         <div class="space-content">
           <h2>Accordion</h2>
           <Accordion>
-            <AccordionItem header="First Item">
+            <AccordionItem title="First Item">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
                 accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
@@ -39,28 +39,28 @@ import {
               </p>
               <button>Tab to me!</button>
             </AccordionItem>
-            <AccordionItem header="Second Item">
+            <AccordionItem title="Second Item">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
                 accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
                 veritatis laboriosam est tenetur.
               </p>
             </AccordionItem>
-            <AccordionItem header="Third Item">
+            <AccordionItem title="Third Item">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
                 accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
                 veritatis laboriosam est tenetur.
               </p>
             </AccordionItem>
-            <AccordionItem header="Fourth Item">
+            <AccordionItem title="Fourth Item">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
                 accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
                 veritatis laboriosam est tenetur.
               </p>
             </AccordionItem>
-            <AccordionItem header="Fifth Item">
+            <AccordionItem title="Fifth Item">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
                 accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
@@ -79,9 +79,7 @@ import {
         </div>
         <div class="space-content">
           <h2>Cards</h2>
-          <Card
-            img="https://images.unsplash.com/photo-1636819488524-1f019c4e1c44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-          />
+          <Card img="https://images.unsplash.com/photo-1636819488524-1f019c4e1c44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" />
         </div>
         <div class="space-content">
           <h2>DarkMode Toggle</h2>
@@ -96,42 +94,58 @@ import {
         </div>
         <div class="space-content">
           <h2>Modals</h2>
-          <button id="modal1-trigger" class="button">Modal 1</button>&nbsp;
-          <button id="modal2-trigger" class="button color-secondary">Modal 2</button>
+          <button id="modal1-trigger" class="button">
+            Modal 1
+          </button>
+          &nbsp;
+          <button id="modal2-trigger" class="button color-secondary">
+            Modal 2
+          </button>
           <Modal triggerId="modal1-trigger" title="Modal 1">
-            <p>Why hello, I be the <strong>first</strong> Modal.</p>
+            <p>
+              Why hello, I be the <strong>first</strong> Modal.
+            </p>
           </Modal>
           <Modal triggerId="modal2-trigger" title="Modal 2" closeText="Cancel">
             <p>
-              Ah yes, and I be the <strong>second</strong> Modal. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Sed, a! Ratione eaque temporibus alias tempora pariatur dolorem.
+              Ah yes, and I be the <strong>second</strong> Modal. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Sed, a! Ratione eaque temporibus alias tempora pariatur dolorem.
             </p>
-            <button class="button" onclick="closeModal()">Confirm action</button>
+            <button class="button" onclick="closeModal()">
+              Confirm action
+            </button>
           </Modal>
         </div>
         <div class="space-content">
           <h2>Notification</h2>
           <Notification>
-            <Icon name="ion:notifications-outline" /><p><strong>Message:</strong> This is a notification!</p>
+            <Icon name="ion:notifications-outline" size={32} />
+            <p>
+              <strong>Message:</strong> This is a notification!
+            </p>
           </Notification>
           <Notification type="info">
-            <Icon name="ion:information-circle-outline" /><p>
+            <Icon name="ion:information-circle-outline" size={32} />
+            <p>
               <strong>Info:</strong> This is a notification of type info.
             </p>
           </Notification>
           <Notification type="success">
-            <Icon name="ion:checkbox-outline" /><p>
+            <Icon name="ion:checkbox-outline" size={32} />
+            <p>
               <strong>Success:</strong> This is a notification of type success.
             </p>
           </Notification>
           <Notification type="warning">
-            <Icon name="ion:warning-outline" /><p>
-              <strong>Warning:</strong> This is a notification of type warning and goes on multiple lines to see how that
-              looks.
+            <Icon name="ion:warning-outline" size={32} />
+            <p>
+              <strong>Warning:</strong> This is a notification of type warning and goes on multiple lines to see how
+              that looks.
             </p>
           </Notification>
           <Notification type="error">
-            <Icon name="ion:alert-circle-outline" /><p>
+            <Icon name="ion:alert-circle-outline" size={32} />
+            <p>
               <strong>Error:</strong> This is a notification of type error.
             </p>
           </Notification>
@@ -141,7 +155,7 @@ import {
           <Pagination totalPages="200" />
         </div>
         <div class="space-content">
-          <h2>SkipLinks</h2>
+          <h2>SkipLink</h2>
           <p>This component can be viewed by shift+tabbing untill they show up.</p>
         </div>
       </div>
