@@ -26,3 +26,5 @@ export const uniqueTags = [
 
 // Site-wide SEO
 export const SITE_NAME = 'Double A Team'
+export const SITE_DESCRIPTION =
+  'Aidan & Arni share travel guides for the UK and Indonesia, visa and marriage advice, and the lessons we have learned along the way.'

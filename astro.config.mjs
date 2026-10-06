@@ -15,14 +15,14 @@ import sentry from '@sentry/astro'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://blog.aidanlowson.com',
+  redirects: {
+    // Old misspelt slug, kept so existing links and search results still work
+    '/posts/survivng-redundancy': '/posts/surviving-redundancy',
+  },
   integrations: [
     compress(),
     mdx(),
-    sitemap({
-      // Starter-template demo pages are noindexed, so keep them out of the sitemap too
-      filter: (page) =>
-        !['/markdown-page/', '/mdx-page/', '/accessible-components/'].some((path) => page.endsWith(path)),
-    }),
+    sitemap(),
     icon(),
     preact(),
     partytown({

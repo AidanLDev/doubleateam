@@ -23,6 +23,7 @@
   "devDependencies": {
     "@astrojs/mdx": "^8.0.2",
     "@astrojs/partytown": "^2.1.8",
+    "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
     "@eslint/eslintrc": "^3.3.7",
     "@eslint/js": "^9.39.5",
