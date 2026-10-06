@@ -40,7 +40,12 @@ export default defineConfig({
     '/posts/survivng-redundancy': '/posts/surviving-redundancy',
   },
   integrations: [
-    compress(),
+    compress({
+      HTML: {
+        // Keep attribute quotes and order so verification tags (e.g. Bing's msvalidate.01) match verbatim
+        'html-minifier-terser': { removeAttributeQuotes: false, sortAttributes: false },
+      },
+    }),
     mdx(),
     sitemap({
       serialize(item) {
